@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: concept_api_before_browser.html 
+keywords: rest api, deploy rest api, rest, access browser, before you begin 
+summary: Hay varias cosas que debe tener en cuenta antes de utilizar la página de documentación en línea de implementación. 
+---
+= Antes de acceder a la API con un explorador
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hay varias cosas que debe tener en cuenta antes de utilizar la página de documentación en línea de implementación.
+
+
+
+== Plan de implementación
+
+Si piensa emitir llamadas API como parte de la realización de tareas administrativas o de implementación específicas, debería considerar la creación de un plan de implementación. Estos planes pueden ser formales o informales, y, por lo general, contienen sus objetivos y las llamadas a las API que se deben utilizar. Consulte procesos de flujo de trabajo mediante la API DE REST de puesta en marcha para obtener más información.
+
+
+
+== Ejemplos de JSON y definiciones de parámetros
+
+Cada llamada API se describe en la página de documentación usando un formato consistente. El contenido incluye notas de implementación, parámetros de consulta y códigos de estado HTTP. Además, puede mostrar detalles sobre JSON utilizado con las solicitudes y respuestas de API de la siguiente manera:
+
+* Ejemplo de valor Si hace clic en _ejemplo valor_ en una llamada API, se muestra una estructura JSON típica para la llamada. Puede modificar el ejemplo según sea necesario y utilizarlo como entrada para su solicitud.
+* Si hace clic en _Model_, se muestra una lista completa de los parámetros JSON, con una descripción de cada parámetro.
+
+
+
+
+== Precaución al emitir llamadas API
+
+Todas las operaciones de API que se realizan mediante la página de documentación de implementación son operaciones en directo. Debe tener cuidado de no crear, actualizar o eliminar por error la configuración u otros datos.

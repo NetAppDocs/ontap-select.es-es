@@ -1,0 +1,244 @@
+---
+sidebar: sidebar 
+permalink: reference_api_json_cc.html 
+keywords: rest api, deploy rest api, rest, python script, json, create cluster 
+summary: Cuando crea o elimina un clúster de ONTAP Select con ejemplos de código Python, debe proporcionar un archivo JSON como entrada del script. Puede copiar y modificar la muestra JSON adecuada en función de sus planes de implementación. 
+---
+= JSON para el script a fin de crear un clúster
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando crea o elimina un clúster de ONTAP Select con ejemplos de código Python, debe proporcionar un archivo JSON como entrada del script. Puede copiar y modificar la muestra JSON adecuada en función de sus planes de implementación.
+
+
+
+== Clúster de un solo nodo en ESXi
+
+[source, json]
+----
+{
+  "hosts": [
+    {
+      "password": "mypassword1",
+      "name": "host-1234",
+      "type": "ESX",
+      "username": "admin"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {
+      "domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+        "lab3.company-demo.com", "lab4.company-demo.com"
+        ],
+
+      "dns_ips": ["10.206.80.135", "10.206.80.136"]
+      },
+      "ontap_image_version": "9.7",
+      "gateway": "10.206.80.1",
+      "ip": "10.206.80.115",
+      "name": "mycluster",
+      "ntp_servers": ["10.206.80.183", "10.206.80.142"],
+      "ontap_admin_password": "mypassword2",
+      "netmask": "255.255.254.0"
+  },
+
+  "nodes": [
+    {
+      "serial_number": "3200000nn",
+      "ip": "10.206.80.114",
+      "name": "node-1",
+      "networks": [
+        {
+          "name": "ontap-external",
+          "purpose": "mgmt",
+          "vlan": 1234
+        },
+        {
+          "name": "ontap-external",
+          "purpose": "data",
+          "vlan": null
+        },
+        {
+          "name": "ontap-internal",
+          "purpose": "internal",
+          "vlan": null
+        }
+      ],
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk": [],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity": 4802666790125
+          }
+        ]
+      }
+    }
+  ]
+}
+----
+
+
+== Clúster de un solo nodo en ESXi mediante vCenter
+
+[source, json]
+----
+{
+  "hosts": [
+    {
+      "name":"host-1234",
+      "type":"ESX",
+      "mgmt_server":"vcenter-1234"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {"domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+      "lab3.company-demo.com", "lab4.company-demo.com"
+      ],
+      "dns_ips": ["10.206.80.135","10.206.80.136"]
+  },
+
+  "ontap_image_version":"9.7",
+  "gateway":"10.206.80.1",
+  "ip":"10.206.80.115",
+  "name":"mycluster",
+  "ntp_servers": ["10.206.80.183","10.206.80.142"],
+  "ontap_admin_password":"mypassword2",
+  "netmask":"255.255.254.0"
+  },
+
+  "vcenter": {
+    "password":"mypassword2",
+    "hostname":"vcenter-1234",
+    "username":"selectadmin"
+  },
+
+  "nodes": [
+    {
+      "serial_number": "3200000nn",
+      "ip":"10.206.80.114",
+      "name":"node-1",
+      "networks": [
+        {
+          "name":"ONTAP-Management",
+          "purpose":"mgmt",
+          "vlan":null
+        },
+        {
+          "name": "ONTAP-External",
+          "purpose":"data",
+          "vlan":null
+        },
+        {
+          "name": "ONTAP-Internal",
+          "purpose":"internal",
+          "vlan":null
+        }
+      ],
+
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk":[],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity":5685190380748
+          }
+        ]
+      }
+    }
+  ]
+}
+----
+
+
+== Clúster de un solo nodo en KVM
+
+[NOTE]
+====
+* A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
+* A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
+
+
+====
+[source, json]
+----
+{
+  "hosts": [
+    {
+      "password": "mypassword1",
+      "name":"host-1234",
+      "type":"KVM",
+      "username":"root"
+    }
+  ],
+
+  "cluster": {
+    "dns_info": {
+      "domains": ["lab1.company-demo.com", "lab2.company-demo.com",
+        "lab3.company-demo.com", "lab4.company-demo.com"
+      ],
+
+      "dns_ips": ["10.206.80.135", "10.206.80.136"]
+    },
+
+    "ontap_image_version": "9.7",
+    "gateway":"10.206.80.1",
+    "ip":"10.206.80.115",
+    "name":"CBF4ED97",
+    "ntp_servers": ["10.206.80.183", "10.206.80.142"],
+    "ontap_admin_password": "mypassword2",
+    "netmask":"255.255.254.0"
+  },
+  "nodes": [
+    {
+      "serial_number":"3200000nn",
+      "ip":"10.206.80.115",
+      "name": "node-1",
+      "networks": [
+        {
+          "name": "ontap-external",
+          "purpose": "mgmt",
+          "vlan":1234
+        },
+        {
+          "name": "ontap-external",
+          "purpose": "data",
+          "vlan": null
+        },
+        {
+          "name": "ontap-internal",
+          "purpose": "internal",
+          "vlan": null
+        }
+      ],
+
+      "host_name": "host-1234",
+      "is_storage_efficiency_enabled": false,
+      "instance_type": "small",
+      "storage": {
+        "disk": [],
+        "pools": [
+          {
+            "name": "storage-pool-1",
+            "capacity": 4802666790125
+          }
+        ]
+      }
+    }
+  ]
+}
+----

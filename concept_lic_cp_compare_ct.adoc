@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_cp_compare_ct.html 
+keywords: license, licensing, capacity pools, capacity tiers, comparing 
+summary: Existen varias diferencias entre los pools de capacidad y los modelos de licencias por niveles de capacidad. 
+---
+= Comparación de pools de capacidad y licencias por niveles de capacidad
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+En la siguiente tabla se comparan los dos modelos de licencias de producción compatibles con ONTAP Select.
+
+[cols="20,40,40"]
+|===
+|  | Niveles de capacidad | Pools de capacidad 
+
+
+| Número de serie de la licencia | Nueve dígitos generados por NetApp y asignados a un nodo | Nueve dígitos generados por NetApp y asignados a un pool de capacidad 
+
+
+| Bloqueo de licencia | Bloqueado en el nodo ONTAP Select | Bloqueado en instancia de License Manager 
+
+
+| Duración de la licencia | Perpetua (sin necesidad de renovación). | Duración fija basada en la compra (se requiere una renovación) 
+
+
+| Duración de la concesión del agregado de datos | No aplicable de una hora a siete días | Número de serie del nodo 
+|===

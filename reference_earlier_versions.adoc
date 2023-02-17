@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: reference_earlier_versions.html 
+keywords: earlier versions, earlier documentation 
+summary: La documentación de versiones anteriores de ONTAP Select está disponible si no está ejecutando la versión más reciente. 
+---
+= Versiones anteriores de la documentación de ONTAP Select
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La documentación de versiones anteriores de ONTAP Select está disponible si no está ejecutando la versión más reciente. También puede acceder a la documentación necesaria cuando utilice el hipervisor KVM con una versión anterior del soporte.
+
+.ONTAP Select 9.5 y anteriores
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293&archive=true["Biblioteca de productos de ONTAP Select"^]
+

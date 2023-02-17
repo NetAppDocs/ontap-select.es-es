@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: task_deploy_cluster.html 
+keywords: install, installing, deploy ontap select cluster, create cluster 
+summary: Puede usar la interfaz de usuario web proporcionada con la utilidad de administración ONTAP Select Deploy para implementar un clúster de ONTAP Select de un solo nodo o varios nodos. 
+---
+= Implementar un clúster de ONTAP Select
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede usar la interfaz de usuario web proporcionada con la utilidad de administración ONTAP Select Deploy para implementar un clúster de ONTAP Select de un solo nodo o varios nodos.
+
+Cuando crea un clúster de ONTAP Select mediante la interfaz web de la utilidad de puesta en marcha, se le guiará a través de una secuencia específica de pasos. El proceso exacto varía en función de si se pone en marcha un clúster de un solo nodo o de varios nodos.
+
+
+TIP: También puede implementar clústeres ONTAP Select mediante la CLI de la utilidad de implementación.
+
+
+
+== Antes de empezar
+
+Debe prepararse para la implementación a fin de asegurarse de que la implementación se realice correctamente.
+
+Planificación inicial:: Revise las secciones _Plan_ y _License_ de la documentación. Según esto, puede tomar decisiones sobre el clúster, como:
++
+--
+* Hipervisor
+* Número de nodos
+* Tipo de licencia
+* Tamaño de la plataforma (tipo de instancia)
+* Versión de ONTAP Select
+
+
+--
+Preparación de host:: Debe preparar los hosts de hipervisor donde se ejecutarán los nodos de ONTAP Select y tener los archivos de licencia de almacenamiento necesarios en función del modelo de licencia. Para ver los requisitos de preparación:
++
+--
+. Inicie sesión en la interfaz de usuario web de implementación.
+. Haga clic en image:icon_question_mark.gif["Signo de interrogación"] en la parte superior de la página.
+. Haga clic en *requisitos previos*.
+. Desplácese hacia abajo para revisar los requisitos y haga clic en *Aceptar*.
+
+
+--
+Archivos de licencia:: Si tiene pensado implementar el clúster en un entorno de producción, debe adquirir los archivos de licencia de almacenamiento en función del modelo de licencia.
+Implementación de credenciales de instalación y cuenta:: Debe instalar la utilidad de administración de implementación y realizar la configuración inicial. Consulte link:task_install_deploy.html["Instalación de ONTAP Select Deploy"] si quiere más información. Necesita tener la contraseña para la cuenta de administrador de despliegue que se configuró como parte del proceso de instalación.
+Instalar imágenes de nodos ONTAP Select anteriores:: De forma predeterminada, la utilidad de administración de implementación contiene la versión más reciente de ONTAP Select en el momento de la versión. Si desea implementar clústeres mediante una versión anterior de ONTAP Select, debe añadir la imagen de ONTAP Select a la instancia de implementación. Consulte link:task_cli_deploy_image_add.html["Adición de una imagen de ONTAP Select para implementar"] si quiere más información.
+Página de inicio de primeros pasos:: La página inicial *Introducción a ONTAP Select Deploy* le guía a través del proceso de varios pasos de creación de un clúster. Hay cinco pasos principales, que incluyen:
++
+--
+* Añada licencias
+* Añada el host al inventario
+* Cree un clúster
+* Comprobaciones previas de red
+* Ponga en marcha el clúster
+
+
+--
+
+
+
+NOTE: Puede realizar los mismos pasos de forma independiente haciendo clic en las pestañas de la parte superior de la página (Clusters, Hypervisor hosts, Administration).
+
+Comprobador de redes:: Si va a implementar un clúster de varios nodos, debe estar familiarizado con el comprobador de red.
+Después de implementar un clúster:: Debe realizar una copia de seguridad de los datos de configuración de implementación de ONTAP Select.
+
+
+
+
+== Creación de un clúster de un solo nodo
+
+Puede usar la interfaz de usuario web de implementación de ONTAP Select para poner en marcha un clúster ONTAP Select de un solo nodo.
+
+.Antes de empezar
+Consulte link:task_deploy_cluster.html#before-you-begin["Antes de empezar"] para preparar la puesta en marcha del clúster. La administración de la implementación debe estar instalada y configurada inicialmente (contraseña, AutoSupport, vCenter).
+
+.Acerca de esta tarea
+Se crea un clúster ONTAP Select con un nodo para una implementación de producción.
+
+.Pasos
+. Inicie sesión en la utilidad Deploy a través de la interfaz web mediante la cuenta de administrador (admin).
+. Si aparece la ventana emergente *Bienvenido a ONTAP Select*, confirme que ha cumplido los requisitos previos de configuración y haga clic en *Aceptar*.
+. Si no aparece la página de inicio del clúster *Introducción*, haga clic en image:icon_question_mark.gif["Signo de interrogación"] En la parte superior de la página y haga clic en *Introducción*.
+. En la página *Introducción*, haga clic en *cargar* y seleccione una licencia de su estación de trabajo local y haga clic en *Abrir* para cargar la licencia.
+. Haga clic en *Actualizar* y confirme que se ha añadido la licencia.
+. Haga clic en *Siguiente* para agregar un host de hipervisor y, a continuación, haga clic en *Agregar*.
++
+Puede añadir el host ESXi directamente o conectarse a una instancia de vCenter Server. Proporcione los detalles de host y las credenciales adecuadas según sea necesario.
+
+. Haga clic en *Actualizar* y confirme que el valor *Tipo* del host es *ESX*.
++
+Las credenciales de cuenta introducidas se añaden a la base de datos de credenciales de implementación.
+
+. Haga clic en *Siguiente* para iniciar el proceso de creación del clúster.
+. En la sección *Detalles del clúster*, proporcione toda la información necesaria que describe el clúster y haga clic en *hecho*.
+. En *Configuración de nodos*, proporcione la dirección IP de administración de nodos y seleccione la licencia para el nodo; puede cargar una nueva licencia si es necesario. También puede cambiar el nombre del nodo si es necesario.
+. Proporcione la configuración *Hypervisor* y *Red*.
++
+Existen tres configuraciones de nodos que definen el tamaño de la máquina virtual y el conjunto de funciones disponible. Estos tipos de instancia son compatibles con las ofertas estándar, premium y premium XL de la licencia adquirida, respectivamente. La licencia que seleccione para el nodo debe coincidir o superar el tipo de instancia.
+
++
+Seleccione el host del hipervisor, así como las redes de gestión y datos.
+
+. Proporcione la configuración *almacenamiento* y haga clic en *hecho*.
++
+Puede seleccionar las unidades según el nivel de licencia de la plataforma y la configuración de host.
+
+. Revise y confirme la configuración del clúster.
++
+Para cambiar la configuración, haga clic en image:icon_pencil.gif["Editar"] en la sección correspondiente.
+
+. Haga clic en *Siguiente* y proporcione la contraseña de administrador de ONTAP.
+. Haga clic en *Crear clúster* para iniciar el proceso de creación del clúster y, a continuación, haga clic en *Aceptar* en la ventana emergente.
++
+Es posible que el clúster se cree demore hasta 30 minutos.
+
+. Supervise el proceso de creación de un clúster en varios pasos para confirmar que el clúster se ha creado correctamente.
++
+La página se actualiza automáticamente a intervalos regulares.
+
++
+
+TIP: Si la operación de creación de clúster se ha iniciado pero no puede completar, es posible que la contraseña administrativa de ONTAP que define no se registre. En este caso, puede acceder a la interfaz de gestión del clúster de ONTAP Select mediante la contraseña _changeme123_ para la cuenta de administrador.
+
+
+
+.Después de terminar
+Debe confirmar que la función ONTAP Select AutoSupport esté configurada y realizar un backup de los datos de configuración de implementación de ONTAP Select.

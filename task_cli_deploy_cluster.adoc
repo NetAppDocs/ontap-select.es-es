@@ -1,0 +1,364 @@
+---
+sidebar: sidebar 
+permalink: task_cli_deploy_cluster.html 
+keywords: administer, administering, cli, create cluster, deploy cluster 
+summary: Puede usar la interfaz de línea de comandos proporcionada con la utilidad de administración ONTAP Select Deploy para crear un clúster de ONTAP Select de un solo nodo o varios nodos. 
+---
+= Implemente un clúster de ONTAP Select mediante la CLI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede usar la interfaz de línea de comandos proporcionada con la utilidad de administración ONTAP Select Deploy para crear un clúster de ONTAP Select de un solo nodo o varios nodos.
+
+
+
+== Antes de empezar
+
+Antes de crear un clúster de ONTAP Select en ESXi, debe comprender la preparación necesaria.
+
+
+
+=== Preparar la conexión de almacenamiento al nodo ONTAP Select
+
+Si utiliza una controladora RAID de hardware local, debe crear al menos un pool de almacenamiento en cada nodo para los datos del sistema así como la raíz y los agregados de datos. Debe conectar el pool de almacenamiento como parte de la configuración del nodo ONTAP Select.
+
+Si utiliza RAID de software, debe crear un pool de almacenamiento para los datos del sistema y asegurarse de que las unidades SSD estén disponibles para los agregados de datos y raíz. Debe conectar el pool de almacenamiento y los discos como parte de la configuración del nodo ONTAP Select.
+
+
+
+=== Versiones de ONTAP Select disponibles
+
+La utilidad de administración de implementación contiene una sola versión de ONTAP Select. Si desea implementar los clústeres mediante una versión anterior de ONTAP Select, primero debe añadir la imagen de ONTAP Select a la instancia de implementación. Consulte link:task_adm_deploy_image_add.html["Adición de una imagen de ONTAP Select para implementar"] si quiere más información.
+
+
+
+=== Licencia de ONTAP Select para una implementación de producción
+
+Antes de implementar un clúster de ONTAP Select en un entorno de producción, debe adquirir una licencia de capacidad de almacenamiento y descargar el archivo de licencia asociado. Se puede obtener una licencia para el almacenamiento de cada nodo mediante el modelo _Capacity Tiers_ o licencia de un pool compartido mediante el modelo _Capacity Pools_.
+
+
+
+== Carga y registro de un archivo de licencia
+
+Después de adquirir un archivo de licencia con capacidad de almacenamiento, debe cargar el archivo que contiene la licencia en la máquina virtual de implementación y registrarlo.
+
+
+NOTE: Si está implementando un clúster solo para la evaluación, puede omitir este paso.
+
+.Antes de empezar
+Debe tener la contraseña de la cuenta de usuario administrador.
+
+.Pasos
+. En un shell de comandos de la estación de trabajo local, utilice la utilidad sftp para cargar el archivo de licencia en la máquina virtual Deploy.
++
+Ejemplo
+
++
+....
+sftp admin@10.234.81.101 (provide password when prompted)
+put NLF-320000nnn.txt
+exit
+....
+. Inicie sesión en la CLI de la utilidad de implementación con la cuenta de administrador mediante SSH.
+. Registre la licencia:
++
+`license add -file-name FILENAME`
+
++
+Introduzca la contraseña de la cuenta de administrador cuando se le solicite.
+
+. Mostrar las licencias en el sistema para confirmar que la licencia se ha añadido correctamente:
++
+`license show`
+
+
+
+
+
+== Añadir hosts de hipervisor ESXi
+
+Debe registrar cada host de hipervisor en el que se ejecutará un nodo de ONTAP Select. Como parte de esto, la utilidad de administración de puesta en marcha autentica ya sea en el servidor vCenter que gestiona el host o directamente en el host independiente ESXi.
+
+.Acerca de esta tarea
+Antes de registrar un host gestionado por vCenter, es necesario añadir una cuenta de servidor de gestión para vCenter Server. Si el host no está gestionado por vCenter, puede proporcionar la credencial de host como parte del registro del host. Debe utilizar este procedimiento para añadir cada host.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
+. Si el host está gestionado por un servidor de vCenter, añada la credencial de cuenta de vCenter:
++
+`credential add -hostname <FQDN|IP> -type vcenter -username VCENTER_USERNAME`
+
++
+Ejemplo
+
++
+....
+credential add -hostname vc.select.company-demo.com -type vcenter -username administrator@vsphere.local
+....
+. Registre el host:
++
+** Registre un host independiente no gestionado por vCenter:
+`host register -name <FQDN|IP> -hypervisor-type ESX -username ESX_USERNAME`
+** Registre un host gestionado por vCenter:
+`host register -name <FQDN|IP> -hypervisor-type ESX -mgmt-server <FQDN|IP>`
++
+Ejemplo
+
++
+....
+host register -name 10.234.81.14 -hypervisor-type ESX -mgmt-server vc.select.company-demo.com
+....
+
+
+. Muestre el estado del host y confirme que se ha authenicated.
++
+`host show -name <FQDN|IP> -detailed`
+
++
+Ejemplo
+
++
+....
+host show -name 10.234.81.14 -detailed
+....
+
+
+
+
+== Crear y configurar un clúster de ONTAP Select
+
+Debe crear y, a continuación, configurar el clúster ONTAP Select. Una vez que se configura el clúster, puede configurar los nodos individuales.
+
+.Antes de empezar
+Debe decidir cuántos nodos contiene el clúster y tener la información de configuración asociada.
+
+.Acerca de esta tarea
+Cuando crea un clúster ONTAP Select, la utilidad Deploy genera automáticamente los nombres de nodo según el nombre del clúster y el número de nodos que proporcione. En la implementación también se generan los identificadores de nodo únicos.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
+. Cree el clúster:
++
+`cluster create -name CLUSTERNAME -node-count NODES`
+
++
+Ejemplo
+
++
+....
+cluster create -name test-cluster -node-count 1
+....
+. Configure el clúster:
++
+`cluster modify -name CLUSTERNAME -mgmt-ip IP_ADDRESS -netmask NETMASK -gateway IP_ADDRESS -dns-servers <FQDN|IP>_LIST -dns-domains DOMAIN_LIST`
+
++
+Ejemplo
+
++
+....
+cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
+-gateway 10.234.81.1 -dns-servers 10.221.220.10 -dnsdomains select.company-demo.com
+....
+. Muestra la configuración y el estado del clúster:
++
+`cluster show -name CLUSTERNAME -detailed`
+
+
+
+
+
+== Configurar un nodo ONTAP Select
+
+Debe configurar cada uno de los nodos en el clúster de ONTAP Select.
+
+.Antes de empezar
+Debe tener la información de configuración del nodo. El archivo de licencia del nivel de capacidad debe cargarse e instalarse en la utilidad Deploy.
+
+.Acerca de esta tarea
+Debe usar este procedimiento para configurar cada nodo. En este ejemplo, se aplica una licencia de nivel de capacidad al nodo.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
+. Determine los nombres asignados a los nodos del clúster:
++
+`node show -cluster-name CLUSTERNAME`
+
+. Seleccione el nodo y realice una configuración básica:
+`node modify -name NODENAME -cluster-name CLUSTERNAME -host-name <FQDN|IP> -license-serial-number NUMBER -instance-type TYPE -passthrough-disks false`
++
+Ejemplo
+
++
+....
+node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.81.14
+-license-serial-number 320000nnnn -instance-type small -passthrough-disks false
+....
++
+La configuración RAID del nodo se indica con el parámetro _passThrough-disks_ . Si utiliza una controladora RAID de hardware local, este valor debe ser FALSE. Si se utiliza RAID de software, este valor debe ser TRUE.
+
++
+Una licencia de nivel de capacidad se usa para el nodo ONTAP Select.
+
+. Mostrar la configuración de red disponible en el host:
++
+`host network show -host-name <FQDN|IP> -detailed`
+
++
+Ejemplo
+
++
+....
+host network show -host-name 10.234.81.14 -detailed
+....
+. Realice la configuración de red del nodo:
++
+`node modify -name NODENAME -cluster-name CLUSTERNAME -mgmt-ip IP -management-networks NETWORK_NAME -data-networks NETWORK_NAME -internal-network NETWORK_NAME`
+
++
+Al implementar un clúster de un solo nodo, no se necesita una red interna y se debe quitar la red interna.
+
++
+Ejemplo
+
++
+....
+node modify -name test-cluster-01 -cluster-name test-cluster -mgmt-ip 10.234.81.21
+-management-networks sDOT_Network -data-networks sDOT_Network
+....
+. Mostrar la configuración del nodo:
++
+`node show -name NODENAME -cluster-name CLUSTERNAME -detailed`
+
++
+Ejemplo
+
++
+....
+node show -name test-cluster-01 -cluster-name test-cluster -detailed
+....
+
+
+
+
+== Conecte el almacenamiento a los nodos ONTAP Select
+
+Debe configurar el almacenamiento que utiliza cada nodo del clúster de ONTAP Select. Cada nodo debe tener asignado siempre al menos un pool de almacenamiento. Cuando se usa software RAID, cada nodo también debe asignarse al menos una unidad de disco.
+
+.Antes de empezar
+Se debe crear el pool de almacenamiento con VMware vSphere. Si utiliza RAID de software, también necesita al menos una unidad de disco disponible.
+
+.Acerca de esta tarea
+Si utiliza una controladora RAID de hardware local, debe realizar los pasos del 1 al 4. Al utilizar el software RAID, debe realizar los pasos del 1 al 6.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con las credenciales de cuenta de administrador.
+. Visualice las agrupaciones de almacenamiento disponibles en el host:
++
+`host storage pool show -host-name <FQDN|IP>`
+
++
+Ejemplo
+
++
+[listing]
+----
+host storage pool show -host-name 10.234.81.14
+----
++
+También se pueden obtener los pools de almacenamiento disponibles mediante VMware vSphere.
+
+. Conecte un pool de almacenamiento disponible al nodo ONTAP Select:
++
+`node storage pool attach -name POOLNAME -cluster-name CLUSTERNAME -node-name NODENAME -capacity-limit LIMIT`
+
++
+Si incluye el parámetro -capacity-limit, especifique el valor como GB o TB.
+
++
+Ejemplo
+
++
+[listing]
+----
+node storage pool attach -name sDOT-02 -cluster-name test-cluster -
+node-name test-cluster-01 -capacity-limit 500GB
+----
+. Muestre los pools de almacenamiento conectados al nodo:
++
+`node storage pool show -cluster-name CLUSTERNAME -node-name NODENAME`
+
++
+Ejemplo
+
++
+[listing]
+----
+node storage pool show -cluster-name test-cluster -node-name testcluster-01
+----
+. Si utiliza RAID de software, conecte la unidad o las unidades disponibles:
++
+`node storage disk attach -node-name NODENAME -cluster-name CLUSTERNAME -disks LIST_OF_DRIVES`
+
++
+Ejemplo
+
++
+[listing]
+----
+node storage disk attach -node-name NVME_SN-01 -cluster-name NVME_SN -disks 0000:66:00.0 0000:67:00.0 0000:68:00.0
+----
+. Si utiliza RAID de software, muestre los discos conectados al nodo:
++
+`node storage disk show -node-name NODENAME -cluster-name CLUSTERNAME`
+
++
+Ejemplo
+
++
+[listing]
+----
+node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
+----
+
+
+
+
+== Implementar un clúster de ONTAP Select
+
+Después de configurar el clúster y los nodos, puede implementar el clúster.
+
+.Antes de empezar
+Antes de implementar un clúster de varios nodos, debe ejecutar el comprobador de conectividad de red para confirmar la conectividad entre los nodos del clúster en la red interna.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
+. Implemente el clúster de ONTAP Select:
++
+`cluster deploy -name CLUSTERNAME`
+
++
+Ejemplo
+
++
+[listing]
+----
+cluster deploy -name test-cluster
+----
++
+Introduzca la contraseña que se utilizará para la cuenta de administrador de ONTAP cuando se le solicite.
+
+. Muestre el estado del clúster para determinar cuándo se ha implementado correctamente:
++
+`cluster show -name CLUSTERNAME`
+
+
+
+.Después de terminar
+Debe realizar una copia de seguridad de los datos de configuración de implementación de ONTAP Select.

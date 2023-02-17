@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: task_adm_security.html 
+keywords: administer, administering, web, security 
+summary: Existen varias tareas relacionadas que puede realizar como parte de la protección de una puesta en marcha de ONTAP Select. 
+---
+= Seguridad
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Existen varias tareas relacionadas que puede realizar como parte de la protección de una puesta en marcha de ONTAP Select.
+
+
+
+== Cambio de la contraseña del administrador de despliegue
+
+Puede cambiar la contraseña de la cuenta de administrador de la máquina virtual de implementación según sea necesario mediante la interfaz de usuario web.
+
+.Pasos
+. Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
+. Haga clic en el icono de figura situado en la parte superior derecha de la página y seleccione *Cambiar contraseña*.
+. Introduzca la contraseña actual y la nueva según se le solicite y haga clic en *Enviar*.
+
+
+
+
+== Adición de una cuenta de servidor de gestión
+
+Puede agregar una cuenta del servidor de gestión a la base de datos del almacén de credenciales de despliegue.
+
+.Antes de empezar
+Debe estar familiarizado con los tipos de credenciales y con cómo se utilizan en la implementación de ONTAP Select.
+
+.Pasos
+. Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
+. Haga clic en la ficha *Administración* situada en la parte superior de la página.
+. Haga clic en *servidores de administración* y, a continuación, haga clic en *Agregar vCenter*.
+. Introduzca la siguiente información y haga clic en *Agregar*.
++
+[cols="30,70"]
+|===
+| En este campo… | Haga lo siguiente … 
+
+
+| Nombre/dirección IP | Proporcione el nombre de dominio o la dirección IP de vCenter Server. 
+
+
+| Nombre de usuario | Introduzca el nombre de usuario de la cuenta para acceder a vCenter. 
+
+
+| Contraseña | Introduzca la contraseña del nombre de usuario asociado. 
+|===
+. Puede registrar (instalar) opcionalmente el complemento Deploy vCenter.
+. Una vez añadido el nuevo servidor de gestión, puede hacer clic opcionalmente image:icon_kebab.gif["Opciones"] y seleccione una de las siguientes opciones:
++
+** Actualizar las credenciales
+** Regístrese como plugin
+** Verificar credenciales
+** Quitar el servidor de gestión
+
+
+

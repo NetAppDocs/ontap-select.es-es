@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: task_cli_security.html 
+keywords: administer, administering, cli, security 
+summary: Existen varias tareas relacionadas que puede realizar como parte de la protección de una puesta en marcha de ONTAP Select. 
+---
+= Seguridad
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Existen varias tareas relacionadas que puede realizar como parte de la protección de una puesta en marcha de ONTAP Select.
+
+
+
+= Cambio de la contraseña del administrador de despliegue
+
+Puede cambiar la contraseña de la cuenta de administrador de la máquina virtual de implementación según sea necesario mediante la interfaz de línea de comandos.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante la cuenta de administrador.
+. Cambie la contraseña:
+`password modify`
+. Responda a todas las solicitudes que se correspondan con su entorno.
+

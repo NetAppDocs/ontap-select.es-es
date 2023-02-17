@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_platforms.html 
+keywords: license, licensing, platform license offerings, license offerings, standard, premium, premium xl 
+summary: Puede comprar una licencia de nivel de capacidad o pool de capacidad de ONTAP Select en uno de los tres niveles de capacidad de la plataforma. Estas ofertas de licencias determinan las capacidades de los hosts en los que pone en marcha ONTAP Select. 
+---
+= Descripción de las ofertas de licencia de la plataforma
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede comprar una licencia de nivel de capacidad o pool de capacidad de ONTAP Select en uno de los tres niveles de capacidad de la plataforma. Estas ofertas de licencias determinan las capacidades de los hosts en los que pone en marcha ONTAP Select.
+
+
+
+== Lo que proporciona una oferta de licencia de plataforma
+
+Una oferta de licencia específica define y limita las funcionalidades del host del hipervisor en dos áreas:
+
+* Tipo de instancia (CPU, memoria)
+* Características adicionales
+
+
+Las ofertas de licencias se organizan en un orden ascendente de capacidades de estándar a XL premium. En general, la opción de licencia que elija le concede las funcionalidades de ese nivel y todos los niveles inferiores. Por ejemplo, el nivel premium proporciona las funcionalidades de premium y estándar.
+
+
+
+== Ofertas de licencias de plataformas
+
+Hay tres ofertas de licencia de plataforma disponibles.
+
+
+
+=== Estándar
+
+La oferta estándar ofrece las siguientes funcionalidades:
+
+* Solo tipo de instancia pequeña
+* Solo unidades de disco duro (HDD)
+* Sólo controladora RAID de hardware local
+* VNAS
+
+
+
+
+=== Premium
+
+La oferta premium ofrece las siguientes funcionalidades:
+
+* Tipo de instancia pequeña o mediana
+* Unidades de disco duro (HDD) o unidades de estado sólido (SSD)
+* Controlador RAID de hardware local o RAID de software
+* VNAS
+* SDS de MetroCluster
+
+
+
+
+=== Premium XL
+
+La oferta premium XL ofrece las siguientes funciones:
+
+* Tipo de instancia pequeño, mediano o grande.
+* Unidades de disco duro (HDD) o unidades de estado sólido (SSD)
+* Controlador RAID de hardware local o RAID de software.
+* VNAS
+* SDS de MetroCluster
+
+
+
+NOTE: El tipo de instancia grande (con la licencia premium XL) solo se ofrece en VMware ESXi.

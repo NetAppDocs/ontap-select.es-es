@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: concept_ha_config.html 
+keywords: ontap select, high availability configurations, two-node ha, multi-node ha, mc sds 
+summary: Descubra opciones de alta disponibilidad para seleccionar la mejor configuración de alta disponibilidad para su entorno. 
+---
+= Configuraciones de alta disponibilidad
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Descubra opciones de alta disponibilidad para seleccionar la mejor configuración de alta disponibilidad para su entorno.
+
+Aunque los clientes están empezando a mover las cargas de trabajo de las aplicaciones de almacenamiento de clase empresarial a soluciones basadas en software que se ejecutan en hardware genérico, las expectativas y necesidades en cuanto a resiliencia y tolerancia a fallos no han cambiado. Una solución de alta disponibilidad que proporciona un objetivo de punto de recuperación (RPO) cero protege al cliente de la pérdida de datos debido a un fallo de cualquier componente de la pila de la infraestructura.
+
+Una gran parte del mercado de SDS está basado en la noción de almacenamiento sin elementos compartidos, con la replicación de software que proporciona resiliencia de datos al almacenar varias copias de datos de usuario en diferentes silos de almacenamiento. ONTAP Select se basa en esta premisa mediante las funciones de replicación síncrona (RAID SyncMirror) que proporciona ONTAP para almacenar una copia adicional de los datos de usuario en el clúster. Esto ocurre en el contexto de un par de alta disponibilidad. Cada par de alta disponibilidad almacena dos copias de los datos de usuario: Una en el almacenamiento proporcionado por el nodo local y otra en el almacenamiento proporcionado por el partner de alta disponibilidad. Dentro de un clúster de ONTAP Select, la alta disponibilidad y la replicación síncrona están Unidas entre sí y la funcionalidad de los dos no se puede desacoplar ni utilizar de forma independiente. Por lo tanto, las funciones de replicación sincrónica solo están disponibles en los nodos de varios nodos.
+
+
+NOTE: En un clúster ONTAP Select, la funcionalidad de replicación síncrona es una función de una implementación de alta disponibilidad, no de los motores de replicación asíncronos de SnapMirror o SnapVault. La replicación síncrona no se puede utilizar independientemente de alta disponibilidad.
+
+Existen dos modelos de puesta en marcha de alta disponibilidad de ONTAP Select: Los clústeres multinodo (cuatro, seis u ocho nodos) y los clústeres de dos nodos. La característica más destacada de un clúster ONTAP Select de dos nodos es el uso de un servicio de mediador externo para resolver situaciones de cerebro dividido. La máquina virtual de puesta en marcha de ONTAP actúa como mediador predeterminado para todas las parejas de alta disponibilidad de dos nodos que configura.
+
+Las dos arquitecturas se representan en las siguientes figuras.
+
+*Cluster ONTAP Select de dos nodos con mediador remoto y utilizando almacenamiento conectado local*
+
+image:DDHA_01.jpg["Clúster ONTAP Select de dos nodos con mediador remoto y utilizando almacenamiento conectado local"]
+
+
+NOTE: El clúster ONTAP Select de dos nodos está compuesto por un par de alta disponibilidad y un mediador. Dentro de la pareja de alta disponibilidad, los agregados de datos de cada nodo de clúster se duplican de forma síncrona y, en caso de una conmutación por error, no se perderán datos.
+
+*Clúster ONTAP Select de cuatro nodos que utiliza almacenamiento con conexión local*image:DDHA_02.jpg["Clúster ONTAP Select de cuatro nodos mediante almacenamiento con conexión local"]
+
+* El clúster ONTAP Select de cuatro nodos se compone de dos parejas de alta disponibilidad. Los clústeres de seis y ocho nodos están compuestos por tres y cuatro parejas de alta disponibilidad, respectivamente. Dentro de cada pareja de alta disponibilidad, los agregados de datos de cada nodo de clúster se duplican de forma síncrona y, en caso de una conmutación por error, no hay pérdida de datos.
+* Solo puede haber una instancia de ONTAP Select en un servidor físico cuando utiliza almacenamiento DAS. ONTAP Select requiere acceso no compartido a la controladora RAID local del sistema y está diseñada para gestionar los discos de conexión local, lo cual sería imposible sin conectividad física al sistema de almacenamiento.
+
+
+
+
+== Alta disponibilidad de dos nodos frente a la alta disponibilidad de varios nodos
+
+A diferencia de las cabinas FAS, los nodos ONTAP Select de un par de alta disponibilidad se comunican de forma exclusiva a través de la red IP. Esto significa que la red IP es un único punto de error (SPOF), y la protección contra particiones de red y escenarios de cerebro dividido se convierte en un aspecto importante del diseño. El clúster de varios nodos puede admitir fallos de un solo nodo, porque los tres o más nodos supervivientes pueden establecer el quórum del clúster. El clúster de dos nodos confía en el servicio mediador alojado en la puesta en marcha de la máquina virtual de ONTAP para obtener el mismo resultado.
+
+El latido del tráfico de red entre los nodos de ONTAP Select y el servicio mediador de puesta en marcha de ONTAP es mínimo y flexible para que la máquina virtual puesta en marcha de ONTAP se aloje en un centro de datos diferente al clúster de dos nodos de ONTAP Select.
+
+
+NOTE: La máquina virtual de puesta en marcha de ONTAP se convierte en una parte integral de un clúster de dos nodos al servir como mediador de ese clúster. Si el servicio mediador no está disponible, el clúster de dos nodos sigue proporcionando datos, pero las funcionalidades de recuperación tras fallos del almacenamiento del clúster de ONTAP Select quedan deshabilitadas. Por lo tanto, el servicio de mediador de puesta en marcha de ONTAP debe mantener una comunicación constante con cada nodo ONTAP Select del par de alta disponibilidad. Se requiere un ancho de banda mínimo de 5 Mbps y una latencia máxima de ida y vuelta (RTT) de 125 ms para permitir el funcionamiento correcto del quórum del clúster.
+
+Si la máquina virtual de implementación de ONTAP que actúa como mediador está temporalmente o potencialmente no disponible de forma permanente, se puede utilizar una máquina virtual de implementación de ONTAP secundaria para restaurar el quórum de clúster de dos nodos. De este modo se genera una configuración en la que el nuevo equipo virtual de implementación de ONTAP no puede gestionar los nodos ONTAP Select, pero participa correctamente en el algoritmo de quórum de clúster. La comunicación entre los nodos ONTAP Select y la máquina virtual de implementación de ONTAP se realiza mediante el protocolo iSCSI mediante IPv4. La dirección IP de gestión del nodo ONTAP Select es el iniciador y la dirección IP de la máquina virtual de implementación de ONTAP es el destino. Por lo tanto, no es posible admitir direcciones IPv6 para las direcciones IP de gestión de nodos cuando se crea un clúster de dos nodos. Los discos de buzón alojados de implementación de ONTAP se crean y enmascaran automáticamente en las direcciones IP de gestión de nodos de ONTAP Select correspondientes en el momento de la creación de clústeres de dos nodos. Toda la configuración se realiza automáticamente durante la instalación y no es necesario realizar ninguna otra acción administrativa. La instancia de puesta en marcha de ONTAP que crea el clúster es el mediador predeterminado para ese clúster.
+
+Se requiere una acción administrativa si se debe cambiar la ubicación del mediador original. Es posible recuperar un quórum de clúster incluso si se pierde la VM de despliegue de ONTAP original. Sin embargo, NetApp recomienda realizar un backup de la base de datos de implementación de ONTAP después de que se cree una instancia de cada clúster de dos nodos.
+
+
+
+== Alta disponibilidad de dos nodos frente a la gran disponibilidad de dos nodos (SDS de MetroCluster)
+
+Es posible estirar un clúster de alta disponibilidad activo/activo de dos nodos en grandes distancias y potencialmente colocar cada nodo en un centro de datos diferente. La única distinción entre un clúster de dos nodos y un clúster extendido de dos nodos (también conocido como SDS de MetroCluster) es la distancia de conectividad de red entre nodos.
+
+El clúster de dos nodos está definido como un clúster para el cual ambos nodos están ubicados en el mismo centro de datos a una distancia de 300 m. En general, ambos nodos tienen vínculos superiores al mismo switch de red o conjunto de switches de red de enlace entre switches (ISL).
+
+El SDS de MetroCluster de dos nodos se define como un clúster para el cual los nodos están físicamente separados (habitaciones diferentes, edificios y centros de datos diferentes) por más de 300 m. Además, las conexiones de enlace ascendente de cada nodo están conectadas a conmutadores de red independientes. El SDS de MetroCluster no requiere hardware dedicado. Sin embargo, el entorno debe ajustarse a los requisitos de latencia (un máximo de 5 ms en RTT y 5 ms en inestabilidad, para un total de 10 ms) y distancia física (un máximo de 10 km).
+
+SDS de MetroCluster es una función excepcional y requiere una licencia Premium. Con la licencia Premium se puede crear equipos virtuales pequeños y medianos, así como discos HDD y SSD.
+
+
+NOTE: El almacenamiento SDS de MetroCluster es compatible tanto con el almacenamiento conectado local (DAS) como con el almacenamiento compartido (vNAS). Tenga en cuenta que las configuraciones de vNAS suelen tener una latencia innata más alta debido a la red entre la máquina virtual de ONTAP Select y el almacenamiento compartido. Las configuraciones de SDS de MetroCluster deben proporcionar un máximo de 10 ms de latencia entre los nodos, incluida la latencia del almacenamiento compartido. En otras palabras, no es adecuado medir la latencia entre los equipos virtuales Select, ya que la latencia del almacenamiento compartido no es mínima para estas configuraciones.

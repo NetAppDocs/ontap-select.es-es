@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: concept_cli_before.html 
+keywords: administer, administering, cli, before you begin 
+summary: Puede acceder al shell de gestión de implementación mediante SSH. Después de iniciar sesión, puede realizar varios procedimientos administrativos. 
+---
+= Antes de empezar
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede acceder al shell de gestión de implementación mediante SSH. Después de iniciar sesión, puede realizar varios procedimientos administrativos.
+
+En general, los procedimientos que puede realizar con la CLI se dividen en una de tres categorías.
+
+Ponga en marcha un clúster de ONTAP Select:: Puede poner en marcha un clúster de un único nodo o de varios nodos.
+Realice un procedimiento con un clúster de ONTAP Select existente:: Los procedimientos administrativos se organizan en diversas categorías, como _Security_ y _Clusters_.
+Realice un procedimiento en la utilidad Deploy:: Hay varios procedimientos específicos para implementar (como cambiar la contraseña del administrador).
+

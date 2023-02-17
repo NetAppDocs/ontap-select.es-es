@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: concept_api_before_python.html 
+keywords: rest api, deploy rest api, rest, python, before you begin 
+summary: Debe preparar el entorno antes de ejecutar los scripts Python de ejemplo. 
+---
+= Antes de acceder a la API mediante Python
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe preparar el entorno antes de ejecutar los scripts Python de ejemplo.
+
+Antes de ejecutar los scripts de Python, debe asegurarse de que el entorno está configurado correctamente:
+
+* Debe instalarse la última versión aplicable de python2. Los códigos de las muestras se han probado utilizando python2. También deben ser portátiles a Python3, pero no han sido probados para la compatibilidad.
+* Deben instalarse las solicitudes y las bibliotecas urllib3. Puede utilizar pip u otra herramienta de gestión Python según sea necesario para su entorno.
+* La estación de trabajo cliente donde se ejecutan los scripts debe tener acceso de red a la máquina virtual ONTAP Select Deploy.
+
+
+Además, debe tener la siguiente información:
+
+* Dirección IP de la máquina virtual de implementación
+* Nombre de usuario y contraseña de una cuenta de administrador de despliegue
+

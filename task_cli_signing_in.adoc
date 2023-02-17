@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: task_cli_signing_in.html 
+keywords: administer, administering, cli, deploy, sign in, signing in 
+summary: Debe iniciar sesión en el shell de gestión de implementación mediante SSH. Después de iniciar sesión, puede emitir comandos de la CLI para crear un clúster ONTAP Select y realizar procedimientos administrativos relacionados. 
+---
+= Inicio de sesión para implementar mediante SSH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe iniciar sesión en el shell de gestión de implementación mediante SSH. Después de iniciar sesión, puede emitir comandos de la CLI para crear un clúster ONTAP Select y realizar procedimientos administrativos relacionados.
+
+.Antes de empezar
+Debe tener la contraseña actual de la cuenta de administrador de implementación (admin). Si es la primera vez que inicia sesión y utiliza vCenter para instalar la máquina virtual de implementación, debe usar la contraseña establecida durante la instalación.
+
+.Pasos
+. Inicie sesión utilizando la cuenta de administrador y la dirección IP de administración de la máquina virtual de implementación; por ejemplo:
++
+`ssh admin@<10.235.82.22>`
+
+. Si es la primera vez que inicia sesión y no instaló la implementación mediante el asistente disponible con vCenter, proporcione la siguiente información de configuración cuando se le solicite:
++
+** Nueva contraseña para la cuenta de administrador (obligatorio)
+** Nombre de la empresa (obligatorio)
+** URL de proxy (opcional)
+
+
+. Escriba *?* y pulse *Intro* para mostrar una lista de los comandos de shell de administración disponibles.
+

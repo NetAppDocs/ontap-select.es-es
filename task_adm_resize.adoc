@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: task_adm_resize.html 
+keywords: administer, administering, web, resizing nodes, resizing 
+summary: Después de implementar un clúster de ONTAP Select, puede actualizar el tipo de instancia del hipervisor de los nodos mediante la utilidad de administración Deploy. 
+---
+= Cambiar el tamaño de los nodos del clúster de ONTAP Select
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de implementar un clúster de ONTAP Select, puede actualizar el tipo de instancia del hipervisor de los nodos mediante la utilidad de administración Deploy.
+
+
+NOTE: Solo se puede ejecutar la operación de ajuste de tamaño de nodos de clúster cuando se utiliza el modelo de licencias de niveles de capacidad. No se puede cambiar el tamaño de los nodos ONTAP Select con una licencia de pools de capacidad.
+
+.Antes de empezar
+El clúster debe estar en el estado en línea.
+
+.Acerca de esta tarea
+Esta tarea describe cómo utilizar la interfaz de usuario web de implementación. También se puede utilizar la interfaz de línea de comandos de implementación para realizar el cambio de tamaño de la instancia. Independientemente de la interfaz que utilice, el tiempo necesario para la operación de ajuste de tamaño puede variar significativamente en función de varios factores y puede tardar más tiempo en completarse. Solo puede cambiar el tamaño de un nodo a un tamaño mayor.
+
+.Pasos
+. Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
+. Haga clic en la ficha *Cluster* en la parte superior de la página y seleccione el clúster deseado en la lista.
+. En la página de detalles del clúster, haga clic en el icono de engranaje situado a la derecha de la página y seleccione *ajuste de tamaño de instancia*.
+. Seleccione *Tipo de instancia* y proporcione las credenciales de ONTAP y, a continuación, haga clic en *Modificar*.
+
+
+.Después de terminar
+Debe esperar a que se complete la operación de cambio de tamaño.

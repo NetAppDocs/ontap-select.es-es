@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: task_adm_replace_drives_swraid.html 
+keywords: administer, administering, web, software raid, replace drive 
+summary: 'Cuando se produce un fallo en una unidad mediante RAID de software, ONTAP Select utiliza una unidad de repuesto (si hay una disponible) e inicia el proceso de recompilación automáticamente. Esto es similar al funcionamiento de ONTAP en FAS y AFF. Sin embargo, si no hay unidad de repuesto disponible, debe añadir una al nodo ONTAP Select.' 
+---
+= Reemplazar una unidad con fallo cuando se utiliza SW RAID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando falla una unidad con el software RAID, ONTAP Select asigna una unidad de repuesto si hay una disponible e inicia el proceso de recompilación automáticamente. Esto es similar a cómo funciona ONTAP en FAS y AFF. Sin embargo, si no hay ninguna unidad de repuesto disponible, es necesario añadir una al nodo ONTAP Select.
+
+
+NOTE: Tanto la eliminación de la unidad con error como la adición de una unidad nueva (marcada como repuesto) se deben realizar mediante la implementación de ONTAP Select. No se admite la asociación de una unidad a la máquina virtual de ONTAP Select con vSphere.
+
+
+
+== Identifique la unidad con error
+
+Cuando se produce un error en una unidad, es necesario utilizar la interfaz de línea de comandos ONTAP para identificar el disco con errores.
+
+.Pasos
+. Inicie sesión en la interfaz de línea de comandos de ONTAP con la cuenta de administrador.
+. Identifique la unidad de disco con errores.
++
+[listing]
+----
+<cluster name>::> storage disk show -container-type broken
+Usable Disk Container Container
+Disk Size Shelf Bay Type Type Name Owner
+---------------- ---------- ----- --- ------- ----------- --------- --------
+NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
+----
+
+
+
+
+== Quite la unidad con error
+
+Después de identificar la unidad que ha fallado, quite el disco.
+
+.Pasos
+. Inicie sesión en la interfaz de usuario web de implementación mediante la cuenta de administrador.
+. Haga clic en la ficha *Clusters* y seleccione el clúster correspondiente.
++
+image:ST_22.jpg["Detalles del nodo"]
+
+. Haga clic en *+* para expandir la vista de almacenamiento.
++
+image:ST_23.jpg["Edite el almacenamiento del nodo"]
+
+. Haga clic en *Editar* para realizar cambios en los discos conectados y desactive la unidad que ha fallado.
++
+image:ST_24.jpg["Detalles del disco de almacenamiento"]
+
+. Proporcione las credenciales del clúster y haga clic en *Editar almacenamiento*.
++
+image:ST_25.jpg["Credenciales de ONTAP"]
+
+. Confirme la operación.
++
+image:ST_26.jpg["Advertencia"]
+
+
+
+
+
+== Añada la unidad de repuesto nueva
+
+Después de quitar la unidad con error, agregue el disco de repuesto.
+
+.Pasos
+. Inicie sesión en la interfaz de usuario web de implementación mediante la cuenta de administrador.
+. Haga clic en la ficha *Clusters* y seleccione el clúster correspondiente.
++
+image:ST_27.jpg["Pareja de HA"]
+
+. Haga clic en *+* para expandir la vista de almacenamiento.
++
+image:ST_28.jpg["Edite el almacenamiento del nodo"]
+
+. Haga clic en *Editar* y confirme que la nueva unidad está disponible y selecciónela.
++
+image:ST_29.jpg["Detalles del disco de almacenamiento"]
+
+. Proporcione las credenciales del clúster y haga clic en *Editar almacenamiento*.
++
+image:ST_30.jpg["Detalles del disco de almacenamiento"]
+
+. Confirme la operación.
++
+image:ST_31.jpg["Detalles del disco de almacenamiento"]
+
+

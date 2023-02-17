@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_dep_general.html 
+keywords: plan, planning, ontap select deploy, general requirements 
+summary: Existen varios requisitos generales que debe tener en cuenta como parte de la planificación para instalar la utilidad de administración de implementación de ONTAP Select. 
+---
+= ONTAP Select implemente requisitos generales y planificación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Existen varios requisitos generales que debe tener en cuenta como parte de la planificación para instalar la utilidad de administración de implementación de ONTAP Select.
+
+
+
+== Emparejamiento de la utilidad de implementación con los clústeres de ONTAP Select
+
+Existen varias opciones al emparejar una instancia de la utilidad Deploy con los clústeres de ONTAP Select.
+
+
+NOTE: En todos los escenarios de puesta en marcha, solo un clúster de ONTAP Select y los nodos del clúster se pueden gestionar mediante una instancia de la utilidad de administración de puesta en marcha. El clúster no puede ser gestionado por dos o más instancias diferentes de la utilidad Deploy.
+
+.Una instancia de la utilidad para cada clúster de ONTAP Select
+Puede instalar y gestionar cada clúster ONTAP Select mediante una instancia dedicada de la utilidad Deploy. Con esta configuración uno a uno, existe una separación clara entre cada uno de los emparejamientos entre utilidades y clústeres. Esta configuración proporciona un alto nivel de aislamiento con dominios de fallo más pequeños.
+
+.Una instancia de la utilidad para varios clústeres de ONTAP Select
+Puede desplegar y gestionar varios clústeres de ONTAP Select en la organización utilizando una única instancia de la utilidad Deploy. Con esta configuración uno a varios, todos los datos de procesamiento y configuración se gestionan mediante la misma instancia de la utilidad Deploy.
+
+
+NOTE: Una instancia de la utilidad Deploy puede administrar hasta 400 nodos de ONTAP Select o 100 clústeres.
+
+
+
+== Autenticación mediante el almacén de credenciales
+
+El almacén de credenciales de implementación de ONTAP Select es una base de datos que contiene información de la cuenta. La implementación utiliza las credenciales de la cuenta para realizar la autenticación del host como parte de la creación y la gestión del clúster. Debe saber cómo se utiliza el almacén de credenciales como parte de la planificación de una implementación de ONTAP Select.
+
+
+NOTE: La información de cuentas se almacena de forma segura en la base de datos mediante el algoritmo de cifrado AES y el algoritmo de hash SHA-256.
+
+.Tipos de credenciales
+Se admiten los siguientes tipos de credenciales:
+
+* El host que se usa para autenticar un host de hipervisor como parte de la puesta en marcha de un nodo ONTAP Select directamente en VMware ESXi
+* VCenter se usa para autenticar un servidor de vCenter como parte de la puesta en marcha de un nodo de ONTAP Select en ESXi cuando el host se gestiona mediante VMware vCenter
+
+
+.Acceso
+Se accede al almacén de credenciales internamente como parte de la realización de tareas administrativas normales mediante la implementación, como la adición de un host de hipervisor. También puede gestionar el almacén de credenciales directamente a través de la interfaz de usuario web de implementación y la CLI.

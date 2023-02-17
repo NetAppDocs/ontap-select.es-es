@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: concept_adm_before.html 
+keywords: administer, administering, web, before you begin 
+summary: Después de crear un clúster de ONTAP Select, puede dar soporte a la implementación mediante la ejecución de varias tareas administrativas. Hay algunas consideraciones generales que tener en cuenta. 
+---
+= Antes de empezar a administrar ONTAP Select
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de crear un clúster de ONTAP Select, puede dar soporte a la implementación mediante la ejecución de varias tareas administrativas. Hay algunas consideraciones generales que tener en cuenta.
+
+
+
+== Antes de empezar
+
+En general, los procedimientos que se pueden realizar mediante la interfaz web de implementación se dividen en una de las tres categorías.
+
+.Ponga en marcha un clúster de ONTAP Select
+Puede poner en marcha un clúster de un único nodo o de varios nodos. Consulte link:task_deploy_cluster.html["Implementar un clúster de ONTAP Select"] si quiere más información.
+
+.Realice un procedimiento con un clúster de ONTAP Select existente
+Los procedimientos administrativos se organizan en diversas categorías, como _Security_ y _Clusters_.
+
+.Realice un procedimiento en la utilidad Deploy
+Hay varios procedimientos específicos para implementar (como cambiar la contraseña del administrador).
+
+
+
+== Administración de ONTAP Select
+
+Hay muchos procedimientos administrativos diferentes disponibles como parte del apoyo a ONTAP Select. Además, existen procedimientos específicos de la utilidad administrativa de despliegue. A continuación se presentan los procedimientos más importantes. En general, todos utilizan la interfaz de usuario web de despliegue. Un proceso administrativo puede consistir en una sola tarea paso a paso o en una secuencia de varias tareas.
+
+
+NOTE: También puede usar la interfaz de línea de comandos para administrar ONTAP Select. Consulte la sección _uso de la CLI_ para obtener más información.
+
+
+
+== Realizar una configuración de ONTAP adicional
+
+Tras la puesta en marcha de un clúster de ONTAP Select, puede configurar y gestionar el clúster del mismo modo que lo haría con un sistema ONTAP basado en hardware. Por ejemplo, puede usar System Manager de OnCommand o la CLI de ONTAP para configurar el clúster ONTAP Select.
+
+.Software cliente NetApp
+Puede conectarse a ONTAP Select utilizando el siguiente software cliente de NetApp compatible:
+
+* System Manager de OnCommand
+* Unified Manager de OnCommand
+* Administrador de rendimiento de OnCommand
+* OnCommand Insight
+* OnCommand Workflow Automation
+* SnapCenter
+* Virtual Storage Console para VMware vSphere
+
+
+Para identificar las versiones compatibles del software cliente, consulte _NetApp Interoperability Matrix Tool_. Si el software cliente admite ONTAP 9, ONTAP Select también admite la misma versión.
+
+
+NOTE: El uso de SnapCenter y los complementos correspondientes requiere licencias basadas en servidor. ONTAP Select no admite actualmente la licencia del sistema de almacenamiento de los complementos de SnapCenter.
+
+ONTAP Select no admite ningún otro software de cliente de NetApp que no esté incluido en la lista.
+
+.Posibles opciones de configuración
+Hay varias opciones disponibles al configurar el clúster, incluidas las siguientes:
+
+* Creación de la configuración de redes
+* Disposición de los agregados
+* Crear las máquinas virtuales de almacenamiento de datos (SVM)
+
+
+.Las licencias adquiridas con capacidad de almacenamiento
+Si decidió no instalar los archivos de licencia con capacidad de almacenamiento como parte de la implementación del clúster de ONTAP Select, debe adquirir e instalar los archivos de licencia antes de que el período de gracia caduque para los clústeres que se ejecuten con una licencia adquirida.
+
+.Agregados reflejados
+Hay discos de reserva de datos creados por la utilidad de administración de implementación en cada nodo ONTAP Select a partir del espacio de almacén de datos utilizable (como Pool0 y Pool1). Para implementar la alta disponibilidad de los datos en un clúster de varios nodos, debe crear un agregado reflejado con estos repuestos.

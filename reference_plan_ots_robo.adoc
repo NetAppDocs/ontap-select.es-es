@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_ots_robo.html 
+keywords: plan, planning, remote and branch office, robo 
+summary: 'Puede poner en marcha ONTAP Select en un entorno de oficina remota/sucursal (robo, por sus siglas en inglés). Como parte de la planificación de una puesta en marcha de oficinas remotas y sucursales, debe seleccionar la configuración que respalda sus objetivos.' 
+---
+= Puestas en marcha remotas y sucursales
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede poner en marcha ONTAP Select en un entorno de oficina remota/sucursal (robo, por sus siglas en inglés). Como parte de la planificación de una puesta en marcha de oficinas remotas y sucursales, debe seleccionar la configuración que respalda sus objetivos.
+
+Hay dos configuraciones principales disponibles cuando se pone en marcha ONTAP Select en un entorno de oficinas remotas y sucursales.
+
+
+NOTE: Es posible usar cualquier licencia de VMware vSphere al implementar ONTAP Select.
+
+.Clúster de dos nodos ONTAP Select con ONTAP ha
+El clúster de dos nodos de ONTAP Select consta de un par de alta disponibilidad y es perfecto para puestas en marcha en oficinas remotas y sucursales.
+
+.Clúster de un único nodo de ONTAP Select compatible con VMware
+Puede poner en marcha un clúster de un único nodo de ONTAP Select en un entorno robo. Aunque un solo nodo carece de una funcionalidad de alta disponibilidad nativa, puede poner en marcha el clúster en una de las siguientes formas de proporcionar protección del almacenamiento:
+
+* Almacenamiento externo compartido mediante ha de VMware
+* VSAN de VMware
+
+
+
+NOTE: Si utiliza VSAN, debe tener una licencia para VSAN de VMware, robo de entorno.

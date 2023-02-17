@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: reference_initial_state.html 
+keywords: install, installing, initial state, cluster initial state 
+summary: Debe conocer el estado inicial de un clúster después de haberse implementado y configurar el clúster según sea necesario para su entorno. 
+---
+= El estado inicial del clúster después de la implementación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe conocer el estado inicial de un clúster después de haberse implementado y configurar el clúster según sea necesario para su entorno.
+
+Un clúster de ONTAP Select tiene varias características después de crearlo.
+
+.LIF
+Hay dos tipos de LIF asignadas por el cliente:
+
+* Gestión de clústeres (uno por clúster)
+* Gestión de nodos (uno por nodo)
+
+
+.SVM
+Hay dos SVM administrativas activas:
+
+* SVM predeterminada
+* SVM de clúster
+
+
+.Agregados
+Se crea el agregado raíz.
+
+.Funciones
+Todas las funciones están sujetas a licencia y están disponibles. Tanto SnapLock como FabricPool requieren licencias independientes.
+
+
+NOTE: No se crean SVM de datos. Además, el clúster de varios nodos tiene una red interna con LIF autogeneradas.
+
+.Información relacionada
+* link:reference_lic_ontap_features.html["Funciones de ONTAP habilitadas de forma predeterminada"]
+

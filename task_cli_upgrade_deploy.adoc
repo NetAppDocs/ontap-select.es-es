@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task_cli_upgrade_deploy.html 
+keywords: administer, administering, cli, deploy, upgrade deploy 
+summary: Puede actualizar una máquina virtual de la utilidad de implementación existente en su sitio mediante la interfaz de línea de comandos. 
+---
+= Actualizar una instancia de implementación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede actualizar una máquina virtual de la utilidad de implementación existente en su sitio mediante la interfaz de línea de comandos.
+
+
+
+== Antes de empezar
+
+Asegúrese de que la implementación no se utiliza para realizar ninguna otra tarea durante la actualización. En las notas de la versión actual se proporciona información y restricciones sobre la actualización de la utilidad Deploy.
+
+
+
+== Descarga del paquete de actualización
+
+Para iniciar el proceso de actualización, es necesario descargar el archivo de actualización de la máquina virtual de implementación correspondiente desde el sitio de soporte de NetApp. El paquete de actualización se formatea como un solo archivo comprimido.
+
+.Pasos
+. Acceda al sitio de soporte de NetApp mediante un explorador web y haga clic en *Support Quick Links*.
+. Haga clic en *Descargar software* en *tareas principales* e inicie sesión.
+. Haga clic en *Buscar su producto*.
+. Desplácese hacia abajo y haga clic en *actualización de despliegue de ONTAP Select*.
+. Seleccione la versión deseada del paquete de actualización.
+. Revise el Contrato de licencia para el usuario final (EULA) y haga clic en *Aceptar y continuar*.
+. Seleccione y descargue el paquete adecuado, respondiendo a todos los avisos según sea necesario para su entorno.
+
+
+.Información relacionada
+link:https://mysupport.netapp.com["Soporte de NetApp"^]
+
+
+
+== Carga del paquete en la máquina virtual de implementación
+
+Después de adquirir el paquete de actualización, debe cargar el archivo en la máquina virtual de implementación.
+
+.Antes de empezar
+Debe tener el archivo de actualización disponible en la estación de trabajo local. También debe tener la contraseña de la cuenta de usuario de administrador.
+
+.Acerca de estas tareas
+En esta tarea se describe un método para cargar el archivo en la máquina virtual de implementación. Es posible que haya otras opciones más adecuadas para su entorno.
+
+.Pasos
+. En un shell de comandos de la estación de trabajo local, utilice la utilidad sftp para cargar el archivo de imagen en la máquina virtual Deploy.
++
+Ejemplo
+
++
+....
+sftp admin@10.234.81.101 (provide password when prompted)
+put ONTAPdeploy2.12_upgrade.tar.gz
+exit
+....
+
+
+.Resultado
+El archivo de actualización se almacena en el directorio inicial del usuario administrador.
+
+
+
+== Aplicación del paquete de actualización
+
+Después de cargar el archivo de actualización en la máquina virtual de implementación, puede aplicar la actualización.
+
+.Antes de empezar
+Debe saber en qué directorio se ha colocado el archivo de actualización en la máquina virtual de la utilidad de implementación. Además, asegúrese de que no se esté utilizando para realizar ninguna otra tarea mientras se realice la actualización.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
+. Realice la actualización con la ruta y el nombre de archivo del directorio adecuados:
++
+`deploy upgrade -package-path FILEPATH`
+
++
+Ejemplo
+
++
+....
+deploy upgrade -package-path /home/admin/
+ONTAPdeploy2.12_upgrade.tar.gz
+....
+
+
+.Después de terminar
+Una vez completado el procedimiento de actualización, se le pedirá que cree una copia de seguridad de la configuración implementar máquina virtual. También debe borrar la caché del explorador para poder ver las páginas de implementación recién creadas.

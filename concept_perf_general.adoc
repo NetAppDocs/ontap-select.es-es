@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: concept_perf_general.html 
+keywords: ontap select, performance 
+summary: El rendimiento varía en función de la configuración del hardware. 
+---
+= Rendimiento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El rendimiento varía en función de la configuración del hardware.
+
+El rendimiento de un clúster de ONTAP Select puede variar considerablemente debido a las características del hardware y la configuración subyacentes. La configuración de hardware específica es el factor más importante en el rendimiento de una instancia ONTAP Select en particular. Estos son algunos de los factores que afectan al rendimiento de una instancia específica de ONTAP Select:
+
+* *Frecuencia de núcleo*. En general, es preferible una frecuencia más alta.
+* *Toma única frente a multitoma*. ONTAP Select no utiliza funciones de varios socket, pero la sobrecarga del hipervisor para admitir configuraciones de varios socket representa cierta desviación del rendimiento total.
+* *Configuración de la tarjeta RAID y controlador de hipervisor asociado*. Es posible que el controlador predeterminado proporcionado por el hipervisor deba sustituirse por el controlador del proveedor de hardware.
+* *Tipo de unidad y número de unidades en los grupos RAID*.
+* *Versión del hipervisor y nivel de parche*.
+
+
+Los detalles de las pruebas de rendimiento para ONTAP Select 9.4, 9.5 y 9.6 están disponibles en la sección _ONTAP Select Performance_ de https://www.netapp.com/media/10662-tr4517.pdf["TR-4517"^].

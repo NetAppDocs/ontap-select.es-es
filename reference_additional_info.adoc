@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: reference_additional_info.html 
+keywords: community, forums, help, support, blogs, videos, imt, release notes, bugs, limitations, known issues 
+summary: Existen recursos adicionales a los que puede acceder para obtener ayuda y obtener más información sobre ONTAP Select. 
+---
+= Dónde encontrar ayuda y más información
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Existen recursos adicionales a los que puede acceder para obtener ayuda y obtener más información sobre ONTAP Select.
+
+
+
+== Recursos de productos de ONTAP Select
+
+En las siguientes páginas de productos se incluyen enlaces a una gran variedad de recursos de ONTAP Select.
+
+* https://www.netapp.com/data-management/ontap-select/documentation["Recursos de ONTAP Select de NetApp"^]
+* https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx["Página de productos ONTAP Select de NetApp"^]
+
+
+
+
+== Recursos de ONTAP 9
+
+* https://docs.netapp.com/us-en/ontap/["Documentación de ONTAP 9"^]
++
+Proporciona la documentación de ONTAP 9 (excepto los comandos de la CLI).
+
+* https://docs.netapp.com/ontap-9/index.jsp["Centro de documentación de ONTAP 9"^]
++
+Proporciona documentación para los comandos de la CLI de ONTAP 9.
+
+
+
+
+
+== Blogs
+
+Hay una colección de artículos del blog que cubren diferentes aspectos de ONTAP Select.
+
+* https://blog.netapp.com/tag/ontap-select/["Blogs de ONTAP Select de NetApp"^]
+
+
+
+
+== Comunidad NetApp
+
+Puede ponerse en contacto con otros usuarios para formular preguntas y contribuir a la comunidad de ONTAP Select de NetApp.
+
+* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select["Comunidad de NetApp: ONTAP Select"^]
+
+
+
+
+== Herramienta de matriz de interoperabilidad de NetApp
+
+La herramienta de matriz de interoperabilidad contiene información detallada sobre la configuración y soporte de productos.
+
+* https://mysupport.netapp.com/matrix/["IMT de NetApp"^]
+

@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: concept_vpi_overview.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, overview, functionality 
+summary: El complemento de VMware vCenter para ONTAP Select Deploy está diseñado para administradores de ONTAP Select que trabajen en el entorno de VMware. Ofrece una alternativa a la interfaz de usuario de la implementación nativa. 
+---
+= Información general del plugin de vCenter de puesta en marcha
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El complemento de VMware vCenter para ONTAP Select Deploy está diseñado para administradores de ONTAP Select que trabajen en el entorno de VMware. Ofrece una alternativa a la interfaz de usuario de la implementación nativa.
+
+
+
+== Empaquetada con puesta en marcha
+
+El complemento de puesta en marcha de vCenter viene incluido en la utilidad de administración de puesta en marcha. Después de usar la interfaz de usuario de implementación para instalar el plugin en vCenter Server, puede acceder al plugin a través de la interfaz web de vSphere.
+
+
+
+== Integración con VMware
+
+Para muchas empresas, VMware vCenter es una plataforma centralizada para administrar recursos cloud y centros de datos virtualizados. Debido a que el complemento de implementación está estrechamente integrado con vCenter, los administradores pueden mover rápidamente entre los dominios de ONTAP Select y vCenter para aprovechar las relaciones entre los diversos recursos.
+
+
+
+== Funcionalidad proporcionada por el complemento de puesta en marcha de vCenter
+
+Después de instalar el complemento de vCenter para implementar, hay dos opciones principales disponibles a través de vSphere en el panel *Global Inventory Lists*.
+
+
+
+=== Clústeres ONTAP Select
+
+La opción clústeres de ONTAP Select es aproximadamente equivalente a la ficha *Clusters* de la interfaz de usuario web de implementación nativa. Proporciona la funcionalidad descrita en la siguiente tabla.
+
+[cols="30,70"]
+|===
+| Usted realiza esta operación ... | Haciendo esto ... 
+
+
+| Ponga en marcha un clúster de ONTAP Select | Haga clic en New ONTAP Select. 
+
+
+| Ver los detalles del clúster | Seleccione un clúster, haga clic en Summary y, a continuación, haga clic en Details. 
+
+
+| Ver los mensajes de eventos del clúster | Seleccione un clúster, haga clic en Summary y, a continuación, haga clic en Events. 
+
+
+| Mueva un clúster en línea o sin conexión, o elimine un clúster | Seleccione un clúster, haga clic en Actions y, a continuación, haga clic en la acción deseada. 
+
+
+| Inicie System Manager | Seleccione un clúster, haga clic en Summary, haga clic en Details y haga clic en Launch System Manager. 
+
+
+| Ver los hosts ESXi que utiliza un clúster | Seleccione un clúster, haga clic en más objetos y, a continuación, haga clic en hosts. Seleccione un host para más detalles y más acciones. 
+
+
+| Vea las máquinas virtuales de ONTAP que utiliza un clúster | Seleccione un clúster, haga clic en más objetos y, a continuación, haga clic en ONTAP VMs. Seleccione una máquina virtual para obtener más detalles y realizar otras acciones. 
+
+
+| Ver los almacenes de datos utilizados por un clúster | Seleccione un clúster, haga clic en More Objects y, a continuación, haga clic en datastores. Seleccione un almacén de datos para obtener más detalles y acciones adicionales. 
+
+
+| Vea las redes que utiliza un clúster | Seleccione un clúster, haga clic en más objetos y, a continuación, haga clic en redes. Seleccione una red para obtener más detalles y acciones adicionales. 
+|===
+
+
+=== Puesta en marcha de ONTAP Select
+
+La opción implementación de ONTAP Select es aproximadamente equivalente a las pestañas *hosts de hipervisor* y *Administración* de la interfaz de usuario web de implementación nativa. Proporciona funcionalidad mediante tres pestañas en la parte superior de la página, como se describe en la siguiente tabla.
+
+[cols="15,85"]
+|===
+| Pestaña | Descripción 
+
+
+| Resumen | Describe las características de la instancia de implementación, incluidos el nombre de host y la dirección IP. 
+
+
+| Host | Muestra información sobre los hosts ESXi registrados en ONTAP Select Deploy. Es posible añadir o eliminar hosts. 
+
+
+| Administración | Le permite realizar tareas administrativas a través de la utilidad Deploy. Esta funcionalidad equivale a la interfaz de usuario nativa de ONTAP Select Deploy, excepto que las opciones *credenciales* y *complementos* no están disponibles con el plug-in. 
+|===
+
+
+== Comparar el plugin de vCenter con la interfaz de usuario de implementación nativa
+
+La funcionalidad proporcionada con el plugin de vCenter a través de vSphere equivale a la interfaz de usuario de puesta en marcha nativa. Sin embargo, existen algunas funciones que no se proporcionan con el plugin y solo están disponibles con la interfaz de usuario de puesta en marcha.
+
+
+
+=== Gestionar el plugin de vCenter
+
+No se puede instalar, actualizar, quitar ni verificar el plugin de vCenter mediante el plugin de vCenter. Debe ejecutar estas tareas de gestión a través de la interfaz de usuario de implementación nativa.
+
+
+
+=== Gestionar credenciales de vCenter
+
+Antes de instalar el plugin de vCenter, debe añadir las credenciales de vCenter necesarias para implementarlas mediante la interfaz de usuario de la implementación nativa.
+
+
+
+=== Los clústeres de ONTAP Select deben ser controlados por el mismo servidor de vCenter
+
+Solo es posible poner en marcha y admitir los clústeres de ONTAP Select gestionados por una única instancia de vCenter Server donde se instaló el plugin. No es posible utilizar el plugin para acceder a los clústeres de ONTAP Select gestionados por otros servidores vCenter o clústeres que se ejecutan en hosts ESXi o KVM independientes.

@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task_cli_deploy_image_remove.html 
+keywords: administer, administering, cli, deploy, ontap select image, remove 
+summary: Puede eliminar imágenes ONTAP Select de su instancia de la utilidad de administración de implementación cuando ya no sean necesarias. 
+---
+= Eliminación de una imagen ONTAP Select de la implementación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede eliminar imágenes ONTAP Select de su instancia de la utilidad de administración de implementación cuando ya no sean necesarias.
+
+
+CAUTION: No debe quitar ninguna imagen ONTAP Select que esté utilizando un clúster.
+
+.Acerca de esta tarea
+Puede eliminar imágenes ONTAP Select antiguas que no se estén utilizando en este momento en un clúster ni que se hayan planificado para su uso con una futura puesta en marcha de clúster.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador (admin).
+. Muestre los clústeres gestionados mediante la implementación y el registro de las imágenes ONTAP en uso:
++
+`cluster show`
+
++
+Anote el número de versión y la plataforma del hipervisor en cada caso.
+
+. Inicie el shell Bash:
++
+`shell bash`
+
+. Mostrar todas las imágenes ONTAP Select disponibles:
++
+`ls -lh /opt/netapp/images`
+
+. Opcionalmente, quite una imagen ESXi.
++
+Ejemplo
+`rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova`
+
+. Opcionalmente, quite una imagen KVM cuando utilice una versión anterior a ONTAP Select 9.10.1.
++
+Ejemplo
+`rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar`
+
+

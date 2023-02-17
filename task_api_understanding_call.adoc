@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: task_api_understanding_call.html 
+keywords: rest api, deploy rest api, rest, understanding, executing 
+summary: Los detalles de todas las llamadas API se documentan y se muestran usando un formato común en la página web de documentación en línea de implementación de ONTAP Select. Al comprender una única llamada API, puede acceder a los detalles de todas las llamadas API e interpretarlos. 
+---
+= Comprender y ejecutar una llamada API
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Los detalles de todas las llamadas API se documentan y se muestran usando un formato común en la página web de documentación en línea de implementación de ONTAP Select. Al comprender una única llamada API, puede acceder a los detalles de todas las llamadas API e interpretarlos.
+
+.Antes de empezar
+Debe haber iniciado sesión en la página web de documentación en línea de implementación de ONTAP Select. Debe tener asignado el identificador único al clúster ONTAP Select cuando se creó el clúster.
+
+.Acerca de esta tarea
+Puede recuperar la información de configuración que describe un clúster de ONTAP Select con su identificador único. En este ejemplo, se devuelven todos los campos clasificados como baratos. Sin embargo, como práctica recomendada, solo se deben solicitar los campos específicos que se necesitan.
+
+.Pasos
+. En la página principal, desplácese hasta la parte inferior y haga clic en *Cluster*.
+. Haga clic en *GET /Clusters/{cluster_id}* para mostrar los detalles de la llamada API utilizada para devolver información acerca de un clúster ONTAP Select.
+

@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_evaluation.html 
+keywords: license, licensing, evaluation, upgrade license 
+summary: Puede usar una licencia de evaluación si desea evaluar ONTAP Select antes de tomar la decisión de realizar la compra. La licencia de evaluación se incluye con la utilidad de administración ONTAP Select Deploy y se aplica automáticamente a cada nodo de ONTAP Select como parte de una implementación de evaluación. 
+---
+= Licencias de evaluación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede usar una licencia de evaluación si desea evaluar ONTAP Select antes de tomar la decisión de realizar la compra. La licencia de evaluación se incluye con la utilidad de administración ONTAP Select Deploy y se aplica automáticamente a cada nodo de ONTAP Select como parte de una implementación de evaluación.
+
+
+
+== Características de las licencias
+
+La licencia de evaluación de ONTAP Select tiene las siguientes características:
+
+* No se requiere una licencia de producción con capacidad de almacenamiento
+* El número de serie del nodo es veinte dígitos y se genera automáticamente mediante la implementación de ONTAP Select
++
+(No lo adquiere directamente a NetApp).
+
+* El período de evaluación proporcionado por la licencia puede ser de hasta 90 días
+* El almacenamiento máximo asignado por cada nodo es el mismo que una licencia de producción
+
+
+
+
+== Actualizar a una licencia de producción
+
+Es posible actualizar un clúster de evaluación de ONTAP Select para usar una licencia de producción. Debe tener en cuenta las siguientes restricciones:
+
+* Debe utilizar la utilidad de administración de despliegue para realizar la actualización de la licencia
+* La actualización de licencia solo es compatible con ONTAP Select 9.5P1 al utilizar Deploy 2.11 o posterior
+* Se puede usar una licencia de nivel de capacidad, pero no se admiten las licencias de pools de capacidad
+* Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción, según el tamaño del clúster
+
+
+link:task_adm_licenses.html["Conversión de una licencia de evaluación a una licencia de producción"] si quiere más información.

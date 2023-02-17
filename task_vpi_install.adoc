@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: task_vpi_install.html 
+keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, install, installing 
+summary: El complemento de puesta en marcha de vCenter se incluye con la utilidad de administración ONTAP Select Deploy. Es posible usar la interfaz de usuario web de ONTAP Select Deploy para instalar y registrar el plugin en vCenter Server. 
+---
+= Instalar el complemento de vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El complemento de puesta en marcha de vCenter se incluye con la utilidad de administración ONTAP Select Deploy. Es posible usar la interfaz de usuario web de ONTAP Select Deploy para instalar y registrar el plugin en vCenter Server.
+
+.Antes de empezar
+* Revisar link:concept_vpi_manage_before.html["Antes de empezar"].
+* Defina una cuenta de vCenter para la puesta en marcha con el siguiente privilegio: sessions.validate.session.
+* Tiene credenciales para una cuenta de vCenter con los siguientes privilegios:
++
+** Extensión
++
+*** Registrar extensión
+
+
+
+
+
+
+.Acerca de esta tarea
+Se asume que el servidor de gestión de vCenter ya se ha añadido a la puesta en marcha. Si no se añadió el servidor vCenter, consulte link:task_adm_security.html["Adición de una cuenta de servidor de gestión"] si quiere más información.
+
+.Pasos
+. Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
+. Haga clic en la ficha *Administración* en la parte superior de la página y, a continuación, haga clic en *servidores de administración* en el panel de la izquierda.
+. Seleccione el servidor de gestión de destino y haga clic en image:icon_kebab.gif["Opciones"] Y haga clic en *Registrar como complemento*.
+. Proporcione las credenciales de vCenter y seleccione la versión del plugin.
+. Haga clic en *Registrar*.
+

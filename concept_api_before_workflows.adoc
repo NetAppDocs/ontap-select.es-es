@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept_api_before_workflows.html 
+keywords: rest api, deploy rest api, rest, workflows, before you begin 
+summary: Debe prepararse para revisar y utilizar los procesos de flujo de trabajo. 
+---
+= Antes de usar los flujos de trabajo de la API
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe prepararse para revisar y utilizar los procesos de flujo de trabajo.
+
+
+
+== Llamadas API que se usan en los flujos de trabajo
+
+La página de documentación en línea de ONTAP Select incluye los detalles de cada llamada a la API DE REST. En lugar de repetir estos detalles aquí, cada llamada de API utilizada en los ejemplos de flujo de trabajo incluye solo la información necesaria para localizar la llamada en la página de documentación. Después de localizar una llamada API específica, puede revisar los detalles completos de la llamada, incluidos los parámetros de entrada, formatos de salida, códigos de estado HTTP y tipo de procesamiento de solicitudes.
+
+Se incluye la siguiente información para cada llamada de API dentro de un flujo de trabajo para ayudar a localizar la llamada en la página de documentación:
+
+* Categoría las llamadas API se organizan en la página de documentación en categorías o áreas relacionadas con la funcionalidad. Para ubicar una llamada API específica, desplácese hasta la parte inferior de la página y haga clic en la categoría API correspondiente.
+* Verbo HTTP el verbo HTTP identifica la acción realizada en un recurso. Cada llamada API se ejecuta a través de un único verbo HTTP.
+* Ruta de acceso la ruta de acceso determina el recurso específico al que se aplica la acción como parte de la realización de una llamada. La cadena de ruta de acceso se anexa a la URL de núcleo para formar la URL completa que identifica el recurso.
+
+
+
+
+== Construcción de una URL para acceder directamente a la API DE REST
+
+Además de la página de documentación de ONTAP Select, también puede acceder a la API DE REST de puesta en marcha directamente mediante un lenguaje de programación como Python. En este caso, la URL principal es ligeramente diferente a la URL utilizada al acceder a la página de documentación en línea. Al acceder a la API directamente, debe anexar /api al dominio y la cadena de puerto. Por ejemplo:
+`\http://deploy.mycompany.com/api`

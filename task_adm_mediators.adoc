@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: task_adm_mediators.html 
+keywords: administer, administering, web, mediators 
+summary: Cada clúster de dos nodos de ONTAP Select es supervisado por el servicio mediador, que ayuda a gestionar la funcionalidad de alta disponibilidad compartida por los nodos. 
+---
+= Administración de los servicios del mediador de despliegue
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cada clúster de dos nodos de ONTAP Select es supervisado por el servicio mediador, que ayuda a gestionar la funcionalidad de alta disponibilidad compartida por los nodos.
+
+
+
+== Ver el estado del servicio del mediador
+
+Puede ver el estado del servicio mediador con respecto a cada uno de los clústeres de dos nodos definidos en la utilidad de puesta en marcha de ONTAP Select.
+
+.Acerca de esta tarea
+Puede ver la configuración de cada mediador, incluido el estado actual, los dos nodos ONTAP Select y el destino iSCSI donde se almacena la información de control de alta disponibilidad. Pase el ratón sobre los objetos de la página para mostrar información detallada.
+
+.Pasos
+. Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
+. Haga clic en la pestaña *Administración* en la parte superior de la página y haga clic en *mediadores*.
+. Opcionalmente, haga clic en *filtro* para personalizar la vista de los clústeres de dos nodos supervisados por el servicio mediador.
+

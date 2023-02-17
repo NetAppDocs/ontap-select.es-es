@@ -1,0 +1,71 @@
+---
+bar: sidebar 
+permalink: reference_chk_deploy_req_info.html 
+keywords: ontap select, deploy, pre-installation, vmware 
+summary: Antes de instalar la utilidad de administración de implementación en un entorno VMware, revise los requisitos básicos y prepárese para que la implementación se realice correctamente. 
+---
+= Información necesaria para la instalación de la utilidad de implementación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Antes de instalar la utilidad de administración de implementación en un entorno VMware, revise la información de configuración necesaria y la información de configuración de red opcional para prepararse para una correcta implementación.
+
+
+
+== Información de configuración requerida
+
+Como parte de la planificación de la implementación, debe determinar la información de configuración necesaria antes de instalar la utilidad de administración de implementación de ONTAP Select.
+
+[cols="40,60"]
+|===
+| Información obligatoria | Descripción 
+
+
+| Nombre de la máquina virtual de puesta en marcha | Identificador que se usará para la máquina virtual. 
+
+
+| Nombre del host ESXi | Identificador del host VMware ESXi donde se instaló la utilidad Deploy. 
+
+
+| Nombre del almacén de datos | Identificador del almacén de datos de VMware que contiene los archivos de la máquina virtual (se requieren aproximadamente 40 GB). 
+
+
+| De la máquina virtual | Identificador de la red en la que está conectada la máquina virtual de implementación. 
+|===
+
+
+== Información de configuración de red opcional
+
+De forma predeterminada, la máquina virtual de implementación se configura mediante DHCP. Sin embargo, si es necesario, puede configurar manualmente la interfaz de red para la máquina virtual.
+
+[cols="35,65"]
+|===
+| Información de red | Descripción 
+
+
+| Nombre de host | Identificador del equipo host. 
+
+
+| Dirección IP del host | Dirección IPv4 estática del equipo host. 
+
+
+| Máscara de subred | Máscara de subred, según la red de la que forma parte la máquina virtual. 
+
+
+| Puerta de enlace | Puerta de enlace o enrutador predeterminadas. 
+
+
+| Servidor DNS primario | Servidor de nombres de dominio principal. 
+
+
+| Servidor DNS secundario | Servidor de nombres de dominio secundario. 
+
+
+| Buscar dominios | Lista de los dominios de búsqueda que se van a utilizar. 
+|===

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_cp_benefits.html 
+keywords: license, licensing, capacity pools, benefits 
+summary: Existen varias ventajas cuando se utiliza el modelo de licencias de pools de capacidad en lugar del modelo de licencias por niveles de capacidad. 
+---
+= Resumen de beneficios
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Existen varias ventajas cuando se utiliza el modelo de licencias de pools de capacidad en lugar del modelo de licencias por niveles de capacidad.
+
+
+
+== Un uso más eficiente de la capacidad de almacenamiento
+
+Cuando se utilizan las licencias de niveles de capacidad, se asigna una capacidad de almacenamiento fija a cada nodo. Cualquier espacio no utilizado no se puede compartir con los otros nodos y se desperdicia, en la práctica. Con licencia de pools de capacidad, cada nodo solo consume la capacidad que necesita según el tamaño de los agregados de datos.
+
+Dado que la capacidad está anclada en un pool central, puede compartirse entre muchos nodos de la organización.
+
+
+
+== Reducción considerable de los gastos administrativos, lo que supone un menor coste
+
+Si utiliza licencias de nivel de capacidad, debe obtener e instalar una licencia para cada nodo. Cuando se usan pools de capacidad, existe una licencia para cada pool compartido. Esto puede reducir considerablemente los gastos administrativos y disminuir los costes.
+
+
+
+== Métricas de uso mejoradas
+
+La interfaz de usuario web de implementación ofrece información de uso mejorada para los pools de capacidad. Usted puede determinar rápidamente la cantidad de almacenamiento que se usa y está disponible en un pool de capacidad, qué nodos utilizan almacenamiento desde un pool y qué pools asigna la capacidad un clúster.
