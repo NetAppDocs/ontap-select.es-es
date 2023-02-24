@@ -98,7 +98,7 @@ Cuando cada host incluye dos puertos de 10 GB, debe configurar el vSwitch de la 
 
 * Configure un vSwitch y asigne ambos puertos al vSwitch. Cree un equipo NIC utilizando los dos puertos.
 * Establezca la directiva de equilibrio de carga en “Ruta basada en el identificador de puerto virtual de origen”.
-* Marque ambos adaptadores como "activos".
+* Marque ambos adaptadores como “activo” o marque un adaptador como “activo” y el otro como “en espera”.
 * Ajuste el ajuste “Faiback” en “Yes”.image:CHK_04.jpg["Propiedades de vSwitch)"]
 * Configure el vSwitch para que utilice tramas gigantes (9000 MTU).
 * Configurar un grupo de puertos en el vSwitch para el tráfico interno (ONTAP-interno):
