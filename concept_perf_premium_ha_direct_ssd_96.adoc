@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: concept_perf_premium_ha_direct_ssd_96.html 
+keywords: ontap select, performance 
+summary: 'Información de rendimiento para el rendimiento de ONTAP Select 9.6: Almacenamiento SSD de conexión directa de alta disponibilidad premium.' 
+---
+= Rendimiento: Almacenamiento SSD de conexión directa de alta disponibilidad excepcional
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Información de rendimiento de la plataforma de referencia.
+
+
+
+== Plataforma de referencia
+
+Hardware de ONTAP Select (Premium XL) (por nodo)
+
+* PRIMERGY RX2540 M4 DE FUJITSU:
++
+** CPU Intel(R) Xeon(R) Gold 6142b a 2.6 GHz
+** 32 núcleos físicos (16 x 2 zócalos), 64 lógicos
+** 256 GB DE MEMORIA RAM
+** Unidades por host: 24 SSD de 960 GB
+** ESX 6.5U1
+
+
+
+
+Hardware de cliente
+
+* 5 clientes NFSv3 IBM 3550m4
+
+
+Información de configuración
+
+* SW RAID 1 x 9 + 2 RAID-DP (11 unidades)
+* 22+1 RAID-5 (RAID-0 en ONTAP) / memoria caché RAID NVRAM
+* No se utilizan funciones de eficiencia del almacenamiento (compresión, deduplicación, copias Snapshot, SnapMirror, etc.)
+
+
+En la siguiente tabla, se muestra el rendimiento medido según cargas de trabajo de lectura/escritura en un par de nodos de alta disponibilidad (ha) de ONTAP Select utilizando tanto RAID de software como RAID de hardware. Las mediciones de rendimiento se realizaron con la herramienta de generación de carga SIO.
+
+
+NOTE: Estas cifras de rendimiento se basan en ONTAP Select 9.6.
+
+*Resultados de rendimiento para un cluster ONTAP Select de un solo nodo (parte de una instancia media de cuatro nodos) en una SSD de almacenamiento de conexión directa (DAS), con software RAID y hardware RAID*
+
+[cols="6*"]
+|===
+| Descripción | Lectura secuencial 64 KiB | Escritura secuencial 64 KiB | Lectura aleatoria 8 KiB | Escritura aleatoria 8 KiB | Potencia aleatoria/ RD (50/50) 8 KiB 
+
+
+| Instancia de ONTAP Select grande con RAID de software DAS (SSD) | 2171 MiBps | 559 MiBps | 954 MiBps | 394 MiBps | 564 MiBps 
+
+
+| Instancia mediana de ONTAP Select con RAID de software DAS (SSD) | 2090 MiBps | 592 MiBps | 677 MiBps | 335 MiBps | 441 3MiBps 
+
+
+| Instancia mediana de ONTAP Select con RAID de hardware DAS (SSD) | 2038 MiBps | 520 MiBps | 578 MiBps | 325 MiBps | 399 MiBps 
+|===
+
+
+=== Lectura secuencial 64K
+
+Detalles
+
+* E/S directa DE LA SIO activada
+* 2 nodos
+* 2 NIC de datos por nodo
+* 1 agregado de datos por nodo (RAID de hardware de 2 TB), (RAID de software de 8 TB)
+* 64 segundos SIO, 1 rosca por proc
+* 32 volúmenes por nodo
+* 1 x ficheros por proc; los ficheros son de 12000MB cada uno
+
+
+
+
+=== Escritura secuencial 64K
+
+Detalles
+
+* E/S directa DE LA SIO activada
+* 2 nodos
+* 2 tarjetas de interfaz de red de datos (NIC) por nodo
+* 1 agregado de datos por nodo (RAID de hardware de 2 TB), (RAID de software de 4 TB)
+* 128 segundos SIO, 1 rosca por proc
+* Volúmenes por nodo: 32 (RAID de hardware), 16 (RAID de software)
+* 1 x ficheros por proc; los ficheros son de 30720 MB cada uno
+
+
+
+
+=== 8 K lectura aleatoria
+
+Detalles
+
+* E/S directa DE LA SIO activada
+* 2 nodos
+* 2 NIC de datos por nodo
+* 1 agregado de datos por nodo (RAID de hardware de 2 TB), (RAID de software de 4 TB)
+* 64 segundos SIO, 8 subprocesos por proc
+* Volúmenes por nodo: 32
+* 1 x ficheros por proc; los ficheros tienen 12228 MB cada uno
+
+
+
+
+=== 8 000 escritura aleatoria
+
+Detalles
+
+* E/S directa DE LA SIO activada
+* 2 nodos
+* 2 NIC de datos por nodo
+* 1 agregado de datos por nodo (RAID de hardware de 2 TB), (RAID de software de 4 TB)
+* 64 segundos SIO, 8 subprocesos por proc
+* Volúmenes por nodo: 32
+* 1 x ficheros por proc; los ficheros tienen 8192 MB cada uno
+
+
+
+
+=== 8 K escritura aleatoria del 50 % 50 % lectura
+
+Detalles
+
+* E/S directa DE LA SIO activada
+* 2 nodos
+* 2 NIC de datos por nodo
+* 1 agregado de datos por nodo (RAID de hardware de 2 TB), (RAID de software de 4 TB)
+* 64 subprocesos SIO proc208 por proc
+* Volúmenes por nodo: 32
+* 1 x ficheros por proc; los ficheros tienen 12228 MB cada uno
+
