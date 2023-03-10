@@ -3639,4 +3639,6 @@
   <block id="5e9d95d213033fcb57aae50adca56cb0" category="list-text">64 subprocesos SIO proc208 por proc</block>
   <block id="f264455563ca8b26d0daffb627e42c00" category="sidebar">Información general sobre rendimiento</block>
   <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">Rendimiento de ONTAP Select 9.6.1</block>
+  <block id="31ecb65d48d53f60c89a54adee2acf00" category="section-title">Gestionar una licencia de pool de capacidad caducada</block>
+  <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">Por lo general, cuando expira una licencia, nada sucede. Sin embargo, no puede instalar una licencia diferente porque los nodos están asociados con la licencia caducada. Hasta que renueve la licencia, debe _no_ hacer cualquier cosa que desconecte el agregado, como una operación de reinicio o conmutación por error. La acción recomendada es acelerar la renovación de la licencia.</block>
 </blocks>

@@ -155,3 +155,9 @@ La actualización de licencia para el clúster puede tardar varios minutos. Perm
 
 .Después de terminar
 Los números de serie de los nodos de veinte dígitos asignados originalmente a cada nodo para la implementación de evaluación se sustituyen por los números de serie de nueve dígitos de las licencias de producción utilizadas para la actualización.
+
+
+
+== Gestionar una licencia de pool de capacidad caducada
+
+Por lo general, cuando expira una licencia, nada sucede. Sin embargo, no puede instalar una licencia diferente porque los nodos están asociados con la licencia caducada. Hasta que renueve la licencia, debe _no_ hacer cualquier cosa que desconecte el agregado, como una operación de reinicio o conmutación por error. La acción recomendada es acelerar la renovación de la licencia.
