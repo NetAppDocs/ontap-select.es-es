@@ -34,7 +34,7 @@ Si utiliza RAID de software, debe crear un pool de almacenamiento para los datos
 
 === Versiones de ONTAP Select disponibles
 
-La utilidad de administración de implementación contiene una sola versión de ONTAP Select. Si desea implementar los clústeres mediante una versión anterior de ONTAP Select, primero debe añadir la imagen de ONTAP Select a la instancia de implementación. Consulte link:task_adm_deploy_image_add.html["Adición de una imagen de ONTAP Select para implementar"] si quiere más información.
+La utilidad de administración de implementación contiene una sola versión de ONTAP Select. Si desea implementar los clústeres mediante una versión anterior de ONTAP Select, primero debe añadir la imagen de ONTAP Select a la instancia de implementación. Consulte link:task_cli_deploy_image_add.html["Adición de una imagen de ONTAP Select para implementar"] si quiere más información.
 
 
 

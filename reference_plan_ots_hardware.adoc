@@ -66,7 +66,7 @@ El host del hipervisor físico en el que se ponga en marcha ONTAP Select debe cu
 
 NOTE: A partir de ONTAP Select 9.9.1, solo se admiten los modelos de CPU basados en Intel Xeon Sandy Bridge o posteriores.
 
-Consulte la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp,window=_blank"] si quiere más información.
+Consulte la https://["Herramienta de matriz de interoperabilidad de NetApp,window=_blank"] si quiere más información.
 
 
 

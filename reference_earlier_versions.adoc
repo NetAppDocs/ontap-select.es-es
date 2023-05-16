@@ -17,5 +17,5 @@ summary: La documentación de versiones anteriores de ONTAP Select está disponi
 La documentación de versiones anteriores de ONTAP Select está disponible si no está ejecutando la versión más reciente. También puede acceder a la documentación necesaria cuando utilice el hipervisor KVM con una versión anterior del soporte.
 
 .ONTAP Select 9.5 y anteriores
-* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293&archive=true["Biblioteca de productos de ONTAP Select"^]
+* https://["Biblioteca de productos de ONTAP Select"^]
 

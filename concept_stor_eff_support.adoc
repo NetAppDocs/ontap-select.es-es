@@ -57,7 +57,7 @@ Cross Volume Background Deduplication:  true
 NOTE: Para actualizaciones de ONTAP Select desde 9.6 y posteriores, debe instalar ONTAP Select en almacenamiento SSD DAS con una licencia premium. Además, debe marcar la casilla de verificación *Habilitar eficiencias de almacenamiento* durante la instalación inicial del clúster con ONTAP Deploy. Para habilitar una actualización posterior a ONTAP con personalidad similar a AFF cuando no se cumplan las condiciones anteriores, se requiere la creación manual de un argumento de arranque y un reinicio de nodo. Póngase en contacto con el soporte técnico para obtener más detalles.
 
 .Configuraciones de eficiencia del almacenamiento de ONTAP Select
-En la tabla siguiente se resumen las distintas opciones de eficiencia del almacenamiento disponibles, habilitadas de forma predeterminada o no habilitadas pero recomendadas, en función del tipo de medio y de la licencia de software. La información de la siguiente tabla es aplicable a ONTAP Select 9.6 y versiones posteriores. Si quiere versiones anteriores, consulte la sección _ONTAP Select Storage Efficiency Support_ de https://www.netapp.com/media/10662-tr4517.pdf["TR-4517"^].
+En la tabla siguiente se resumen las distintas opciones de eficiencia del almacenamiento disponibles, habilitadas de forma predeterminada o no habilitadas pero recomendadas, en función del tipo de medio y de la licencia de software. La información de la siguiente tabla es aplicable a ONTAP Select 9.6 y versiones posteriores. Si quiere versiones anteriores, consulte la sección _ONTAP Select Storage Efficiency Support_ de https://["TR-4517"^].
 
 [cols="4"]
 |===

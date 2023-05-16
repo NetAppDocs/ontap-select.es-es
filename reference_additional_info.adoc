@@ -22,19 +22,19 @@ Existen recursos adicionales a los que puede acceder para obtener ayuda y obtene
 
 En las siguientes páginas de productos se incluyen enlaces a una gran variedad de recursos de ONTAP Select.
 
-* https://www.netapp.com/data-management/ontap-select/documentation["Recursos de ONTAP Select de NetApp"^]
-* https://www.netapp.com/us/products/data-management-software/ontap-select-sds.aspx["Página de productos ONTAP Select de NetApp"^]
+* https://["Recursos de ONTAP Select de NetApp"^]
+* https://["Página de productos ONTAP Select de NetApp"^]
 
 
 
 
 == Recursos de ONTAP 9
 
-* https://docs.netapp.com/us-en/ontap/["Documentación de ONTAP 9"^]
+* https://["Documentación de ONTAP 9"^]
 +
 Proporciona la documentación de ONTAP 9 (excepto los comandos de la CLI).
 
-* https://docs.netapp.com/ontap-9/index.jsp["Centro de documentación de ONTAP 9"^]
+* https://["Centro de documentación de ONTAP 9"^]
 +
 Proporciona documentación para los comandos de la CLI de ONTAP 9.
 
@@ -46,7 +46,7 @@ Proporciona documentación para los comandos de la CLI de ONTAP 9.
 
 Hay una colección de artículos del blog que cubren diferentes aspectos de ONTAP Select.
 
-* https://blog.netapp.com/tag/ontap-select/["Blogs de ONTAP Select de NetApp"^]
+* https://["Blogs de ONTAP Select de NetApp"^]
 
 
 
@@ -55,7 +55,7 @@ Hay una colección de artículos del blog que cubren diferentes aspectos de ONTA
 
 Puede ponerse en contacto con otros usuarios para formular preguntas y contribuir a la comunidad de ONTAP Select de NetApp.
 
-* http://community.netapp.com/t5/forums/filteredbylabelpage/board-id/data-ontap-discussions/label-name/ontap%20select["Comunidad de NetApp: ONTAP Select"^]
+* http://["Comunidad de NetApp: ONTAP Select"^]
 
 
 
@@ -64,5 +64,5 @@ Puede ponerse en contacto con otros usuarios para formular preguntas y contribui
 
 La herramienta de matriz de interoperabilidad contiene información detallada sobre la configuración y soporte de productos.
 
-* https://mysupport.netapp.com/matrix/["IMT de NetApp"^]
+* https://["IMT de NetApp"^]
 

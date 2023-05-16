@@ -46,7 +46,7 @@ Ya no se admite el hipervisor KVM::
 * A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
 * A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
 +
-NetApp recomienda a los clientes planificar y ejecutar una migración completa de datos desde ONTAP Select para KVM a cualquier otra plataforma ONTAP, incluido ONTAP Select para ESXi. Para obtener más información, consulte https://mysupport.netapp.com/info/communications/ECMLP2877451.html["Aviso de EOA"^]
+NetApp recomienda a los clientes planificar y ejecutar una migración completa de datos desde ONTAP Select para KVM a cualquier otra plataforma ONTAP, incluido ONTAP Select para ESXi. Para obtener más información, consulte https://["Aviso de EOA"^]
 
 
 

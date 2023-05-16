@@ -25,4 +25,4 @@ El rendimiento de un clúster de ONTAP Select puede variar considerablemente deb
 * *Versión del hipervisor y nivel de parche*.
 
 
-Los detalles de las pruebas de rendimiento para ONTAP Select 9.4, 9.5 y 9.6 están disponibles en la sección _ONTAP Select Performance_ de https://www.netapp.com/media/10662-tr4517.pdf["TR-4517"^].
+Los detalles de las pruebas de rendimiento para ONTAP Select 9.4, 9.5 y 9.6 están disponibles en la sección _ONTAP Select Performance_ de https://["TR-4517"^].
