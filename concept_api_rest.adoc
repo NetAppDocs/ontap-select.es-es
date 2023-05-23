@@ -20,7 +20,7 @@ La transferencia de estado representacional (REST) es un estilo para crear aplic
 
 == Con las restricciones clásicas y a la arquitectura
 
-EL RESTO fue articulado formalmente por Roy Fielding en su doctorado https://["disertación"] En UC Irvine en 2000. Define un estilo arquitectónico a través de un conjunto de restricciones, que han mejorado colectivamente las aplicaciones basadas en web y los protocolos subyacentes. Estas restricciones establecen una aplicación de servicios web RESTful basada en una arquitectura de cliente/servidor que utiliza un protocolo de comunicación sin estado.
+EL RESTO fue articulado formalmente por Roy Fielding en su doctorado https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["disertación"] En UC Irvine en 2000. Define un estilo arquitectónico a través de un conjunto de restricciones, que han mejorado colectivamente las aplicaciones basadas en web y los protocolos subyacentes. Estas restricciones establecen una aplicación de servicios web RESTful basada en una arquitectura de cliente/servidor que utiliza un protocolo de comunicación sin estado.
 
 
 
