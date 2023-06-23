@@ -89,11 +89,15 @@ ONTAP Select no admite varias funciones de ONTAP. En la mayoría de los casos, e
 * Grupos de interfaces los grupos de interfaces (IFGRPs) no son compatibles.
 * Supervisión de estado la supervisión de estado tradicional utilizada con una puesta en marcha de ONTAP basada en hardware es específica de los componentes de hardware subyacentes. Gracias al entorno virtualizado que se utiliza con ONTAP Select, los monitores de estado no están activos.
 * Compatibilidad de descarga de NIC debido al entorno virtualizado utilizado con ONTAP Select, la función de descarga de NIC no es compatible.
-* No se admite ninguna modificación del espacio IP del clúster, incluida la adición o la eliminación de puertos.
+* Espacio IP del clúster
+No se admite ninguna modificación del espacio IP del clúster, como la adición o eliminación de puertos, LAN virtuales (VLAN) o grupos de agregación de enlaces.
 * No se admiten las propiedades de los puertos ONTAP que modifican las propiedades de los puertos ONTAP, incluida la velocidad, el dúplex y el control de flujo.
 * Procesadores de servicios
 * Unidades de cifrado del almacenamiento de NetApp
 * Protección de ransomware autónoma (ARP)
+* Copias Snapshot a prueba de manipulaciones
+* Migración de SVM
+* HCX de VMware
 
 
 .Información relacionada
