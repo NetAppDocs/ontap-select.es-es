@@ -2435,7 +2435,6 @@
   <block id="150fc0d33877571bc7e496a88e0dcdb5" category="paragraph">Una vez completado el procedimiento de actualización, se le pedirá que cree una copia de seguridad de la configuración implementar máquina virtual. También debe borrar la caché del explorador para poder ver las páginas de implementación recién creadas.</block>
   <block id="9f8405ace72665fee032686e586d5366" category="summary">Después de implementar un clúster de ONTAP Select, puede actualizar el tipo de instancia del hipervisor de los nodos mediante la utilidad de administración Deploy.</block>
   <block id="a81401e9911e6ba18e35f42e304aeafc" category="doc">Cambiar el tamaño de los nodos del clúster de ONTAP Select</block>
-  <block id="da8c60eda9de027a78518654141ef28e" category="admonition">Solo se puede ejecutar la operación de ajuste de tamaño de nodos de clúster cuando se utiliza el modelo de licencias de niveles de capacidad. No se puede cambiar el tamaño de los nodos ONTAP Select con una licencia de pools de capacidad.</block>
   <block id="c491351d31e9a04b74d8cf6b5f75e570" category="paragraph">El clúster debe estar en el estado en línea.</block>
   <block id="090def24fea0489fb8d3e01bab4bd447" category="paragraph">Esta tarea describe cómo utilizar la interfaz de usuario web de implementación. También se puede utilizar la interfaz de línea de comandos de implementación para realizar el cambio de tamaño de la instancia. Independientemente de la interfaz que utilice, el tiempo necesario para la operación de ajuste de tamaño puede variar significativamente en función de varios factores y puede tardar más tiempo en completarse. Solo puede cambiar el tamaño de un nodo a un tamaño mayor.</block>
   <block id="0a34214ca44126aa0cdfec7af4a58c66" category="list-text">Haga clic en la ficha *Cluster* en la parte superior de la página y seleccione el clúster deseado en la lista.</block>
@@ -3646,4 +3645,7 @@ No se admite ninguna modificación del espacio IP del clúster, como la adición
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">Copias Snapshot a prueba de manipulaciones</block>
   <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">Migración de SVM</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">HCX de VMware</block>
+  <block id="c87ac723a8ad54443fb95ff969ba10fa" category="admonition">Se puede realizar la operación de cambio de tamaño de nodos de clúster al utilizar el modelo de licencias de niveles de capacidad y el modelo de licencias de pools de capacidad.</block>
+  <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">El refrescamiento del cluster de despliegue de OTS falla con error</block>
+  <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">La restricción de los roles y permisos de la cuenta de administrador de ONTAP puede limitar la capacidad de ONTAP Select Deploy de gestionar el clúster. Para obtener más información, consulte el artículo de la base de conocimientos <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>.</block>
 </blocks>

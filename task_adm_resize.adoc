@@ -17,7 +17,7 @@ summary: Después de implementar un clúster de ONTAP Select, puede actualizar e
 Después de implementar un clúster de ONTAP Select, puede actualizar el tipo de instancia del hipervisor de los nodos mediante la utilidad de administración Deploy.
 
 
-NOTE: Solo se puede ejecutar la operación de ajuste de tamaño de nodos de clúster cuando se utiliza el modelo de licencias de niveles de capacidad. No se puede cambiar el tamaño de los nodos ONTAP Select con una licencia de pools de capacidad.
+NOTE: Se puede realizar la operación de cambio de tamaño de nodos de clúster al utilizar el modelo de licencias de niveles de capacidad y el modelo de licencias de pools de capacidad.
 
 .Antes de empezar
 El clúster debe estar en el estado en línea.
