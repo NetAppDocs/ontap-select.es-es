@@ -131,7 +131,10 @@ Después de crear o implementar un clúster, debe realizar un backup de los dato
 
 === Agregados reflejados
 
-A pesar de que la existencia del agregado reflejado es necesaria para proporcionar una copia actualizada (RPO 0) de el agregado principal, tenga cuidado de que el agregado primario no funcione con poco espacio libre. Una condición de poco espacio en el agregado principal podría provocar que ONTAP elimine la copia Snapshot™ de NetApp común utilizada como base para la devolución del almacenamiento. Esto funciona tal y como está diseñado para acomodar las escrituras de cliente. Sin embargo, la ausencia de una copia Snapshot común tras la recuperación requiere que el nodo ONTAP Select realice una referencia completa del agregado reflejado. Esta operación puede llevar mucho tiempo en un entorno sin compartir. Un buen punto de partida para supervisar la utilización del espacio agregado es de hasta un 85 %.
+A pesar de que la existencia del agregado reflejado es necesaria para proporcionar una copia actualizada (RPO 0) de el agregado principal, tenga cuidado de que el agregado primario no funcione con poco espacio libre. Una condición de poco espacio en el agregado primario puede provocar que ONTAP elimine la copia snapshot común utilizada como base para el retorno del almacenamiento. Esto funciona tal y como está diseñado para acomodar las escrituras de cliente. Sin embargo, la ausencia de una copia Snapshot común tras la recuperación requiere que el nodo ONTAP Select realice una referencia completa del agregado reflejado. Esta operación puede llevar mucho tiempo en un entorno sin compartir.
+
+
+NOTE: Se recomienda mantener al menos un 20% de espacio libre para agregados reflejados para lograr un rendimiento y una disponibilidad de almacenamiento óptimos. Aunque la recomendación es del 10% para agregados no duplicados, el sistema de archivos puede utilizar el 10% adicional del espacio para absorber cambios incrementales. Los cambios incrementales aumentan el aprovechamiento del espacio para agregados reflejados gracias a la arquitectura basada en Snapshot de copia en escritura de ONTAP. Si no se siguen estas mejores prácticas, puede tener un impacto negativo en el rendimiento.
 
 
 

@@ -65,7 +65,7 @@ El clúster de dos nodos está definido como un clúster para el cual ambos nodo
 
 El SDS de MetroCluster de dos nodos se define como un clúster para el cual los nodos están físicamente separados (habitaciones diferentes, edificios y centros de datos diferentes) por más de 300 m. Además, las conexiones de enlace ascendente de cada nodo están conectadas a conmutadores de red independientes. El SDS de MetroCluster no requiere hardware dedicado. Sin embargo, el entorno debe ajustarse a los requisitos de latencia (un máximo de 5 ms en RTT y 5 ms en inestabilidad, para un total de 10 ms) y distancia física (un máximo de 10 km).
 
-SDS de MetroCluster es una función excepcional y requiere una licencia Premium. Con la licencia Premium se puede crear equipos virtuales pequeños y medianos, así como discos HDD y SSD.
+SDS de MetroCluster es una función excepcional y requiere una licencia Premium o una licencia Premium XL. Con la licencia Premium se puede crear equipos virtuales pequeños y medianos, así como discos HDD y SSD. La licencia Premium XL también permite la creación de unidades NVMe.
 
 
 NOTE: El almacenamiento SDS de MetroCluster es compatible tanto con el almacenamiento conectado local (DAS) como con el almacenamiento compartido (vNAS). Tenga en cuenta que las configuraciones de vNAS suelen tener una latencia innata más alta debido a la red entre la máquina virtual de ONTAP Select y el almacenamiento compartido. Las configuraciones de SDS de MetroCluster deben proporcionar un máximo de 10 ms de latencia entre los nodos, incluida la latencia del almacenamiento compartido. En otras palabras, no es adecuado medir la latencia entre los equipos virtuales Select, ya que la latencia del almacenamiento compartido no es mínima para estas configuraciones.
