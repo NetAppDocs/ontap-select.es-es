@@ -17,6 +17,9 @@ summary: Existen varios problemas de planificación relacionados con el almacena
 Existen varios problemas de planificación relacionados con el almacenamiento en host de ONTAP Select que se deben tener en cuenta.
 
 
+NOTE: La información sobre soporte de almacenamiento externo se describe en link:reference_plan_ots_vnas.html["Requisitos de vNAS de ONTAP Select"].
+
+
 
 == Requisitos de la controladora RAID de hardware
 
@@ -60,12 +63,7 @@ Cuando pone en marcha un clúster de ONTAP Select en el hipervisor ESXi de VMwar
 
 El entorno para una implementación RAID de software en VMware ESXi debe cumplir con los siguientes requisitos principales:
 
-* Versión de ESXi de VMware:
-+
-** ESXi 6.5 U2 (compilación 8294253) o posterior
-** ESXi 6.7 GA (compilación 8169922) o posterior
-
-
+* VMware ESXi 7,0 GA (compilación 15843807) o posterior
 * ONTAP Select 9.5 o posterior
 * ONTAP Select Deploy 2.10 o posterior
 * Solo nuevos clústeres de ONTAP Select
