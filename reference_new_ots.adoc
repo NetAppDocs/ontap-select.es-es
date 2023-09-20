@@ -19,6 +19,17 @@ NetApp actualiza periódicamente ONTAP Select para ofrecerle nuevas funciones y 
 
 
 
+== ONTAP Select 9.13.1
+
+ONTAP Select 9.13.1 incluye varias funciones y mejoras nuevas.
+
+Expansión del clúster:: ONTAP Select 9.13.1 introduce la expansión de clúster que proporciona protección de alta disponibilidad tras el impacto de la interrupción de un nodo en la capacidad de un clúster para suministrar datos. A partir de ONTAP Select 9.13.1, puede expandir un clúster de un solo nodo a un clúster de dos nodos configurando ambos nodos como pareja de alta disponibilidad. El procedimiento se automatiza e inicia desde la puesta en marcha de ONTAP Select mediante la CLI o la interfaz web. Para realizar este procedimiento, debe cumplir ciertos requisitos de hardware y software. link:concept_cluster_expansion.html["Leer más"].
+Compatibilidad con NVMe sobre TCP:: Cuando actualice a ONTAP Select 9.13.1, debe tener la nueva licencia para admitir NVMe over TCP. Esta licencia se incluye automáticamente cuando se implementa ONTAP Select por primera vez desde la versión 9.13.1.
+Se ha actualizado el soporte de VMware ESXi:: A partir de ONTAP 9.13.1, se admite VMware ESXi 8,0 GA (compilación 20513097) con la versión de hardware 4 y posteriores.
+
+
+
+
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 se beneficia de la mayoría de los nuevos desarrollos en la versión actual del producto principal de ONTAP. No incluye ninguna nueva función ni mejora específica de ONTAP Select.

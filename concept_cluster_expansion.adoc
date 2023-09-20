@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: concept_cluster_expansion.html 
+keywords: cluster, expand, expansion, single, two, node deployment workflow, workflow, deployment steps 
+summary: 'Expanda un clúster de un solo nodo existente a un clúster de dos nodos configurando ambos nodos como un par de alta disponibilidad (HA).' 
+---
+= Expanda el clúster
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A partir de ONTAP 9.13.1, puede expandir un clúster de un solo nodo existente a un clúster de dos nodos configurando ambos nodos como un par de alta disponibilidad (HA). La expansión a un clúster de alta disponibilidad de dos nodos proporciona alta disponibilidad, lo que le protege del impacto de la interrupción de un nodo en la capacidad de un clúster para servir los datos.
+
+El procedimiento se automatiza e inicia desde la puesta en marcha de ONTAP Select mediante la CLI o la interfaz web. Este es un procedimiento disruptivo.
+
+.Requisitos previos de expansión de clúster
+Antes de iniciar el procedimiento de ampliación de clúster, compruebe que cumple los siguientes requisitos previos:
+
+* El nodo existente se enciende.
+* Ha realizado correctamente una actualización de clúster en el nodo existente.
+* Los hosts ESX para los nodos nuevos y existentes tienen la misma configuración.
+* Se ejecutó correctamente el comprobador de conectividad de red entre los hosts ESX de los nodos nuevos y existentes.
+* Para usar el procedimiento de ampliación de clúster de puesta en marcha de ONTAP Select, debe contar con una licencia de evaluación (90 días) y una licencia de producción (nivel de capacidad o pool de capacidad). Compruebe que cumple los siguientes requisitos de licencia:
++
+--
+** Tiene la licencia de nivel de capacidad o pool de capacidad que necesita para el nodo nuevo.
++
+
+NOTE: Para una licencia de pool de capacidad, es posible usar la capacidad sin utilizar en un pool existente. Si es necesario, puede aumentar la capacidad actualizando la licencia.
+
+** Si los dos nodos tienen una licencia de pool de capacidad, pertenecen al mismo pool de capacidad.
+** Aplicó el mismo tipo de licencia a ambos nodos.
+
+
+--
++
+Los requisitos de licencia para cada nodo (existente y nuevo) en un clúster de dos nodos son el doble que los requisitos para un clúster de un solo nodo:
+
++
+--
+** Para un clúster de un solo nodo la licencia completa está disponible para los agregados de datos. Por ejemplo, un solo nodo con una licencia de 1TB puede alojar 1TB TB de agregados de datos.
+** Para un clúster de dos nodos, la mitad de la capacidad de licencia se utiliza para los agregados de datos de cada nodo y los discos de mirroring de los agregados de datos del nodo del partner correspondiente consumen la otra mitad. Por ejemplo, dos nodos con una licencia de 2TB TB alojan 1TB TB de agregados de datos cada uno para ofrecer una capacidad total disponible combinada de 2TB TB para los agregados y 2TB para alojar los discos duplicados de los agregados.
+
+
+--
++
+Para obtener más información sobre las licencias, consulte link:concept_lic_evaluation.html["Licencia"] sección.
+
+* Los almacenes de datos adjuntos a los nodos cumplen los siguientes criterios:
++
+** Los almacenes de datos del nodo existente deben ser del mismo tipo, por ejemplo, VMware Virtual Machine File System (VMFS)-5, VMFS-6 o NFS.
+** El almacén de datos adjunto al nodo nuevo debe tener el mismo tipo que el almacén de datos predeterminado para el nodo existente.
+** Los almacenes de datos del nodo existente deben tener un espacio libre igual o mayor que el espacio utilizado en el nodo.
+** El espacio libre del almacén de datos conectado al nuevo nodo debe tener el doble del espacio total ocupado en el nodo existente.
+
+
+* Ambos nodos ONTAP Select son el mismo tipo de instancia.
+
+
+.Requisitos de hardware y software
+Los nodos nuevos y existentes deben cumplir varios requisitos de hardware y software:
+
+* El clúster de un solo nodo existente ejecuta ONTAP 9.13.1 o versiones posteriores.
+* Los hosts ESX para los nodos nuevos y existentes cumplen los siguientes criterios:
++
+** Son compatibles con vCenter Server 7,0 Update 3 o posterior. NetApp también recomienda vCenter Server 7,0 o una versión posterior.
+** Tienen una red interna para la conexión entre clústeres.
+
+
+* El nodo existente y el nodo nuevo son tipos de RAID de hardware.
+* Para un tipo de instancia pequeña, el nodo tiene un mínimo de 16GB GB de RAM y cuatro CPU. Para un tipo de instancia grande, el nodo tiene un máximo de 128GB GB de RAM y 16 CPU.
+
+
+.Limitaciones de ampliación de clústeres
+Debe tener en cuenta las siguientes limitaciones para una ampliación de clúster de ONTAP Select:
+
+* El procedimiento solo admite la expansión de un clúster de un solo nodo a un clúster de dos nodos.
+* La expansión se limita a la capacidad total de 64TB almacenes de datos, la capacidad de almacenamiento de datos es de 32TB TB y las 32TB restantes tienen espacio adicional para mirroring de datos.
+* La expansión de clúster solo se admite para tipos de clústeres y nodos RAID de hardware. No se admite la ampliación a tipos mixtos de RAID de software y hardware.
+
+
+En la siguiente figura se muestra la configuración de un único nodo antes de la ampliación y la configuración del par de alta disponibilidad de dos nodos tras la ampliación.
+image:cluster_expansion_two_node.PNG["diagrama de expansión de un clúster de un único nodo a dos nodos"]
+
+.Inicie el procedimiento de ampliación del clúster
+Para iniciar la implementación de ONTAP Select y ejecutar el procedimiento de ampliación del clúster, ejecute los siguientes comandos desde la CLI:
+
+. `node add -cluster-name <cluster_name> -nodes <2nd_node_name>`
+. `node modify -cluster-name <cluster_name> -name <1st_node_name> -internal-networks ONTAP-Internal`
+. `node modify -cluster-name <cluster_name> -name <2nd_node_name> -mgmt-ip <node_ip> -host-name <host_name> -management-networks ONTAP-Management -internal-networks ONTAP-Internal -data-networks ONTAP-External -passthrough-disks false`
+. `node storage pool attach -cluster-name <cluster_name> -node-name <2nd_node_name> -name <storage_pool_name> -capacity-limit <capacity>`
+. `cluster expand -name <cluster_name>`
++
+Cuando se lo pida, introduzca su contraseña de administrador de ONTAP.
+
+

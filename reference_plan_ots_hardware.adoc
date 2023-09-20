@@ -37,13 +37,16 @@ Para poner en marcha un clúster de ONTAP Select, su organización debe tener un
 
 ONTAP Select puede ponerse en marcha en los siguientes hipervisores:
 
-* VMware ESXi 6.5 U2 (compilación 8294253 o posterior)
-* VMware ESXi 6.7 GA (compilación 8169922 o superior), incluidos 6.7 U1, U2 y U3
 * VMware ESXi 7.0 GA (compilación 15843807 o posterior), incluidos 7.0 U1, U2 y U3C
+* VMware ESXi 8,0 GA (compilación 20513097)
+* VMware ESXi 8,0 U1 (compilación 21495797)
 
 
 
 NOTE: NetApp es compatible con ONTAP Select en las versiones identificadas de ESXi siempre que VMware también siga siendo compatible con las mismas versiones.
+
+
+NOTE: ESXi 6,5 GA y ESXi 6,7 GA están llegando al final del estado de disponibilidad. Si tiene clústeres de ONTAP Select con estas versiones, debe actualizar a las versiones compatibles según el https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad (IMT)"^].
 
 
 

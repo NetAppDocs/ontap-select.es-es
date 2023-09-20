@@ -25,6 +25,7 @@ NOTE: Las funciones de ONTAP con dependencias específicas de hardware generalme
 
 Las siguientes funciones se incluyen con ONTAP Select y con licencia de forma predeterminada:
 
+* NVMe sobre TCP
 * NFS
 * CIFS
 * ISCSI

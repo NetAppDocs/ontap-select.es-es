@@ -18,7 +18,7 @@ Debe instalar la utilidad de administración de implementación de ONTAP Select 
 
 
 
-== Descargar la imagen de la máquina virtual
+== Descargue la imagen de la máquina virtual
 
 Puede descargar el paquete ONTAP Select en el sitio de soporte de NetApp.
 
@@ -37,7 +37,51 @@ La utilidad de administración de implementación de ONTAP Select se incluye com
 
 
 
-== Poner en marcha la máquina virtual
+== Verifique la firma OVA de despliegue de ONTAP Select
+
+Debe verificar la firma del dispositivo de virtualización abierta (OVA) de ONTAP Select antes de instalar el paquete de instalación.
+
+.Antes de empezar
+Compruebe que el sistema cumple los siguientes requisitos:
+
+* OpenSSL versiones 1.0.2 a 3,0 para la verificación básica
+* Acceso público a Internet para la verificación del protocolo de estado de certificado en línea (OCSP)
+
+
+.Pasos
+. Obtenga los siguientes archivos de la página de descarga del producto en el sitio de soporte de NetApp:
++
+[cols="2*"]
+|===
+| Archivo | Descripción 
+
+
+| `ONTAP-Select-Deploy-Production.pub` | Clave pública utilizada para verificar la firma. 
+
+
+| `csc-prod-chain-ONTAP-Select-Deploy.pem` | Cadena de confianza de la autoridad pública de certificación (CA). 
+
+
+| `csc-prod-ONTAP-Select-Deploy.pem` | El certificado utilizado para generar la clave. 
+
+
+| `ONTAPdeploy.ova` | El ejecutable de instalación del producto para ONTAP Select 9.13.1. 
+
+
+| `ONTAPdeploy.ova.sig` | El algoritmo SHA-256 es hash y luego firmado por el agente de soporte remoto (RSA) mediante el `csc-prod` clave y firma para el instalador. 
+|===
+. Compruebe que el `ONTAPdeploy.ova.sig` el archivo utiliza los certificados y los comandos de validación asociados.
+. Verifique la firma con el siguiente comando:
++
+[listing]
+----
+openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
+----
+
+
+
+
+== Implemente el equipo virtual
 
 Es necesario instalar e iniciar la máquina virtual de implementación de ONTAP Select con la imagen de máquina virtual OVF. Como parte del proceso de instalación, debe configurar la interfaz de red para usar DHCP o una configuración de IP estática.
 
@@ -94,7 +138,7 @@ Introduzca una contraseña para el usuario administrador:
 
 
 
-== Inicio de sesión en la interfaz web de despliegue
+== Inicie sesión en la interfaz web de despliegue
 
 Debe iniciar sesión en la interfaz de usuario web para confirmar que la utilidad Deploy está disponible y realizar la configuración inicial.
 
