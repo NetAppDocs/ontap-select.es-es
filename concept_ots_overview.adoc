@@ -98,6 +98,7 @@ No se admite ninguna modificación del espacio IP del clúster, como la adición
 * Copias Snapshot a prueba de manipulaciones
 * Migración de SVM
 * HCX de VMware
+* Recuperación ante desastres de máquina virtual de almacenamiento (DR de SVM)
 
 
 .Información relacionada
