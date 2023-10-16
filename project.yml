@@ -195,8 +195,6 @@ sidebar:
         url: "/concept_perf_general.html"
       - title: Rendimiento de ONTAP Select 9.6.1
         url: "/concept_perf_premium_ha_direct_ssd_96.html"
-    - title: Expanda el clúster
-      url: "/concept_cluster_expansion.html"
   - title: Integre con vCenter
     entries:
     - title: Primeros pasos
