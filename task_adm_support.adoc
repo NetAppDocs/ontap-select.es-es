@@ -18,7 +18,7 @@ Existen varias tareas relacionadas de diagnóstico y soporte que se pueden reali
 
 
 
-== Configuración del sistema de despliegue
+== Configure el sistema de despliegue
 
 Debe establecer los parámetros básicos de configuración del sistema que afectan al funcionamiento de la utilidad Deploy.
 
@@ -42,7 +42,7 @@ Ejemplo
 
 
 
-== Mostrar los mensajes de eventos de implementación de ONTAP Select
+== Muestra los mensajes de eventos de despliegue de ONTAP Select
 
 La utilidad ONTAP Select Deploy incluye una función de registro de eventos que proporciona información sobre la actividad del sistema. Debe ver el contenido del registro de eventos para depurar cualquier problema o cuando el equipo de soporte lo indica.
 
@@ -66,7 +66,7 @@ Puede filtrar la lista de mensajes de eventos según varias características, co
 
 
 
-== Habilitar AutoSupport
+== Habilite AutoSupport
 
 Puede habilitar y deshabilitar la función AutoSupport según sea necesario.
 

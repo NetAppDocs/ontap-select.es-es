@@ -18,7 +18,7 @@ Existen varias tareas relacionadas que puede realizar para administrar un clúst
 
 
 
-== Mover un clúster de ONTAP Select a los estados en línea y sin conexión
+== Mueva un clúster de ONTAP Select a los estados sin conexión y en línea
 
 Después de crear un clúster, puede cambiar su estado a sin conexión o en línea según sea necesario.
 

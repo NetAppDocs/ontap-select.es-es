@@ -18,7 +18,7 @@ Existen varias tareas relacionadas que puede realizar como parte de la protecci�
 
 
 
-= Cambio de la contraseña del administrador de despliegue
+= Cambie la contraseña del administrador de despliegue
 
 Puede cambiar la contraseña de la cuenta de administrador de la máquina virtual de implementación según sea necesario mediante la interfaz de línea de comandos.
 

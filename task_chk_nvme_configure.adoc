@@ -21,7 +21,7 @@ Utilice el paso a través de I/o de VMDirectPath en los dispositivos NVMe para m
 .Antes de empezar
 Asegúrese de que su entorno de implementación cumpla con los siguientes requisitos mínimos:
 
-* ONTAP Select 9.7 o posterior con la utilidad de administración de despliegue asociada
+* ONTAP Select 9,7 o posterior con una utilidad de administración de puesta en marcha compatible
 * Oferta de licencia de plataforma Premium XL o licencia de evaluación de 90 días
 * VMware ESXi versión 6.7 o posterior
 * Dispositivos NVMe que cumplen con la especificación 1.0 o posterior
@@ -37,7 +37,7 @@ Este procedimiento está diseñado para realizarse antes de crear un nuevo clús
 * Un clúster de un único nodo incurrirá en tiempos de inactividad.
 
 
-Consulte link:concept_stor_capacity_inc.html["Aumentar la capacidad de almacenamiento"] para obtener más información.
+Consulte link:concept_stor_capacity_inc.html["Aumente la capacidad de almacenamiento"] para obtener más información.
 
 .Pasos
 . Acceda al menú *Configuración del BIOS* del host para activar la compatibilidad con la virtualización de E/S.

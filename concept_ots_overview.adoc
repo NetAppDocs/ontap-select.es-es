@@ -45,7 +45,7 @@ Un clúster de ONTAP Select se compone de uno, dos, cuatro, seis u ocho nodos. C
 La utilidad de administración de implementación se suministra e instala como una máquina virtual Linux independiente. Debe utilizar la utilidad para implementar clústeres de ONTAP Select en un entorno de producción. Se incluye una versión actual de la imagen del nodo ONTAP Select con la utilidad de implementación.
 
 
-NOTE: A partir de ONTAP Select 9.7, la utilidad de administración de implementación ya no tiene asignado un número de versión independiente. La puesta en marcha tiene el mismo número de versión que la versión de ONTAP Select asociada. Sin embargo, cada actualización de la utilidad Deploy dentro de una versión específica de ONTAP Select tiene un número de compilación único.
+NOTE: A la utilidad de administración de despliegue no se le asigna un Núm. De versión independiente. La puesta en marcha tiene el mismo número de versión que la versión de ONTAP Select asociada. Sin embargo, cada actualización de la utilidad Deploy dentro de una versión específica de ONTAP Select tiene un número de compilación único.
 
 
 
@@ -57,7 +57,7 @@ image:ots_architecture.png["Muestra un clúster de cuatro nodos de ONTAP Select 
 
 
 
-== Comparación entre ONTAP Select y ONTAP 9
+== Compare ONTAP Select y ONTAP 9
 
 Tanto la basada en hardware de ONTAP como la de ONTAP Select proporcionan soluciones de almacenamiento empresariales. Sin embargo, al estar diseñados e implementados de forma diferente, cada uno puede abordar distintos requisitos empresariales y escenarios de uso. Antes de planificar una puesta en marcha de ONTAP Select, debería estar familiarizado con las principales diferencias entre las plataformas.
 

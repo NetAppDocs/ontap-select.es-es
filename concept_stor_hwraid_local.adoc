@@ -106,7 +106,7 @@ Se pueden utilizar varias extensiones del sistema de archivos para crear un úni
 
 Como alternativa, es posible empezar por crear un único almacén de datos en una única LUN. Cuando se necesita espacio adicional y necesita una licencia con mayor capacidad ONTAP Select, ese espacio puede añadirse al mismo almacén de datos que una extensión, hasta el tamaño máximo del almacén de datos. Después de alcanzar el tamaño máximo, es posible crear nuevos almacenes de datos y añadirla a ONTAP Select. Los dos tipos de operaciones de extensión de la capacidad son compatibles y se pueden lograr mediante la funcionalidad ONTAP Deploy Storage-add. Cada nodo ONTAP Select se puede configurar para admitir hasta 400 TB de almacenamiento. La capacidad de aprovisionamiento desde varios almacenes de datos requiere un proceso de dos pasos.
 
-La creación inicial de clúster se puede utilizar para crear un clúster de ONTAP Select que consume parte de o todo el espacio del almacén de datos inicial. Un segundo paso consiste en ejecutar una o más operaciones de adición de capacidad usando almacenes de datos adicionales hasta alcanzar la capacidad total deseada. Esta funcionalidad se detalla en la sección link:concept_stor_capacity_inc.html["Aumentar la capacidad de almacenamiento"].
+La creación inicial de clúster se puede utilizar para crear un clúster de ONTAP Select que consume parte de o todo el espacio del almacén de datos inicial. Un segundo paso consiste en ejecutar una o más operaciones de adición de capacidad usando almacenes de datos adicionales hasta alcanzar la capacidad total deseada. Esta funcionalidad se detalla en la sección link:concept_stor_capacity_inc.html["Aumente la capacidad de almacenamiento"].
 
 
 NOTE: La sobrecarga de VMFS no es cero (consulte link:https://kb.vmware.com/s/article/1001618["VMware KB 1001618"]), y al intentar utilizar todo el espacio informado como libre por un almacén de datos, se han producido errores espurios durante las operaciones de creación de clúster.
@@ -147,7 +147,7 @@ ONTAP Select divide el almacenamiento conectado subyacente en discos virtuales d
 Por ejemplo, un ONTAP Select puede asignar un almacén de datos o LUN con una cantidad de 31 TB (el espacio restante después de que se ponga en marcha el equipo virtual y se aprovisionan el sistema y los discos raíz). A continuación, se crean y asignan cuatro discos virtuales de ~7,75 TB al complejo de reflejos y local de ONTAP adecuado.
 
 
-NOTE: Añadir capacidad a una máquina virtual de ONTAP Select es probable que tenga como resultado VMDK de diferentes tamaños. Para obtener más información, consulte la sección link:concept_stor_capacity_inc.html["Aumentar la capacidad de almacenamiento"]. A diferencia de los sistemas FAS, pueden existir VMDK de distinto tamaño en el mismo agregado. ONTAP Select utiliza una franja RAID 0 en estos VMDK, lo que provoca que se pueda utilizar todo el espacio de cada VMDK con independencia de su tamaño.
+NOTE: Añadir capacidad a una máquina virtual de ONTAP Select es probable que tenga como resultado VMDK de diferentes tamaños. Para obtener más información, consulte la sección link:concept_stor_capacity_inc.html["Aumente la capacidad de almacenamiento"]. A diferencia de los sistemas FAS, pueden existir VMDK de distinto tamaño en el mismo agregado. ONTAP Select utiliza una franja RAID 0 en estos VMDK, lo que provoca que se pueda utilizar todo el espacio de cada VMDK con independencia de su tamaño.
 
 
 

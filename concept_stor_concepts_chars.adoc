@@ -116,7 +116,7 @@ Debe asegurarse de que los pools de almacenamiento se creen correctamente como p
 
 
 
-=== Gestión de los discos virtuales
+=== Gestionar los discos virtuales
 
 Existen varios problemas relacionados con los discos virtuales que se deben conocer como parte de la preparación para la implementación de ONTAP Select.
 
@@ -167,7 +167,7 @@ image:ST_02.jpg["Clúster ESXi"]
 Es posible crear un almacén de datos VMFS que reside en una cabina de almacenamiento externa. Se accede al almacenamiento por medio de uno de los distintos protocolos de red. En la siguiente figura, se muestra un almacén de datos VMFS en una cabina de almacenamiento externa a la que se accede mediante el protocolo iSCSI.
 
 
-NOTE: ONTAP Select admite todas las cabinas de almacenamiento externo descritas en la guía de compatibilidad de almacenamiento/SAN de VMware, incluidos iSCSI, Fibre Channel y Fibre Channel sobre Ethernet.
+NOTE: ONTAP Select admite todas las cabinas de almacenamiento externas descritas en la documentación sobre almacenamiento/compatibilidad SAN de VMware, incluidos iSCSI, Fibre Channel y Fibre Channel sobre Ethernet.
 
 image:ST_03.jpg["Host del hipervisor ESXi"]
 

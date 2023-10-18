@@ -27,12 +27,9 @@ NOTE: Si quiere más información sobre cómo configurar un vSwitch en un host d
 
 
 
-== Actualización a VMXNT3
+== Actualice a VMXNet3
 
-A partir de ONTAP Select 9.5 con Deploy 2.10, VMXNEG3 es el controlador de red predeterminado que se incluye con las nuevas implementaciones de clúster en VMware ESXi. Si actualiza un nodo de ONTAP Select existente a la versión 9.5 o posterior, el controlador no se actualiza automáticamente.
-
-
-NOTE: Por el momento no es necesario actualizar a VMXNNNT3. Sin embargo, si decide actualizar el controlador, debe realizar la actualización manualmente. En este caso, comuníquese con el soporte de NetApp para obtener ayuda.
+A partir de ONTAP Select 9.5 con Deploy 2.10, VMXNEG3 es el controlador de red predeterminado que se incluye con las nuevas implementaciones de clúster en VMware ESXi. Si actualiza un nodo ONTAP Select antiguo a la versión 9,5 o posterior, el controlador no se actualiza automáticamente.
 
 
 

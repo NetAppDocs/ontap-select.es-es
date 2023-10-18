@@ -33,14 +33,13 @@ La licencia de evaluación de ONTAP Select tiene las siguientes características
 
 
 
-== Actualizar a una licencia de producción
+== Actualice a una licencia de producción
 
 Es posible actualizar un clúster de evaluación de ONTAP Select para usar una licencia de producción. Debe tener en cuenta las siguientes restricciones:
 
 * Debe utilizar la utilidad de administración de despliegue para realizar la actualización de la licencia
-* La actualización de licencia solo es compatible con ONTAP Select 9.5P1 al utilizar Deploy 2.11 o posterior
 * Se puede usar una licencia de nivel de capacidad, pero no se admiten las licencias de pools de capacidad
 * Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción, según el tamaño del clúster
 
 
-link:task_adm_licenses.html["Conversión de una licencia de evaluación a una licencia de producción"] si quiere más información.
+Consulte link:task_adm_licenses.html["Convertir una licencia de evaluación en una licencia de producción"] si quiere más información.

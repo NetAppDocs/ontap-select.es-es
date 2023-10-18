@@ -64,14 +64,6 @@ Cuando pone en marcha un clúster de ONTAP Select en el hipervisor ESXi de VMwar
 El entorno para una implementación RAID de software en VMware ESXi debe cumplir con los siguientes requisitos principales:
 
 * VMware ESXi 7,0 GA (compilación 15843807) o posterior
-* ONTAP Select 9.5 o posterior
-* ONTAP Select Deploy 2.10 o posterior
-* Solo nuevos clústeres de ONTAP Select
-
-
-
-NOTE: Debe implementar un nuevo clúster con ONTAP Select 9.5 o posterior mediante la utilidad de administración Deploy. No se puede utilizar RAID de software con un nodo existente que se haya actualizado desde una versión anterior a ONTAP Select 9.5.
-
 * Licencia premium o superior de ONTAP Select
 * Solo unidades SSD locales
 * Separación de discos de sistema de la raíz y los agregados de datos
@@ -82,6 +74,7 @@ NOTE: Debe implementar un nuevo clúster con ONTAP Select 9.5 o posterior median
 NOTE: Si hay una controladora RAID de hardware, consulte link:concept_stor_concepts_chars.html["Almacenamiento en profundidad"] para obtener información sobre requisitos de configuración adicionales.
 
 * No se admiten VMware VMotion, alta disponibilidad y DRS
+* No se puede usar RAID de software con un nodo que se haya actualizado desde ONTAP Select 9,4 o una versión anterior. Si este es el caso, debe crear un nuevo nodo para la implementación de RAID de software.
 
 
 
@@ -100,14 +93,14 @@ Debe configurar cada nodo ONTAP Select y cada host de hipervisor de la siguiente
 
 Como parte de la planificación de una implementación de ONTAP Select, debe tener en cuenta las restricciones relacionadas con el uso y la asignación de almacenamiento.
 
-A continuación se presentan las restricciones de almacenamiento más importantes. También debe revisar _NetApp Interoperability Matrix Tool_ para obtener información más detallada.
+A continuación se presentan las restricciones de almacenamiento más importantes. También debe revisar el link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener información más detallada.
 
 
-TIP: ONTAP Select aplica varias restricciones relacionadas con la asignación y el uso del almacenamiento. Antes de poner en marcha un clúster de ONTAP Select o adquirir una licencia, debería estar familiarizado con estas restricciones. Consulte la sección _License_ para obtener más información.
+TIP: ONTAP Select aplica varias restricciones relacionadas con la asignación y el uso del almacenamiento. Antes de poner en marcha un clúster de ONTAP Select o adquirir una licencia, debería estar familiarizado con estas restricciones. Consulte link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html["Licencia"] para obtener más información.
 
 
 
-=== Cálculo de la capacidad de almacenamiento bruta
+=== Calcule la capacidad de almacenamiento bruta
 
 La capacidad de almacenamiento de ONTAP Select corresponde al tamaño total permitido de los datos virtuales y los discos raíz conectados a la máquina virtual ONTAP Select. Debe tener en cuenta esto al asignar capacidad.
 
@@ -163,7 +156,7 @@ Cuando se utiliza VSAN de VMware, un almacén de datos puede ser mayor que 64 TB
 
 Debe tener en cuenta las siguientes recomendaciones en relación con el hardware del núcleo del hipervisor:
 
-* Todas las unidades de un agregado único de ONTAP Select deben ser del mismo tipo. Por ejemplo, no se deben mezclar unidades HDD y SSD en el mismo agregado.
+* Todas las unidades de un único agregado de ONTAP Select deben ser del mismo tipo. Por ejemplo, no se deben mezclar unidades HDD y SSD en el mismo agregado.
 
 
 
@@ -199,10 +192,10 @@ NOTE: El software RAID con unidades DAS locales es compatible con la licencia pr
 
 Es posible configurar RAID de software para usar unidades SSD NVMe. Su entorno debe cumplir con los siguientes requisitos:
 
-* ONTAP Select 9.7 o posterior con la utilidad de administración de despliegue asociada
+* ONTAP Select 9,7 o posterior con una utilidad de administración de puesta en marcha compatible
 * Oferta de licencia de plataforma Premium XL o licencia de evaluación de 90 días
 * VMware ESXi versión 6.7 o posterior
 * Dispositivos NVMe que cumplen con la especificación 1.0 o posterior
 
 
-Es necesario configurar manualmente las unidades NVMe antes de usarlas. Consulte link:task_chk_nvme_configure.html["Configuración de un host para usar unidades NVMe"] si quiere más información.
+Es necesario configurar manualmente las unidades NVMe antes de usarlas. Consulte link:task_chk_nvme_configure.html["Configure un host para usar unidades NVMe"] si quiere más información.

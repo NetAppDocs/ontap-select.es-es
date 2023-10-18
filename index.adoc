@@ -1,7 +1,8 @@
 ---
+layout: landing-page 
 sidebar: sidebar 
 permalink: index.html 
-summary: Bienvenido al portal de documentación de ONTAP Select. 
+summary: ONTAP Select de NetApp es un dispositivo de almacenamiento definido por software que puede poner en marcha en una serie de servidores de hardware genérico que ejecutan el hipervisor ESXi de VMware. Proporciona la agilidad que necesita para crear una infraestructura de cloud privado flexible y escalable. Este sitio contiene la documentación para ONTAP Select 9.13.1, 9.12.1, 9.11.1, 9.10.1 y 9,9.1. 
 ---
 = Documentación de ONTAP Select
 :hardbreaks:
@@ -11,35 +12,4 @@ summary: Bienvenido al portal de documentación de ONTAP Select.
 :linkattrs: 
 :imagesdir: ./media/
 
-
-[role="lead"]
-ONTAP Select de NetApp es un dispositivo de almacenamiento definido por software que puede poner en marcha en una serie de servidores de hardware genérico que ejecutan el hipervisor ESXi de VMware. Proporciona la agilidad que necesita para crear una infraestructura de cloud privado flexible y escalable.
-
-
-
-== Descubra las novedades
-
-* link:reference_new_ots.html["Novedades de esta versión"]
-
-
-[NOTE]
-====
-* A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
-* A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
-
-
-====
-
-
-== Acceda a la documentación del producto
-
-ONTAP Select 9.13.1 se puede poner en marcha en VMware ESXi. Este sitio contiene la documentación para ONTAP Select 9.13.1, 9.12.1, 9.11.1, 9.10.1, 9,9.1, 9,8 y 9,7 que se ejecutan en VMware ESXi, así como la documentación independiente del hipervisor (como la API DE REST).
-
-Puede encontrar las notas de la versión así como la documentación de la versión KVM del producto, tal y como se admite con versiones anteriores en la https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293["Biblioteca de productos de ONTAP Select"^].
-
-
-
-== Obtenga más información y póngase en contacto con colegas
-
-* link:reference_additional_info.html["Dónde encontrar ayuda y más información"]
 

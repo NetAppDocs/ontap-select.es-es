@@ -30,7 +30,7 @@ Existen varias instancias en las que debe quitar manualmente el plugin:
 
 
 
-== Con el MOB de VMware para quitar el plugin
+== Utilice VMware MOB para quitar el plugin
 
 El MOB es una aplicación VMware que permite ver y gestionar los objetos en un servidor VMware vCenter. Es posible utilizar el MOB para quitar el complemento de implementación de vCenter.
 
@@ -53,7 +53,7 @@ El complemento se elimina de la lista de extensiones.
 
 
 
-== Quite el plugin de la carpeta de interfaz de usuario de vSphere
+== Quite el plugin de la carpeta de la interfaz de usuario de vSphere
 
 Debe examinar el directorio de la interfaz de usuario de vSphere en el servidor de vCenter y quitar el plugin de implementación, si existen.
 
@@ -93,7 +93,7 @@ El complemento de implementación puede tardar varios minutos en reiniciarse y e
 
 
 
-== Quitar el plugin de la carpeta cliente de vSphere
+== Quite el plugin de la carpeta del cliente de vSphere
 
 Si se encuentra, debe examinar el directorio de vSphere Client en el servidor de vCenter y quitar el plugin de implementación. Aunque el complemento Deploy no utiliza Flash, se recomienda examinar este directorio como parte del procedimiento de eliminación del plugin.
 

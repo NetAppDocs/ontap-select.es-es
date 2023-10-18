@@ -4,7 +4,7 @@ permalink: task_vpi_upgrade.html
 keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, upgrade, verify, remove 
 summary: Es posible usar la interfaz de usuario web de implementación de ONTAP Select para actualizar o quitar el plugin de implementación desde el servidor de vCenter. También puede verificar que el plugin siga instalado. 
 ---
-= Verificar y quitar el complemento de vCenter de implementación
+= Verifique y quite el complemento de implementación de vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

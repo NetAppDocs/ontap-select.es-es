@@ -4,7 +4,7 @@ permalink: task_cli_upgrade_deploy.html
 keywords: administer, administering, cli, deploy, upgrade deploy 
 summary: Puede actualizar una máquina virtual de la utilidad de implementación existente en su sitio mediante la interfaz de línea de comandos. 
 ---
-= Actualizar una instancia de implementación
+= Actualizar una instancia de despliegue
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,11 +23,11 @@ Puede actualizar una máquina virtual de la utilidad de implementación existent
 Asegúrese de que la implementación no se utiliza para realizar ninguna otra tarea durante la actualización. En las notas de la versión actual se proporciona información y restricciones sobre la actualización de la utilidad Deploy.
 
 
-NOTE: Si tiene instalada una instancia de la utilidad de administración Despliegue de ONTAP Select, debe considerar la posibilidad de actualizar a la versión actual. El nodo de ONTAP Select y los componentes de puesta en marcha de ONTAP Select se actualizan de forma independiente. Consulte link:concept_adm_upgrading_nodes.html["Actualizar los nodos ONTAP Select"^] para obtener más detalles.
+NOTE: Si tiene instalada una instancia anterior de la utilidad de administración de implementación de ONTAP Select, debe actualizar a la versión actual. El nodo de ONTAP Select y los componentes de puesta en marcha de ONTAP Select se actualizan de forma independiente. Consulte link:concept_adm_upgrading_nodes.html["Actualice los nodos ONTAP Select"^] para obtener más detalles.
 
 
 
-== Descarga del paquete de actualización
+== Descargue el paquete de actualización
 
 Para iniciar el proceso de actualización, es necesario descargar el archivo de actualización de la máquina virtual de implementación correspondiente desde el sitio de soporte de NetApp. El paquete de actualización se formatea como un solo archivo comprimido.
 
@@ -46,7 +46,7 @@ link:https://mysupport.netapp.com["Soporte de NetApp"^]
 
 
 
-== Carga del paquete en la máquina virtual de implementación
+== Cargue el paquete en la máquina virtual de despliegue
 
 Después de adquirir el paquete de actualización, debe cargar el archivo en la máquina virtual de implementación.
 
@@ -72,7 +72,7 @@ El archivo de actualización se almacena en el directorio inicial del usuario ad
 
 
 
-== Aplicación del paquete de actualización
+== Aplique el paquete de actualización
 
 Después de cargar el archivo de actualización en la máquina virtual de implementación, puede aplicar la actualización.
 

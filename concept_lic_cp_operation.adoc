@@ -20,7 +20,7 @@ El modelo de licencias de pools de capacidad es diferente al modelo de niveles d
 
 == Administrador de licencias
 
-El Administrador de licencias es un componente de software introducido con ONTAP Select 9.5 utilizando ONTAP Select Deploy 2.10. LM se ejecuta como un proceso independiente dentro de cada instancia de la utilidad de administración de despliegue. Algunas de las funciones proporcionadas por LM son:
+El Administrador de licencias se ejecuta como un proceso independiente dentro de cada instancia de la utilidad de administración de despliegue. Algunas de las funciones proporcionadas por LM son:
 
 * Genere un número de serie único de veinte dígitos para cada nodo en función del número de serie de licencia de pool de capacidad
 * Cree concesiones para la capacidad de los pools de capacidad compartida en función de las solicitudes de los nodos ONTAP Select

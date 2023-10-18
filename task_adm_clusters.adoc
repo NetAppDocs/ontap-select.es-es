@@ -18,7 +18,7 @@ Existen varias tareas relacionadas que puede realizar para administrar un clúst
 
 
 
-== Mover un clúster de ONTAP Select a la conexión y sin conexión
+== Mueva un clúster de ONTAP Select sin conexión y en línea
 
 Después de crear un clúster, puede desconectarlo y conectarlo de acuerdo a sus necesidades.
 
@@ -59,7 +59,7 @@ Si la opción de eliminación no está disponible, el clúster no tiene el estad
 
 
 
-== Actualizar la configuración del clúster de puesta en marcha
+== Actualice la configuración del clúster de puesta en marcha
 
 Después de crear un clúster de ONTAP Select, puede realizar cambios en el clúster o en la configuración de máquina virtual fuera de la utilidad de implementación mediante las herramientas de administración de hipervisores o de ONTAP. La configuración de una máquina virtual también puede cambiar después de la migración.
 

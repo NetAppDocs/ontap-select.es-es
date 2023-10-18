@@ -34,7 +34,7 @@ CAUTION: Si tiene uno o varios clústeres de dos nodos activos, la máquina virt
 .Ubicación del cluster y del servicio mediador
 Dado que los clústeres de dos nodos suelen ponerse en marcha en una sucursal remota, pueden ser remotos desde el centro de datos de la empresa y la utilidad de implementación que proporciona soporte administrativo. Con esta configuración, el tráfico de gestión entre la utilidad Deploy y el clúster fluye por la WAN. Consulte las notas de la versión para obtener más información acerca de las limitaciones y restricciones.
 
-.Realizar una copia de seguridad de los datos de configuración de implementación
+.Realice una copia de seguridad de los datos de configuración de despliegue
 Se recomienda realizar backups periódicos de los datos de configuración de implementación, incluida la creación de un clúster. Esto cobra especial importancia en los clústeres de dos nodos, debido a los datos de configuración del mediador incluidos con el backup.
 
 .Dirección IP estática asignada a la implementación

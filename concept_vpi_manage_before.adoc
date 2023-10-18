@@ -18,9 +18,9 @@ Hay varias cosas que debe hacer antes de instalar y gestionar el complemento de 
 
 
 
-== Decisión de usar la interfaz de usuario web de implementación o la CLI de
+== Decida si se utilizará la interfaz de usuario web de implementación o la CLI
 
-En la mayoría de las situaciones, la interfaz de usuario web de puesta en marcha proporciona la opción más práctica al gestionar el complemento de vCenter, y esta es la opción que se describe en esta guía. Sin embargo, también puede gestionar el plugin mediante la interfaz de línea de comandos deploy. Para obtener más información, escriba los siguientes comandos en el símbolo del sistema de la CLI de Deploy:
+En la mayoría de los casos, la interfaz de usuario web de puesta en marcha ofrece la opción más conveniente cuando se gestiona el plugin de vCenter y esta es la opción descrita en este procedimiento. Sin embargo, también puede gestionar el plugin mediante la interfaz de línea de comandos deploy. Para obtener más información, escriba los siguientes comandos en el símbolo del sistema de la CLI de Deploy:
 
 * `deploy plugin ?` (Los subcomandos incluyen: Instalar, quitar, mostrar y actualizar)
 * `deploy plugin-packages show`
@@ -33,7 +33,8 @@ En la mayoría de las situaciones, la interfaz de usuario web de puesta en march
 Hay varios pasos que debe realizar independientemente de la tarea de administración. La preparación común incluye:
 
 * Leer la sección primeros pasos para familiarizarse con el complemento de vCenter para la implementación.
-* Garantía de que la utilidad de administración de implementación de ONTAP Select está instalada y en ejecución. Consulte la Guía de instalación y puesta en marcha de clústeres para VMware para obtener más información.
+* Garantía de que la utilidad de administración de implementación de ONTAP Select está instalada y en ejecución.
+Consulte la documentación de instalación y puesta en marcha de clústeres para VMware para obtener más información.
 * Adquiriendo las credenciales de cuenta:
 +
 ** Implemente una cuenta de administrador
@@ -47,13 +48,13 @@ En función de la tarea de gestión, es posible que se requiera una preparación
 
 
 
-== Preparar las cuentas de vCenter Server
+== Prepare las cuentas de vCenter Server
 
 Antes de instalar y usar el plugin de implementación, debe crear las cuentas de vCenter con los privilegios requeridos. Puede crear una única cuenta con todos los privilegios necesarios o crear varias cuentas con un solo privilegio. Para mayor simplicidad, el siguiente ejemplo distribuye los privilegios de vCenter en tres roles independientes que luego se pueden asignar a las tres cuentas correspondientes.
 
 
 
-=== Se valida el acceso del usuario final al plugin
+=== Validar el acceso del usuario final al plugin
 
 Se necesita una cuenta para validar el acceso al plugin mediante vSphere. La cuenta debe tener el siguiente privilegio de vCenter: sessions.validate.session. Una vez creada la cuenta en vCenter, debe definirla en la utilidad de administración de implementación. En la interfaz de usuario web de Deploy, haga clic en la pestaña Administration y, a continuación, Credentials para proporcionar la ubicación y las credenciales del servidor de vCenter.
 
@@ -65,7 +66,7 @@ Esta cuenta se utiliza de las siguientes formas:
 
 
 
-=== Gestión del plugin
+=== Gestione el plugin
 
 En la interfaz de usuario web de implementación, puede instalar el plugin y, a continuación, actualizarlo o quitarlo. Cada vez que realiza una de estas acciones de gestión, se le pedirá una cuenta de vCenter en la ventana emergente. Cada una de las acciones de gestión se controla mediante un privilegio de vCenter independiente.
 
@@ -84,7 +85,7 @@ Puede crear una sola función y cuenta con los tres privilegios o dividir los pr
 
 
 
-=== Acceso al plugin
+=== Acceda al plugin
 
 Los usuarios finales pueden acceder al plugin mediante vSphere. Debe asignar el siguiente privilegio a las cuentas que utilizarán el plugin:
 

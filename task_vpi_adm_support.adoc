@@ -53,7 +53,7 @@ Puede filtrar la lista de mensajes de eventos según varias características, co
 
 
 
-== Habilitar AutoSupport
+== Habilite AutoSupport
 
 AutoSupport es la principal herramienta de solución de problemas que usa NetApp para dar soporte a ONTAP Select. Puede habilitar o deshabilitar la función AutoSupport según sea necesario.
 

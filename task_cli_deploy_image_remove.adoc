@@ -4,7 +4,7 @@ permalink: task_cli_deploy_image_remove.html
 keywords: administer, administering, cli, deploy, ontap select image, remove 
 summary: Puede eliminar imágenes ONTAP Select de su instancia de la utilidad de administración de implementación cuando ya no sean necesarias. 
 ---
-= Eliminación de una imagen ONTAP Select de la implementación
+= Eliminar una imagen ONTAP Select de la implementación
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

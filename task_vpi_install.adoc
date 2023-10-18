@@ -4,7 +4,7 @@ permalink: task_vpi_install.html
 keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, install, installing 
 summary: El complemento de puesta en marcha de vCenter se incluye con la utilidad de administración ONTAP Select Deploy. Es posible usar la interfaz de usuario web de ONTAP Select Deploy para instalar y registrar el plugin en vCenter Server. 
 ---
-= Instalar el complemento de vCenter
+= Instale el complemento Deploy vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -31,7 +31,7 @@ El complemento de puesta en marcha de vCenter se incluye con la utilidad de admi
 
 
 .Acerca de esta tarea
-Se asume que el servidor de gestión de vCenter ya se ha añadido a la puesta en marcha. Si no se añadió el servidor vCenter, consulte link:task_adm_security.html["Adición de una cuenta de servidor de gestión"] si quiere más información.
+Se asume que el servidor de gestión de vCenter ya se ha añadido a la puesta en marcha. Si no se añadió el servidor vCenter, consulte link:task_adm_security.html["Agregue una cuenta de servidor de gestión"] si quiere más información.
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.

@@ -50,7 +50,7 @@ NOTE: ESXi 6,5 GA y ESXi 6,7 GA están llegando al final del estado de disponibi
 
 
 
-=== Actualice a VMware ESXi 6.5 U2 o posterior
+=== Actualice a VMware ESXi 6,5 U2 o una versión posterior
 
 Si actualmente tiene instalado ONTAP Select en VMware ESXi 6.5 U1, deberá actualizar a ESXi 6.5 U2 o posterior Lo antes posible.. El uso de ESXi 6.5 U1 puede exponerle a un fallo de máquina virtual debido a un error conocido de VMware.
 
@@ -90,7 +90,7 @@ El tamaño del clúster admite varias configuraciones de Ethernet.
 |===
 
 
-| Tamaño del clúster | Requisitos mínimos | Recomendación 
+| Tamaño del clúster | Requisitos mínimos | Requisitos recomendados 
 
 
 | Clúster de un solo nodo | 2 x 1 GbE | 2 x 10 GbE 
@@ -107,7 +107,7 @@ El tamaño del clúster admite varias configuraciones de Ethernet.
 
 Existen varios requisitos de hardware adicionales según el tipo de instancia del nodo.
 
-Consulte link:concept_lic_platforms.html["Descripción de las ofertas de licencia de la plataforma"] si quiere más información.
+Consulte link:concept_lic_platforms.html["Conozca las ofertas de licencias de la plataforma"] si quiere más información.
 
 .Pequeño
 * Núcleos de CPU seis núcleos físicos o más, con cuatro reservados para ONTAP Select.

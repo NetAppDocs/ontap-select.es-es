@@ -4,7 +4,7 @@ permalink: concept_vpi_planning.html
 keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, planning 
 summary: Antes de instalar y usar el complemento de vCenter para implementar, debe prepararse para garantizar el éxito. 
 ---
-= Planifique utilizar el complemento de vCenter para poner en marcha
+= Piense utilizar el complemento vCenter Deploy
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

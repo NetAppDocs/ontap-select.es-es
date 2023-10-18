@@ -92,19 +92,19 @@ La opción implementación de ONTAP Select es aproximadamente equivalente a las 
 |===
 
 
-== Comparar el plugin de vCenter con la interfaz de usuario de implementación nativa
+== Compare el complemento de vCenter con la interfaz de usuario de puesta en marcha nativa
 
 La funcionalidad proporcionada con el plugin de vCenter a través de vSphere equivale a la interfaz de usuario de puesta en marcha nativa. Sin embargo, existen algunas funciones que no se proporcionan con el plugin y solo están disponibles con la interfaz de usuario de puesta en marcha.
 
 
 
-=== Gestionar el plugin de vCenter
+=== Gestione el plugin de vCenter
 
 No se puede instalar, actualizar, quitar ni verificar el plugin de vCenter mediante el plugin de vCenter. Debe ejecutar estas tareas de gestión a través de la interfaz de usuario de implementación nativa.
 
 
 
-=== Gestionar credenciales de vCenter
+=== Gestione las credenciales de vCenter
 
 Antes de instalar el plugin de vCenter, debe añadir las credenciales de vCenter necesarias para implementarlas mediante la interfaz de usuario de la implementación nativa.
 

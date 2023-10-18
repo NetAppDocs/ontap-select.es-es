@@ -4,7 +4,7 @@ permalink: task_cli_deploy_image_add.html
 keywords: administer, administering, cli, deploy, ontap select image, add 
 summary: Puede agregar una imagen ONTAP Select a la instancia de la utilidad de administración de implementación. Después de instalar la imagen, puede usarla cuando se implementa un clúster de ONTAP Select. 
 ---
-= Adición de una imagen de ONTAP Select para implementar
+= Agregue una imagen ONTAP Select para implementarla
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,7 +35,7 @@ NOTE: Sólo debe agregar una imagen ONTAP Select con una versión anterior a la 
 
 
 
-== Descarga de la imagen de instalación
+== Descargue la imagen de instalación
 
 Para iniciar el proceso de adición de una imagen de ONTAP Select a una instancia de la utilidad de implementación, debe descargar la imagen de instalación del sitio de soporte de NetApp. La imagen de instalación de ONTAP Select tiene el formato de archivo comprimido único.
 
@@ -52,7 +52,7 @@ Para iniciar el proceso de adición de una imagen de ONTAP Select a una instanci
 
 
 
-== Carga de la imagen de instalación para desplegar
+== Cargue la imagen de instalación que se va a desplegar
 
 Después de adquirir la imagen de instalación de ONTAP Select, deberá cargar el archivo en la máquina virtual de implementación.
 
@@ -87,7 +87,7 @@ El archivo de instalación del nodo se almacena en el directorio inicial del usu
 
 
 
-== Adición de la imagen de instalación
+== Añada la imagen de instalación
 
 Puede añadir la imagen de instalación de ONTAP Select al directorio implementar imágenes para que esté disponible al implementar un clúster nuevo.
 
@@ -109,7 +109,7 @@ Ejemplo
 
 
 
-== Mostrar las imágenes de instalación disponibles
+== Muestra las imágenes de instalación disponibles
 
 Puede mostrar las imágenes ONTAP Select que están disponibles al implementar un clúster nuevo.
 

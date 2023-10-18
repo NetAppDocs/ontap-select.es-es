@@ -60,7 +60,7 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 ----
 
 
-== Colocación de nodos ONTAP Select cuando utiliza vNAS
+== Coloque los nodos de ONTAP Select cuando use vNAS
 
 ONTAP Select incluye compatibilidad con clústeres de varios nodos de ONTAP Select en un almacenamiento compartido. La implementación de ONTAP permite la configuración de varios nodos ONTAP Select en el mismo host ESX, siempre y cuando estos nodos no formen parte del mismo clúster. Tenga en cuenta que esta configuración solo es válida para entornos VNAS (almacenes de datos compartidos). No se admiten varias instancias de ONTAP Select por host cuando se utiliza el almacenamiento DAS, porque estas instancias compiten por el mismo controlador de RAID de hardware.
 

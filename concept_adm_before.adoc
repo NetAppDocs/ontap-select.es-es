@@ -16,14 +16,10 @@ summary: Después de crear un clúster de ONTAP Select, puede dar soporte a la i
 [role="lead"]
 Después de crear un clúster de ONTAP Select, puede dar soporte a la implementación mediante la ejecución de varias tareas administrativas. Hay algunas consideraciones generales que tener en cuenta.
 
-
-
-== Antes de empezar
-
 En general, los procedimientos que se pueden realizar mediante la interfaz web de implementación se dividen en una de las tres categorías.
 
 .Ponga en marcha un clúster de ONTAP Select
-Puede poner en marcha un clúster de un único nodo o de varios nodos. Consulte link:task_deploy_cluster.html["Implementar un clúster de ONTAP Select"] si quiere más información.
+Puede poner en marcha un clúster de un único nodo o de varios nodos. Consulte link:task_deploy_cluster.html["Ponga en marcha un clúster de ONTAP Select"] si quiere más información.
 
 .Realice un procedimiento con un clúster de ONTAP Select existente
 Los procedimientos administrativos se organizan en diversas categorías, como _Security_ y _Clusters_.
@@ -33,32 +29,31 @@ Hay varios procedimientos específicos para implementar (como cambiar la contras
 
 
 
-== Administración de ONTAP Select
+== Administrar ONTAP Select
 
-Hay muchos procedimientos administrativos diferentes disponibles como parte del apoyo a ONTAP Select. Además, existen procedimientos específicos de la utilidad administrativa de despliegue. A continuación se presentan los procedimientos más importantes. En general, todos utilizan la interfaz de usuario web de despliegue. Un proceso administrativo puede consistir en una sola tarea paso a paso o en una secuencia de varias tareas.
-
-
-NOTE: También puede usar la interfaz de línea de comandos para administrar ONTAP Select. Consulte la sección _uso de la CLI_ para obtener más información.
+Hay muchos procedimientos administrativos diferentes disponibles como parte del apoyo a ONTAP Select. Además, existen procedimientos específicos de la utilidad administrativa de despliegue. A continuación se presentan los procedimientos más importantes. En general, todos utilizan la interfaz de usuario web de despliegue.
 
 
+NOTE: También puede hacerlo link:https://docs.netapp.com/us-en/ontap-select/task_cli_signing_in.html["utilice la interfaz de línea de comandos"] Para administrar ONTAP Select.
 
-== Realizar una configuración de ONTAP adicional
 
-Tras la puesta en marcha de un clúster de ONTAP Select, puede configurar y gestionar el clúster del mismo modo que lo haría con un sistema ONTAP basado en hardware. Por ejemplo, puede usar System Manager de OnCommand o la CLI de ONTAP para configurar el clúster ONTAP Select.
+
+== Ejecute una configuración de ONTAP adicional
+
+Tras la puesta en marcha de un clúster de ONTAP Select, puede configurar y gestionar el clúster del mismo modo que lo haría con un sistema ONTAP basado en hardware. Por ejemplo, puede usar ONTAP System Manager o la interfaz de línea de comandos de ONTAP para configurar el clúster de ONTAP Select.
 
 .Software cliente NetApp
 Puede conectarse a ONTAP Select utilizando el siguiente software cliente de NetApp compatible:
 
-* System Manager de OnCommand
-* Unified Manager de OnCommand
-* Administrador de rendimiento de OnCommand
+* System Manager de ONTAP
+* Active IQ Unified Manager
 * OnCommand Insight
 * OnCommand Workflow Automation
 * SnapCenter
 * Virtual Storage Console para VMware vSphere
 
 
-Para identificar las versiones compatibles del software cliente, consulte _NetApp Interoperability Matrix Tool_. Si el software cliente admite ONTAP 9, ONTAP Select también admite la misma versión.
+Para identificar las versiones compatibles del software cliente, revise el link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad de NetApp"^]. Si el software cliente admite ONTAP 9, ONTAP Select también admite la misma versión.
 
 
 NOTE: El uso de SnapCenter y los complementos correspondientes requiere licencias basadas en servidor. ONTAP Select no admite actualmente la licencia del sistema de almacenamiento de los complementos de SnapCenter.

@@ -18,7 +18,7 @@ Existen varias tareas relacionadas que se pueden realizar como parte de la admin
 
 
 
-== Gestión de las licencias de nivel de capacidad
+== Gestione las licencias del nivel de capacidad
 
 Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Select según sea necesario.
 
@@ -33,7 +33,7 @@ Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Sele
 
 
 
-== Permite gestionar las licencias de pool de capacidad
+== Gestione las licencias del pool de capacidad
 
 Es posible añadir, editar y eliminar licencias de pools de capacidad ONTAP Select según sea necesario.
 
@@ -62,7 +62,7 @@ Es posible añadir, editar y eliminar licencias de pools de capacidad ONTAP Sele
 
 
 
-== Volver a instalar una licencia de pool de capacidad
+== Vuelva a instalar una licencia de grupo de capacidad
 
 Cada licencia de pool de capacidad activo se bloquea en una instancia específica de License Manager, que se encuentra dentro de una instancia de la utilidad de administración de despliegue. Si utiliza una licencia de pool de capacidad y luego restaura o recupera la instancia de implementación, la licencia original ya no es válida. Debe generar un nuevo archivo de licencia de capacidad y, a continuación, instalar la licencia en la nueva instancia de implementación.
 
@@ -126,12 +126,11 @@ Consulte link:task_lic_acquire_cp.html["Adquirir una licencia de pool de capacid
 
 
 
-== Conversión de una licencia de evaluación a una licencia de producción
+== Convertir una licencia de evaluación en una licencia de producción
 
 Puede actualizar un clúster de evaluación de ONTAP Select para utilizar una licencia de nivel de capacidad de producción con la utilidad de administración de implementación.
 
 .Antes de empezar
-* Debe utilizar ONTAP Select 9.5P1 con Deploy 2.11 o posterior
 * Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción.
 * Debe tener licencias de nivel de capacidad para cada nodo en el clúster de evaluación.
 
@@ -158,6 +157,6 @@ Los números de serie de los nodos de veinte dígitos asignados originalmente a 
 
 
 
-== Gestionar una licencia de pool de capacidad caducada
+== Gestione una licencia de pool de capacidad caducada
 
 Por lo general, cuando expira una licencia, nada sucede. Sin embargo, no puede instalar una licencia diferente porque los nodos están asociados con la licencia caducada. Hasta que renueve la licencia, debe _no_ hacer cualquier cosa que desconecte el agregado, como una operación de reinicio o conmutación por error. La acción recomendada es acelerar la renovación de la licencia.

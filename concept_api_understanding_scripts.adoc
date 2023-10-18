@@ -4,7 +4,7 @@ permalink: concept_api_understanding_scripts.html
 keywords: rest api, deploy rest api, rest, python, python scripts, understanding 
 summary: Los scripts Python de ejemplo le permiten realizar varias tareas diferentes. Debe comprender los scripts antes de utilizarlos en una instancia de despliegue en directo. 
 ---
-= Descripción de los scripts Python
+= Entiende los scripts de Python
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -30,7 +30,7 @@ Los scripts se han diseñado con las siguientes características comunes:
 
 
 
-== Crear un clúster
+== Cree un clúster
 
 Es posible crear un clúster de ONTAP Select con el script cluster.py. Según los parámetros de la CLI y el contenido del archivo de entrada JSON, puede modificar el script en el entorno de implementación de la manera siguiente:
 
@@ -56,7 +56,7 @@ Los parámetros de entrada de la CLI para el script incluyen:
 
 
 
-== Añadir una licencia de nodo
+== Añada una licencia de nodo
 
 Si decide implementar un clúster de producción, debe agregar una licencia para cada nodo utilizando el script _add_license.py_. Puede añadir la licencia antes o después de implementar el clúster.
 
@@ -71,7 +71,7 @@ Los parámetros de entrada de la CLI para el script incluyen:
 
 
 
-== Eliminar un clúster
+== Elimine un clúster
 
 Es posible eliminar un clúster ONTAP Select existente con el script _delete_cluster.py_.
 

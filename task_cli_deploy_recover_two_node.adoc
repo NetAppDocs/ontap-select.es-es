@@ -4,7 +4,7 @@ permalink: task_cli_deploy_recover_two_node.html
 keywords: administer, administering, cli, two node cluster, recover, recovering 
 summary: Si la utilidad ONTAP Select Deploy falla o no está disponible por algún motivo, se pierde la capacidad de administrar nodos y clústeres de ONTAP Select. Además, los clústeres de dos nodos pierden funcionalidad de alta disponibilidad porque el servicio mediador incluido en la puesta en marcha no está disponible. Si se produce un error irrecuperable, debe recuperar la instancia de la utilidad de instalación para restaurar la funcionalidad administrativa y de alta disponibilidad. 
 ---
-= Se recupera la utilidad de implementación para un clúster de dos nodos
+= Recupere la utilidad Deploy para un clúster de dos nodos
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -51,14 +51,14 @@ Debe decidir qué procedimiento se debe utilizar al recuperar una instancia de l
 | ¿Tiene un backup de puesta en marcha que contenga el clúster de dos nodos? | Procedimiento de recuperación que se debe utilizar 
 
 
-| Sí | Restauración de una instancia de la utilidad de despliegue mediante una copia de seguridad de configuración 
+| Sí | Restaure una instancia de utilidad de despliegue mediante una copia de seguridad de configuración 
 
 
-| No | Reconfigurar y recuperar una instancia de la utilidad de implementación 
+| No | Vuelva a configurar y recuperar una instancia de utilidad de despliegue 
 |===
 
 
-== Restauración de una instancia de la utilidad de despliegue mediante una copia de seguridad de configuración
+== Restaure una instancia de utilidad de despliegue mediante una copia de seguridad de configuración
 
 Si tiene una copia de seguridad de la instancia de la utilidad de implementación con errores que contiene el clúster de dos nodos, puede restaurar los datos de configuración en la nueva instancia de la máquina virtual de implementación. A continuación, debe completar la recuperación realizando una configuración adicional de los dos nodos del clúster ONTAP Select.
 
@@ -119,7 +119,7 @@ Si utiliza la licencia de pools de capacidad, debe volver a instalar cada licenc
 
 
 
-== Reconfigurar y recuperar una instancia de la utilidad de implementación
+== Vuelva a configurar y recuperar una instancia de utilidad de despliegue
 
 Si no tiene un backup de la instancia de la utilidad de implementación fallida que contiene el clúster de dos nodos, debe configurar el destino y buzón del mediador iSCSI en la nueva máquina virtual de implementación. A continuación, debe completar la recuperación realizando una configuración adicional de los dos nodos del clúster ONTAP Select.
 
@@ -210,7 +210,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 Si utiliza la licencia de pools de capacidad, debe volver a instalar cada licencia de pool de capacidad. Consulte Volver a instalar una licencia de pool de capacidad para obtener detalles adicionales.
 
 .Información relacionada
-* link:task_install_deploy.html["Instalación de ONTAP Select Deploy"]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["Restaurar los datos de configuración de despliegue en la nueva máquina virtual"]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["Volver a instalar una licencia de pool de capacidad"]
+* link:task_install_deploy.html["Instale ONTAP Select Deploy"]
+* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["Restaure los datos de configuración de implementación en la nueva máquina virtual"]
+* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["Vuelva a instalar una licencia de grupo de capacidad"]
 

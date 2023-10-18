@@ -4,7 +4,7 @@ permalink: task_cli_deploy_cluster.html
 keywords: administer, administering, cli, create cluster, deploy cluster 
 summary: Puede usar la interfaz de línea de comandos proporcionada con la utilidad de administración ONTAP Select Deploy para crear un clúster de ONTAP Select de un solo nodo o varios nodos. 
 ---
-= Implemente un clúster de ONTAP Select mediante la CLI
+= Ponga en marcha un clúster de ONTAP Select mediante la interfaz de línea de comandos
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ Antes de crear un clúster de ONTAP Select en ESXi, debe comprender la preparaci
 
 
 
-=== Preparar la conexión de almacenamiento al nodo ONTAP Select
+=== Prepárese para conectar el almacenamiento al nodo ONTAP Select
 
 Si utiliza una controladora RAID de hardware local, debe crear al menos un pool de almacenamiento en cada nodo para los datos del sistema así como la raíz y los agregados de datos. Debe conectar el pool de almacenamiento como parte de la configuración del nodo ONTAP Select.
 
@@ -34,7 +34,7 @@ Si utiliza RAID de software, debe crear un pool de almacenamiento para los datos
 
 === Versiones de ONTAP Select disponibles
 
-La utilidad de administración de implementación contiene una sola versión de ONTAP Select. Si desea implementar los clústeres mediante una versión anterior de ONTAP Select, primero debe añadir la imagen de ONTAP Select a la instancia de implementación. Consulte link:task_cli_deploy_image_add.html["Adición de una imagen de ONTAP Select para implementar"] si quiere más información.
+La utilidad de administración de implementación contiene una sola versión de ONTAP Select. Si desea implementar los clústeres mediante una versión anterior de ONTAP Select, primero debe añadir la imagen de ONTAP Select a la instancia de implementación. Consulte link:task_cli_deploy_image_add.html["Agregue una imagen ONTAP Select para implementarla"] si quiere más información.
 
 
 
@@ -44,7 +44,7 @@ Antes de implementar un clúster de ONTAP Select en un entorno de producción, d
 
 
 
-== Carga y registro de un archivo de licencia
+== Cargue y registre un archivo de licencia
 
 Después de adquirir un archivo de licencia con capacidad de almacenamiento, debe cargar el archivo que contiene la licencia en la máquina virtual de implementación y registrarlo.
 
@@ -81,7 +81,7 @@ Introduzca la contraseña de la cuenta de administrador cuando se le solicite.
 
 
 
-== Añadir hosts de hipervisor ESXi
+== Añada hosts de hipervisor ESXi
 
 Debe registrar cada host de hipervisor en el que se ejecutará un nodo de ONTAP Select. Como parte de esto, la utilidad de administración de puesta en marcha autentica ya sea en el servidor vCenter que gestiona el host o directamente en el host independiente ESXi.
 
@@ -174,7 +174,7 @@ cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 
 
 
-== Configurar un nodo ONTAP Select
+== Configure un nodo ONTAP Select
 
 Debe configurar cada uno de los nodos en el clúster de ONTAP Select.
 
@@ -330,7 +330,7 @@ node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 
 
 
-== Implementar un clúster de ONTAP Select
+== Ponga en marcha un clúster de ONTAP Select
 
 Después de configurar el clúster y los nodos, puede implementar el clúster.
 

@@ -4,7 +4,7 @@ permalink: task_cli_migrate_deploy.html
 keywords: administer, administering, cli, deploy, deploy instance, migrate 
 summary: Puede migrar una instancia existente de la utilidad de administración de implementación a una nueva máquina virtual mediante la interfaz de línea de comandos. 
 ---
-= Migración de una instancia de implementación a una máquina virtual nueva
+= Migrar una instancia de despliegue a una nueva máquina virtual
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ Este procedimiento se basa en la creación de una nueva máquina virtual que uti
 
 
 
-== Realizar una copia de seguridad de los datos de configuración de implementación
+== Realice una copia de seguridad de los datos de configuración de despliegue
 
 Debe crear un backup de los datos de configuración de implementación como parte de la migración de la máquina virtual. También debe crear un backup después de implementar un clúster de ONTAP Select. Los datos se guardan en un único archivo cifrado que puede descargar en la estación de trabajo local.
 
@@ -53,7 +53,7 @@ Puede acceder al archivo de copia de seguridad a través de la URL.
 
 
 
-== Instalación de una nueva instancia de la máquina virtual de implementación
+== Instale una nueva instancia de la máquina virtual de despliegue
 
 Debe crear una nueva instancia de la máquina virtual de despliegue que se pueda actualizar con los datos de configuración de la máquina virtual original.
 
@@ -74,11 +74,11 @@ Esta tarea se describe a grandes rasgos.
 
 
 .Información relacionada
-link:task_install_deploy.html["Instalación de ONTAP Select Deploy"]
+link:task_install_deploy.html["Instale ONTAP Select Deploy"]
 
 
 
-== Restaurar los datos de configuración de despliegue en la nueva máquina virtual
+== Restaure los datos de configuración de implementación en la nueva máquina virtual
 
 Es necesario restaurar los datos de configuración desde la máquina virtual original de la utilidad de implementación a la nueva máquina virtual. Los datos se encuentran en un único archivo que debe cargar desde su estación de trabajo local.
 

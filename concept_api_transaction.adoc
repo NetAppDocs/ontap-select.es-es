@@ -45,7 +45,7 @@ El contenido del cuerpo de la solicitud varía en función de la llamada especí
 
 
 
-=== Filtrando objetos
+=== Filtrar objetos
 
 Al emitir una llamada API que utilice GET, puede limitar o filtrar los objetos devueltos en función de cualquier atributo. Por ejemplo, puede especificar un valor exacto para que coincida:
 
@@ -99,7 +99,7 @@ TIP: Como práctica recomendada, siempre debe identificar los campos específico
 
 
 
-=== Ordenar objetos del conjunto de resultados
+=== Ordenar objetos en el conjunto de salida
 
 Los registros de una colección de recursos se devuelven en el orden predeterminado definido por el objeto. Puede cambiar el orden utilizando el parámetro de consulta Order_by con el nombre del campo y la dirección de ordenación de la siguiente manera:
 `order_by=<field name> asc|desc`

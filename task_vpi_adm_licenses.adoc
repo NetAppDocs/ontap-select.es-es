@@ -18,7 +18,7 @@ Existen varias tareas relacionadas que se pueden realizar como parte de la admin
 
 
 
-== Gestión de licencias
+== Gestionar licencias
 
 Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Select según sea necesario.
 

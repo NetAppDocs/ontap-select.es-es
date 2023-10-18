@@ -4,7 +4,7 @@ permalink: task_vpi_deploy_cluster.html
 keywords: vcenter, plug-in, vcenter plug-in, deploy plug-in, deploy cluster, deploying cluster, create cluster, creating cluster 
 summary: Es posible usar el plugin de vCenter mediante la interfaz de usuario web de vSphere para implementar clústeres de ONTAP Select. 
 ---
-= Implementar un clúster de ONTAP Select
+= Ponga en marcha un clúster de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -51,7 +51,7 @@ Además de la preparación común, debe estar familiarizado con el comprobador d
 
 
 
-== Añadir un host de hipervisor
+== Añada un host de hipervisor
 
 Puede añadir hipervisores hosts a la utilidad de implementación en la que se ejecutarán los nodos de ONTAP Select antes de implementar un clúster. Si es necesario, puede añadir los hosts como parte del cuadro de diálogo de creación del clúster.
 
@@ -71,7 +71,7 @@ Puede añadir uno o varios hosts según el tamaño del clúster.
 
 
 
-== Creación de un clúster de un solo nodo
+== Cree un clúster de un solo nodo
 
 Puede utilizar el complemento de VMware vCenter a través del cliente web de vSphere para implementar un clúster de ONTAP Select que consta de un único nodo.
 
@@ -121,7 +121,7 @@ TIP: Si la operación de creación del clúster se ha iniciado pero no puede com
 
 
 
-== Crear un clúster multinodo
+== Cree un clúster de varios nodos
 
 Puede utilizar el complemento de VMware vCenter a través del cliente web de vSphere para implementar un clúster de ONTAP Select que consta de varios nodos.
 

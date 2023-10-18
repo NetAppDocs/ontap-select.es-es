@@ -4,7 +4,7 @@ permalink: task_adm_resize.html
 keywords: administer, administering, web, resizing nodes, resizing 
 summary: Después de implementar un clúster de ONTAP Select, puede actualizar el tipo de instancia del hipervisor de los nodos mediante la utilidad de administración Deploy. 
 ---
-= Cambiar el tamaño de los nodos del clúster de ONTAP Select
+= Cambie el tamaño de los nodos del clúster de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

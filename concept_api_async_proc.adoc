@@ -27,7 +27,7 @@ NOTE: Consulte la página de documentación en línea de implementación de ONTA
 
 
 
-== Consulta del objeto Job asociado a una solicitud API
+== Consulte el objeto Job asociado a una solicitud API
 
 El objeto Job devuelto en la respuesta HTTP contiene varias propiedades. Puede consultar la propiedad state para determinar si la solicitud se completó correctamente. Un objeto Job puede estar en uno de los siguientes estados:
 

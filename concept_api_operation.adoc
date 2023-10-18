@@ -49,7 +49,7 @@ Hay dos formas principales de que un servidor realice una solicitud HTTP recibid
 
 
 
-== Confirmación de la finalización de un trabajo de larga duración
+== Confirmar que se ha completado un trabajo de ejecución prolongada
 
 Por lo general, cualquier operación que puede tardar mucho tiempo en completarse se procesa de forma asíncrona mediante una tarea en segundo plano en el servidor. Con la API Deploy REST, cada tarea en segundo plano está anclada por un objeto Job que realiza un seguimiento de la tarea y proporciona información, como el estado actual. Un objeto Job, incluido su identificador único, se devuelve en la respuesta HTTP después de crear una tarea en segundo plano.
 

@@ -32,7 +32,7 @@ Hay varias formas de ver los recursos de VMware que utiliza un clúster de ONTAP
 
 
 
-== Ver los recursos de VMware para un clúster a través del plugin
+== Vea los recursos de VMware para un clúster a través del plugin
 
 Puede ver los recursos de VMware asignados a un clúster de ONTAP Select a través del plugin de implementación.
 
@@ -46,7 +46,7 @@ Puede ver los recursos de VMware asignados a un clúster de ONTAP Select a trav�
 
 
 
-== Ver los clústeres de ONTAP Select mediante una máquina virtual ESXi
+== Ver los clústeres de ONTAP Select a través de una máquina virtual ESXi
 
 Puede ver el clúster de ONTAP Select y los recursos de clúster asociados mediante el acceso a una máquina virtual de VMware.
 
@@ -60,7 +60,7 @@ Puede ver el clúster de ONTAP Select y los recursos de clúster asociados media
 
 
 
-== Crear un clúster de un solo nodo en un host ESXI
+== Cree un clúster de un solo nodo en un HOST ESXI
 
 Puede seleccionar un host de hipervisor ESXI a través de la interfaz de vSphere y poner en marcha un clúster de un solo nodo de ONTAP Select.
 
@@ -68,5 +68,5 @@ Puede seleccionar un host de hipervisor ESXI a través de la interfaz de vSphere
 . Inicie sesión en vCenter Server a través del HTML5 de vSphere mediante un explorador.
 . Haga clic en *Menú* en la parte superior y, a continuación, haga clic en *hosts y clústeres*.
 . Haga clic con el botón derecho del ratón en el host del hipervisor deseado a la izquierda, seleccione *ONTAP Select* y, a continuación, haga clic en *Nueva ONTAP Select*.
-. Para completar el proceso de implementación, siga los pasos descritos en link:task_deploy_cluster.html["Implementar un clúster de ONTAP Select"].
+. Para completar el proceso de implementación, siga los pasos descritos en link:task_deploy_cluster.html["Ponga en marcha un clúster de ONTAP Select"].
 

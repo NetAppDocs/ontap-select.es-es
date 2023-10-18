@@ -117,13 +117,13 @@ Debido a que los discos de datos del equipo virtual de ONTAP Select están asoci
 
 NOTE: El tipo de grupo RAID del agregado raíz depende del número de discos disponibles. La implementación de ONTAP selecciona el tipo de grupo de RAID adecuado. Si tiene suficientes discos asignados al nodo, utiliza RAID-DP; de lo contrario, crea un agregado raíz de RAID-4.
 
-Al añadir capacidad a una máquina virtual ONTAP Select mediante RAID de software, el administrador debe tener en cuenta el tamaño de la unidad física y el número de unidades necesarias. Para obtener más información, consulte la sección link:concept_stor_capacity_inc.html["Aumentar la capacidad de almacenamiento"].
+Al añadir capacidad a una máquina virtual ONTAP Select mediante RAID de software, el administrador debe tener en cuenta el tamaño de la unidad física y el número de unidades necesarias. Para obtener más información, consulte la sección link:concept_stor_capacity_inc.html["Aumente la capacidad de almacenamiento"].
 
 Al igual que sucede con los sistemas FAS y AFF, solo es posible añadir unidades con una capacidad igual o superior a un grupo RAID existente. Las unidades de mayor capacidad tienen el tamaño adecuado. Si va a crear nuevos grupos RAID, el nuevo tamaño del grupo RAID debe coincidir con el tamaño del grupo RAID existente para garantizar que el rendimiento general del agregado no se deteriore.
 
 
 
-== Hacer coincidir un disco de ONTAP Select con el disco ESX correspondiente
+== Haga coincidir un disco ONTAP Select con el disco ESX correspondiente
 
 Los discos ONTAP Select suelen denominarse NET x.y. Puede utilizar el siguiente comando de ONTAP para obtener el UUID de disco:
 
