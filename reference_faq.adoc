@@ -50,7 +50,7 @@ http://<Deploy-IP-Address/api/ui
 NOTE: La versión API v3 no es compatible con versiones anteriores de la API. Hay disponible una nueva guía de API en https://library.netapp.com/ecm/ecm_download_file/ECMLP2845694["Portal de campo Field Portal"].
 
 .¿Se pueden realizar backups de la máquina virtual de ONTAP Select con VMware u otras copias Snapshot de terceros?
-No La máquina virtual de ONTAP Select utiliza unidades persistentes independientes, que se excluyen de las copias snapshot basadas en VMware. El único método admitido para realizar backups de ONTAP Select es SnapMirror, SnapVault o SVM DR (cuando corresponda).
+No La máquina virtual de ONTAP Select utiliza unidades persistentes independientes, que se excluyen de las copias snapshot basadas en VMware. El único método admitido para realizar backups de ONTAP Select es SnapMirror o SnapVault.
 
 .¿Dónde puedo recibir información sobre las preguntas que no se tratan en estas preguntas frecuentes?
 Contacto link:mailto:ng-ses-ontap-select@netapp.com["ng-ses-ontap-select@netapp.com"].
