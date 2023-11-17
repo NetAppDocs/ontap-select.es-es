@@ -440,7 +440,6 @@
   <block id="332fd48f854bf692aea555e091e1b3cc" category="paragraph"><block ref="332fd48f854bf692aea555e091e1b3cc" category="inline-link-rx"></block></block>
   <block id="eea1cec828c419810e082867558ec301" category="list-text">Haga clic en *actualización de nodo ONTAP Select*.</block>
   <block id="a864f71b844955db4e27746202712f1b" category="list-text">Seleccione y descargue la imagen de actualización adecuada respondiendo a todos los avisos según sea necesario.</block>
-  <block id="202772c1f92d500b0765ed04693d11e5" category="list-text">Actualice el nodo ONTAP Select mediante los procedimientos de actualización estándar de ONTAP con el archivo de actualización de ONTAP Select.</block>
   <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link">Documentación de ONTAP 9</block>
   <block id="a451fb0a81dc4fb9e6df8ff3f0cd6380" category="summary">Puede poner en marcha ONTAP Select en un entorno de oficina remota/sucursal (robo, por sus siglas en inglés). Como parte de la planificación de una puesta en marcha de oficinas remotas y sucursales, debe seleccionar la configuración que respalda sus objetivos.</block>
   <block id="e629f0dfc57ffa98b8aabae83c3e5032" category="doc">Puestas en marcha remotas y sucursales</block>
@@ -2243,11 +2242,8 @@
   <block id="a0352e441ba04fb28d070a715c9d2ff2" category="paragraph">Asegúrese de que la implementación no se utiliza para realizar ninguna otra tarea durante la actualización. En las notas de la versión actual se proporciona información y restricciones sobre la actualización de la utilidad Deploy.</block>
   <block id="eb75a7c0dc84d14c47a84e436b8082cc" category="paragraph">Para iniciar el proceso de actualización, es necesario descargar el archivo de actualización de la máquina virtual de implementación correspondiente desde el sitio de soporte de NetApp. El paquete de actualización se formatea como un solo archivo comprimido.</block>
   <block id="67a5c1dd24ee56878ca59f7cbb4a6602" category="list-text">Acceda al sitio de soporte de NetApp mediante un explorador web y haga clic en *Support Quick Links*.</block>
-  <block id="bccf3e76ee48d8e82f2ceba72b62d7af" category="list-text">Desplácese hacia abajo y haga clic en *actualización de despliegue de ONTAP Select*.</block>
   <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">Seleccione la versión deseada del paquete de actualización.</block>
   <block id="def8f653fff47640d3bcce40244c6331" category="list-text">Seleccione y descargue el paquete adecuado, respondiendo a todos los avisos según sea necesario para su entorno.</block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">Soporte de NetApp</block>
-  <block id="256b9e5b7f511be2eea8558649199f73" category="paragraph"><block ref="256b9e5b7f511be2eea8558649199f73" category="inline-link-macro-rx"></block></block>
   <block id="e1592123d1df946558bd9bf257720d21" category="paragraph">Después de adquirir el paquete de actualización, debe cargar el archivo en la máquina virtual de implementación.</block>
   <block id="d5d592c7eaf2cef1bd79103f367e703c" category="paragraph">Debe tener el archivo de actualización disponible en la estación de trabajo local. También debe tener la contraseña de la cuenta de usuario de administrador.</block>
   <block id="f331fac6e9cf90cf6a3bc3b228554302" category="paragraph-title">Acerca de estas tareas</block>
@@ -2257,7 +2253,6 @@
   <block id="dbb14ca7f13323519486701e4b502763" category="paragraph">Debe saber en qué directorio se ha colocado el archivo de actualización en la máquina virtual de la utilidad de implementación. Además, asegúrese de que no se esté utilizando para realizar ninguna otra tarea mientras se realice la actualización.</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">Realice la actualización con la ruta y el nombre de archivo del directorio adecuados:</block>
   <block id="f5fb71abd32be9bc904db11637b6b903" category="paragraph"><block ref="1299ca75bdbf03e068a6eb77561752df" prefix="" category="inline-code"></block></block>
-  <block id="150fc0d33877571bc7e496a88e0dcdb5" category="paragraph">Una vez completado el procedimiento de actualización, se le pedirá que cree una copia de seguridad de la configuración implementar máquina virtual. También debe borrar la caché del explorador para poder ver las páginas de implementación recién creadas.</block>
   <block id="9f8405ace72665fee032686e586d5366" category="summary">Después de implementar un clúster de ONTAP Select, puede actualizar el tipo de instancia del hipervisor de los nodos mediante la utilidad de administración Deploy.</block>
   <block id="c491351d31e9a04b74d8cf6b5f75e570" category="paragraph">El clúster debe estar en el estado en línea.</block>
   <block id="090def24fea0489fb8d3e01bab4bd447" category="paragraph">Esta tarea describe cómo utilizar la interfaz de usuario web de implementación. También se puede utilizar la interfaz de línea de comandos de implementación para realizar el cambio de tamaño de la instancia. Independientemente de la interfaz que utilice, el tiempo necesario para la operación de ajuste de tamaño puede variar significativamente en función de varios factores y puede tardar más tiempo en completarse. Solo puede cambiar el tamaño de un nodo a un tamaño mayor.</block>
@@ -3526,7 +3521,6 @@ No se admiten los grupos de interfaces.</block>
   <block id="f300769ad7ade3ee1597c88f58750b97" category="doc">Actualice los nodos ONTAP Select</block>
   <block id="2e17a67d810d937603511ac8eb9044c5" category="paragraph">Consulte las notas de la versión para obtener información adicional y los procedimientos que se necesitan antes de actualizar un nodo ONTAP Select.</block>
   <block id="2a883d1fe3d932e9f2fc25c99deaa4b9" category="inline-link-macro">Información general de la actualización de ONTAP</block>
-  <block id="c6747590f95713e2f203d616751eb4ea" category="paragraph"><block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block></block>
   <block id="46928a27773a23230df6e5bda4c3aeb9" category="section-title">Revierte un nodo ONTAP Select</block>
   <block id="140182c4500e816e4313b2abddef452d" category="paragraph">No puede revertir un nodo ONTAP Select a una versión anterior a la que estaba instalado originalmente. Por ejemplo:</block>
   <block id="f02e36d55b7d949e1003748824aa7ec6" category="list-text">ONTAP Select 9,7 está instalado inicialmente</block>
@@ -3708,4 +3702,10 @@ Consulte la documentación de instalación y puesta en marcha de clústeres para
   <block id="ba0ae169498601730046cfffe2523387" category="sidebar">Entender una llamada a la API</block>
   <block id="20f67f07ed859b317730c48838666bb5" category="sidebar">Flujo de trabajo 1 Crear un clúster</block>
   <block id="d95d85ec027f0d5da378060fe690a4ec" category="sidebar">Comprender los scripts</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">Sitio de soporte de NetApp</block>
+  <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">Acceda a <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Usando un navegador web y elija *Descargas* en el menú Descargas.</block>
+  <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">Desplácese hacia abajo y seleccione *Actualización de implementación de ONTAP Select*.</block>
+  <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">Revise el Contrato de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.</block>
+  <block id="3b21e87e0ddc0bee4fd0ebb1cd063173" category="paragraph">Antes de que finalice el procedimiento de actualización, se le pedirá que cree una copia de seguridad de la configuración de la máquina virtual de despliegue. Además, debe limpiar la caché del navegador para poder ver las páginas de despliegue recién creadas.</block>
+  <block id="cb09c1543f3641ccb98ebd45cc63490d" category="list-text">Actualice el nodo ONTAP Select mediante los procedimientos de actualización estándar de ONTAP con el archivo de actualización de ONTAP Select. Consulte <block ref="c6747590f95713e2f203d616751eb4ea" category="inline-link-macro-rx"></block> para el procedimiento de actualización detallado.</block>
 </blocks>

@@ -32,17 +32,12 @@ NOTE: Si tiene instalada una instancia anterior de la utilidad de administració
 Para iniciar el proceso de actualización, es necesario descargar el archivo de actualización de la máquina virtual de implementación correspondiente desde el sitio de soporte de NetApp. El paquete de actualización se formatea como un solo archivo comprimido.
 
 .Pasos
-. Acceda al sitio de soporte de NetApp mediante un explorador web y haga clic en *Support Quick Links*.
-. Haga clic en *Descargar software* en *tareas principales* e inicie sesión.
-. Haga clic en *Buscar su producto*.
-. Desplácese hacia abajo y haga clic en *actualización de despliegue de ONTAP Select*.
+. Acceda a link:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] Usando un navegador web y elija *Descargas* en el menú Descargas.
+. Desplácese hacia abajo y seleccione *Actualización de implementación de ONTAP Select*.
 . Seleccione la versión deseada del paquete de actualización.
-. Revise el Contrato de licencia para el usuario final (EULA) y haga clic en *Aceptar y continuar*.
+. Revise el Contrato de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.
 . Seleccione y descargue el paquete adecuado, respondiendo a todos los avisos según sea necesario para su entorno.
 
-
-.Información relacionada
-link:https://mysupport.netapp.com["Soporte de NetApp"^]
 
 
 
@@ -95,4 +90,4 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 
 .Después de terminar
-Una vez completado el procedimiento de actualización, se le pedirá que cree una copia de seguridad de la configuración implementar máquina virtual. También debe borrar la caché del explorador para poder ver las páginas de implementación recién creadas.
+Antes de que finalice el procedimiento de actualización, se le pedirá que cree una copia de seguridad de la configuración de la máquina virtual de despliegue. Además, debe limpiar la caché del navegador para poder ver las páginas de despliegue recién creadas.
