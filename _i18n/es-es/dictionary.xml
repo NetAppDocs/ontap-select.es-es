@@ -3614,4 +3614,5 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="a00a440e4e7508545fb84f9e32bb861b" category="paragraph-title">Integre ONTAP Select con un clúster basado en hardware de ONTAP</block>
   <block id="e289810d4028b10554ae6b447fa581ee" category="sidebar">Requisitos de almacenamiento externo</block>
   <block id="a9e831fb19f71068ebfd5cb9b303ea66" category="sidebar">VMware vCenter en ESXi</block>
+  <block id="314c09ddbe5ce5a2ebc071a5ba939ef6" category="sidebar">Documentos de ONTAP Select 9.14.1</block>
 </blocks>
