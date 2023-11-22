@@ -36,9 +36,88 @@ NOTE: Una instancia de la utilidad Deploy puede administrar hasta 400 nodos de O
 
 
 
+== Requisitos relacionados con el entorno KVM
+
+Antes de instalar la utilidad de administración de implementación en un entorno de hipervisor KVM, debe revisar los requisitos básicos y prepararse para el despliegue.
+
+.Requisitos y restricciones para una puesta en marcha
+Hay varios requisitos y restricciones que debe tener en cuenta al instalar la utilidad ONTAP Select Deploy en un entorno KVM.
+
+.Requisitos de hardware del servidor host KVM de Linux
+Hay varios requisitos mínimos de recursos que debe cumplir su host de hipervisor KVM de Linux. Compruebe que los hosts donde se implementa ONTAP Select cumplen los siguientes requisitos básicos:
+
+* Servidor Linux:
++
+** El hardware y el software deben ser de 64 bits
+** El servidor debe cumplir con las mismas versiones compatibles que se han definido para un nodo ONTAP Select
+
+
+* CPU virtuales (2)
+* Memoria virtual (4GB)
+* Almacenamiento (40GB)
+* El protocolo de configuración dinámica de host (DHCP) está habilitado (también puede asignar una dirección IP estática)
+
+
+.Conectividad de la red
+Comprobar que la interfaz de red de la máquina virtual de implementación está configurada y se puede conectar a los hosts ONTAP Select que gestiona.
+
+.Compatibilidad con IP versión 4
+La implementación de ONTAP Select solo es compatible con IP versión 4 (IPv4). La versión 6 (IPv6) de IP no se admite. Esta restricción afecta a ONTAP Select de las siguientes maneras:
+
+* Debe asignar una dirección IPv4 a la LIF de gestión de la máquina virtual de puesta en marcha.
+* La implementación no puede crear nodos de ONTAP Select configurados para usar IPv6 en los LIF de ONTAP.
+
+
+
+
+== Información de configuración requerida
+
+Como parte de la planificación de la implementación, debe determinar la información de configuración necesaria antes de instalar la utilidad de administración de implementación de ONTAP Select.
+
+.Nombre de la máquina virtual de puesta en marcha
+El nombre que se utiliza para la máquina virtual.
+
+.Nombre del host KVM de Linux
+Host KVM de Linux en el que está instalada la utilidad de implementación.
+
+.Nombre del pool de almacenamiento
+El pool de almacenamiento que contiene los archivos de la máquina virtual (se requieren aproximadamente 40GB GB).
+
+.Red para la máquina virtual
+La red a la que está conectada la VM de despliegue.
+
+
+
+== Información de configuración de red opcional
+
+La máquina virtual de despliegue se configura mediante DHCP de forma predeterminada. Sin embargo, si es necesario, puede configurar manualmente la interfaz de red para la máquina virtual.
+
+.Nombre de host
+El nombre del host.
+
+.Dirección IP del host
+La dirección IPv4 estática.
+
+.Máscara de subred
+La máscara de subred, que se basa en la red de la que forma parte la máquina virtual.
+
+.Puerta de enlace
+La puerta de enlace o el enrutador predeterminados.
+
+.Servidor DNS primario
+Servidor de nombres de dominio primario.
+
+.Servidor DNS secundario
+El servidor de nombres de dominio secundario.
+
+.Buscar dominios
+Los dominios de búsqueda que se van a utilizar.
+
+
+
 == Autenticación mediante el almacén de credenciales
 
-El almacén de credenciales de implementación de ONTAP Select es una base de datos que contiene información de la cuenta. La implementación utiliza las credenciales de la cuenta para realizar la autenticación del host como parte de la creación y la gestión del clúster. Debe saber cómo se utiliza el almacén de credenciales como parte de la planificación de una implementación de ONTAP Select.
+El almacén de credenciales de despliegue de ONTAP Select es una base de datos que contiene información de cuenta. La implementación utiliza las credenciales de la cuenta para realizar la autenticación del host como parte de la creación y la gestión del clúster. Debe saber cómo se utiliza el almacén de credenciales como parte de la planificación de una implementación de ONTAP Select.
 
 
 NOTE: La información de cuentas se almacena de forma segura en la base de datos mediante el algoritmo de cifrado AES y el algoritmo de hash SHA-256.

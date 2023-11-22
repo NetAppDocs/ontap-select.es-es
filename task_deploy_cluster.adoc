@@ -97,7 +97,7 @@ Los pasos que siga dependerán de si desea crear un clúster de un solo nodo o u
 . Haga clic en *Actualizar* y confirme que se ha añadido la licencia.
 . Haga clic en *Siguiente* para agregar un host de hipervisor y, a continuación, haga clic en *Agregar*.
 +
-Puede añadir el host ESXi directamente o conectarse a una instancia de vCenter Server. Proporcione los detalles de host y las credenciales adecuadas según sea necesario.
+Puede añadir directamente el host del hipervisor o mediante la conexión a un servidor vCenter. Proporcione los detalles de host y las credenciales adecuadas según sea necesario.
 
 . Haga clic en *Actualizar* y confirme que el valor *Tipo* del host es *ESX*.
 +
@@ -146,7 +146,7 @@ TIP: Si se inicia la operación de creación de clúster, pero no se puede compl
 . Haga clic en *Refrescar* y confirme que se han agregado las licencias.
 . Haga clic en *Siguiente* para agregar dos hosts de hipervisor y luego haga clic en *Agregar*.
 +
-Puede añadir los hosts ESXi directamente o mediante la conexión a un servidor vCenter. Proporcione los detalles de host y las credenciales adecuadas según sea necesario.
+Puede añadir los hosts del hipervisor directamente o mediante la conexión a un servidor vCenter. Proporcione los detalles de host y las credenciales adecuadas según sea necesario.
 
 . Haga clic en *Actualizar* y confirme que el valor *Tipo* del host es *ESX*.
 +

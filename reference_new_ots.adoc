@@ -17,13 +17,16 @@ summary: La versión actual no incluye ninguna nueva función ni mejora específ
 [role="lead"]
 NetApp actualiza periódicamente ONTAP Select para ofrecerle nuevas funciones y mejoras.
 
-[NOTE]
-====
-* A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
-* A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
 
 
-====
+== ONTAP Select 9.14.1
+
+ONTAP Select 9.14.1 incluye varias funciones y mejoras nuevas.
+
+Compatibilidad con hipervisor KVM:: A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hipervisor KVM. Anteriormente, en ONTAP Select 9.10.1 se eliminó la compatibilidad para poner en marcha un clúster nuevo en un hipervisor KVM y se eliminó la compatibilidad con la administración de hosts y clústeres KVM existentes, excepto para desconectar o eliminar, en ONTAP Select 9.11.1.
+Ya no se admite la implementación del complemento de VMware vCenter:: A partir de ONTAP Select 9.14.1, ya no se admite el complemento para implementar VMware vCenter.
+
+
 
 
 == ONTAP Select 9.13.1

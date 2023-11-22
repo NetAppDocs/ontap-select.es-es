@@ -18,6 +18,49 @@ Existen varios requisitos generales que se deben tener en cuenta como parte de l
 
 
 
+== Conocimientos y habilidades de Linux necesarios para KVM
+
+Linux con el hipervisor KVM es un entorno complejo en el que trabajar. Antes de implementar ONTAP Select en KVM, debe contar con los conocimientos y habilidades necesarios.
+
+Distribución de servidores Linux:: Debe contar con experiencia con la distribución de Linux específica que se utilizará para la puesta en marcha de ONTAP Select. Específicamente, debe ser capaz de realizar las siguientes tareas:
++
+--
+* Instale la distribución de Linux
+* Configure el sistema con la CLI
+* Agregue paquetes de software, así como cualquier dependencia
+
+
+--
+
+
+Para obtener más información sobre la preparación del servidor Linux, incluidos los paquetes de software y configuración necesarios, consulte la lista de comprobación de configuración del host. Consulte los requisitos del hipervisor para las distribuciones de Linux actualmente compatibles.
+
+Instalación y administración de KVM:: Debería estar familiarizado con los conceptos generales de virtualización. Además, existen varios comandos de la CLI de Linux que debe utilizar como parte de la instalación y administración de ONTAP Select en un entorno KVM:
++
+--
+* `virt-install`
+* `virsh`
+* `lsblk`
+* `lvs`
+* `vgs`
+* `pvs`
+
+
+--
+Configuración de redes y Open vSwitch:: Debe estar familiarizado con los conceptos de red y la configuración de los switches de red. Además, deberías tener experiencia con Open vSwitch. Debe utilizar los siguientes comandos de red en parte de la configuración de la red de ONTAP Select en un entorno KVM:
++
+--
+* `ovs-vsctl`
+* `ip`
+* `ip link`
+* `systemctl`
+
+
+--
+
+
+
+
 == Tamaño del clúster y consideraciones relacionadas
 
 Hay varios problemas de planificación relacionados con el tamaño del clúster que debe tener en cuenta.
@@ -28,7 +71,7 @@ Dedicado versus colubicado:: En función del tipo de aplicación, debe determina
 
 
 
-== Hosts de hipervisores
+== Consideraciones del host del hipervisor
 
 Existen varios problemas de planificación relacionados con el host del hipervisor que debe tener en cuenta.
 
@@ -46,7 +89,7 @@ Independiente del hipervisor:: Tanto ONTAP Select como la utilidad de administra
 
 
 
-NOTE: A partir de ONTAP Select 9.10.1, el hipervisor KVM ya no es compatible cuando se pone en marcha un clúster nuevo. Todavía puede utilizar KVM con una versión compatible anterior.
+NOTE: A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hipervisor KVM. Anteriormente, en ONTAP Select 9.10.1 se eliminó la compatibilidad para poner en marcha un clúster nuevo en un hipervisor KVM y se eliminó la compatibilidad con la administración de hosts y clústeres KVM existentes, excepto para desconectar o eliminar, en ONTAP Select 9.11.1.
 
 Consulte la información de planificación específica del hipervisor y las notas de la versión para obtener más detalles sobre las plataformas compatibles.
 
@@ -81,7 +124,7 @@ Integración de ONTAP Select con un clúster basado en hardware de ONTAP:: No se
 
 
 
-== Reducida
+== Consideraciones sobre el almacenamiento
 
 Existen varios problemas de planificación relacionados con el almacenamiento host que se deben tener en cuenta.
 
@@ -109,6 +152,32 @@ Calcular el almacenamiento necesario:: Debe determinar la cantidad de almacenami
 NOTE: La capacidad de almacenamiento de ONTAP Select corresponde al tamaño total permitido de los discos de datos conectados a la máquina virtual ONTAP Select.
 
 Modelo de licencias para la puesta en marcha de entornos de producción:: Debe seleccionar los niveles de capacidad o el modelo de licencia para pools de capacidad para cada clúster de ONTAP Select implementado en un entorno de producción. Consulte la sección _License_ para obtener más información.
+
+
+
+
+== Autenticación mediante el almacén de credenciales
+
+El almacén de credenciales de despliegue de ONTAP Select es una base de datos que contiene información de cuenta. La implementación utiliza las credenciales de la cuenta para realizar la autenticación del host como parte de la creación y la gestión del clúster. Debe saber cómo se utiliza el almacén de credenciales como parte de la planificación de una implementación de ONTAP Select.
+
+
+NOTE: La información de la cuenta se almacena de forma segura en la base de datos mediante el algoritmo de cifrado Advanced Encryption Standard (AES) y el algoritmo hash SHA-256.
+
+Tipos de credenciales:: Se admiten los siguientes tipos de credenciales:
++
+--
+* host
++
+La credencial *host* se utiliza para autenticar un host de hipervisor como parte de la implementación de un nodo ONTAP Select directamente en ESXi o KVM.
+
+* vcenter
++
+La credencial *vcenter* se utiliza para autenticar un servidor vCenter como parte de la implementación de un nodo ONTAP Select en ESXi cuando VMware vCenter administra el host.
+
+
+
+--
+Acceso:: Se accede al almacén de credenciales internamente como parte de la realización de tareas administrativas normales mediante la implementación, como la adición de un host de hipervisor. También puede gestionar el almacén de credenciales directamente a través de la interfaz de usuario web de implementación y la CLI.
 
 
 .Información relacionada

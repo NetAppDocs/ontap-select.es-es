@@ -16,7 +16,7 @@ summary: Hay varios requisitos de SDS de MetroCluster que debe tener en cuenta c
 [role="lead"]
 El SDS de MetroCluster es una opción de configuración al crear un clúster de ONTAP Select de dos nodos. Es similar a una puesta en marcha de oficina remota/sucursal (robo, por sus siglas en inglés). Sin embargo, la distancia entre los dos nodos puede ser de hasta 10 km Esta puesta en marcha mejorada de dos nodos proporciona situaciones de casos prácticos adicionales. Debe conocer los requisitos y las restricciones como parte de preparar la implementación de SDS de MetroCluster.
 
-Antes de implementar SDS de MetroCluster, debe asegurarse de que se cumplan los siguientes requisitos.
+Antes de implementar SDS de MetroCluster, compruebe que se cumplen los siguientes requisitos.
 
 .Licencia
 Cada nodo debe tener una licencia ONTAP Select premium o superior.
@@ -26,9 +26,7 @@ SDS de MetroCluster se puede poner en marcha en los mismos hipervisores VMware E
 
 [NOTE]
 ====
-* A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
-* A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
-
+A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hipervisor KVM. Anteriormente, en ONTAP Select 9.10.1 se eliminó la compatibilidad para poner en marcha un clúster nuevo en un hipervisor KVM y se eliminó la compatibilidad con la administración de hosts y clústeres KVM existentes, excepto para desconectar o eliminar, en ONTAP Select 9.11.1.
 
 ====
 .Configuración de red

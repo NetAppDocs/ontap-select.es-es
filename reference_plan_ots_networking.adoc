@@ -27,7 +27,7 @@ NOTE: Si quiere más información sobre cómo configurar un vSwitch en un host d
 
 
 
-== Actualice a VMXNet3
+== Actualizar a VMXNet3 (solo ESXi)
 
 A partir de ONTAP Select 9.5 con Deploy 2.10, VMXNEG3 es el controlador de red predeterminado que se incluye con las nuevas implementaciones de clúster en VMware ESXi. Si actualiza un nodo ONTAP Select antiguo a la versión 9,5 o posterior, el controlador no se actualiza automáticamente.
 
@@ -49,7 +49,7 @@ NOTE: Puede establecer manualmente el valor de MTU de clúster si es necesario, 
 
 
 
-== Host de dos NIC con vSwitch estándar
+== Host de dos NIC con vSwitch estándar (solo ESXi)
 
 Para mejorar el rendimiento de ONTAP Select en una configuración de dos NIC, debe aislar el tráfico de red interno y externo mediante dos grupos de puertos. Esta recomendación se aplica a la siguiente configuración específica:
 
@@ -76,7 +76,7 @@ Consulte link:concept_nw_concepts_chars.html["Redes profundas"] Para obtener má
 
 
 
-== Host de cuatro NIC con vSwitch estándar
+== Host cuatro NIC con vSwitch estándar (solo ESXi)
 
 Para mejorar el rendimiento de ONTAP Select en una configuración de cuatro NIC, debe aislar el tráfico de red interno y externo utilizando cuatro grupos de puertos. Esta recomendación se aplica a la siguiente configuración específica:
 
@@ -123,8 +123,10 @@ Debe asegurarse de que los firewalls están configurados correctamente para perm
 Hay varios participantes o entidades que intercambian tráfico de red como parte de una implementación de ONTAP Select. Se introducen y, a continuación, se utilizan en la descripción de resumen de los requisitos de tráfico de red.
 
 * Implemente la utilidad de administración ONTAP Select Deploy
-* VSphere/ESXi: Un servidor vSphere o un host ESXi, según cómo se gestione el host en la puesta en marcha de clúster
-* Servidor del hipervisor host del hipervisor ESXi
+* VSphere (solo ESXi)
+Un servidor vSphere o un host ESXi, según cómo se gestione el host en la puesta en marcha del clúster
+* Servidor de hipervisor
+Host de hipervisor ESXi o host Linux KVM
 * Nodo OTS nodo ONTAP Select
 * Grupo OTS un clúster ONTAP Select
 * Estación de trabajo administrativa local de WS de administración
@@ -133,31 +135,34 @@ Hay varios participantes o entidades que intercambian tráfico de red como parte
 .Resumen de los requisitos de tráfico de red
 En la siguiente tabla se describen los requisitos de tráfico de red para una implementación de ONTAP Select.
 
-[cols="20,45,35"]
+[cols="20,20,35,25"]
 |===
-| Protocolo/Puerto | Dirección | Descripción 
+| Protocolo/Puerto | ESXi/KVM | Dirección | Descripción 
 
 
-| TLS (443) | Implemente en vCenter Server (gestionado) o ESXi (no administrado) | API VIX de VMware 
+| TLS (443) | ESXi | Ponga en marcha en vCenter Server (gestionado) o ESXi (gestionado o no gestionado) | API VIX de VMware 
 
 
-| 902 | Implemente en vCenter Server (gestionado) o ESXi (no administrado) | API VIX de VMware 
+| 902 | ESXi | Implemente en vCenter Server (gestionado) o ESXi (no administrado) | API VIX de VMware 
 
 
-| ICMP | Puesta en marcha en servidor de hipervisor | Ping 
+| ICMP | ESXi o KVM | Puesta en marcha en servidor de hipervisor | Ping 
 
 
-| ICMP | Despliegue en cada nodo OTS | Ping 
+| ICMP | ESXi o KVM | Despliegue en cada nodo OTS | Ping 
 
 
-| SSH (22) | WS de administración a cada nodo OTS | Administración 
+| SSH (22) | ESXi o KVM | WS de administración a cada nodo OTS | Administración 
 
 
-| TLS (443) | Despliegue en los nodos y clusters de OTS | Acceda a ONTAP 
+| SSH (22) | KVM | Póngalo en marcha en nodos de servidor del hipervisor | Acceda al servidor del hipervisor 
 
 
-| TLS (443) | Cada nodo OTS que se va a implementar | Puesta en marcha de acceso 
+| TLS (443) | ESXi o KVM | Despliegue en los nodos y clusters de OTS | Acceda a ONTAP 
 
 
-| ISCSI (3260) | Cada nodo OTS que se va a implementar | Mediador/disco de buzón 
+| TLS (443) | ESXi o KVM | Cada nodo OTS que se va a implementar | Acceso a puesta en marcha (licencia de pools de capacidad) 
+
+
+| ISCSI (3260) | ESXi o KVM | Cada nodo OTS que se va a implementar | Mediador/disco de buzón 
 |===

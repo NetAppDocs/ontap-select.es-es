@@ -23,7 +23,7 @@ Debe instalar la utilidad de administración de implementación de ONTAP Select 
 Puede descargar el paquete ONTAP Select en el sitio de soporte de NetApp.
 
 .Acerca de esta tarea
-La utilidad de administración de implementación de ONTAP Select se incluye como máquina virtual según el estándar de formato de virtualización abierta (OVF). El archivo comprimido único tiene el sufijo `ova`.
+La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar de formato de virtualización abierta (OVF). El archivo comprimido único tiene el sufijo `ova`.
 
 .Pasos
 . Acceda al sitio de soporte de NetApp mediante un navegador web y haga clic en *Support Quick Links*.
@@ -83,18 +83,18 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 
 == Implemente el equipo virtual
 
-Es necesario instalar e iniciar la máquina virtual de implementación de ONTAP Select con la imagen de máquina virtual OVF. Como parte del proceso de instalación, debe configurar la interfaz de red para usar DHCP o una configuración de IP estática.
+Debe instalar e iniciar la máquina virtual de ONTAP Select Deploy mediante la imagen de la máquina virtual de OVF. Como parte del proceso de instalación, se configura la interfaz de red para usar DHCP o una configuración de IP estática.
 
 .Antes de empezar
-Debe prepararse para implementar la máquina virtual de implementación de ONTAP Select:
+Para un hipervisor ESXi, debe prepararse para poner en marcha la máquina virtual ONTAP Select Deploy:
 
 * Active la funcionalidad OVF en su explorador instalando el complemento de integración de clientes de VMware o realizando una configuración similar según sea necesario
-* DHCP habilitado en el entorno de VMware si se asigna dinámicamente una dirección IP a la máquina virtual de implementación
+* Habilite DHCP en el entorno VMware si asignará dinámicamente una dirección IP a la VM de despliegue
 
 
-Debe tener la información de configuración que se utilizará al crear la máquina virtual, incluido el nombre de la máquina virtual, la red externa y el nombre de host. Al definir una configuración de red estática, se necesita la siguiente información adicional:
+Para los hipervisores ESXi y KVM, debe tener la información de configuración que se utilizará al crear la máquina virtual, incluido el nombre de la máquina virtual, la red externa y el nombre de host. Al definir una configuración de red estática, se necesita la siguiente información adicional:
 
-* Dirección IP de la máquina virtual de implementación
+* La dirección IP de la máquina virtual de puesta en marcha
 * Máscara de red
 * Dirección IP de la puerta de enlace (enrutador)
 * Dirección IP del servidor DNS primario
@@ -103,17 +103,23 @@ Debe tener la información de configuración que se utilizará al crear la máqu
 
 
 .Acerca de esta tarea
-Si utiliza vSphere, el asistente de plantilla implementar OVF incluye un formulario para proporcionar toda la información de configuración de la implementación, incluida la configuración de red. Sin embargo, si elige no utilizar este formulario, puede utilizar la consola de la máquina virtual de implementación para configurar la red en su lugar.
+Si utiliza vSphere, el asistente de plantilla implementar OVF incluye un formulario para proporcionar toda la información de configuración de la implementación, incluida la configuración de red. Sin embargo, si decide no utilizar este formulario, puede utilizar la consola de la VM de despliegue para configurar la red en su lugar.
 
 .Pasos
+Los pasos que siga dependerán de si utiliza un hipervisor ESXi o KVM.
+
+[role="tabbed-block"]
+====
+.ESXi
+--
 . Acceda al cliente vSphere e inicie sesión.
 . Desplácese hasta la ubicación adecuada de la jerarquía y seleccione *implementar plantilla OVF*.
 . Seleccione el archivo OVA y complete el asistente implementar plantilla OVF, seleccionando las opciones que correspondan a su entorno.
 +
 Debe definir la contraseña de la cuenta de administrador. Debe proporcionar esta contraseña al iniciar sesión en la utilidad de implementación.
 
-. Después de la implementación de la máquina virtual, seleccione la nueva máquina virtual y enciela si todavía no se ha encendido según la entrada que haya introducido en el asistente de implementación.
-. Si es necesario, puede configurar la red de puesta en marcha mediante la consola de máquina virtual:
+. Una vez implementada la máquina virtual, seleccione la nueva máquina virtual y enciéndala si aún no está encendida según la entrada que haya introducido en el asistente de implementación.
+. Si es necesario, puede configurar la red de despliegue mediante la consola de VM:
 +
 .. Haga clic en la ficha *Console* para acceder al shell de configuración del host ESXi y supervisar el proceso de encendido.
 .. Espere hasta que aparezca el siguiente símbolo del sistema:
@@ -130,12 +136,65 @@ Introduzca una contraseña para el usuario administrador:
 +
 ¿Usar DHCP para establecer la información de red? [n]:
 
-.. Escriba *n* para definir una configuración de IP estática o y para usar DHCP y pulse *Intro*.
+.. Escriba *n* para definir una configuración IP estática o *y* para usar el DHCP, y seleccione *Intro*.
 .. Si selecciona una configuración estática, proporcione toda la información de configuración de red según sea necesario.
 
 
 
 
+--
+.KVM
+--
+. Inicie sesión en la CLI en el servidor Linux:
++
+[listing]
+----
+ssh root@<ip_address>
+----
+. Cree un nuevo directorio y extraiga la imagen de VM sin procesar:
++
+[listing]
+----
+mkdir /home/select_deploy25
+cd /home/select_deploy25
+mv /root/<file_name> .
+tar -xzvf <file_name>
+----
+. Cree e inicie la máquina virtual KVM que ejecute la utilidad de administración de despliegue:
++
+[listing]
+----
+virt-install --name=select-deploy --vcpus=2 --ram=4096 --os-variant=debian10 --controller=scsi,model=virtio-scsi --disk path=/home/deploy/ONTAPdeploy.raw,device=disk,bus=scsi,format=raw --network "type=bridge,source=ontap-br,model=virtio,virtualport_type=openvswitch" --console=pty --import --noautoconsole
+----
+. Si es necesario, puede configurar la red de despliegue mediante la consola de VM:
++
+.. Conectarse a la consola del equipo virtual:
++
+[listing]
+----
+virsh console <vm_name>
+----
+.. Espere hasta que aparezca el siguiente símbolo del sistema:
++
+[listing]
+----
+Host name :
+----
+.. Escriba el nombre del host y seleccione *Intro*.
+.. Espere hasta que aparezca el siguiente símbolo del sistema:
++
+[listing]
+----
+Use DHCP to set networking information? [n]:
+----
+.. Escriba *n* para definir una configuración IP estática o *y* para usar el DHCP, y seleccione *Intro*.
+.. Si selecciona una configuración estática, proporcione toda la información de configuración de red según sea necesario.
+
+
+
+
+--
+====
 
 
 == Inicie sesión en la interfaz web de despliegue

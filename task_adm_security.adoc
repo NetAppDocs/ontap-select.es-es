@@ -56,11 +56,9 @@ Debe estar familiarizado con los tipos de credenciales y con cómo se utilizan e
 
 | Contraseña | Introduzca la contraseña del nombre de usuario asociado. 
 |===
-. Puede registrar (instalar) opcionalmente el complemento Deploy vCenter.
 . Una vez añadido el nuevo servidor de gestión, puede hacer clic opcionalmente image:icon_kebab.gif["Opciones"] y seleccione una de las siguientes opciones:
 +
 ** Actualizar las credenciales
-** Regístrese como plugin
 ** Verificar credenciales
 ** Quitar el servidor de gestión
 

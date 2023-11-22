@@ -48,8 +48,7 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 == Código abierto
 
-El archivo de avisos proporciona información sobre los derechos de autor y las licencias de terceros que se utilizan en software de NetApp.
+El archivo de aviso proporciona información sobre los derechos de autor y las licencias de terceros utilizados en el software de NetApp.
 
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2885796["Aviso para ONTAP Select 9.13.1"^]
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2884813["Aviso para ONTAP Select 9.12.1"^]
+* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886734["Aviso para ONTAP Select 9.14.1"^]
 

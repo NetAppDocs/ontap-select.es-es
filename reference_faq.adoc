@@ -18,9 +18,7 @@ Puede encontrar respuestas a preguntas frecuentes sobre ONTAP Select.
 
 [NOTE]
 ====
-* A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
-* A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
-
+A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hipervisor KVM. Anteriormente, en ONTAP Select 9.10.1 se eliminó la compatibilidad para poner en marcha un clúster nuevo en un hipervisor KVM y se eliminó la compatibilidad con la administración de hosts y clústeres KVM existentes, excepto para desconectar o eliminar, en ONTAP Select 9.11.1.
 
 ====
 
@@ -118,7 +116,11 @@ El RAID de software es una capa de la pila de software de ONTAP. El software RAI
 
 A continuación se presentan algunos de los requisitos del software RAID:
 
-* Compatible con ESX y KVM (anterior a ONTAP Select 9.10.1)
+* Compatible con ESX y KVM
++
+** A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hipervisor KVM. Anteriormente, se había eliminado la compatibilidad con el hipervisor KVM en ONTAP Select 9.10.1.
+
+
 * Tamaño de los discos físicos compatibles: 200 GB – 32 TB
 * Sólo compatible con configuraciones DAS
 * Compatible con SSD o NVMe
@@ -203,21 +205,6 @@ Para los clústeres multinodo, la red interna debe estar completamente abierta (
 .¿Qué derechos de vCenter instala ONTAP Select necesita crear clústeres de ONTAP Select?
 La lista de derechos de vCenter requeridos está disponible aquí: link:reference_plan_ots_vcenter.html["Servidor VMware vCenter"].
 
-.¿Qué es el complemento de puesta en marcha de vCenter?
-Es posible integrar la funcionalidad de puesta en marcha de ONTAP Select en vCenter Server con el complemento de puesta en marcha de ONTAP Select. Tenga en cuenta que el plugin no sustituye a ONTAP Select Deploy. En lugar de ello, la puesta en marcha de ONTAP Select funciona en segundo plano, y el administrador de vCenter puede invocar la mayoría de la funcionalidad de puesta en marcha de ONTAP Select con el plugin. Algunas operaciones de puesta en marcha de ONTAP Select solo están disponibles con la CLI.
-
-.¿Cuántas máquinas virtuales en marcha de ONTAP Select pueden registrar sus complementos en una instancia de vCenter Server?
-Solo una máquina virtual de ONTAP Select Deploy puede registrar su complemento con un servidor de vCenter específico.
-
-.¿Cuál es la ventaja del complemento de puesta en marcha de vCenter para ONTAP Select?
-El complemento permite a los administradores de vCenter y a los generalistas DE TECNOLOGÍA crear clústeres de ONTAP Select con la interfaz gráfica de usuario HTML5 de vCenter. Tenga en cuenta que la interfaz gráfica de usuario de Flash vCenter no es compatible.
-
-Además, permite la implementación de ONTAP Select para usar el control de acceso basado en roles de vCenter para la autenticación. Los usuarios a los que se les da el privilegio de vCenter de usar el plugin de ONTAP Select Deploy tienen su cuenta de vCenter asignada al usuario administrador de ONTAP Select Deploy. La implementación de ONTAP Select registra el ID de usuario de cada operación y el siguiente archivo puede usarse como registro de auditoría básico:
-
-[listing]
-----
-nginx_access.log
-----
 
 
 == ALTA DISPONIBILIDAD y clústeres

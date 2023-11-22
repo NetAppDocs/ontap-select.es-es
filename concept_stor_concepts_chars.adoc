@@ -116,7 +116,7 @@ Debe asegurarse de que los pools de almacenamiento se creen correctamente como p
 
 
 
-=== Gestionar los discos virtuales
+=== Gestione los discos virtuales en ESXi
 
 Existen varios problemas relacionados con los discos virtuales que se deben conocer como parte de la preparación para la implementación de ONTAP Select.
 
@@ -141,7 +141,7 @@ ONTAP Select gestiona los discos virtuales. Se crean automáticamente cuando se 
 
 
 
-== Ilustración del entorno de almacenamiento externo
+== Ilustración del entorno de almacenamiento externo en ESXi
 
 La solución vNAS de ONTAP Select permite a ONTAP Select utilizar almacenes de datos que residen en un almacenamiento externo al host del hipervisor. Se puede acceder a los almacenes de datos a través de la red mediante VMware VSAN o directamente en una cabina de almacenamiento externa.
 

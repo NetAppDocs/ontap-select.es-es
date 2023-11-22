@@ -26,7 +26,7 @@ Si se añade capacidad adicional a un agregado de ONTAP Select existente, el nue
 
 Si se añade almacenamiento de conexión local a un sistema para proporcionar pools de almacenamiento locales (DAS) adicionales, debe crear un grupo RAID y LUN (o LUN) adicionales. Del mismo modo que con los sistemas FAS, se debe tener cuidado para asegurarse de que el rendimiento del nuevo grupo RAID sea similar al del grupo RAID original, si se agrega nuevo espacio al mismo agregado. Si va a crear un nuevo agregado, la distribución de los nuevos grupos RAID puede ser diferente si las implicaciones de rendimiento del nuevo agregado están bien comprendidas.
 
-El nuevo espacio puede añadirse a ese mismo almacén de datos como una extensión si el tamaño total del almacén de datos no supera el tamaño máximo de almacén de datos compatible con ESX. Añadir una extensión de almacén de datos en el almacén de datos en el que ONTAP Select ya está instalado puede realizarse de forma dinámica y no afecta a las operaciones del nodo ONTAP Select.
+El nuevo espacio se puede agregar al mismo almacén de datos como una extensión si el tamaño total del almacén de datos no supera el tamaño máximo admitido del almacén de datos. La adición de una extensión de almacén de datos al almacén de datos en el que ONTAP Select ya está instalado se puede realizar de forma dinámica y no afecta a las operaciones del nodo de ONTAP Select.
 
 Si el nodo ONTAP Select forma parte de un par de alta disponibilidad, se deben tener en cuenta algunos problemas adicionales.
 

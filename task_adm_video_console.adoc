@@ -14,7 +14,7 @@ summary: Puede acceder a la consola de vídeo de la máquina virtual ESXi donde 
 
 
 [role="lead"]
-Puede acceder a la consola de vídeo de la máquina virtual ESXi donde se ejecuta ONTAP Select.
+Puede acceder a la consola de vídeo de la máquina virtual del hipervisor donde se está ejecutando ONTAP Select.
 
 .Acerca de esta tarea
 Es posible que deba acceder a la consola de máquinas virtuales para solucionar un problema o cuando el soporte de NetApp lo solicite.

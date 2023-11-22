@@ -39,14 +39,23 @@ Anote el número de versión y la plataforma del hipervisor en cada caso.
 +
 `ls -lh /opt/netapp/images`
 
-. Opcionalmente, quite una imagen ESXi.
+. Opcionalmente, elimine la imagen de ONTAP Select con el host del hipervisor.
 +
-Ejemplo
-`rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova`
-
-. Opcionalmente, quite una imagen KVM cuando utilice una versión anterior a ONTAP Select 9.10.1.
-+
-Ejemplo
-`rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar`
-
+[role="tabbed-block"]
+====
+.Ejemplo de ESXi
+--
+[source, asciidoc]
+----
+rm -r /opt/netapp/images/DataONTAPv-9.3RC1-vidconsole-esx.ova
+----
+--
+.Ejemplo de KVM
+--
+[source, asciidoc]
+----
+rm -r /opt/netapp/images/DataONTAPv-9.3RC1-serialconsole-kvm.raw.tar
+----
+--
+====
 

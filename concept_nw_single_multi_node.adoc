@@ -26,6 +26,10 @@ A diferencia de la versión multinodo del producto ONTAP Select, cada equipo vir
 
 Estos puertos se utilizan para proporcionar los siguientes servicios: LIF de gestión, datos y interconexión de clústeres.
 
+.KVM
+ONTAP Select se puede poner en marcha como un clúster de un solo nodo. El host del hipervisor incluye un switch virtual que proporciona acceso a la red externa.
+
+.ESXi
 La relación entre estos puertos y los adaptadores físicos subyacentes se puede ver en la siguiente figura, que muestra un nodo de clúster ONTAP Select en el hipervisor ESX.
 
 *Configuración de red del cluster ONTAP Select de un solo nodo*

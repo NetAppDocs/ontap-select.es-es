@@ -4,7 +4,7 @@ permalink: reference_plan_dep_vmware.html
 keywords: plan, planning, ontap select deploy, vmware requirements 
 summary: Hay varios requisitos y restricciones específicos del entorno de VMware que debe tener en cuenta antes de instalar la utilidad de implementación de ONTAP Select en un entorno de VMware. 
 ---
-= Entorno de hipervisores de VMware
+= Consideraciones del host del hipervisor
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,61 @@ summary: Hay varios requisitos y restricciones específicos del entorno de VMwar
 
 
 [role="lead"]
+Existen varios problemas de planificación relacionados con el host del hipervisor que debe tener en cuenta.
+
+
+CAUTION: No se debe modificar directamente la configuración de una máquina virtual de ONTAP Select a menos que el soporte de NetApp le indique hacerlo. Sólo se debe configurar y modificar una máquina virtual mediante la utilidad de administración de despliegue. Si se realizan cambios en una máquina virtual de ONTAP Select fuera de la utilidad de implementación sin la ayuda del soporte de NetApp, es posible que la máquina virtual falle y quede inutilizable.
+
+
+
+== Independiente del hipervisor
+
+Tanto ONTAP Select como la utilidad de administración de puesta en marcha de ONTAP Select son independientes del hipervisor.
+
+Los siguientes hipervisores son compatibles tanto con ONTAP Select como con la administración de puesta en marcha de ONTAP Select:
+
+* VMware ESXi
+* Máquina virtual basada en kernel (KVM)
+
+
+
+NOTE: Consulte la información de planificación específica del hipervisor y las notas de la versión para obtener más detalles sobre las plataformas compatibles.
+
+.Hipervisor para nodos ONTAP Select y utilidad de administración
+Tanto la utilidad de administración como los nodos de ONTAP Select se ejecutan como máquinas virtuales. El hipervisor que elija para la utilidad de puesta en marcha es independiente del hipervisor que elija para los nodos ONTAP Select. Dispone de flexibilidad completa al emparejar los dos:
+
+* La utilidad de puesta en marcha que se ejecuta en VMware ESXi puede crear y gestionar clústeres de ONTAP Select en VMware ESXi o KVM
+* La utilidad de puesta en marcha que se ejecuta en KVM puede crear y gestionar clústeres de ONTAP Select en VMware ESXi o KVM
+
+
+.Una o más instancias de nodo ONTAP Select por host
+Cada nodo ONTAP Select se ejecuta como máquina virtual dedicada. Puede crear varios nodos en el mismo host del hipervisor, con las siguientes restricciones:
+
+* No se pueden ejecutar varios nodos desde un único clúster de ONTAP Select en el mismo host. Todos los nodos de un host específico deben tener clústeres de ONTAP Select diferentes.
+* Debe usar almacenamiento externo.
+* Si utiliza RAID de software, solo puede implementar un nodo ONTAP Select en el host.
+
+
+.Coherencia de hipervisores para los nodos dentro de un clúster
+Todos los hosts de un clúster de ONTAP Select deben ejecutarse en la misma versión y versión del software del hipervisor.
+
+.Número de puertos físicos en cada host
+Debe configurar cada host para que use uno, dos o cuatro puertos físicos. Aunque tiene flexibilidad al configurar los puertos de red, debe seguir estas recomendaciones cuando sea posible:
+
+* Un host en un clúster de un solo nodo debería tener dos puertos físicos.
+* Cada host de un clúster multinodo debería tener cuatro puertos físicos
+
+
+.Integre ONTAP Select con un clúster basado en hardware de ONTAP
+No se puede añadir un nodo ONTAP Select directamente a un clúster basado en hardware de ONTAP. Sin embargo, de forma opcional, puede establecer una relación de paridad entre un clúster de ONTAP Select y un clúster de ONTAP basado en hardware.
+
+
+
+== Entorno de hipervisores de VMware
+
 Hay varios requisitos y restricciones específicos del entorno de VMware que debe tener en cuenta antes de instalar la utilidad de implementación de ONTAP Select en un entorno de VMware.
 
-
-
-== Requisitos de hardware del servidor host ESXi
-
+.Requisitos de hardware del servidor host ESXi
 Hay varios requisitos mínimos de recursos que el host del hipervisor ESXi debe cumplir. Debe asegurarse de que los hosts donde se ha implementado ONTAP Select cumplan con los siguientes requisitos básicos:
 
 * Servidor ESXi:
@@ -34,10 +83,7 @@ Hay varios requisitos mínimos de recursos que el host del hipervisor ESXi debe 
 * DHCP habilitado (también puede asignar una dirección IP estática)
 
 
-
-
-== Conectividad de la red
-
+.Conectividad de la red
 Es necesario asegurarse de que la interfaz de red de máquina virtual de implementación de ONTAP Select esté configurada y tenga una dirección IP de administración única. Puede usar DHCP para asignar de forma dinámica una dirección IP o configurar manualmente una dirección IP estática.
 
 Según sus decisiones de puesta en marcha, la máquina virtual de puesta en marcha debe poder conectarse al servidor vCenter, a los hosts del hipervisor ESXi y a los nodos ONTAP Select que gestiona. Debe configurar los firewalls para permitir el tráfico requerido.
@@ -51,18 +97,12 @@ La implementación también debe poder comunicarse con las direcciones IP de adm
 * SSL (puerto 443)
 
 
-
-
-== Compatibilidad con IP versión 4
-
+.Compatibilidad con IP versión 4
 La implementación de ONTAP Select solo es compatible con IP versión 4 (IPv4). La versión 6 (IPv6) de IP no se admite. Esta restricción afecta a ONTAP Select de las siguientes maneras:
 
 * Debe asignar una dirección IPv4 a la LIF de gestión de la máquina virtual de implementación.
 * La implementación no puede crear nodos de ONTAP Select configurados para usar IPv6 en los LIF de ONTAP.
 
 
-
-
-== Restricción del idioma de VMware vCenter
-
+.Restricción del idioma de VMware vCenter
 Si utiliza ONTAP Select Deploy para crear un clúster que se ejecute en ESXi con vCenter en una instancia de Windows Server, debe usar una versión en inglés. La implementación de ONTAP Select no es compatible con vCenter en versiones de Windows que no están en inglés.

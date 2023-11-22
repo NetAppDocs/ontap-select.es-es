@@ -73,4 +73,4 @@ La oferta premium XL ofrece las siguientes funciones:
 
 
 
-NOTE: El tipo de instancia grande (con la licencia premium XL) solo se ofrece en VMware ESXi.
+NOTE: Puede utilizar el tipo de instancia grande (con la licencia premium XL) para cualquier configuración, pero no es compatible con KVM debido a problemas de rendimiento.

@@ -14,7 +14,7 @@ summary: Antes de instalar la utilidad de administración de implementación en 
 
 
 [role="lead"]
-Antes de instalar la utilidad de administración de implementación en un entorno VMware, revise la información de configuración necesaria y la información de configuración de red opcional para prepararse para una correcta implementación.
+Antes de instalar la utilidad de administración de implementación en un entorno de hipervisor, revise la información de configuración necesaria y la información de configuración de red opcional para prepararse para una implementación correcta.
 
 
 
@@ -30,10 +30,10 @@ Como parte de la planificación de la implementación, debe determinar la inform
 | Nombre de la máquina virtual de puesta en marcha | Identificador que se usará para la máquina virtual. 
 
 
-| Nombre del host ESXi | Identificador del host VMware ESXi donde se instaló la utilidad Deploy. 
+| Nombre del host del hipervisor | Identificador del host de hipervisor VMware ESXi o KVM donde se instala la utilidad Deploy. 
 
 
-| Nombre del almacén de datos | Identificador del almacén de datos de VMware que contiene los archivos de la máquina virtual (se requieren aproximadamente 40 GB). 
+| Nombre del almacén de datos | Identificador del almacén de datos del hipervisor que contiene los archivos de la máquina virtual (se requieren aproximadamente 40GB GB). 
 
 
 | De la máquina virtual | Identificador de la red en la que está conectada la máquina virtual de implementación. 

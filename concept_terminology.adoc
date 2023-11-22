@@ -17,6 +17,7 @@ summary: Al comenzar a explorar ONTAP Select y planificar una implementación, e
 Al comenzar a explorar ONTAP Select y planificar una implementación, es útil familiarizarse con la terminología y los conceptos clave.
 
 Puesta en marcha de ONTAP Select:: ONTAP Select Deploy es la utilidad de administración que se utiliza para poner en marcha clústeres de ONTAP Select. La utilidad Deploy se ejecuta en una máquina virtual dedicada de Linux. Puede acceder a la utilidad de implementación mediante la interfaz de usuario web, el shell de gestión de la interfaz de línea de comandos y la API DE REST.
+Máquina virtual basada en kernel:: La máquina virtual basada en kernel (KVM) es una característica de virtualización del kernel de Linux, que le permite actuar como una plataforma de hipervisor. Se admite una amplia gama de sistemas operativos invitados.
 Host de hipervisor frente a nodo ONTAP Select:: Un _hypervisor host_ es la plataforma de hardware principal que aloja una máquina virtual ONTAP Select. Cuando se implementa una máquina virtual ONTAP Select y está activa en un host de hipervisor, se considera un _ONTAP Select node_.
 Clúster de ONTAP Select:: Puede crear un _ONTAP Select cluster_ compuesto por uno, dos, cuatro, seis u ocho nodos. Los clústeres de varios nodos siempre contienen uno o más pares de alta disponibilidad. Por ejemplo, un clúster de cuatro nodos consta de dos parejas de alta disponibilidad. Un único clúster de nodo no proporciona funcionalidades de alta disponibilidad.
 Preparación del entorno de host del hipervisor:: Antes de usar la utilidad de administración Deploy para poner en marcha un clúster de ONTAP Select, debe preparar los hosts de hipervisor donde se ejecutará ONTAP Select, incluidos los entornos de almacenamiento y redes. Esta configuración previa del host se realiza fuera del producto de ONTAP Select de acuerdo con los requisitos y las limitaciones actuales.
@@ -59,7 +60,7 @@ VNAS de ONTAP Select:: La solución vNAS de ONTAP Select permite que un nodo ONT
 
 En ambos casos, el almacenamiento externo debe configurarse antes de crear un clúster de ONTAP Select o ampliar la capacidad de almacenamiento de un nodo existente.
 
-Realojamiento de nodos:: Cuando pone en marcha un clúster que utiliza almacenamiento externo disponible a través de la solución vNAS de ONTAP Select (VMware VSAN o una cabina de almacenamiento externo genérica), la máquina virtual ESXi que aloja el nodo ONTAP Select puede moverse por medio de acciones utilizando las siguientes funciones de VMware:
+Realojamiento del nodo en la máquina virtual ESXi:: Cuando pone en marcha un clúster que utiliza almacenamiento externo disponible a través de la solución vNAS de ONTAP Select (VMware VSAN o una cabina de almacenamiento externo genérica), la máquina virtual ESXi que aloja el nodo ONTAP Select puede moverse por medio de acciones utilizando las siguientes funciones de VMware:
 +
 --
 * VMotion
@@ -77,6 +78,7 @@ Cuando se mueve una máquina virtual, la utilidad Deploy actualiza su base de da
 
 
 --
+Abra vSwitch para KVM:: Open vSwitch (OVS) es una implementación de software de un switch virtual que admite varios protocolos de red. OVS es de código abierto y está disponible de acuerdo con la licencia Apache 2,0.
 Servicio de mediación:: La utilidad de puesta en marcha de ONTAP Select incluye un servicio de mediador que se conecta a los nodos en los clústeres de dos nodos activos. Este servicio supervisa cada par de alta disponibilidad y ayuda a gestionar los fallos.
 
 

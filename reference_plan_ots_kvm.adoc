@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_ots_kvm.html 
+keywords: plan, planning, vnas, kvm 
+summary: Existen varios problemas de planificación relacionados con el uso del hipervisor KVM que se deben tener en cuenta. 
+---
+= Requisitos de KVM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede configurar ONTAP Select en el hipervisor KVM con una cabina de almacenamiento externa.
+
+
+
+== Requisitos básicos y restricciones
+
+Si se usa una cabina externa para los pools de almacenamiento de ONTAP Select, se aplican las siguientes restricciones de configuración:
+
+* Debe definir como el tipo de pool lógico mediante CLVM.
+* Debe proporcionar un límite de capacidad de almacenamiento.
+* La configuración solo es compatible con los protocolos FC, Fibre Channel sobre Ethernet (FCoE) e iSCSI.
+* La configuración no reconoce el almacenamiento con Thin Provisioning.
+
+
+
+CAUTION: La capacidad de almacenamiento que especifique debe estar dentro de los límites de almacenamiento permitidos del almacenamiento externo. Se produce un error si no se proporciona un límite de capacidad o el almacenamiento externo se queda sin espacio durante la operación de creación de discos.
+
+
+
+== Mejores prácticas
+
+Debe cumplir las siguientes recomendaciones:
+
+* Defina puertos de red dedicados, ancho de banda y configuraciones de vSwitch para las redes ONTAP Select y almacenamiento externo
+* Configurar la opción de capacidad para restringir el uso del almacenamiento (ONTAP Select no puede consumir toda la capacidad de un pool de almacenamiento externo).
+* Verifique que todas las cabinas de almacenamiento externo utilicen las funciones de redundancia y alta disponibilidad disponibles cuando sea posible
+
