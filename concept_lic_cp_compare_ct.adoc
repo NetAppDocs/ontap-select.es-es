@@ -30,5 +30,26 @@ En la siguiente tabla se comparan los dos modelos de licencias de producción co
 | Duración de la licencia | Perpetua (sin necesidad de renovación). | Duración fija basada en la compra (se requiere una renovación) 
 
 
-| Duración de la concesión del agregado de datos | No aplicable de una hora a siete días | Número de serie del nodo 
+| Duración de la concesión del agregado de datos | No aplicable | De una hora a siete días 
+
+
+| Número de serie del nodo | Nueve dígitos e igual al número de serie de la licencia | Veinte dígitos y generados por el Administrador de licencias 
+
+
+| Soporte técnico | Complemento y tiempo limitado | Incluido y co-denominado 
+
+
+| Tipos de licencia | Estándar, premium, premium XL | Estándar, premium, premium XL 
+
+
+| Licencia de evaluación disponible | Sí | Sí 
+
+
+| Evaluación a actualización de producción | Sí | No 
+
+
+| Cambio de tamaño del equipo virtual ONTAP Select (pequeño a mediano, mediano a grande) | Sí | Sí 
+
+
+| Aplicación: Licencia caducada | N.A. | Sí (sin periodo de gracia) 
 |===

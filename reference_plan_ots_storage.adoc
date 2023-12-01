@@ -169,9 +169,15 @@ El tamaño mínimo del pool de almacenamiento asignado a cada nodo en un clúste
 
 La asignación mínima para una puesta en marcha de producción consta de 2 TB para los datos de usuario, más aproximadamente 266 GB utilizados por diversos procesos internos de ONTAP Select, que se considera como sobrecarga requerida.
 
+[NOTE]
+====
+Cada nodo de una pareja de alta disponibilidad debe tener la misma capacidad de almacenamiento.
 
-NOTE: Cada nodo de una pareja de alta disponibilidad debe tener la misma capacidad de almacenamiento.
+Al calcular la cantidad de almacenamiento para un par de alta disponibilidad, se debe tener en cuenta que todos los agregados (raíz y datos) están duplicados. Como resultado, cada plex del agregado consume la misma cantidad de almacenamiento.
 
+Por ejemplo, cuando se crea un agregado de 2TB TB, se asignan 2TB GB a dos instancias plex (2TB GB para plex0 y 2TB GB para plex1) o 4TB GB de la cantidad total de almacenamiento con licencia.
+
+====
 
 
 === La capacidad de almacenamiento y varios pools de almacenamiento
