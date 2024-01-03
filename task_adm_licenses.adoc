@@ -27,7 +27,7 @@ Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Sele
 . Haga clic en la ficha *Administración* situada en la parte superior de la página.
 . Haga clic en *licencias* y haga clic en *nivel de capacidad*.
 . Si lo desea, haga clic en *filtro* y para limitar las licencias mostradas.
-. Si lo desea, seleccione una licencia y haga clic en image:icon_kebab.gif["Opciones"] para administrar una licencia existente
+. Para reemplazar una licencia existente; seleccione una licencia, haga clic en image:icon_kebab.gif["Opciones"], Y seleccione *Actualizar*.
 . Para añadir una nueva licencia, haga clic en *Agregar* en la parte superior de la página y, a continuación, haga clic en *cargar licencias* y seleccione un archivo de licencia de su estación de trabajo local.
 
 
@@ -42,7 +42,7 @@ Es posible añadir, editar y eliminar licencias de pools de capacidad ONTAP Sele
 . Haga clic en la ficha *Administración* situada en la parte superior de la página.
 . Haga clic en *licencias* y haga clic en *grupos de capacidad*.
 . Si lo desea, haga clic en *filtro* y para limitar las licencias mostradas.
-. Si lo desea, seleccione una licencia y haga clic en image:icon_kebab.gif["Opciones"] para administrar una licencia existente
+. Si lo desea, seleccione una licencia y haga clic en image:icon_kebab.gif["Opciones"] para administrar una licencia existente.
 . Para añadir una licencia nueva o renovar una licencia existente, haga clic en *Agregar* en la parte superior de la página y, a continuación, haga clic en *cargar licencia(s)* y seleccione un archivo de licencia de su estación de trabajo local.
 . Para ver una lista de los pools de capacidad:
 +

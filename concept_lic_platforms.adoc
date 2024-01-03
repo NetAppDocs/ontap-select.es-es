@@ -65,12 +65,12 @@ La oferta premium ofrece las siguientes funcionalidades:
 
 La oferta premium XL ofrece las siguientes funciones:
 
-* Tipo de instancia pequeño, mediano o grande.
-* Unidades de disco duro (HDD) o unidades de estado sólido (SSD)
-* Controlador RAID de hardware local o RAID de software.
+* Tipo de instancia small, medium o large
+* HDD, SSD o unidades NVMe
+* Controlador RAID de hardware local o RAID de software
 * VNAS
 * SDS de MetroCluster
 
 
 
-NOTE: Puede utilizar el tipo de instancia grande (con la licencia premium XL) para cualquier configuración, pero no es compatible con KVM debido a problemas de rendimiento.
+NOTE: El uso del tipo de instancia grande o unidades NVMe en una configuración SW-RAID no se admite en KVM.
