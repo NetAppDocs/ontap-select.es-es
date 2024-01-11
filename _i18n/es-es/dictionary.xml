@@ -3637,4 +3637,8 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="884fb5a94a98010f0044edb08adfd51e" category="admonition">El uso del tipo de instancia grande o unidades NVMe en una configuración SW-RAID no se admite en KVM.</block>
   <block id="4c1cad05d7febe049143598de4b3847d" category="list-text">Para reemplazar una licencia existente; seleccione una licencia, haga clic en <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>, Y seleccione *Actualizar*.</block>
   <block id="22296b7841252645a75ccd1c4032738e" category="list-text">Si lo desea, seleccione una licencia y haga clic en <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> para administrar una licencia existente.</block>
+  <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">Gestionar licencias complementarias</block>
+  <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">Información general sobre gestionar licencias (solo administradores de clúster)</block>
+  <block id="a9a72d6af23763d014760a444a6e414b" category="inline-link-macro">Habilite nuevas funciones añadiendo claves de licencia</block>
+  <block id="9737e258b60b8a3df4f9108391ab5366" category="paragraph">En el caso del producto ONTAP Select, las licencias complementarias se aplican directamente en ONTAP y no se gestionan a través de la puesta en marcha de ONTAP Select. Consulte <block ref="ce1ae1f692dcc386afa95c6f51ac8788" category="inline-link-macro-rx"></block> y.. <block ref="63870a99c743eac4250d67a3b291ca39" category="inline-link-macro-rx"></block> si quiere más información.</block>
 </blocks>

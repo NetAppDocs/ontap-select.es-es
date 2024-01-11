@@ -160,3 +160,9 @@ Los números de serie de los nodos de veinte dígitos asignados originalmente a 
 == Gestione una licencia de pool de capacidad caducada
 
 Por lo general, cuando expira una licencia, nada sucede. Sin embargo, no puede instalar una licencia diferente porque los nodos están asociados con la licencia caducada. Hasta que renueve la licencia, debe _no_ hacer cualquier cosa que desconecte el agregado, como una operación de reinicio o conmutación por error. La acción recomendada es acelerar la renovación de la licencia.
+
+
+
+== Gestionar licencias complementarias
+
+En el caso del producto ONTAP Select, las licencias complementarias se aplican directamente en ONTAP y no se gestionan a través de la puesta en marcha de ONTAP Select. Consulte link:https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["Información general sobre gestionar licencias (solo administradores de clúster)"^] y.. link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html["Habilite nuevas funciones añadiendo claves de licencia"^] si quiere más información.
