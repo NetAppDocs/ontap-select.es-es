@@ -14,7 +14,7 @@ summary: 'Las puestas en marcha de NAS (vNAS) virtuales admiten clústeres de ON
 
 
 [role="lead"]
-Las puestas en marcha de NAS (vNAS) virtuales admiten clústeres de ONTAP Select en VSAN, algunos productos de HCI, tecnología NetApp HCI y tipos de cabinas de almacenes de datos externas. La infraestructura subyacente de estas configuraciones proporciona resiliencia al almacén de datos.
+Las instalaciones de NAS virtual (vNAS) admiten clústeres de ONTAP Select en SAN virtual (VSAN), algunos productos HCI y tipos de almacenes de datos de cabinas externas. La infraestructura subyacente de estas configuraciones proporciona resiliencia al almacén de datos.
 
 El requisito mínimo es que la configuración subyacente sea compatible con VMware y deba aparecer en los HCL de VMware correspondientes.
 
