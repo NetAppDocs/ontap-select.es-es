@@ -99,7 +99,6 @@ No se admiten los grupos de interfaces.
 * Migración de SVM
 * Recuperación ante desastres de máquina virtual de almacenamiento (DR de SVM)
 * Cumplimiento de normativas SnapLock
-* Copias Snapshot a prueba de manipulaciones
 * HCX de VMware
 
 
