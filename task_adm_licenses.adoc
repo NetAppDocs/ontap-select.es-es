@@ -161,6 +161,8 @@ Los números de serie de los nodos de veinte dígitos asignados originalmente a 
 
 Por lo general, cuando expira una licencia, nada sucede. Sin embargo, no puede instalar una licencia diferente porque los nodos están asociados con la licencia caducada. Hasta que renueve la licencia, debe _no_ hacer cualquier cosa que desconecte el agregado, como una operación de reinicio o conmutación por error. La acción recomendada es acelerar la renovación de la licencia.
 
+Para obtener más información sobre ONTAP Select y la renovación de licencia, consulte la sección Licencias, instalación, actualizaciones y revertir en la link:https://docs.netapp.com/us-en/ontap-select/reference_faq.html#licenses-installation-upgrades-and-reverts["PREGUNTAS FRECUENTES"].
+
 
 
 == Gestionar licencias complementarias

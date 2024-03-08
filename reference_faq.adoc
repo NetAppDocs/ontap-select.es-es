@@ -94,6 +94,35 @@ NOTE: No se admite un cambio de la dirección IP de la máquina virtual de imple
 
 La actualización a ONTAP Select Deploy 2.6 permite la compatibilidad con estos cambios para cualquier clúster de ONTAP Select que ya se haya implementado pero no se haya modificado de su configuración original. En otras palabras, si se cambiaron las propiedades del clúster de ONTAP Select mencionadas anteriormente mediante System Manager o vCenter, la actualización a ONTAP Select Deploy 2.6 no solucionará estas inconsistencias. Los cambios de las propiedades de ONTAP Select deben revertirse primero para implementar ONTAP Select para añadir sus metadatos únicos a cada máquina virtual de ONTAP Select.
 
+.¿Cómo detecta la implementación que se renuevan las licencias de ONTAP Select?
+El método es el mismo para todas las licencias, aunque los detalles varían según si se trata de una licencia de nivel de capacidad o de pool de capacidad.
+
+* ONTAP Select Deploy detecta si las licencias y los contratos de soporte se renuevan con la compra de un archivo de licencia actualizado de NetApp. El archivo de licencia (.NLF) incluye fechas de capacidad, inicio y finalización, y se genera el link:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^], Y, a continuación, se actualiza en el servidor de despliegue.
++
+
+NOTE: Puede cargar el NLF en el servidor de implementación mediante las funciones *Add* y *Update*. *Agregar* agrega nuevas licencias al servidor, y *Update* actualiza los archivos existentes con información como capacidad, licencia de nodo (estándar, premium, premium XL), fechas de inicio y finalización de soporte (licencia de nivel de capacidad) o fechas de inicio y finalización de suscripción (licencia de grupo de capacidad).
+
++
+
+CAUTION: No intente modificar el archivo de licencia. Al hacerlo, se invalida la clave de seguridad y la licencia no es válida.
+
+* Una *licencia de nivel de capacidad* es una licencia permanente por nodo vinculada al número de serie del nodo ONTAP Select. Se vende con un contrato de soporte independiente. Aunque la licencia es permanente, el contrato de soporte debe renovarse para acceder a las actualizaciones de ONTAP Select y recibir asistencia del soporte técnico de NetApp. También se requiere un contrato de soporte actual para cambiar parámetros de licencia, como capacidad o tamaño de nodo.
++
+La compra de una actualización de licencia de nivel de capacidad, cambio de parámetros o renovación del contrato de soporte requiere el número de serie del nodo como parte del pedido. Los números de serie del nodo de nivel de capacidad tienen nueve dígitos y comienzan por el número '32'.
+
++
+Una vez completada la compra y generada el archivo de licencia, se carga en el servidor de implementación mediante la función *Update*.
+
+* Una *licencia de grupo de capacidad* es una suscripción para el derecho de usar un grupo específico de capacidad y tamaño de nodo (estándar, premium, premium XL) para implementar uno o más clústeres. La suscripción incluye el derecho de utilizar una licencia y soporte durante un plazo específico. El derecho a usar una licencia y el contrato de soporte han especificado las fechas de inicio y finalización.
+
+
+.¿Cómo detecta la implementación si los nodos tienen licencias renovadas o contrato de soporte?
+La adquisición, generación y carga de un archivo de licencia actualizado es la forma en que Deploy detecta licencias renovadas y contratos de soporte.
+
+Si ha pasado la fecha de finalización de un contrato de soporte del nivel de capacidad, el nodo puede seguir ejecutándose, pero no podrá descargar e instalar actualizaciones de ONTAP ni llamar al soporte técnico de NetApp para obtener ayuda sin poner primero al día el contrato de soporte.
+
+Si una suscripción de pool de capacidad caduca, el sistema le avisa primero, pero después de 30 días, si el sistema se apaga, no se reiniciará hasta que se instale una suscripción actualizada en el servidor de implementación.
+
 
 
 == Reducida
