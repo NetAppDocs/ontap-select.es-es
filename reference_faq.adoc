@@ -76,7 +76,7 @@ Sí, el procedimiento de reversión de un clúster de ONTAP Select es casi idén
 .¿El SDS de ONTAP MetroCluster requiere una licencia Premium como mínimo?
 Sí.
 
-.¿Las direcciones IP de la implementación de ONTAP Select y la gestión de nodos y clústeres de ONTAP Select se pueden cambiar después de la instalación?
+.¿Se puede cambiar la configuración de red de clúster de ONTAP Select después de la instalación?
 Los cambios en las siguientes propiedades de clúster ONTAP Select se reconocen en una implementación de ONTAP Select mediante la operación de actualización de clúster disponible a través de la interfaz gráfica de usuario, la interfaz de línea de comandos o la API DE REST:
 
 * Configuración de red (direcciones IP, DNS, NTP, máscara de red y pasarela)
@@ -89,10 +89,10 @@ También se reconocen los siguientes cambios de ONTAP Select VM:
 * Cambios en el nombre de la red de host y el nombre del pool de almacenamiento
 
 
-
-NOTE: No se admite un cambio de la dirección IP de la máquina virtual de implementación de ONTAP Select.
-
 La actualización a ONTAP Select Deploy 2.6 permite la compatibilidad con estos cambios para cualquier clúster de ONTAP Select que ya se haya implementado pero no se haya modificado de su configuración original. En otras palabras, si se cambiaron las propiedades del clúster de ONTAP Select mencionadas anteriormente mediante System Manager o vCenter, la actualización a ONTAP Select Deploy 2.6 no solucionará estas inconsistencias. Los cambios de las propiedades de ONTAP Select deben revertirse primero para implementar ONTAP Select para añadir sus metadatos únicos a cada máquina virtual de ONTAP Select.
+
+.¿Se puede cambiar la configuración de red de implementación de ONTAP Select después de la instalación?
+No se admite la modificación de los detalles de red de la instancia de despliegue después de su ejecución en un entorno. Para obtener más información, consulte link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance["Artículo de la base de conocimientos: Modificación de la configuración de DNS de la instancia de implementación de ONTAP"^].
 
 .¿Cómo detecta la implementación que se renuevan las licencias de ONTAP Select?
 El método es el mismo para todas las licencias, aunque los detalles varían según si se trata de una licencia de nivel de capacidad o de pool de capacidad.
