@@ -3658,4 +3658,5 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">¿Se puede cambiar la configuración de red de implementación de ONTAP Select después de la instalación?</block>
   <block id="7d43503b6c7e842cf0609c80d607e71e" category="inline-link-macro">Artículo de la base de conocimientos: Modificación de la configuración de DNS de la instancia de implementación de ONTAP</block>
   <block id="f749fbe2e5bf0cebd2b21a449646f930" category="paragraph">No se admite la modificación de los detalles de red de la instancia de despliegue después de su ejecución en un entorno. Para obtener más información, consulte <block ref="46ce5e00458e90fd9337d10a66b64599" category="inline-link-macro-rx"></block>.</block>
+  <block id="8e59a8dddb8fd9611be1f2b3aca8c4fa" category="admonition">ONTAP Select 9.12.1 y versiones posteriores admiten ahora la recuperación ante desastres de SVM como origen con un máximo de 16 relaciones. La compatibilidad con la recuperación ante desastres de SVM se limita al uso de la versión ONTAP de origen a las versiones +2, tales como 9.12.1 a 9.14.1.</block>
 </blocks>

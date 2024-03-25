@@ -97,7 +97,6 @@ No se admiten los grupos de interfaces.
 * No se admiten las propiedades de los puertos ONTAP que modifican las propiedades de los puertos ONTAP, incluida la velocidad, el dúplex y el control de flujo.
 * Procesadores de servicios
 * Migración de SVM
-* Recuperación ante desastres de máquina virtual de almacenamiento (DR de SVM)
 * Cumplimiento de normativas SnapLock
 * HCX de VMware
 
