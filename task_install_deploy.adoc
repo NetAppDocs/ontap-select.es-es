@@ -23,15 +23,15 @@ Debe instalar la utilidad de administración de implementación de ONTAP Select 
 Puede descargar el paquete ONTAP Select en el sitio de soporte de NetApp.
 
 .Acerca de esta tarea
-La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar de formato de virtualización abierta (OVF). El archivo comprimido único tiene el sufijo `ova`.
+La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar de formato de virtualización abierta (OVF). El archivo comprimido único tiene el sufijo `ova`. La máquina virtual proporciona las imágenes de instalación y servidor de puesta en marcha para los nodos de ONTAP Select.
 
 .Pasos
-. Acceda al sitio de soporte de NetApp mediante un navegador web y haga clic en *Support Quick Links*.
-. Haga clic en *Descargar software* en *tareas principales* e inicie sesión.
-. Haga clic en *Buscar su producto*.
-. Desplácese hacia abajo y haga clic en *ONTAP Select*.
+. Acceda a link:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] mediante un navegador web e iniciar sesión.
+. Seleccione *Descargas* en el menú y, a continuación, seleccione *Descargas* en el menú desplegable.
+. En la página Descargas, en Todos los productos A-Z, seleccione la letra *O*.
+. Desplácese hacia abajo y seleccione *ONTAP Select*.
 . Seleccione la versión deseada del paquete.
-. Revise el Contrato de licencia para el usuario final (EULA) y haga clic en *Aceptar y continuar*.
+. Revise el Contrato de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.
 . Seleccione y descargue el paquete adecuado, respondiendo a todas las solicitudes según sea necesario.
 
 
@@ -207,7 +207,7 @@ Debe iniciar sesión en la interfaz de usuario web para confirmar que la utilida
 `\https://<ip_address>/`
 
 . Proporcione el nombre de la cuenta y la contraseña del administrador (admin) e inicie sesión.
-. Si aparece la ventana emergente *Bienvenido a ONTAP Select*, revise los requisitos previos y haga clic en *Aceptar* para continuar.
+. Si aparece la ventana emergente *Bienvenido a ONTAP Select*, revise los requisitos previos y seleccione *Aceptar* para continuar.
 . Si es la primera vez que inicia sesión y no instaló la implementación mediante el asistente disponible con vCenter, proporcione la siguiente información de configuración cuando se le solicite:
 +
 ** Nueva contraseña para la cuenta de administrador (obligatorio)
