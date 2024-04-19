@@ -92,6 +92,7 @@ No se admite ninguna modificación del espacio IP del clúster, como la adición
 * Supervisión de estado la supervisión de estado tradicional utilizada con una puesta en marcha de ONTAP basada en hardware es específica de los componentes de hardware subyacentes. Gracias al entorno virtualizado que se utiliza con ONTAP Select, los monitores de estado no están activos.
 * Grupos de interfaces
 No se admiten los grupos de interfaces.
+* Gestor de claves multi-tenant (MTKM)
 * Compatibilidad de descarga de NIC debido al entorno virtualizado utilizado con ONTAP Select, la función de descarga de NIC no es compatible.
 * Unidades de cifrado del almacenamiento de NetApp
 * No se admiten las propiedades de los puertos ONTAP que modifican las propiedades de los puertos ONTAP, incluida la velocidad, el dúplex y el control de flujo.
