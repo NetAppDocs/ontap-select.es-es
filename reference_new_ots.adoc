@@ -2,8 +2,7 @@
 sidebar: sidebar 
 permalink: reference_new_ots.html 
 keywords: new features 
-// summary: The current release includes several new features and improvements specific to ONTAP Select. 
-summary: La versión actual no incluye ninguna nueva función ni mejora específica de ONTAP Select. 
+summary: La versión actual incluye varias funciones o mejoras nuevas específicas para ONTAP Select. 
 ---
 = Novedades de esta versión
 :hardbreaks:
@@ -16,6 +15,31 @@ summary: La versión actual no incluye ninguna nueva función ni mejora específ
 
 [role="lead"]
 NetApp actualiza periódicamente ONTAP Select para ofrecerle nuevas funciones y mejoras.
+
+
+
+== ONTAP Select 9.15.1
+
+ONTAP Select 9.15.1 incluye varias funciones y mejoras nuevas.
+
+Soporte para la expansión y la contracción de clústeres:: A partir de ONTAP Select 9.15.1, se admiten la expansión y contracción de clústeres.
++
+--
+* Ampliación de clúster desde clústeres de seis nodos a ocho nodos
++
+Se puede aumentar el tamaño del clúster de un clúster de seis nodos a uno de ocho nodos con la función de ampliación de clústeres. link:task_cluster_expansion_contraction.html#expand-the-cluster["Leer más"].
+
+* Contracción de clústeres de ocho nodos a clústeres de seis nodos
++
+Puede reducir el tamaño del clúster de ocho nodos a un clúster de seis nodos con la función de contracción de clústeres. link:task_cluster_expansion_contraction.html#contract-the-cluster["Leer más"].
+
+
+
+--
+
+
+
+NOTE: El soporte para la ampliación y la contracción de clústeres se limita solo a clústeres ESX.
 
 
 
