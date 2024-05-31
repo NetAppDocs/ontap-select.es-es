@@ -42,7 +42,7 @@ Las siguientes funciones se incluyen con ONTAP Select y con licencia de forma pr
 * Recuperación ante desastres de máquina virtual de almacenamiento (DR de SVM)
 +
 
-NOTE: ONTAP Select 9.12.1 y versiones posteriores admiten ahora la recuperación ante desastres de SVM como origen con un máximo de 16 relaciones. La compatibilidad con la recuperación ante desastres de SVM se limita al uso de la versión ONTAP de origen a las versiones +2, tales como 9.12.1 a 9.14.1.
+NOTE: ONTAP Select 9.12.1 y versiones posteriores ahora admite la Recuperación ante desastres de SVM como origen y destino con un máximo de 16 relaciones. La compatibilidad con la recuperación ante desastres de SVM se limita al uso de la versión ONTAP de origen a las versiones +2. Por ejemplo, el origen de ONTAP Select 9.12.1 puede conectarse a las versiones 9.12.1, 9.13.1 o 9.14.1 de ONTAP de destino.
 
 
 
