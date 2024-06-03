@@ -34,6 +34,9 @@ Para los clústeres de un solo nodo, la puesta en marcha de ONTAP configura la m
 En el caso de clústeres de varios nodos, ONTAP Deploy configura cada equipo virtual de ONTAP Select para utilizar uno o dos grupos de puertos para la red interna y por separado, uno o dos grupos de puertos para la red externa. El tráfico de gestión de clústeres y nodos puede usar el mismo grupo de puertos que el tráfico externo o, de manera opcional, un grupo de puertos separado. El tráfico de gestión de clústeres y nodos no puede compartir el mismo grupo de puertos con tráfico interno.
 
 
+NOTE: ONTAP Select admite un máximo de cuatro VMNIC.
+
+
 
 == VSwitch estándar o distribuido y cuatro puertos físicos por nodo
 

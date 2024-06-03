@@ -1934,8 +1934,6 @@
   <block id="db88ef4d05292b05026992fe3ca193af" category="paragraph">La implementación de ONTAP Select solo es compatible con IP versión 4 (IPv4). La versión 6 (IPv6) de IP no se admite. Esta restricción afecta a ONTAP Select de las siguientes maneras:</block>
   <block id="a808fd43c31372cb5ef7ac1ac9224c52" category="list-text">Debe asignar una dirección IPv4 a la LIF de gestión de la máquina virtual de implementación.</block>
   <block id="b3a288a6973caafe5e4ff191758f8b98" category="list-text">La implementación no puede crear nodos de ONTAP Select configurados para usar IPv6 en los LIF de ONTAP.</block>
-  <block id="8d0030231ca098991021200ebed892e9" category="section-title">Restricción del idioma de VMware vCenter</block>
-  <block id="f3723501df4dfade0c26ca5e04290d9e" category="paragraph">Si utiliza ONTAP Select Deploy para crear un clúster que se ejecute en ESXi con vCenter en una instancia de Windows Server, debe usar una versión en inglés. La implementación de ONTAP Select no es compatible con vCenter en versiones de Windows que no están en inglés.</block>
   <block id="76848919ab4ad9c5a51b5f29720a249f" category="summary">Debe conocer el estado inicial de un clúster después de haberse implementado y configurar el clúster según sea necesario para su entorno.</block>
   <block id="2bfa0c145c4d2b4004e481451529eb85" category="doc">El estado inicial del clúster después de la implementación</block>
   <block id="4f8adfce07663fda787740d49cd25397" category="paragraph">Un clúster de ONTAP Select tiene varias características después de crearlo.</block>
@@ -3727,4 +3725,5 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="ab88e927f8e0951fd63eee470e63e5db" category="list-text">Supervise el proceso de contracción del cluster de varios pasos para confirmar que el cluster se ha contraído correctamente.</block>
   <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">Documentos de ONTAP Select 9.15.1</block>
   <block id="f99bb666310fb365b4d0029c161a384b" category="admonition">ONTAP Select 9.12.1 y versiones posteriores ahora admite la Recuperación ante desastres de SVM como origen y destino con un máximo de 16 relaciones. La compatibilidad con la recuperación ante desastres de SVM se limita al uso de la versión ONTAP de origen a las versiones +2. Por ejemplo, el origen de ONTAP Select 9.12.1 puede conectarse a las versiones 9.12.1, 9.13.1 o 9.14.1 de ONTAP de destino.</block>
+  <block id="55c2a90a9fb6113abeb7e76c6cb0bfb0" category="admonition">ONTAP Select admite un máximo de cuatro VMNIC.</block>
 </blocks>
