@@ -589,7 +589,6 @@
   <block id="f2df12ffd4f2520acaaeab11317642da" category="paragraph">ONTAP Select puede ponerse en marcha en los siguientes hipervisores:</block>
   <block id="33b6370e1de46bd324564163dfaf48a9" category="list-text">VMware ESXi 7.0 GA (compilación 15843807 o posterior), incluidos 7.0 U1, U2 y U3C</block>
   <block id="3522298772b42c1feed00428b1765cfd" category="admonition">NetApp es compatible con ONTAP Select en las versiones identificadas de ESXi siempre que VMware también siga siendo compatible con las mismas versiones.</block>
-  <block id="10e25613e6e661d9225b8b8847992335" category="paragraph">Si actualmente tiene instalado ONTAP Select en VMware ESXi 6.5 U1, deberá actualizar a ESXi 6.5 U2 o posterior Lo antes posible.. El uso de ESXi 6.5 U1 puede exponerle a un fallo de máquina virtual debido a un error conocido de VMware.</block>
   <block id="5c4eab167cc470fbe0f1b2e9a2449486" category="section-title">VMware vCenter y hosts ESXi independientes</block>
   <block id="d8492e635eeb04bc232082f13805e768" category="paragraph">Si un host del hipervisor ESXi se gestiona mediante una instancia de vCenter Server, debe registrar el host en la utilidad de administración de puesta en marcha con las credenciales de vCenter. No es posible registrar el host como un host independiente con las credenciales ESXi.</block>
   <block id="d200a289a8ebcab27fa991f9d753e39c" category="section-title">Requisitos centrales de hardware</block>
@@ -3003,7 +3002,6 @@ No se admite ninguna modificación del espacio IP del clúster, como la adición
   <block id="64a49455734301778985c42afcafa1b5" category="list-text">VMware ESXi 8,0 GA (compilación 20513097)</block>
   <block id="9702dfddce9ca846a20b21815bd5bf71" category="list-text">VMware ESXi 8,0 U1 (compilación 21495797)</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">Herramienta de matriz de interoperabilidad (IMT)</block>
-  <block id="2dbfa835ab3a0bf6c79ee95b561f1daf" category="admonition">ESXi 6,5 GA y ESXi 6,7 GA están llegando al final del estado de disponibilidad. Si tiene clústeres de ONTAP Select con estas versiones, debe actualizar a las versiones compatibles según el<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block>.</block>
   <block id="be89bf0bd68c0f721ab7e25e408b6fa7" category="summary">Si ejecuta ONTAP Select en VMware ESXi, puede actualizar el software ESXi de una versión compatible con una versión anterior a ESXi 7,0 o posterior. Antes de actualizar, debe comprender el proceso y seleccionar el procedimiento de actualización adecuado.</block>
   <block id="817a2297c74a908c3261968059682b32" category="paragraph">Realizar una actualización de ESXi mediante la utilidad de administración de implementación es la opción más general y resiliente. Sin embargo, puede haber casos en los que la implementación no está disponible o no se puede utilizar. Por ejemplo, la actualización a ESXi 7,0 no es compatible con versiones anteriores de ONTAP Select y la utilidad de administración Deploy.</block>
   <block id="f87065c0eaa86d23a9d0bc62defec91b" category="list-text">Actualice el host del hipervisor donde ONTAP Select se ejecuta a ESXi 7,0 o posterior mediante el procedimiento proporcionado por VMware.</block>
@@ -3202,7 +3200,6 @@ No se admiten los grupos de interfaces.</block>
   <block id="37ff470528fb108e5783094291a4fa39" category="section-title">Cargue y registre un archivo de licencia</block>
   <block id="6a1aef20627259c0bc151f0c191b9cb8" category="section-title">Configure un nodo ONTAP Select</block>
   <block id="feabcebe39f17dad32257d11d0077c91" category="section-title">Conecte el almacenamiento a los nodos ONTAP Select</block>
-  <block id="ce21532ed687995262d3680b0a7b3ce2" category="section-title">Actualice a VMware ESXi 6,5 U2 o una versión posterior</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">Requisitos mínimos</block>
   <block id="145a82122e23908d50818a5950c27509" category="cell">Requisitos recomendados</block>
   <block id="a5ce4a1eb8334399b5ae78ecb675d015" category="paragraph">Consulte <block ref="cc66674a6eca098ccdd0161214bd6b9f" category="inline-link-macro-rx"></block> si quiere más información.</block>
@@ -3726,4 +3723,5 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="526263eea2f04c1872d7038c1d10f65d" category="sidebar">Documentos de ONTAP Select 9.15.1</block>
   <block id="f99bb666310fb365b4d0029c161a384b" category="admonition">ONTAP Select 9.12.1 y versiones posteriores ahora admite la Recuperación ante desastres de SVM como origen y destino con un máximo de 16 relaciones. La compatibilidad con la recuperación ante desastres de SVM se limita al uso de la versión ONTAP de origen a las versiones +2. Por ejemplo, el origen de ONTAP Select 9.12.1 puede conectarse a las versiones 9.12.1, 9.13.1 o 9.14.1 de ONTAP de destino.</block>
   <block id="55c2a90a9fb6113abeb7e76c6cb0bfb0" category="admonition">ONTAP Select admite un máximo de cuatro VMNIC.</block>
+  <block id="28986937787872c11df39e20ca126e8d" category="admonition">ESXi 6,5 GA y ESXi 6,7 GA alcanzaron el fin del estado de disponibilidad. Si tiene clústeres de ONTAP Select con estas versiones, debe actualizar a las versiones compatibles según el<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block>.</block>
 </blocks>

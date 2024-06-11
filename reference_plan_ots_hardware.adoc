@@ -48,13 +48,7 @@ ONTAP Select puede ponerse en marcha en los siguientes hipervisores:
 NOTE: NetApp es compatible con ONTAP Select en las versiones identificadas de ESXi siempre que VMware también siga siendo compatible con las mismas versiones.
 
 
-NOTE: ESXi 6,5 GA y ESXi 6,7 GA están llegando al final del estado de disponibilidad. Si tiene clústeres de ONTAP Select con estas versiones, debe actualizar a las versiones compatibles según el https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad (IMT)"^].
-
-
-
-=== Actualice a VMware ESXi 6,5 U2 o una versión posterior
-
-Si actualmente tiene instalado ONTAP Select en VMware ESXi 6.5 U1, deberá actualizar a ESXi 6.5 U2 o posterior Lo antes posible.. El uso de ESXi 6.5 U1 puede exponerle a un fallo de máquina virtual debido a un error conocido de VMware.
+NOTE: ESXi 6,5 GA y ESXi 6,7 GA alcanzaron el fin del estado de disponibilidad. Si tiene clústeres de ONTAP Select con estas versiones, debe actualizar a las versiones compatibles según el https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad (IMT)"^].
 
 
 
