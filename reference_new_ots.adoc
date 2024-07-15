@@ -23,6 +23,7 @@ NetApp actualiza periódicamente ONTAP Select para ofrecerle nuevas funciones y 
 
 ONTAP Select 9.15.1 incluye varias funciones y mejoras nuevas.
 
+Compatibilidad actualizada con hipervisor de KVM:: A partir de ONTAP Select 9.15.1, el hipervisor de máquina virtual basada en kernel (KVM) es compatible con Red Hat Enterprise Linux (RHEL) 9,4 y Rocky Linux 9,4.
 Soporte para la expansión y la contracción de clústeres:: A partir de ONTAP Select 9.15.1, se admiten la expansión y contracción de clústeres.
 +
 --
