@@ -25,7 +25,13 @@ Este procedimiento se basa en la creación de una nueva máquina virtual que uti
 Debe crear un backup de los datos de configuración de implementación como parte de la migración de la máquina virtual. También debe crear un backup después de implementar un clúster de ONTAP Select. Los datos se guardan en un único archivo cifrado que puede descargar en la estación de trabajo local.
 
 .Antes de empezar
-Asegúrese de que la implementación no esté realizando ninguna otra tarea durante la operación de backup.
+* Asegúrese de que la implementación no esté realizando ninguna otra tarea durante la operación de backup.
+* Guarde la imagen original de la máquina virtual de despliegue.
++
+
+CAUTION: La imagen original de la máquina virtual de despliegue es necesaria más adelante en este procedimiento cuando se restauran los datos de configuración de despliegue del original a la nueva máquina virtual.
+
+
 
 .Acerca de esta tarea
 El archivo de backup que se crea captura todos los datos de configuración de la máquina virtual. Estos datos describen aspectos del entorno de implementación, incluidos los clústeres de ONTAP Select.

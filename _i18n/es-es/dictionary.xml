@@ -3730,4 +3730,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8,0 U3</block>
   <block id="78fb396e8c541b492002e6b94963fe83" category="list-text">ONTAP Select 9.14.1 incluye compatibilidad con VMware ESXi 8,0.2.</block>
   <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">A partir de ONTAP 9.13,1, se admite VMware ESXi 8.0.1 GA (compilación 20513097) con las versiones de hardware 4 y posteriores.</block>
+  <block id="066308395ea593f82277b09bef1304dc" category="list-text">Guarde la imagen original de la máquina virtual de despliegue.</block>
+  <block id="f3d42eb73da0b3db6a0beb04d2f78c68" category="admonition">La imagen original de la máquina virtual de despliegue es necesaria más adelante en este procedimiento cuando se restauran los datos de configuración de despliegue del original a la nueva máquina virtual.</block>
 </blocks>
