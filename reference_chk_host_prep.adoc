@@ -33,7 +33,7 @@ Debe preparar los hosts de hipervisores.
 Debe preparar cada uno de los servidores KVM Linux en los que se ponga en marcha un nodo ONTAP Select. También debe preparar el servidor donde se despliega la utilidad de administración de despliegue de ONTAP Select.
 
 .Instale Red Hat Enterprise Linux
-Debe instalar el sistema operativo Red Hat Enterprise Linux (RHEL) mediante la imagen ISO. Durante la instalación, debe configurar el sistema de la siguiente manera:
+Debe instalar el sistema operativo Red Hat Enterprise Linux (RHEL) mediante la imagen ISO. Consulte la link:reference_plan_ots_hardware.html#software-compatibility["información de compatibilidad de software para hipervisores"]para obtener una lista de las versiones de RHEL compatibles. Durante la instalación, debe configurar el sistema de la siguiente manera:
 
 * Seleccione Predeterminado como política de seguridad
 * Seleccione la selección de software Virtualized Host
@@ -50,81 +50,7 @@ ONTAP Select requiere varios paquetes de software adicionales. La lista exacta d
 
 NOTE: Es posible que algunos de los paquetes necesarios ya estén instalados si eligió Virtualized Host para la selección de software durante la instalación del servidor Linux. Es posible que necesite instalar el paquete openvswitch desde el código fuente como se describe en link:https://docs.openvswitch.org/en/latest/intro/install/general/["Abra la documentación de vSwitch"^].
 
- For additional information about the necessary packages and other configuration requirements, see the link:https://imt.netapp.com/matrix/#welcome[NetApp Interoperability Matrix Tool^].
-.Se requieren paquetes adicionales para RHEL 7,7
-Instale el mismo conjunto de paquetes necesarios para RHEL 7,6.
-
-.Se requieren paquetes adicionales para RHEL 7,6
-Verifique que los siguientes paquetes y dependencias estén instalados cuando utilice RHEL 7,6 o CentOS 7,6. En cada caso, se incluyen el nombre y la versión del paquete.
-
-* qemu-kvm (1,5.3-160)
-+
-
-NOTE: Cuando use el software RAID, debe utilizar la versión 2.9.0 en su lugar.
-
-* libvirt (4,5.0-10)
-* interruptor openvswitch (2,7.3)
-* virt-install (1,5.0-1)
-* Lshw (B.02.18-12)
-* lsscsi (0,27-6)
-* lsof (4,87-6)
-
-
-Si utiliza vNAS en KVM (almacenamiento externo) y planea migrar máquinas virtuales de un host a otro, debe instalar los siguientes paquetes y dependencias adicionales:
-
-* valla-agentes-todos (4,2.1-11)
-* clúster lvm2 (2.02.180-8)
-* marcapasos (1,1.19-8)
-* pc (0,9.165-6)
-
-
-.Se requieren paquetes adicionales para RHEL 7,5
-Verifique que los siguientes paquetes y dependencias estén instalados cuando utilice RHEL 7,5 o CentOS 7,5. En cada caso, se incluyen el nombre y la versión del paquete.
-
-* qemu-kvm (1,5.3-141)
-+
-
-NOTE: Cuando use el software RAID, debe utilizar la versión 2.9.0 en su lugar.
-
-* libvirt (3,9.0)
-* interruptor openvswitch (2,7.3)
-* virt-install (1,4.1-7)
-* Lshw (B.02.18-12)
-* lsscsi (0,27-6)
-* lsof (4,87-5)
-
-
-Si utiliza vNAS en KVM (almacenamiento externo) y planea migrar máquinas virtuales de un host a otro, debe instalar los siguientes paquetes y dependencias adicionales:
-
-* valla-agentes-todos (4,0.11-86)
-* clúster lvm2 (2.02.177-4)
-* marcapasos (1,1.18-11)
-* pc (0,9.16205)
-
-
-.Se requieren paquetes adicionales para RHEL 7,4
-Verifique que los siguientes paquetes y dependencias estén instalados cuando utilice RHEL 7,4 o CentOS 7,4. En cada caso se incluyen el nombre y la versión del paquete.
-
-* qemu-kvm (1,5.3-141)
-+
-
-NOTE: Cuando use el software RAID, debe utilizar la versión 2.9.0 en su lugar.
-
-* libvirt (3,2.0-14)
-* interruptor openvswitch (2,7.3)
-* virt-install (1,4.1-7)
-* Lshw (B.02.18-7)
-* lsscsi (0,27-6)
-* lsof (4,87-4)
-
-
-Si utiliza vNAS en KVM (almacenamiento externo) y planea migrar máquinas virtuales de un host a otro, debe instalar los siguientes paquetes y dependencias adicionales:
-
-* valla-agentes-todos (4,0.11-66)
-* clúster lvm2 (2.02.171-8)
-* marcapasos (1,1.16-12)
-* pc (0,9.158-6)
-
+Para obtener información adicional sobre los paquetes necesarios y otros requisitos de configuración, consulte la link:https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp"^].
 
 .Configuración de los pools de almacenamiento
 Un pool de almacenamiento de ONTAP Select es un contenedor de datos lógico que abstrae el almacenamiento físico subyacente. Es necesario gestionar los pools de almacenamiento en los hosts KVM donde se implementó ONTAP Select.

@@ -3353,7 +3353,6 @@ Host de hipervisor ESXi o host Linux KVM</block>
   <block id="b2e7abe45d5aa586a8f3507497cdd9f9" category="paragraph-title">Prepare el servidor Linux</block>
   <block id="b09f29f89d723a464604296e2e5e07ac" category="paragraph">Debe preparar cada uno de los servidores KVM Linux en los que se ponga en marcha un nodo ONTAP Select. También debe preparar el servidor donde se despliega la utilidad de administración de despliegue de ONTAP Select.</block>
   <block id="fc8913280cdc00a30c367fb6cad82a5a" category="paragraph-title">Instale Red Hat Enterprise Linux</block>
-  <block id="68a91f25005786321a1f8d6a1ee48471" category="paragraph">Debe instalar el sistema operativo Red Hat Enterprise Linux (RHEL) mediante la imagen ISO. Durante la instalación, debe configurar el sistema de la siguiente manera:</block>
   <block id="4adf8d273405d567b3c04578e7587fcc" category="list-text">Seleccione Predeterminado como política de seguridad</block>
   <block id="b7ed0ef33f8535f13a2a8c61b522db5c" category="list-text">Seleccione la selección de software Virtualized Host</block>
   <block id="beb8bb5c30618e7ed13d13dae4f958bd" category="list-text">El destino debe ser el disco de arranque local y no una LUN RAID utilizada por ONTAP Select</block>
@@ -3363,42 +3362,6 @@ Host de hipervisor ESXi o host Linux KVM</block>
   <block id="3738f55ea208199f5c75954580847670" category="paragraph">ONTAP Select requiere varios paquetes de software adicionales. La lista exacta de paquetes varía según la versión de Linux que esté utilizando. Como primer paso, verifique que el repositorio yum esté disponible en su servidor. Si no está disponible, puede recuperarla mediante el<block ref="a52a983e58d14432379ef732f02ff1ab" prefix=" " category="inline-code"></block> comando:</block>
   <block id="99965beffa3302f13c927db3818d3722" category="inline-link-macro">Abra la documentación de vSwitch</block>
   <block id="ef81ea587a9f08c529a68f4615638a9f" category="admonition">Es posible que algunos de los paquetes necesarios ya estén instalados si eligió Virtualized Host para la selección de software durante la instalación del servidor Linux. Es posible que necesite instalar el paquete openvswitch desde el código fuente como se describe en <block ref="7514235d0c1cb4fbed4568e20a4d9277" category="inline-link-macro-rx"></block>.</block>
-  <block id="e8d8655fb6a53b117137b3c4c8b513d6" category="paragraph-title">Se requieren paquetes adicionales para RHEL 7,7</block>
-  <block id="38b05d80cfdb17c384b49b78c5779d34" category="paragraph">Instale el mismo conjunto de paquetes necesarios para RHEL 7,6.</block>
-  <block id="4504762947692447bf5d6197d7415a2b" category="paragraph-title">Se requieren paquetes adicionales para RHEL 7,6</block>
-  <block id="c5ddd03bd8afc1a01dfb929571f7984c" category="paragraph">Verifique que los siguientes paquetes y dependencias estén instalados cuando utilice RHEL 7,6 o CentOS 7,6. En cada caso, se incluyen el nombre y la versión del paquete.</block>
-  <block id="b3768f3042522f2ebefd687b011ef35b" category="list-text">qemu-kvm (1,5.3-160)</block>
-  <block id="73c94f60276006addfcc246cf5694dea" category="admonition">Cuando use el software RAID, debe utilizar la versión 2.9.0 en su lugar.</block>
-  <block id="e7b6819ebab33d41294f76cb2ef12d89" category="list-text">libvirt (4,5.0-10)</block>
-  <block id="63d4dd1094ecc476b13197bf5bcf9d74" category="list-text">interruptor openvswitch (2,7.3)</block>
-  <block id="81bacf976bcfb2e05b1bab56d153fd53" category="list-text">virt-install (1,5.0-1)</block>
-  <block id="0af0fc62f7cd9d3b202c4fe9d734ac15" category="list-text">Lshw (B.02.18-12)</block>
-  <block id="ce2f31b80fee4a220bf108c0c1c7b4c0" category="list-text">lsscsi (0,27-6)</block>
-  <block id="a72b667fcf6c87b1d9261d7fbfda5c21" category="list-text">lsof (4,87-6)</block>
-  <block id="f2836af2ae094b6178aa55d38db1db83" category="paragraph">Si utiliza vNAS en KVM (almacenamiento externo) y planea migrar máquinas virtuales de un host a otro, debe instalar los siguientes paquetes y dependencias adicionales:</block>
-  <block id="e161209405816766b464900b7eaf4594" category="list-text">valla-agentes-todos (4,2.1-11)</block>
-  <block id="b4bc73e8ba342f5dd4c958e1597646c9" category="list-text">clúster lvm2 (2.02.180-8)</block>
-  <block id="af9008e8791f6754f7139995dffa092d" category="list-text">marcapasos (1,1.19-8)</block>
-  <block id="1d3d8cff8b4d8c56161a24798b46d75e" category="list-text">pc (0,9.165-6)</block>
-  <block id="47bf2901e81b84a3461fe6f88dc0822b" category="paragraph-title">Se requieren paquetes adicionales para RHEL 7,5</block>
-  <block id="5e35a367894ad4778ad935a913f20591" category="paragraph">Verifique que los siguientes paquetes y dependencias estén instalados cuando utilice RHEL 7,5 o CentOS 7,5. En cada caso, se incluyen el nombre y la versión del paquete.</block>
-  <block id="962b918f7188b59dd7dda40036ccb244" category="list-text">qemu-kvm (1,5.3-141)</block>
-  <block id="0829cbb8c3f5e3775b8b9b6ff12edba2" category="list-text">libvirt (3,9.0)</block>
-  <block id="828fda93ae5609ae900a74b74a329a1f" category="list-text">virt-install (1,4.1-7)</block>
-  <block id="9a85f336951f60862065a2c99a506331" category="list-text">lsof (4,87-5)</block>
-  <block id="22520cb839fcc2ea175d9468908457de" category="list-text">valla-agentes-todos (4,0.11-86)</block>
-  <block id="eaaf2c3924b5ae9f38e2888c82fffeca" category="list-text">clúster lvm2 (2.02.177-4)</block>
-  <block id="63a608b8dcb6a5cbb6bc554603885f0f" category="list-text">marcapasos (1,1.18-11)</block>
-  <block id="94d2030906db727ace138dc978ae4250" category="list-text">pc (0,9.16205)</block>
-  <block id="a81ff201ea5e179ccb62ed746bf9bd3a" category="paragraph-title">Se requieren paquetes adicionales para RHEL 7,4</block>
-  <block id="953b5a8d418e7a7571a24efdaaeffd73" category="paragraph">Verifique que los siguientes paquetes y dependencias estén instalados cuando utilice RHEL 7,4 o CentOS 7,4. En cada caso se incluyen el nombre y la versión del paquete.</block>
-  <block id="83d959bc76f3b861a116f9eea1c7a2a7" category="list-text">libvirt (3,2.0-14)</block>
-  <block id="fac13a6d19ac85eceeda764e5abcb6f8" category="list-text">Lshw (B.02.18-7)</block>
-  <block id="847db2741d4d60a1941f2a32402e6128" category="list-text">lsof (4,87-4)</block>
-  <block id="6eefc4ad705acae02bbc63fb026239ff" category="list-text">valla-agentes-todos (4,0.11-66)</block>
-  <block id="e8cf539445d5c650ec492b96a3986d22" category="list-text">clúster lvm2 (2.02.171-8)</block>
-  <block id="808a7f32a60e4e781435682f980ff36a" category="list-text">marcapasos (1,1.16-12)</block>
-  <block id="cb2885fb02858a21c6adb63dcfb19659" category="list-text">pc (0,9.158-6)</block>
   <block id="3fec9570e277fe5ca33bf5e5dc7cf266" category="paragraph-title">Configuración de los pools de almacenamiento</block>
   <block id="4a1a2ddde34541bd47c25ab818424838" category="paragraph">Un pool de almacenamiento de ONTAP Select es un contenedor de datos lógico que abstrae el almacenamiento físico subyacente. Es necesario gestionar los pools de almacenamiento en los hosts KVM donde se implementó ONTAP Select.</block>
   <block id="694bb5d3641d16eb91812f8515d06f39" category="section-title">Cree un pool de almacenamiento</block>
@@ -3732,4 +3695,7 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="2908aba1afb68c480565ae68ebe3508c" category="list-text">A partir de ONTAP 9.13,1, se admite VMware ESXi 8.0.1 GA (compilación 20513097) con las versiones de hardware 4 y posteriores.</block>
   <block id="066308395ea593f82277b09bef1304dc" category="list-text">Guarde la imagen original de la máquina virtual de despliegue.</block>
   <block id="f3d42eb73da0b3db6a0beb04d2f78c68" category="admonition">La imagen original de la máquina virtual de despliegue es necesaria más adelante en este procedimiento cuando se restauran los datos de configuración de despliegue del original a la nueva máquina virtual.</block>
+  <block id="be0d4e27d8840d1c72235cf50443fb8d" category="inline-link-macro">información de compatibilidad de software para hipervisores</block>
+  <block id="49ea5cb7c3815d4c59fc6dcf8eca3da7" category="paragraph">Debe instalar el sistema operativo Red Hat Enterprise Linux (RHEL) mediante la imagen ISO. Consulte la <block ref="12b9dc433549f13cfe17d1a83c8c9209" category="inline-link-macro-rx"></block>para obtener una lista de las versiones de RHEL compatibles. Durante la instalación, debe configurar el sistema de la siguiente manera:</block>
+  <block id="97864053a66a3401d6a681c00bd2e4e3" category="paragraph">Para obtener información adicional sobre los paquetes necesarios y otros requisitos de configuración, consulte la <block ref="8929420574d68b861547fa3bcafe0ff2" category="inline-link-macro-rx"></block>.</block>
 </blocks>
