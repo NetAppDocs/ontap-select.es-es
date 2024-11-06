@@ -29,11 +29,11 @@ Soporte para la expansión y la contracción de clústeres:: A partir de ONTAP S
 --
 * Ampliación de clúster desde clústeres de seis nodos a ocho nodos
 +
-Se puede aumentar el tamaño del clúster de un clúster de seis nodos a uno de ocho nodos con la función de ampliación de clústeres. link:task_cluster_expansion_contraction.html#expand-the-cluster["Leer más"].
+Se puede aumentar el tamaño del clúster de un clúster de seis nodos a uno de ocho nodos con la función de ampliación de clústeres. Actualmente no se admiten las ampliaciones de clústeres de uno, dos o cuatro nodos a clústeres de seis u ocho nodos. link:task_cluster_expansion_contraction.html#expand-the-cluster["Leer más"].
 
 * Contracción de clústeres de ocho nodos a clústeres de seis nodos
 +
-Puede reducir el tamaño del clúster de ocho nodos a un clúster de seis nodos con la función de contracción de clústeres. link:task_cluster_expansion_contraction.html#contract-the-cluster["Leer más"].
+Puede reducir el tamaño del clúster de ocho nodos a un clúster de seis nodos con la función de contracción de clústeres. Actualmente no se admiten las contracciones de clústeres de seis o ocho nodos a uno, dos o cuatro clústeres de nodos. link:task_cluster_expansion_contraction.html#contract-the-cluster["Leer más"].
 
 
 

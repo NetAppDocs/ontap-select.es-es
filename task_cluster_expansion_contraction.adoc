@@ -20,7 +20,7 @@ El procedimiento se inicia desde la puesta en marcha de ONTAP Select a través d
 
 
 
-== Requisitos de hardware y almacenamiento
+== Consideraciones sobre hardware y almacenamiento
 
 Las funcionalidades de expansión y contracción del cluster están restringidas de las siguientes maneras:
 
@@ -33,8 +33,12 @@ Las funcionalidades de expansión y contracción del cluster están restringidas
 ** ESXi 7,0
 
 
-* La expansión solo es posible desde clústeres de seis nodos a clústeres de ocho nodos.
-* La contracción solo es posible desde clústeres de ocho nodos a clústeres de seis nodos.
+
+
+Actualmente no se admiten las siguientes expansiones y contracciones de cluster:
+
+* Expansión de uno, dos o cuatro clústeres de nodos a clústeres de seis u ocho nodos.
+* Contracción de seis u ocho clústeres de nodos a uno, dos o cuatro clústeres de nodos.
 
 
 
