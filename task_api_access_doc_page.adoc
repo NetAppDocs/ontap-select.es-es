@@ -4,7 +4,7 @@ permalink: task_api_access_doc_page.html
 keywords: rest api, deploy rest api, rest, deploy documentation, access, accessing 
 summary: Para ver la documentación en línea de la implementación de ONTAP Select, debe acceder a la documentación de API, y también para emitir manualmente una llamada API. 
 ---
-= Acceda a la página de documentación de despliegue
+= Acceda a la página de documentación de implementación de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

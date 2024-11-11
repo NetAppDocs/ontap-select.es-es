@@ -4,7 +4,7 @@ permalink: task_cli_upgrade_esxi65.html
 keywords: administer, administering, cli, esxi, upgrade, esxi 6.5 
 summary: Si ejecuta ONTAP Select en VMware ESXi, puede actualizar el software ESXi de una versión compatible con una versión anterior a ESXi 7,0 o posterior. Antes de actualizar, debe comprender el proceso y seleccionar el procedimiento de actualización adecuado. 
 ---
-= Actualice VMware ESXi a la versión 7,0 o posterior
+= Actualice ONTAP Select VMware ESXi a la versión 7,0 o posterior
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

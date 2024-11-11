@@ -4,7 +4,7 @@ permalink: reference_plan_best_practices.html
 keywords: plan, planning, best practices, recommendations 
 summary: Existen mejores prácticas que se deben tener en cuenta como parte de la planificación de una puesta en marcha de ONTAP Select. 
 ---
-= Resumen de las mejores prácticas
+= Resumen de prácticas recomendadas para la puesta en marcha de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

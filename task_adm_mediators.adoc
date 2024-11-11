@@ -4,7 +4,7 @@ permalink: task_adm_mediators.html
 keywords: administer, administering, web, mediators 
 summary: Cada clúster de dos nodos de ONTAP Select es supervisado por el servicio mediador, que ayuda a gestionar la funcionalidad de alta disponibilidad compartida por los nodos. 
 ---
-= Administración de los servicios del mediador de despliegue
+= Administrar los servicios de mediador de despliegue de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: concept_api_transaction.html
 keywords: rest api, deploy rest api, rest, transaction, request, response, headers, input, output 
 summary: Cada llamada de API de implementación se realiza como una solicitud HTTP a la máquina virtual de implementación, que genera una respuesta asociada al cliente. Este par de solicitud/respuesta se considera una transacción de API. Antes de utilizar la API de implementación, debería estar familiarizado con las variables de entrada disponibles para controlar una solicitud y el contenido del resultado de la respuesta. 
 ---
-= Transacción de API de solicitud y respuesta
+= Solicite y responda la transacción de API para ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

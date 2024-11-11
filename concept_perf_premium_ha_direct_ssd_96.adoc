@@ -4,7 +4,7 @@ permalink: concept_perf_premium_ha_direct_ssd_96.html
 keywords: ontap select, performance 
 summary: 'Información de rendimiento para el rendimiento de ONTAP Select 9.6: Almacenamiento SSD de conexión directa de alta disponibilidad premium.' 
 ---
-= Rendimiento: Almacenamiento SSD de conexión directa de alta disponibilidad excepcional
+= Rendimiento de 9,6 de ONTAP Select: Almacenamiento SSD premium de conexión directa de alta disponibilidad
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

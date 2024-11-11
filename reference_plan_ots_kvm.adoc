@@ -4,7 +4,7 @@ permalink: reference_plan_ots_kvm.html
 keywords: plan, planning, vnas, kvm 
 summary: Existen varios problemas de planificación relacionados con el uso del hipervisor KVM que se deben tener en cuenta. 
 ---
-= Requisitos de KVM
+= Requisitos de KVM de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

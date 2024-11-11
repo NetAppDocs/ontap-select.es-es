@@ -4,7 +4,7 @@ permalink: concept_api_before_browser.html
 keywords: rest api, deploy rest api, rest, access browser, before you begin 
 summary: Hay varias cosas que debe tener en cuenta antes de utilizar la página de documentación en línea de implementación. 
 ---
-= Antes de acceder a la API con un explorador
+= Antes de acceder a la API de implementación de ONTAP Select con un explorador
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

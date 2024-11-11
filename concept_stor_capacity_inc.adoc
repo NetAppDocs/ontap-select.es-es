@@ -4,7 +4,7 @@ permalink: concept_stor_capacity_inc.html
 keywords: ontap select, deploy, increase storage 
 summary: La implementación de ONTAP se puede usar para añadir almacenamiento adicional y obtener licencias para cada nodo de un clúster de ONTAP Select. 
 ---
-= Aumente la capacidad de almacenamiento
+= Aumente la capacidad de almacenamiento de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

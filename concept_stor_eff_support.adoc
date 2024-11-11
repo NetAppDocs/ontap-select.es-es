@@ -4,7 +4,7 @@ permalink: concept_stor_eff_support.html
 keywords: ontap select, storage efficiency support 
 summary: ONTAP Select ofrece opciones de eficiencia del almacenamiento similares a las opciones de eficiencia del almacenamiento presentes en las cabinas FAS y AFF. 
 ---
-= Soporte de eficiencia del almacenamiento
+= Soporte para la eficiencia del almacenamiento de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

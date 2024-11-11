@@ -4,7 +4,7 @@ permalink: concept_nw_data_mgmt_separation.html
 keywords: ontap select, traffic separation 
 summary: Aísle el tráfico de datos y el tráfico de gestión en redes de capa 2 independientes. 
 ---
-= Separación del tráfico de datos y gestión
+= Separación del tráfico de datos y gestión ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

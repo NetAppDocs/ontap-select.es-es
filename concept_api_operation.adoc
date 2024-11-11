@@ -4,7 +4,7 @@ permalink: concept_api_operation.html
 keywords: rest api, deploy rest api, rest, operation, basic operation 
 summary: Mientras QUE REST establece un conjunto común de tecnologías y prácticas recomendadas, los detalles de cada API pueden variar en función de las opciones de diseño. Debe tener en cuenta los detalles y las características operativas de la API de implementación de ONTAP Select antes de usar la API. 
 ---
-= Características operativas básicas
+= ONTAP Select implementa características operativas básicas de API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

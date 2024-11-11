@@ -4,7 +4,7 @@ permalink: task_adm_replace_drives_swraid.html
 keywords: administer, administering, web, software raid, replace drive 
 summary: 'Cuando se produce un fallo en una unidad mediante RAID de software, ONTAP Select utiliza una unidad de repuesto (si hay una disponible) e inicia el proceso de recompilación automáticamente. Esto es similar al funcionamiento de ONTAP en FAS y AFF. Sin embargo, si no hay unidad de repuesto disponible, debe añadir una al nodo ONTAP Select.' 
 ---
-= Sustituya una unidad con error cuando utilice SW RAID
+= Sustituir las unidades RAID de software que fallen para ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

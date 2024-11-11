@@ -4,7 +4,7 @@ permalink: reference_plan_ots_robo.html
 keywords: plan, planning, remote and branch office, robo 
 summary: 'Puede poner en marcha ONTAP Select en un entorno de oficina remota/sucursal (robo, por sus siglas en inglés). Como parte de la planificación de una puesta en marcha de oficinas remotas y sucursales, debe seleccionar la configuración que respalda sus objetivos.' 
 ---
-= Puestas en marcha remotas y sucursales
+= Puestas en marcha de ONTAP Select remotas y sucursales
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

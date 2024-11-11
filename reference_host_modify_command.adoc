@@ -4,7 +4,7 @@ permalink: reference_host_modify_command.html
 keywords: host modify, command, syntax, host management server 
 summary: Es posible utilizar el comando host modify para modificar un servidor de gestión de hosts con esta instancia de ONTAP Select Deploy. 
 ---
-= Modificar un servidor de administración de host
+= Modificar un servidor de gestión de host para el despliegue de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

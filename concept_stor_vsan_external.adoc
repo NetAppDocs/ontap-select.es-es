@@ -4,7 +4,7 @@ permalink: concept_stor_vsan_external.html
 keywords: ontap select, vsan and external array configurations, vnas architecture 
 summary: 'Las puestas en marcha de NAS (vNAS) virtuales admiten clústeres de ONTAP Select en VSAN, algunos productos de HCI, tecnología NetApp HCI y tipos de cabinas de almacenes de datos externas. La infraestructura subyacente de estas configuraciones proporciona resiliencia al almacén de datos.' 
 ---
-= Configuraciones de VSAN y cabina externa
+= VSAN de ONTAP Select y configuraciones de cabinas externas
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

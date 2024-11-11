@@ -4,7 +4,7 @@ permalink: task_cli_security.html
 keywords: administer, administering, cli, security 
 summary: Existen varias tareas relacionadas que puede realizar como parte de la protección de una puesta en marcha de ONTAP Select. 
 ---
-= Seguridad
+= Proteja una puesta en marcha de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

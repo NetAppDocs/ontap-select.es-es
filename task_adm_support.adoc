@@ -4,7 +4,7 @@ permalink: task_adm_support.html
 keywords: administer, administering, web, diagnostics, support 
 summary: Existen varias tareas relacionadas de diagnóstico y soporte que se pueden realizar como parte de la administración de ONTAP Select. 
 ---
-= Diagnóstico y soporte
+= Diagnóstico y asistencia de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

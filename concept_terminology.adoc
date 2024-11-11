@@ -4,7 +4,7 @@ permalink: concept_terminology.html
 keywords: terminology, key concepts, concepts 
 summary: Al comenzar a explorar ONTAP Select y planificar una implementación, es útil familiarizarse con la terminología y los conceptos clave. 
 ---
-= Terminología y conceptos clave
+= Terminología y conceptos clave de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -95,6 +95,9 @@ Las configuraciones predeterminadas de vNAS habilitan una característica de opt
 --
 Actualización del clúster:: Después de crear un clúster, puede realizar cambios en la configuración del clúster o de máquinas virtuales fuera de la utilidad de puesta en marcha mediante las herramientas de administración de ONTAP o del hipervisor. También puede migrar una máquina virtual que cause cambios en la configuración. Cuando se producen estos cambios, la utilidad de implementación no se actualiza automáticamente y puede quedar sin sincronizar con el estado del clúster. Puede utilizar la función de actualización de clúster para actualizar la base de datos de configuración de despliegue. La actualización del clúster se encuentra disponible a través de la interfaz de usuario web de Deploy, el shell de gestión de la interfaz de línea de comandos y la API DE REST.
 RAID de software:: Al usar almacenamiento de conexión directa (DAS), la funcionalidad RAID se proporciona tradicionalmente a través de una controladora RAID de hardware local. En su lugar, puede configurar un nodo para que utilice _software RAID_ donde el nodo ONTAP Select proporciona la funcionalidad RAID. Si utiliza RAID de software, ya no se necesita una controladora RAID de hardware.
+
+
+[[ontap-select-image-install]]
 Instalación de imagen ONTAP Select:: A partir de la implementación de ONTAP Select 2.8, la utilidad de administración de implementación sólo contiene una versión de ONTAP Select. La versión incluida es la más actual disponible en el momento de la publicación. La función de instalación de imagen de ONTAP Select le permite añadir versiones anteriores de ONTAP Select a su instancia de la utilidad de implementación, que se puede utilizar posteriormente al implementar un clúster de ONTAP Select. Consulte link:task_cli_deploy_image_add.html["Añada imágenes ONTAP Select para obtener más información"].
 
 

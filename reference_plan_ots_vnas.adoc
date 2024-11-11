@@ -4,7 +4,7 @@ permalink: reference_plan_ots_vnas.html
 keywords: plan, planning, vnas, vmware esxi, 
 summary: Existen varios problemas de planificación relacionados con el uso de VMware ESXi que debe tener en cuenta. 
 ---
-= Requisitos de VMware ESXi
+= Requisitos de VMware ESXi de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

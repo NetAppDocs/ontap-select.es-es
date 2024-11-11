@@ -4,7 +4,7 @@ permalink: task_adm_connectivity.html
 keywords: administer, administering, web, connectivity, network connectivity, network checker 
 summary: Se puede probar la conectividad de red entre dos o más nodos ONTAP Select en la red de clúster interna. Normalmente, se ejecuta esta prueba antes de que se ponga en marcha un clúster de varios nodos para detectar problemas que podrían provocar errores en la operación. 
 ---
-= Confirmación de la conectividad entre los nodos ONTAP Select
+= Confirme la conectividad entre los nodos ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

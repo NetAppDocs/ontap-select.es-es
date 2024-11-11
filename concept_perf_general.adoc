@@ -4,7 +4,7 @@ permalink: concept_perf_general.html
 keywords: ontap select, performance 
 summary: El rendimiento varía en función de la configuración del hardware. 
 ---
-= Rendimiento
+= Información general sobre el rendimiento de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

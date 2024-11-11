@@ -4,7 +4,7 @@ permalink: concept_usecase_private_cloud.html
 keywords: ontap select, private cloud 
 summary: ONTAP Select está especialmente indicado para dar cabida a uno o más clouds privados dentro de su organización. Un caso de uso común es proporcionar servicios de almacenamiento para clouds privados basados en servidores genéricos. 
 ---
-= Cloud privado y centro de datos
+= Soporte de ONTAP Select para el cloud privado y centros de datos
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

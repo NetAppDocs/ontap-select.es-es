@@ -4,7 +4,7 @@ permalink: concept_ha_config.html
 keywords: ontap select, high availability configurations, two-node ha, multi-node ha, mc sds 
 summary: Descubra opciones de alta disponibilidad para seleccionar la mejor configuración de alta disponibilidad para su entorno. 
 ---
-= Configuraciones de alta disponibilidad
+= Configuraciones de alta disponibilidad de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

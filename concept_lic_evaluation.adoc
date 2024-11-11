@@ -14,7 +14,18 @@ summary: Puede usar una licencia de evaluación si desea evaluar ONTAP Select an
 
 
 [role="lead"]
-Puede usar una licencia de evaluación si desea evaluar ONTAP Select antes de tomar la decisión de realizar la compra. La licencia de evaluación se incluye con la utilidad de administración ONTAP Select Deploy y se aplica automáticamente a cada nodo de ONTAP Select como parte de una implementación de evaluación.
+Se puede implementar ONTAP Select con una licencia de evaluación o una licencia adquirida. La licencia que elija debe aplicarse a cada uno de los nodos del clúster ONTAP Select y por lo tanto a todo el clúster. Puede usar una licencia de evaluación si desea evaluar ONTAP Select antes de tomar la decisión de realizar la compra. La licencia de evaluación se incluye con la utilidad de administración ONTAP Select Deploy y se aplica automáticamente a cada nodo de ONTAP Select como parte de una implementación de evaluación.
+
+Hay varias consideraciones a la hora de poner en marcha y ofrecer soporte a un clúster de evaluación:
+
+* Solo puede usar el clúster para fines de evaluación. No se debe utilizar un clúster con una licencia de evaluación en un entorno de producción.
+* Debe utilizar la utilidad de administración ONTAP Select Deploy de la siguiente manera al configurar cada host:
++
+** No proporcione un número de serie
+** Configure para utilizar una licencia de evaluación
+
+
+
 
 
 

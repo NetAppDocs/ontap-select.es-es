@@ -4,7 +4,7 @@ permalink: reference_initial_state.html
 keywords: install, installing, initial state, cluster initial state 
 summary: Debe conocer el estado inicial de un clúster después de haberse implementado y configurar el clúster según sea necesario para su entorno. 
 ---
-= El estado inicial del clúster después de la implementación
+= Estado inicial del clúster de ONTAP Select tras la puesta en marcha
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

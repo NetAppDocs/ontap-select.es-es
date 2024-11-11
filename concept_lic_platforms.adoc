@@ -4,7 +4,7 @@ permalink: concept_lic_platforms.html
 keywords: license, licensing, platform license offerings, license offerings, standard, premium, premium xl 
 summary: Puede comprar una licencia de nivel de capacidad o pool de capacidad de ONTAP Select en uno de los tres niveles de capacidad de la plataforma. Estas ofertas de licencias determinan las capacidades de los hosts en los que pone en marcha ONTAP Select. 
 ---
-= Conozca las ofertas de licencias de la plataforma
+= Conozca las ofertas de licencias de plataforma para ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

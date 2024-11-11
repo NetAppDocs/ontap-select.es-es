@@ -85,18 +85,37 @@ Cada nodo de un clúster de ONTAP Select se otorga automáticamente licencia par
 
 ONTAP Select no admite varias funciones de ONTAP. En la mayoría de los casos, estas funciones requieren un hardware especial que no esté disponible en el entorno virtualizado de ONTAP Select.
 
-* Protección de ransomware autónoma (ARP)
+* Actualizaciones automáticas para la protección autónoma contra ransomware (ARP)
++
+
+NOTE: A partir de ONTAP Select 9.16.1, se admiten las actualizaciones manuales de ARP y la licencia de función ARP se incluye en el archivo de licencia de NetApp (NLF).
+
 * Espacio IP del clúster
++
 No se admite ninguna modificación del espacio IP del clúster, como la adición o eliminación de puertos, LAN virtuales (VLAN) o grupos de agregación de enlaces.
-* ESXi 8,0 U3
-* No se admiten Fibre Channel ni Fibre Channel sobre Ethernet.
-* Supervisión de estado la supervisión de estado tradicional utilizada con una puesta en marcha de ONTAP basada en hardware es específica de los componentes de hardware subyacentes. Gracias al entorno virtualizado que se utiliza con ONTAP Select, los monitores de estado no están activos.
+
+* Fibre Channel
++
+No son compatibles con Fibre Channel ni Fibre Channel sobre Ethernet.
+
+* Supervisores de estado
++
+La supervisión de estado tradicional utilizada con una puesta en marcha de ONTAP basada en hardware es específica de los componentes de hardware subyacentes. Gracias al entorno virtualizado que se utiliza con ONTAP Select, los monitores de estado no están activos.
+
 * Grupos de interfaces
++
 No se admiten los grupos de interfaces.
+
 * Gestor de claves multi-tenant (MTKM)
-* Compatibilidad de descarga de NIC debido al entorno virtualizado utilizado con ONTAP Select, la función de descarga de NIC no es compatible.
+* Compatibilidad con descarga de NIC
++
+Debido al entorno virtualizado que se utiliza con ONTAP Select, no se admite la instalación de descarga de NIC.
+
 * Unidades de cifrado del almacenamiento de NetApp
-* No se admiten las propiedades de los puertos ONTAP que modifican las propiedades de los puertos ONTAP, incluida la velocidad, el dúplex y el control de flujo.
+* Propiedades del puerto ONTAP
++
+No se admite la modificación de las propiedades de los puertos ONTAP, como la velocidad, la dúplex y el control de flujo.
+
 * Procesadores de servicios
 * Migración de SVM
 * Cumplimiento de normativas SnapLock
@@ -104,5 +123,4 @@ No se admiten los grupos de interfaces.
 
 
 .Información relacionada
-* link:reference_lic_ontap_features.html["Funciones de ONTAP habilitadas de forma predeterminada"]
-
+link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["Funciones de ONTAP habilitadas de forma predeterminada"]

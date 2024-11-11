@@ -4,7 +4,7 @@ permalink: concept_stor_hwraid_local.html
 keywords: ontap select, hardware raid, performance boost, protection 
 summary: Cuando hay una controladora RAID de hardware disponible, ONTAP Select puede trasladar los servicios RAID al controlador de hardware para obtener un aumento de rendimiento de escritura y protección contra fallos de unidades físicas. Como resultado, la controladora RAID de conexión local ofrece protección RAID para todos los nodos del clúster ONTAP Select, no mediante RAID de ONTAP. 
 ---
-= Servicios RAID de hardware para almacenamiento conectado local
+= Servicios RAID de hardware para almacenamiento conectado local de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,6 +24,9 @@ NOTE: Los agregados de datos de ONTAP Select se configuran para utilizar RAID 0,
 == Configuración de la controladora RAID para el almacenamiento conectado local
 
 Todos los discos de conexión local que proporcionan a ONTAP Select el almacenamiento de respaldo deben estar situados detrás de una controladora RAID. La mayoría de los servidores de consumo incluyen varias opciones de controladora RAID en varios precios, cada uno con diversos niveles de funcionalidad. La intención es admitir tantas de estas opciones como sea posible, siempre que cumplan con ciertos requisitos mínimos colocados en el controlador.
+
+
+NOTE: No es posible desvincular los discos virtuales de máquinas virtuales ONTAP Select que estén utilizando la configuración de RAID de hardware. La desvinculación de discos solo es compatible para máquinas virtuales ONTAP Select que utilizan la configuración de RAID de software. Consulte link:task_adm_replace_drives_swraid.html["Reemplace una unidad con errores en una configuración RAID de software ONTAP Select"] para obtener más información.
 
 La controladora RAID que administra los discos ONTAP Select debe cumplir los siguientes requisitos:
 

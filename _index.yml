@@ -4,12 +4,12 @@ indexpage:
     que se puede utilizar en diferentes servidores de hardware genérico que ejecutan
     el hipervisor VMware ESXi o máquina virtual basada en kernel (KVM). Proporciona
     la agilidad que necesita para crear una infraestructura de cloud privado flexible
-    y escalable. Este sitio contiene la documentación para ONTAP Select 9.15.1.
+    y escalable. Este sitio contiene la documentación para ONTAP Select 9.16.1.
   tiles:
   - title: Manos a la obra
     links:
     - title: Notas de la versión
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3318065
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3330673
     - title: Novedades
       url: "/reference_new_ots.html"
     - title: Obtenga más información sobre ONTAP Select

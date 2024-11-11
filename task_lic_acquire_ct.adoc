@@ -4,7 +4,7 @@ permalink: task_lic_acquire_ct.html
 keywords: license, licensing, acquire, capacity tiers 
 summary: Cuando se utilizan licencias de niveles de capacidad, es necesario adquirir un archivo de licencia para cada nodo ONTAP Select. El archivo de licencia define la capacidad de almacenamiento del nodo y se bloquea en el nodo a través del número de serie único de nueve dígitos que asigna NetApp. 
 ---
-= Adquirir una licencia de nivel de capacidad
+= Adquiera una licencia de nivel de capacidad de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

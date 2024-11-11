@@ -4,7 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps 
 summary: A partir de ONTAP Select 9.15.1, puede aumentar el tamaño de un clúster existente de seis a ocho nodos y reducir el tamaño del clúster de ocho a seis nodos. 
 ---
-= Expanda o contraiga el clúster
+= Expanda o contraiga un clúster de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ El procedimiento se inicia desde la puesta en marcha de ONTAP Select a través d
 
 Las funcionalidades de expansión y contracción del cluster están restringidas de las siguientes maneras:
 
-* La compatibilidad se limita a los clústeres creados en hosts de hipervisores ESX. Las siguientes versiones de ESX son compatibles con ONTAP Select 9.15.1:
+* La compatibilidad se limita a los clústeres creados en hosts de hipervisores ESX. Las siguientes versiones de ESX son compatibles con ONTAP Select 9.15.1 y versiones posteriores:
 +
 ** ESXi 8.0U2
 ** ESXi 8.0U1
@@ -60,7 +60,7 @@ Como preparación para el procedimiento de ampliación del clúster, se añaden 
 . Seleccione la pestaña *Cluster* en la parte superior de la página y seleccione el clúster deseado de la lista.
 . En la página de detalles del clúster, seleccione el icono de engranaje a la derecha de la página y seleccione *Expandir clúster*.
 . Navega a la sección *HA Pair 4*.
-. Elija los detalles de la configuración del par de alta disponibilidad para el cuarto par de alta disponibilidad, entre los que se incluyen:
+. Elija los detalles de configuración del par de alta disponibilidad para el cuarto par de alta disponibilidad, entre los que se incluyen:
 +
 ** Tipo de instancia
 ** Nombres de nodo

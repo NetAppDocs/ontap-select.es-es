@@ -4,7 +4,7 @@ permalink: concept_api_before_workflows.html
 keywords: rest api, deploy rest api, rest, workflows, before you begin 
 summary: Debe prepararse para revisar y utilizar los procesos de flujo de trabajo. 
 ---
-= Antes de usar los flujos de trabajo de la API
+= Antes de utilizar los flujos de trabajo de la API de puesta en marcha de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

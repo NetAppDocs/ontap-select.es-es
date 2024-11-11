@@ -4,7 +4,7 @@ permalink: concept_api_before_python.html
 keywords: rest api, deploy rest api, rest, python, before you begin 
 summary: Debe preparar el entorno antes de ejecutar los scripts Python de ejemplo. 
 ---
-= Antes de acceder a la API mediante Python
+= Antes de acceder a la API de implementación de ONTAP Select con Python
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
