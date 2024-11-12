@@ -68,7 +68,7 @@ ONTAP Select 9.14.1 incluye varias funciones y mejoras nuevas.
 Compatibilidad con hipervisor KVM:: A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hipervisor KVM. Anteriormente, en ONTAP Select 9.10.1 se eliminó la compatibilidad para poner en marcha un clúster nuevo en un hipervisor KVM y se eliminó la compatibilidad con la administración de hosts y clústeres KVM existentes, excepto para desconectar o eliminar, en ONTAP Select 9.11.1.
 Ya no se admite la implementación del complemento de VMware vCenter:: A partir de ONTAP Select 9.14.1, ya no se admite el complemento para implementar VMware vCenter.
 Soporte actualizado de ONTAP Select Deploy:: Si está ejecutando una versión de ONTAP Select Deploy 9.14.1 inferior a 9.14.1P2, debe actualizar a ONTAP Select Deploy 9.14.1P2 lo antes posible. Para obtener más información, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["Notas de la versión de ONTAP Select 9.14.1"^].
-Compatibilidad con VMware ESXi mejorada:: ONTAP Select 9.14.1 incluye compatibilidad con VMware ESXi 8,0.2.
+Compatibilidad con VMware ESXi mejorada:: ONTAP Select 9.14.1 incluye compatibilidad con VMware ESXi 8.0 U2.
 
 
 
