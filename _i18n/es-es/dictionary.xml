@@ -586,7 +586,6 @@
   <block id="667aa4140034cc454b837db2fc24ce3d" category="inline-link">Herramienta de matriz de interoperabilidad de NetApp,window=_blank</block>
   <block id="e974ba73413c61605294fbea7a63f880" category="paragraph">Consulte la<block ref="6989237bb21ab12eea7660d1d2c0793b" category="inline-link-rx"></block> si quiere más información.</block>
   <block id="6ef6e53858c70e7e79a98bf86eb89b40" category="section-title">Requisitos básicos de hardware</block>
-  <block id="6e789a662664596fd2f867b83af8955a" category="paragraph">Existen varios requisitos de hardware comunes que se aplican a todas las plataformas independientemente del tipo de instancia del nodo o de la oferta de licencia.</block>
   <block id="e22b6495595f2c4ad67a830d1be05c6e" category="paragraph-title">Procesador</block>
   <block id="1a4f0dd8a8bf6109c981c282ef6e87c9" category="paragraph">Entre los microprocesadores compatibles se incluyen los siguientes:</block>
   <block id="7a4cc24a8547103995174a22d62c6415" category="inline-link-macro">Procesadores Intel Xeon,window=_blank</block>
@@ -3167,7 +3166,6 @@
   <block id="250f6d868aabeaced76663cb583769da" category="sidebar">Gestione los clústeres</block>
   <block id="6a66d4f800a8576eee650d6dd676dd9d" category="sidebar">Use la API de REST</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Más recursos</block>
-  <block id="2cf665df8bcce3d8608ac2923c3934b2" category="sidebar">Página de recursos de ONTAP Select</block>
   <block id="5c7750df890d8a1ae46102a5c56d163d" category="sidebar">Blogs de ONTAP Select</block>
   <block id="bafb5d4f7ed06fcf88f3e77fadecc81b" category="sidebar">Comunidad de ONTAP Select</block>
   <block id="dd3d71b5f68ad8da8831a0b5ea514e35" category="sidebar">Matriz de interoperabilidad</block>
@@ -3754,4 +3752,41 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8,0 U1</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8,0GA</block>
   <block id="8d224631a5a87c64caecc71fee6fb612" category="list-text">ESXi 7,0 U3</block>
+  <block id="2541fca0ad59c8199b8bb08b5020de58" category="inline-link-macro">Inicio rápido de ONTAP Select para implementaciones de plantillas OVF</block>
+  <block id="eccbbc66ee95decf0d7c0595d219c92b" category="paragraph"><block ref="eccbbc66ee95decf0d7c0595d219c92b" category="inline-link-macro-rx"></block></block>
+  <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">Existen varios requisitos de hardware comunes que se aplican a todas las plataformas independientemente del tipo de instancia del nodo o de la oferta de licencia.</block>
+  <block id="f699f7e9ed69e5269a69fd9ec385c1ad" category="admonition">Los procesadores Advanced Micro Devices (AMD) no son compatibles con ONTAP Select.</block>
+  <block id="676477cfcc6ef4db97bbb95e9c75b57e" category="summary">Se puede implementar rápidamente una instancia de evaluación de 90 días de un clúster ONTAP Select de un solo nodo mediante una plantilla OVF en VMware ESXi.</block>
+  <block id="08aeb5678ae03a8db1f16233a4a16070" category="paragraph">Puede utilizar el inicio rápido para las implementaciones de plantillas de formato de virtualización abierta (OVF) para implementar rápidamente una instancia de evaluación de 90 días de un clúster ONTAP Select de un solo nodo mediante una plantilla OVF en VMware ESXi.</block>
+  <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">No es necesario obtener un número de serie ni una licencia de capacidad de almacenamiento de NetApp.</block>
+  <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">Puede asignar la misma cantidad de almacenamiento para los datos de usuario que una licencia adquirida.</block>
+  <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">No se puede actualizar el nodo de una licencia de evaluación a una licencia adquirida.</block>
+  <block id="de68e769353f85803d50af3ad5192201" category="list-text">Solo se puede usar una cuenta de vCenter para implementar la plantilla OVF. Actualmente no se admite la instalación directa en un host ESXi.</block>
+  <block id="3becac3f3a46d46f0df7e4df7b69a359" category="list-text">Debe instalar la plantilla OVF (incluida en un archivo ova) con el cliente independiente de vSphere o el cliente web de vSphere (la única opción para ESXi 6,5 y versiones posteriores). No utiliza la utilidad de administración de ONTAP Select Deploy.</block>
+  <block id="324b9a453c1c067658adca4be37dbae0" category="section-title">Prepare el host del clúster de ONTAP Select</block>
+  <block id="1ec19b1e234462f154c2312b865baa14" category="paragraph">Utilice los siguientes requisitos para preparar el host ESXi donde se puso en marcha el clúster de ONTAP Select. La descripción de la plataforma se basa en la configuración de tipo de instancia estándar o pequeña con formato de almacenamiento local de conexión directa (DAS) mediante el sistema de archivos VMFS-5 o VMFS-6.</block>
+  <block id="7564075dd4184b322f666087a8172ae7" category="inline-image-macro">Requisitos para preparar el host ESXi</block>
+  <block id="40500d60ce10678b5afdd4398f493978" category="paragraph"><block ref="40500d60ce10678b5afdd4398f493978" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9d35c0cb060ab36e25ffd3d93795556" category="inline-link-macro">Documentación de instalación de ONTAP Select</block>
+  <block id="295c8d07537fb1be04c147371b26ece5" category="paragraph">Para obtener información adicional sobre las opciones de configuración del host, consulte la <block ref="cd27c348e940a3727b6807628855d8fd" category="inline-link-macro-rx"></block>.</block>
+  <block id="246320dc101bf0e3be5986b0320159e6" category="section-title">Implemente un clúster ONTAP Select de un solo nodo mediante una plantilla OVF</block>
+  <block id="a50cac13360eacf7961596b190047155" category="paragraph">Complete los siguientes pasos en un servidor host ESXi de 64 bits compatible.</block>
+  <block id="e7c78d04f4c3c4a7d36c59b9d2c2b9f7" category="list-text">Vaya a la página del programa de productos de evaluación de NetApp y seleccione *ONTAP Select* para descargar la plantilla OVF de ONTAP Select en su estación de trabajo local.</block>
+  <block id="04b1e5dd71a31edd4beba2e075fb1a5e" category="list-text">Inicie sesión en el cliente web de VMware vSphere con una cuenta con Privileges administrativo.</block>
+  <block id="b8d4fc60e9ceb80bf2fc078ddfdc693c" category="list-text">Seleccione el host mediante una de las siguientes opciones:</block>
+  <block id="a636f64e8e0f0ff7c201bcbe4197a1a8" category="list-text">Seleccione *Archivo* &gt; *despliegue de la plantilla OVF*.</block>
+  <block id="96a3af93a31aa2d6987b7e0083ab462b" category="list-text">Seleccione *Datacenter*. A continuación, haga clic con el botón derecho y seleccione *Implementar plantilla OVF*.</block>
+  <block id="e0ccc728234a1a6f0227f25e6efde9d4" category="list-text">Seleccione el archivo OVA de origen ONTAP Select en su estación de trabajo local y, a continuación, seleccione *Siguiente*.</block>
+  <block id="ea9ba5785c2b1398a34baf7fc0a68c67" category="list-text">Revise los detalles de la plantilla OVF y seleccione *Siguiente*.</block>
+  <block id="9caf4332c798060a1cebc6b53f315bb7" category="list-text">Revise los detalles del EULA y seleccione *Aceptar*. Luego selecciona *Siguiente*.</block>
+  <block id="be18e91c73f7a7d7a9ae5462079f0ac7" category="list-text">Escriba el nombre de la nueva máquina virtual y seleccione *Siguiente*.</block>
+  <block id="87d6a5bfde901ee6044d4f9ec142b4d6" category="list-text">Si hay más de un almacén de datos disponible, seleccione el almacén de datos y seleccione *Siguiente*.</block>
+  <block id="44260bcf8bb9526a48d3725d7dccac06" category="list-text">Seleccione *Thick Provision Lazy zeroed* y, a continuación, seleccione *Siguiente*.</block>
+  <block id="d4de99256df06c0619573e5d37a5352d" category="list-text">Seleccione las redes de gestión y datos y, a continuación, seleccione *Siguiente*.</block>
+  <block id="34fcbce1c7afc6b294a2a56ad5419543" category="list-text">En la página *Propiedades*, proporcione todos los valores requeridos y seleccione *Siguiente*.</block>
+  <block id="dfe2716b8d1ea246f6e1aa9804752d1e" category="list-text">Revise los detalles de la implementación y seleccione *Encendido después de la implementación*.</block>
+  <block id="c56b5c777d1fbf5b3503afddde839f20" category="list-text">Seleccione *Finalizar* para comenzar el proceso de implementación.</block>
+  <block id="66723f6678d3dd5c1bae3c6838416d52" category="list-text">Después de poner en marcha el clúster de ONTAP Select, puede configurar el clúster mediante System Manager o la interfaz de la CLI. Debe asignar el disco utilizando la operación estándar de ONTAP *DISK ASSIGN*.</block>
+  <block id="7c51cb770ac84a1429ed1cfe6c686aed" category="paragraph"><block ref="7c51cb770ac84a1429ed1cfe6c686aed" category="inline-link-macro-rx"></block></block>
+  <block id="fa0d249cd337d58b40ea3c7cc54de247" category="sidebar">Inicio rápido para implementaciones de plantillas OVF</block>
 </blocks>

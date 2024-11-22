@@ -22,14 +22,6 @@ El flujo de trabajo de creación del clúster difiere en las siguientes situacio
 * Se utilizan varios nodos o hosts en el clúster
 * Clúster se implementa en un entorno de producción con una licencia adquirida
 * En lugar de VMware ESXi, se utiliza el hipervisor KVM
-+
-[NOTE]
-====
-** A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
-** A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
-
-
-====
 
 
 
@@ -413,3 +405,6 @@ Salida::
 
 --
 
+
+.Información relacionada
+link:task_quick_start_for_ovf_template_deployments.html["Inicio rápido de ONTAP Select para implementaciones de plantillas OVF"]

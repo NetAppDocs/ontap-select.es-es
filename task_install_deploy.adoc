@@ -218,4 +218,6 @@ Debe iniciar sesión en la interfaz de usuario web para confirmar que la utilida
 
 
 .Información relacionada
-link:task_cli_signing_in.html["Inicie sesión para implementar con SSH"]
+* link:task_cli_signing_in.html["Inicie sesión para implementar con SSH"]
+* link:task_quick_start_for_ovf_template_deployments.html["Inicio rápido de ONTAP Select para implementaciones de plantillas OVF"]
+

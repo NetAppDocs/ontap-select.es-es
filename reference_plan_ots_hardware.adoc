@@ -81,6 +81,9 @@ Entre los microprocesadores compatibles se incluyen los siguientes:
 * Procesadores Intel Xeon para servidor (consulte link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["Procesadores Intel Xeon,window=_blank"] si quiere más información).
 
 
+
+NOTE: Los procesadores Advanced Micro Devices (AMD) no son compatibles con ONTAP Select.
+
 .Configuración de Ethernet
 El tamaño del clúster admite varias configuraciones de Ethernet.
 

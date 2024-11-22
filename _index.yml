@@ -28,10 +28,10 @@ indexpage:
       url: "/concept_adm_before.html"
     - title: Use la API de REST
       url: "/concept_api_how_access.html"
+    - title: Inicio rápido para implementaciones de plantillas OVF
+      url: "/task_quick_start_for_ovf_template_deployments.html"
   - title: Más recursos
     links:
-    - title: Página de recursos de ONTAP Select
-      url: https://www.netapp.com/data-management/ontap-select/documentation/
     - title: Biblioteca de productos de ONTAP Select
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62293
     - title: Documentación de ONTAP 9

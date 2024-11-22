@@ -167,13 +167,6 @@ Cuando crea o elimina un clúster de ONTAP Select con ejemplos de código Python
 
 == Clúster de un solo nodo en KVM
 
-[NOTE]
-====
-* A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
-* A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
-
-
-====
 [source, json]
 ----
 {
