@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task_quick_start_for_ovf_template_deployments.html 
-keywords: ontap select, ovf, template, deployment, evaluation, license 
+permalink: deploy-evaluation-ontap-select-ovf-template.html 
+keywords: ontap, select, ovf, template, deployment, evaluation, license 
 summary: Se puede implementar rápidamente una instancia de evaluación de 90 días de un clúster ONTAP Select de un solo nodo mediante una plantilla OVF en VMware ESXi. 
 ---
-= Inicio rápido de ONTAP Select para implementaciones de plantillas OVF
+= Ponga en marcha una instancia de evaluación de 90 días de un clúster de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Se puede implementar rápidamente una instancia de evaluación de 90 d�
 
 
 [role="lead"]
-Puede utilizar el inicio rápido para las implementaciones de plantillas de formato de virtualización abierta (OVF) para implementar rápidamente una instancia de evaluación de 90 días de un clúster ONTAP Select de un solo nodo mediante una plantilla OVF en VMware ESXi.
+Se puede implementar rápidamente una instancia de evaluación de 90 días de un clúster ONTAP Select de un solo nodo mediante una plantilla OVF en VMware ESXi.
 
 .Acerca de esta tarea
 * No es necesario obtener un número de serie ni una licencia de capacidad de almacenamiento de NetApp.

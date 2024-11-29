@@ -3752,12 +3752,9 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8,0 U1</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8,0GA</block>
   <block id="8d224631a5a87c64caecc71fee6fb612" category="list-text">ESXi 7,0 U3</block>
-  <block id="2541fca0ad59c8199b8bb08b5020de58" category="inline-link-macro">Inicio rápido de ONTAP Select para implementaciones de plantillas OVF</block>
-  <block id="eccbbc66ee95decf0d7c0595d219c92b" category="paragraph"><block ref="eccbbc66ee95decf0d7c0595d219c92b" category="inline-link-macro-rx"></block></block>
   <block id="563074de50ee7515467ef30a7a16a15d" category="paragraph">Existen varios requisitos de hardware comunes que se aplican a todas las plataformas independientemente del tipo de instancia del nodo o de la oferta de licencia.</block>
   <block id="f699f7e9ed69e5269a69fd9ec385c1ad" category="admonition">Los procesadores Advanced Micro Devices (AMD) no son compatibles con ONTAP Select.</block>
   <block id="676477cfcc6ef4db97bbb95e9c75b57e" category="summary">Se puede implementar rápidamente una instancia de evaluación de 90 días de un clúster ONTAP Select de un solo nodo mediante una plantilla OVF en VMware ESXi.</block>
-  <block id="08aeb5678ae03a8db1f16233a4a16070" category="paragraph">Puede utilizar el inicio rápido para las implementaciones de plantillas de formato de virtualización abierta (OVF) para implementar rápidamente una instancia de evaluación de 90 días de un clúster ONTAP Select de un solo nodo mediante una plantilla OVF en VMware ESXi.</block>
   <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">No es necesario obtener un número de serie ni una licencia de capacidad de almacenamiento de NetApp.</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">Puede asignar la misma cantidad de almacenamiento para los datos de usuario que una licencia adquirida.</block>
   <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">No se puede actualizar el nodo de una licencia de evaluación a una licencia adquirida.</block>
@@ -3788,5 +3785,7 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="c56b5c777d1fbf5b3503afddde839f20" category="list-text">Seleccione *Finalizar* para comenzar el proceso de implementación.</block>
   <block id="66723f6678d3dd5c1bae3c6838416d52" category="list-text">Después de poner en marcha el clúster de ONTAP Select, puede configurar el clúster mediante System Manager o la interfaz de la CLI. Debe asignar el disco utilizando la operación estándar de ONTAP *DISK ASSIGN*.</block>
   <block id="7c51cb770ac84a1429ed1cfe6c686aed" category="paragraph"><block ref="7c51cb770ac84a1429ed1cfe6c686aed" category="inline-link-macro-rx"></block></block>
-  <block id="fa0d249cd337d58b40ea3c7cc54de247" category="sidebar">Inicio rápido para implementaciones de plantillas OVF</block>
+  <block id="8ca84893979a849d9d51eac372cc15a9" category="inline-link-macro">Ponga en marcha una instancia de evaluación de 90 días de un clúster de ONTAP Select</block>
+  <block id="cb5e9657db1221bb8eb7f5be5287d604" category="paragraph"><block ref="cb5e9657db1221bb8eb7f5be5287d604" category="inline-link-macro-rx"></block></block>
+  <block id="ac951fbceb082ef32560a291949a4015" category="sidebar">Ponga en marcha una instancia de evaluación de 90 días de un clúster</block>
 </blocks>

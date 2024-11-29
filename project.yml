@@ -19,7 +19,7 @@ settings:
     url: "/ontap-select-9131"
   - version-number: 9.12.1
     url: "/ontap-select-9121"
-  langs: es-es,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,fr-fr,it-it
+  langs: es-es,us-en,de-de,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: Documentos de ONTAP Select 9.16.1
@@ -295,8 +295,8 @@ sidebar:
         url: "/task_cli_deploy_image_remove.html"
       - title: Recupere la puesta en marcha de un clúster de dos nodos
         url: "/task_cli_deploy_recover_two_node.html"
-  - title: Inicio rápido para implementaciones de plantillas OVF
-    url: "/task_quick_start_for_ovf_template_deployments.html"
+  - title: Ponga en marcha una instancia de evaluación de 90 días de un clúster
+    url: "/deploy-evaluation-ontap-select-ovf-template.html"
   - title: PREGUNTAS FRECUENTES
     url: "/reference_faq.html"
   - title: Avisos legales
