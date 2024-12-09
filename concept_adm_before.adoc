@@ -72,4 +72,7 @@ Hay varias opciones disponibles al configurar el clúster, incluidas las siguien
 Si decidió no instalar los archivos de licencia con capacidad de almacenamiento como parte de la implementación del clúster de ONTAP Select, debe adquirir e instalar los archivos de licencia antes de que el período de gracia caduque para los clústeres que se ejecuten con una licencia adquirida.
 
 .Agregados reflejados
-Hay discos de reserva de datos creados por la utilidad de administración de implementación en cada nodo ONTAP Select a partir del espacio de almacén de datos utilizable (como Pool0 y Pool1). Para implementar la alta disponibilidad de los datos en un clúster de varios nodos, debe crear un agregado reflejado con estos repuestos.
+La utilidad de administración Deploy crea discos de reserva de datos en cada nodo ONTAP Select del espacio utilizable del almacén de datos (como Pool0 y Pool1). Para implementar la alta disponibilidad de los datos en un clúster de varios nodos, debe crear un agregado reflejado con estos repuestos.
+
+
+NOTE: La toma de control de alta disponibilidad solo se admite cuando los agregados de datos se configuran como agregados reflejados.

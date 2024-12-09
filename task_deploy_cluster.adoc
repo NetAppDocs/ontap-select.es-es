@@ -41,10 +41,10 @@ Planificación inicial:: Revise las secciones _Plan_ y _License_ de la documenta
 Preparación de host:: Debe preparar los hosts de hipervisor donde se ejecutarán los nodos de ONTAP Select y tener los archivos de licencia de almacenamiento necesarios en función del modelo de licencia. Para ver los requisitos de preparación:
 +
 --
-. Inicie sesión en la interfaz de usuario web de implementación.
-. Haga clic en image:icon_question_mark.gif["Signo de interrogación"] en la parte superior de la página.
-. Haga clic en *requisitos previos*.
-. Desplácese hacia abajo para revisar los requisitos y haga clic en *Aceptar*.
+. Inicie sesión en la interfaz de usuario web de puesta en marcha.
+. Seleccione image:icon_question_mark.gif["Signo de interrogación"] en la parte superior de la página.
+. Selecciona *Requisitos*.
+. Desplácese hacia abajo para revisar los requisitos y seleccione *OK*.
 
 
 --
@@ -65,7 +65,7 @@ Página de inicio de primeros pasos:: La página inicial *Introducción a ONTAP 
 
 
 
-NOTE: Puede realizar los mismos pasos de forma independiente haciendo clic en las pestañas de la parte superior de la página (Clusters, Hypervisor hosts, Administration).
+NOTE: Puede realizar los mismos pasos de forma independiente si selecciona las pestañas de la parte superior de la página (Clusters, Hosts de hipervisor, Administración).
 
 Comprobador de redes:: Si va a implementar un clúster de varios nodos, debe estar familiarizado con el comprobador de red.
 Después de implementar un clúster:: Debe realizar una copia de seguridad de los datos de configuración de implementación de ONTAP Select.
@@ -84,27 +84,27 @@ Consulte link:task_deploy_cluster.html#before-you-begin["Antes de empezar"] para
 Se crea un clúster de ONTAP Select con uno o varios nodos para una puesta en marcha de producción.
 
 .Pasos
-Los pasos que siga dependerán de si desea crear un clúster de un solo nodo o un clúster de varios nodos.
+Los pasos que siga dependerán de si desea crear un clúster de un solo nodo o un clúster de varios nodos. Un clúster de varios nodos puede tener dos, cuatro, seis u ocho nodos.
 
 [role="tabbed-block"]
 ====
 .Clúster de un solo nodo
 --
 . Inicie sesión en la utilidad Deploy a través de la interfaz web mediante la cuenta de administrador (admin).
-. Si aparece la ventana emergente *Bienvenido a ONTAP Select*, confirme que ha cumplido los requisitos previos de configuración y haga clic en *Aceptar*.
-. Si no aparece la página de inicio del clúster *Introducción*, haga clic en image:icon_question_mark.gif["Signo de interrogación"] En la parte superior de la página y haga clic en *Introducción*.
-. En la página *Introducción*, haga clic en *cargar* y seleccione una licencia de su estación de trabajo local y haga clic en *Abrir* para cargar la licencia.
-. Haga clic en *Actualizar* y confirme que se ha añadido la licencia.
-. Haga clic en *Siguiente* para agregar un host de hipervisor y, a continuación, haga clic en *Agregar*.
+. Si aparece la ventana emergente *Bienvenido a ONTAP Select*, confirma que has cumplido los requisitos previos de configuración y selecciona *Aceptar*.
+. Si no se muestra la página de inicio del clúster *Getting Started*, seleccione image:icon_question_mark.gif["Signo de interrogación"] en la parte superior de la página y seleccione *Getting Started*.
+. En la página *Primeros pasos*, seleccione *Cargar* y, a continuación, seleccione una licencia de su estación de trabajo local y seleccione *Abrir* para cargar la licencia.
+. Seleccione *Actualizar* y confirme que se ha agregado la licencia.
+. Seleccione *Siguiente* para agregar un host de hipervisor y luego seleccione *Agregar*.
 +
 Puede añadir directamente el host del hipervisor o mediante la conexión a un servidor vCenter. Proporcione los detalles de host y las credenciales adecuadas según sea necesario.
 
-. Haga clic en *Actualizar* y confirme que el valor *Tipo* del host es *ESX*.
+. Seleccione *Refrescar* y confirme que el valor *Type* del host es *ESX*.
 +
 Las credenciales de cuenta introducidas se añaden a la base de datos de credenciales de implementación.
 
-. Haga clic en *Siguiente* para iniciar el proceso de creación del clúster.
-. En la sección *Detalles del clúster*, proporcione toda la información necesaria que describe el clúster y haga clic en *hecho*.
+. Seleccione *Siguiente* para comenzar el proceso de creación del clúster.
+. En la sección *Detalles del clúster*, proporcione toda la información requerida que describa el clúster y seleccione *Listo*.
 . En *Configuración de nodos*, proporcione la dirección IP de administración de nodos y seleccione la licencia para el nodo; puede cargar una nueva licencia si es necesario. También puede cambiar el nombre del nodo si es necesario.
 . Proporcione la configuración *Hypervisor* y *Red*.
 +
@@ -113,16 +113,16 @@ Existen tres configuraciones de nodos que definen el tamaño de la máquina virt
 +
 Seleccione el host del hipervisor, así como las redes de gestión y datos.
 
-. Proporcione la configuración *almacenamiento* y haga clic en *hecho*.
+. Proporcione la configuración *Storage* y seleccione *Done*.
 +
 Puede seleccionar las unidades según el nivel de licencia de la plataforma y la configuración de host.
 
 . Revise y confirme la configuración del clúster.
 +
-Para cambiar la configuración, haga clic en image:icon_pencil.gif["Editar"] en la sección correspondiente.
+Puede cambiar la configuración seleccionando image:icon_pencil.gif["Editar"] en la sección correspondiente.
 
-. Haga clic en *Siguiente* y proporcione la contraseña de administrador de ONTAP.
-. Haga clic en *Crear clúster* para iniciar el proceso de creación del clúster y, a continuación, haga clic en *Aceptar* en la ventana emergente.
+. Seleccione *Siguiente* y proporcione la contraseña de administrador de ONTAP.
+. Seleccione *Crear clúster* para comenzar el proceso de creación del clúster y luego seleccione *Aceptar* en la ventana emergente.
 +
 Es posible que el clúster se cree demore hasta 30 minutos.
 
@@ -136,20 +136,20 @@ La página se actualiza automáticamente a intervalos regulares.
 .Clúster multinodo
 --
 . Inicie sesión en la utilidad Deploy a través de la interfaz web mediante la cuenta de administrador (admin).
-. Si aparece la ventana emergente *Bienvenido a ONTAP Select*, confirma que has cumplido con los requisitos previos de configuración y haz clic en *Aceptar*.
-. Si no aparece la página de inicio del clúster *Introducción*, haga clic en image:icon_question_mark.gif["Signo de interrogación"] En la parte superior de la página y haga clic en *Introducción*.
-. En la página *Introducción*, haga clic en *cargar* y seleccione una licencia de su estación de trabajo local y haga clic en *Abrir* para cargar la licencia. Repita el procedimiento para agregar una segunda licencia.
-. Haga clic en *Refrescar* y confirme que se han agregado las licencias.
-. Haga clic en *Siguiente* para agregar dos hosts de hipervisor y luego haga clic en *Agregar*.
+. Si se muestra la ventana emergente *Bienvenido a ONTAP Select*, confirme que ha cumplido con los requisitos previos de configuración y seleccione *Aceptar*.
+. Si no se muestra la página de inicio del clúster *Getting Started*, seleccione image:icon_question_mark.gif["Signo de interrogación"] en la parte superior de la página y seleccione *Getting Started*.
+. En la página *Primeros pasos*, seleccione *Cargar*, seleccione una licencia de su estación de trabajo local y seleccione *Abrir* para cargar la licencia. Repita el procedimiento para agregar licencias adicionales.
+. Seleccione *Actualizar* y confirme que se han agregado las licencias.
+. Seleccione *Siguiente* para agregar todos los hosts de hipervisor y luego seleccione *Agregar*.
 +
 Puede añadir los hosts del hipervisor directamente o mediante la conexión a un servidor vCenter. Proporcione los detalles de host y las credenciales adecuadas según sea necesario.
 
-. Haga clic en *Actualizar* y confirme que el valor *Tipo* del host es *ESX*.
+. Seleccione *Refrescar* y confirme que el valor *Type* del host es *ESX*.
 +
 Las credenciales de cuenta introducidas se añaden a la base de datos de credenciales de implementación.
 
-. Haga clic en *Siguiente* para iniciar el proceso de creación del clúster.
-. En la sección *Detalles del clúster*, seleccione *Cluster de nodos 2* para *Cluster Size*, proporcione toda la información requerida que describa los clusters y haga clic en *Listo*.
+. Seleccione *Siguiente* para comenzar el proceso de creación del clúster.
+. En la sección *Detalles del clúster*, seleccione el *Tamaño del clúster* deseado, proporcione toda la información requerida que describa los clústeres y seleccione *Listo*.
 . En *Configuración de nodos*, proporcione las direcciones IP de administración de nodos y seleccione las licencias para cada nodo; puede cargar una nueva licencia si es necesario. También puede cambiar los nombres de los nodos si es necesario.
 . Proporcione la configuración *Hypervisor* y *Red*.
 +
@@ -158,17 +158,17 @@ Existen tres configuraciones de nodos que definen el tamaño de la máquina virt
 +
 Seleccione los hosts de hipervisor, así como las redes internas, de gestión y de datos.
 
-. Proporcione la configuración *almacenamiento* y haga clic en *hecho*.
+. Proporcione la configuración *Storage* y seleccione *Done*.
 +
 Puede seleccionar las unidades según el nivel de licencia de la plataforma y la configuración de host.
 
 . Revise y confirme la configuración del clúster.
 +
-Para cambiar la configuración, haga clic en image:icon_pencil.gif["Editar"] en la sección correspondiente.
+Puede cambiar la configuración seleccionando image:icon_pencil.gif["Editar"] en la sección correspondiente.
 
-. Haga clic en *Siguiente* y ejecute la comprobación previa de red haciendo clic en *Ejecutar*. Esto valida que la red interna seleccionada para el tráfico del clúster de ONTAP funcione correctamente.
-. Haga clic en *Siguiente* y proporcione la contraseña de administrador de ONTAP.
-. Haga clic en *Crear clúster* para iniciar el proceso de creación del clúster y, a continuación, haga clic en *Aceptar* en la ventana emergente.
+. Seleccione *Siguiente* y ejecute la comprobación previa de red seleccionando *Ejecutar*. Esto valida que la red interna seleccionada para el tráfico del clúster de ONTAP funcione correctamente.
+. Seleccione *Siguiente* y proporcione la contraseña de administrador de ONTAP.
+. Seleccione *Crear clúster* para comenzar el proceso de creación del clúster y, a continuación, seleccione *Aceptar* en la ventana emergente.
 +
 El clúster puede tardar hasta 45 minutos en crearse.
 
