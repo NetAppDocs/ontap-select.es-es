@@ -263,8 +263,6 @@ sidebar:
         url: "/reference_api_script_common.html"
       - title: Cambie el tamaño de los nodos del clúster
         url: "/reference_api_script_resize.html"
-  - title: Automatice con Ansible
-    url: "/concept_automate_ansible.html"
   - title: Utilice la CLI
     entries:
     - title: Inicie sesión mediante SSH

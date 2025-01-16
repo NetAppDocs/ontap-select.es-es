@@ -1012,39 +1012,6 @@
   <block id="f9af681ffe76058731402326b2c3b21c" category="cell">Servidor de nombres de dominio secundario.</block>
   <block id="8eece195bddb7ef51bf3e3aaa23e7345" category="cell">Buscar dominios</block>
   <block id="b07c79f371126a8737e35942d21d74c3" category="cell">Lista de los dominios de búsqueda que se van a utilizar.</block>
-  <block id="c32e557727d87dabd26419e2d74fd541" category="summary">Use los roles de Ansible para automatizar las puestas en marcha de ONTAP Select.</block>
-  <block id="6a7bceb6d2b5ceedce475be4f9b01f70" category="doc">Automatice las puestas en marcha de ONTAP Select con Ansible</block>
-  <block id="ef4813ca7c0fc0ff31c081f95744fca3" category="paragraph">Use los libros de estrategia y roles de Ansible para automatizar las puestas en marcha de ONTAP Select.</block>
-  <block id="53e3f47e6ca445e9be6f8424cc405d08" category="paragraph">Un rol de Ansible es una colección lógica de tareas, plantillas, controladores y variables en una estructura de archivos estandarizada. Utilice estos roles para facilitar, reutilizar y modular funcionalidad que se puede utilizar de forma independiente. Incluya roles y la lista de hosts a los que desea que se ejecuten, en un libro de estrategia para su ejecución. Después de instalar Ansible, actualizar los módulos necesarios y comprender los libros de estrategia, estará listo para descargar los roles de ONTAP Select (OTS) de GitHub de NetApp para crear y ejecutar su propio libro de estrategia para poner en marcha los clústeres de ONTAP Select.</block>
-  <block id="a5cd3ed116608dac017f14c046ea56bf" category="section-title">Funciones</block>
-  <block id="826d466edf75a6e091340a11b737b650" category="paragraph">Hay dos roles disponibles para ONTAP Select:</block>
-  <block id="efd9faa12026d5475636db4e69b74c88" category="section-title">na_ots_deploy</block>
-  <block id="43240aa487d9e87740e23d626da1a362" category="paragraph">Este rol descarga el archivo de instalación para ONTAP Select Deploy en un host de vCenter o ESXi. A continuación, crea y ejecuta el equipo virtual de puesta en marcha.</block>
-  <block id="295abdb722ec58f88548a860f1de3615" category="paragraph">Este rol utiliza los siguientes valores de entrada:</block>
-  <block id="ce32e2e59fbccdfecf9783e364821344" category="list-text">Credenciales de host vCenter o ESXi</block>
-  <block id="bcac6351d7ffa20621625e884ac48eef" category="list-text">Ponga en marcha la creación de equipos virtuales e incluya información como:</block>
-  <block id="75ba8d70e3692ba200f0e0df37b4d2ae" category="list-text">Dirección IP</block>
-  <block id="99dea78007133396a7b8ed70578ac6ae" category="list-text">Inicio de sesión</block>
-  <block id="53c3b66ec700ff4dc91986d0dd8b16ac" category="list-text">Ruta local al archivo OVA</block>
-  <block id="a494e509586e66c9858cd2b0032bbb59" category="paragraph">Asegúrese de que el archivo de instalación esté disponible antes de ejecutar el libro de estrategia, incluida la función).</block>
-  <block id="67b626a26e85af31687eb59b04a92d36" category="admonition">La forma más sencilla de proporcionar estos valores de entrada es a través de un archivo de variables globales en formato YML. Superar este ARCHIVO DE YML en el libro de estrategia.</block>
-  <block id="62f436a0c8a1102605e3a87bed8fb9bb" category="paragraph">El rol tiene una única tarea que importa el archivo OVA de implementación en el host, crea la máquina virtual y lo ejecuta. Puede acceder a este rol y descargarlo desde Ansible GitHub de NetApp aquí: <block ref="76046f5222ce385c10b6d73a03e82ba7" category="inline-link-macro-rx"></block></block>
-  <block id="844c277ee2d3a4ab83ef1f113352e100" category="section-title">na_ots_cluster</block>
-  <block id="7fd297e1f0beaa7151bd9285d7dff546" category="paragraph">Este rol utiliza las API de implementación de ONTAP Select para crear e implementar el clúster de ONTAP Select. Supone que se ha creado la VM de despliegue y está en funcionamiento manualmente o utilizando el rol *na_ots_Deploy*. Además, el rol supone que los hosts de selección se configuraron correctamente con las redes y el almacenamiento necesarios para el clúster ONTAP Select.</block>
-  <block id="f0257515d53312c2d8028409069c5d84" category="paragraph">El rol utiliza los valores de entrada de las credenciales de vCenter o ESXI y pone en marcha credenciales de las máquinas virtuales para acceder a las API y toda la información relativa necesaria para crear el clúster de ONTAP Select y la máquina virtual del nodo.</block>
-  <block id="ea6e2b68eae559d20093f0d7eae85fb8" category="paragraph">El rol realiza las siguientes tareas:</block>
-  <block id="de939cf4d4a045633c8a520b501bb40e" category="list-text">Añadir credenciales de host (vcenter o esxi)</block>
-  <block id="0b67a16a8394599f4eecf8683ef0d301" category="list-text">Obtener y registrar los ID de host</block>
-  <block id="fa8c1aa26c03157b5e62997fd0fdaa14" category="list-text">Validación de la red interna (para clústeres de varios nodos)</block>
-  <block id="d7494ab1ca8800562b8faee8d3a4984e" category="list-text">Cree el clúster</block>
-  <block id="073dd452840b7a9881432728f959cd2c" category="list-text">Configurar los nodos</block>
-  <block id="5b6e8147fdc6caa0b27d7fc75489608f" category="list-text">Configurar la red y el pool de almacenamiento</block>
-  <block id="b6877b94a1e530ab0fc6b8d1545fd166" category="list-text">Implementar el clúster</block>
-  <block id="f8cac4cf1b1201d6a9386323183ca9c8" category="paragraph">Como resultado, el rol se completa con la máquina virtual del clúster en funcionamiento y el clúster ONTAP Select en su totalidad. Puede acceder a este rol y descargarlo desde Ansible GitHub de NetApp aquí: <block ref="56a4d28e5b01605b6b865a56dead08da" category="inline-link-macro-rx"></block></block>
-  <block id="043194e296799e8dbefda7f37d0e101e" category="section-title">Ejemplo de libro de aplicaciones</block>
-  <block id="483b9ffc2547d862835719e69821ce3e" category="paragraph">A continuación se muestra un libro de estrategia de ejemplo que llama a estas dos funciones de ONTAP Select. Tenga en cuenta que las variables de entrada se definen en archivos YML y se pasan a través de “var_files”. Puede encontrar más detalles en los archivos README en cada una de las funciones.</block>
-  <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link-macro">aquí</block>
-  <block id="006a0a02171a296bf3a320f8991be24a" category="paragraph">Una vez creado y en ejecución el clúster de ONTAP Select con los roles anteriores, puede aprovechar el amplio conjunto de roles de Ansible de ONTAP disponibles para automatizar aún más las funciones y la funcionalidad de ONTAP. Se puede acceder a los roles de ONTAP disponibles <block ref="4d400bdda09fce7a6e9e1a49c64cce9d" category="inline-link-macro-rx"></block>. En resumen, los roles de Ansible ONTAP Select y los roles de ONTAP le permiten automatizar por completo el flujo de trabajo integral para gestionar el almacenamiento con ONTAP Select.</block>
   <block id="dc70eb9d82aec891b52c1c2a03dfea96" category="summary">En primer lugar, familiarícese con los conceptos generales de red que se aplican al entorno ONTAP Select. A continuación, analice las características y opciones específicas disponibles con los clústeres de un único nodo y de varios nodos.</block>
   <block id="5835673e7d17b0c7e15036e16b1efe5f" category="section-title">Redes físicas</block>
   <block id="2ded6502ab49fd8b23f16e584e9fea94" category="paragraph">La red física admite la implementación de un clúster ONTAP Select principalmente proporcionando la infraestructura de conmutación de capa dos subyacente. La configuración relacionada con la red física incluye tanto el host del hipervisor como el entorno de red conmutada más amplio.</block>
@@ -1881,14 +1848,10 @@
   <block id="7e8ceade9e54e9a912c6f9a52ea87658" category="list-text">Gestión de clústeres (uno por clúster)</block>
   <block id="5e3a8851b34912653fbf0e9bbf3fc9d0" category="list-text">Gestión de nodos (uno por nodo)</block>
   <block id="642223473862db290604321fe2ebe763" category="paragraph-title">SVM</block>
-  <block id="3013e63917da83ac89d317625e960fa3" category="paragraph">Hay dos SVM administrativas activas:</block>
-  <block id="38cd25d85c8a7e96abb2aaf9d4009eb2" category="list-text">SVM predeterminada</block>
-  <block id="c6117cdbee2307d85ed57db8a195f4f8" category="list-text">SVM de clúster</block>
   <block id="d5350d8759b1ec84607e47908809058e" category="paragraph-title">Agregados</block>
   <block id="ebeedb9721ef0e0966825fecfef52bb5" category="paragraph">Se crea el agregado raíz.</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="paragraph-title">Funciones</block>
   <block id="d5daa4c0e0a3988a633eb5273b984697" category="paragraph">Todas las funciones están sujetas a licencia y están disponibles. Tanto SnapLock como FabricPool requieren licencias independientes.</block>
-  <block id="076515078e25047da0c60bc6f27e2c68" category="admonition">No se crean SVM de datos. Además, el clúster de varios nodos tiene una red interna con LIF autogeneradas.</block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">Puede actualizar una máquina virtual de la utilidad de implementación existente en su sitio mediante la interfaz de línea de comandos.</block>
   <block id="a0352e441ba04fb28d070a715c9d2ff2" category="paragraph">Asegúrese de que la implementación no se utiliza para realizar ninguna otra tarea durante la actualización. En las notas de la versión actual se proporciona información y restricciones sobre la actualización de la utilidad Deploy.</block>
   <block id="eb75a7c0dc84d14c47a84e436b8082cc" category="paragraph">Para iniciar el proceso de actualización, es necesario descargar el archivo de actualización de la máquina virtual de implementación correspondiente desde el sitio de soporte de NetApp. El paquete de actualización se formatea como un solo archivo comprimido.</block>
@@ -2808,7 +2771,6 @@
   <block id="eff97b5f2d2c83f1ed5631ba2caad4b3" category="sidebar">Añada una licencia de nodo</block>
   <block id="17a06a80e87a37d4e1892e8c0528b857" category="sidebar">Elimine un clúster</block>
   <block id="1ca48c398b8c739a9815d44011185388" category="sidebar">Cambie el tamaño de los nodos del clúster</block>
-  <block id="46fc1cf655dd8158b6b58910cf88e653" category="sidebar">Automatice con Ansible</block>
   <block id="8a9e0f8224695e94f0988f444488877b" category="sidebar">Utilice la CLI</block>
   <block id="89c5ba6f9355d2da97bb00bdf0ec66e5" category="sidebar">Inicie sesión mediante SSH</block>
   <block id="8c45b8a7e3dd4094586773bc09fc8842" category="sidebar">Utilidad de puesta en marcha</block>
@@ -2894,7 +2856,6 @@
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">HCX de VMware</block>
   <block id="c87ac723a8ad54443fb95ff969ba10fa" category="admonition">Se puede realizar la operación de cambio de tamaño de nodos de clúster al utilizar el modelo de licencias de niveles de capacidad y el modelo de licencias de pools de capacidad.</block>
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">El refrescamiento del cluster de despliegue de OTS falla con error</block>
-  <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">La restricción de los roles y permisos de la cuenta de administrador de ONTAP puede limitar la capacidad de ONTAP Select Deploy de gestionar el clúster. Para obtener más información, consulte el artículo de la base de conocimientos <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>.</block>
   <block id="65af935cd1eb18bdc5fd96837e0ae492" category="paragraph">A pesar de que la existencia del agregado reflejado es necesaria para proporcionar una copia actualizada (RPO 0) de el agregado principal, tenga cuidado de que el agregado primario no funcione con poco espacio libre. Una condición de poco espacio en el agregado primario puede provocar que ONTAP elimine la copia snapshot común utilizada como base para el retorno del almacenamiento. Esto funciona tal y como está diseñado para acomodar las escrituras de cliente. Sin embargo, la ausencia de una copia Snapshot común tras la recuperación requiere que el nodo ONTAP Select realice una referencia completa del agregado reflejado. Esta operación puede llevar mucho tiempo en un entorno sin compartir.</block>
   <block id="6aa8a3e3c7b01a983d682bcf568533c1" category="paragraph">SDS de MetroCluster es una función excepcional y requiere una licencia Premium o una licencia Premium XL. Con la licencia Premium se puede crear equipos virtuales pequeños y medianos, así como discos HDD y SSD. La licencia Premium XL también permite la creación de unidades NVMe.</block>
   <block id="0bbe8377b151cc2455792bb1798d4907" category="sidebar">Configuración de VMware vSphere vSwitch</block>
@@ -3386,7 +3347,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="f778b020848c4bce334b26593dd9cc1f" category="paragraph">El disco se asigna como reserva y está disponible para ONTAP Select. El disco puede tardar un minuto o más en estar disponible.</block>
   <block id="a743fc9c91bd7ab650676dc7bcff7cbe" category="paragraph">Debido a que la configuración del nodo ha cambiado, debe realizar una operación de actualización del clúster con la utilidad de administración Deploy.</block>
   <block id="2e34b681cc534c1f05dd05873a67719f" category="list-text">Seleccione *Editar* y confirme que la nueva unidad está disponible y selecciónela.</block>
-  <block id="33693ff3a7d631ea880e109dfc69ea97" category="paragraph">El archivo de aviso proporciona información sobre los derechos de autor y las licencias de terceros utilizados en el software de NetApp.</block>
   <block id="f371e1e74365e433f105f30c886225bf" category="inline-link">Notas de la versión de ONTAP Select 9.14.1</block>
   <block id="6e0dedd1d494cddc9086f77fa36f54a0" category="paragraph">ONTAP Select se puede poner en marcha como un clúster de un solo nodo. El host del hipervisor incluye un switch virtual que proporciona acceso a la red externa.</block>
   <block id="6615bf96d027d0ff485c1b1838661527" category="admonition">Un host en el que se ejecuta ONTAP Select requiere unidades físicas locales cuando se utiliza una controladora RAID de hardware o la funcionalidad RAID del software que se proporciona con ONTAP Select. Si utiliza la solución vNAS de ONTAP Select para acceder a almacenamiento externo, no se utilizan una controladora RAID local y las funciones RAID de software.</block>
@@ -3646,7 +3606,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="567999f9c71634f001a831b733088bbc" category="doc">Utilice ONTAP Select en oficinas remotas y sucursales</block>
   <block id="ecef17057a10f9337620a1aee67c110f" category="summary">NetApp ONTAP Select es un dispositivo de almacenamiento definido por software que se puede utilizar en diferentes servidores de hardware genérico que ejecutan el hipervisor VMware ESXi o máquina virtual basada en kernel (KVM). Proporciona la agilidad que necesita para crear una infraestructura de cloud privado flexible y escalable. Este sitio contiene la documentación para ONTAP Select 9.16.1.</block>
   <block id="b38f50fa2d7eac1d0761ec2b46339f62" category="inline-link-macro">Aviso para ONTAP Select 9.16.1</block>
-  <block id="561a04c4081432fad02b159522e1d02c" category="list-text"><block ref="561a04c4081432fad02b159522e1d02c" category="inline-link-macro-rx"></block></block>
   <block id="de0887504497c1f3eb64ac5f23488612" category="doc">JSON para el script para crear un clúster de ONTAP Select</block>
   <block id="79ebef96ee386ef1a7dba01d303ce759" category="doc">Script para añadir una licencia de nodo de ONTAP Select</block>
   <block id="be1f2ab308d7f936426d71ac4b257096" category="doc">Script para crear un cluster de ONTAP Select</block>
@@ -3790,4 +3749,16 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="944a1b1080e2860bd56c15282a8e476e" category="list-text">En la sección *Detalles del clúster*, seleccione el *Tamaño del clúster* deseado, proporcione toda la información requerida que describa los clústeres y seleccione *Listo*.</block>
   <block id="8b5ceafca01d3a14f09a0d742cbb2cfb" category="list-text">Seleccione *Siguiente* y ejecute la comprobación previa de red seleccionando *Ejecutar*. Esto valida que la red interna seleccionada para el tráfico del clúster de ONTAP funcione correctamente.</block>
   <block id="2735f745a89477a2abc1f435e606bde3" category="list-text">Seleccione *Crear clúster* para comenzar el proceso de creación del clúster y, a continuación, seleccione *Aceptar* en la ventana emergente.</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Los archivos de notificación proporcionan información sobre los derechos de autor y las licencias de terceros que se utilizan en software de NetApp.</block>
+  <block id="4d5e19ca322ec82f576cffa70356d45b" category="paragraph"><block ref="4d5e19ca322ec82f576cffa70356d45b" category="inline-link-rx"></block></block>
+  <block id="dba6192da7444fc9e5fd32119193b12b" category="admonition">La restricción de los roles y permisos de la cuenta de administrador de ONTAP puede limitar la capacidad de ONTAP Select Deploy de gestionar el clúster. Para obtener más información, consulte el artículo de la base de conocimientos <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>.</block>
+  <block id="a97a40851f37ebfbf5db3d3bf28da58b" category="admonition">Un clúster multinodo tiene una red interna con LIF generadas automáticamente.</block>
+  <block id="0f1007666fd5cc7934baffbdef1287d0" category="paragraph">Hay tres SVM activas:</block>
+  <block id="070848ec049722b444235c5db132a1bb" category="list-text">SVM. Administración</block>
+  <block id="9392c5507686114a0bba1e8e0b5be096" category="list-text">SVM de nodo</block>
+  <block id="d78477ac5628a6dd2fb8c046564b2227" category="list-text">SVM System (clúster)</block>
+  <block id="93b1520005778e826c33efa7132d61c9" category="inline-link">Cree un SVM</block>
+  <block id="e0d52f0658828de62020550252885d55" category="admonition">No se crean SVM de datos como parte de la puesta en marcha del clúster de ONTAP Select. Las debe crear el administrador del clúster tras la puesta en marcha. Para obtener más información, consulte<block ref="35df8afad8b7a7c75a74b08ae370be2a" category="inline-link-rx"></block>.</block>
+  <block id="c472d49cae1aabcbf09d7e5fe0e34c87" category="inline-link-macro">Tipos de SVM contenidas en un clúster</block>
+  <block id="2e6bba9624b33764642b52b2cab65274" category="list-text"><block ref="2e6bba9624b33764642b52b2cab65274" category="inline-link-macro-rx"></block></block>
 </blocks>

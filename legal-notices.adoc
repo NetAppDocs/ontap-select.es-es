@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: legal-notices.html 
-keywords:  
-summary:  
+keywords: copyrights, notices, trademarks, patents, privacy 
+summary: Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más. 
 ---
 = Avisos legales
 :hardbreaks:
@@ -48,7 +48,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 == Código abierto
 
-El archivo de aviso proporciona información sobre los derechos de autor y las licencias de terceros utilizados en el software de NetApp.
+Los archivos de notificación proporcionan información sobre los derechos de autor y las licencias de terceros que se utilizan en software de NetApp.
 
-* link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3330674["Aviso para ONTAP Select 9.16.1"^]
-
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3330674["Aviso para ONTAP Select 9.16.1"^]

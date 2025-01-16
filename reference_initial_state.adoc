@@ -28,12 +28,19 @@ Hay dos tipos de LIF asignadas por el cliente:
 * Gestión de nodos (uno por nodo)
 
 
+
+NOTE: Un clúster multinodo tiene una red interna con LIF generadas automáticamente.
+
 .SVM
-Hay dos SVM administrativas activas:
+Hay tres SVM activas:
 
-* SVM predeterminada
-* SVM de clúster
+* SVM. Administración
+* SVM de nodo
+* SVM System (clúster)
 
+
+
+NOTE: No se crean SVM de datos como parte de la puesta en marcha del clúster de ONTAP Select. Las debe crear el administrador del clúster tras la puesta en marcha. Para obtener más información, consulte https://docs.netapp.com/us-en/ontap/nfs-config/create-svms-data-access-task.html["Cree un SVM"^].
 
 .Agregados
 Se crea el agregado raíz.
@@ -41,9 +48,7 @@ Se crea el agregado raíz.
 .Funciones
 Todas las funciones están sujetas a licencia y están disponibles. Tanto SnapLock como FabricPool requieren licencias independientes.
 
-
-NOTE: No se crean SVM de datos. Además, el clúster de varios nodos tiene una red interna con LIF autogeneradas.
-
 .Información relacionada
+* link:https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html["Tipos de SVM contenidas en un clúster"^]
 * link:reference_lic_ontap_features.html["Funciones de ONTAP habilitadas de forma predeterminada"]
 
