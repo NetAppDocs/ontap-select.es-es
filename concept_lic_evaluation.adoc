@@ -4,7 +4,7 @@ permalink: concept_lic_evaluation.html
 keywords: license, licensing, evaluation, upgrade license 
 summary: Puede usar una licencia de evaluación si desea evaluar ONTAP Select antes de tomar la decisión de realizar la compra. La licencia de evaluación se incluye con la utilidad de administración ONTAP Select Deploy y se aplica automáticamente a cada nodo de ONTAP Select como parte de una implementación de evaluación. 
 ---
-= Licencias de evaluación
+= Licencias de evaluación para instalaciones de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,6 +16,15 @@ summary: Puede usar una licencia de evaluación si desea evaluar ONTAP Select an
 [role="lead"]
 Se puede implementar ONTAP Select con una licencia de evaluación o una licencia adquirida. La licencia que elija debe aplicarse a cada uno de los nodos del clúster ONTAP Select y por lo tanto a todo el clúster. Puede usar una licencia de evaluación si desea evaluar ONTAP Select antes de tomar la decisión de realizar la compra. La licencia de evaluación se incluye con la utilidad de administración ONTAP Select Deploy y se aplica automáticamente a cada nodo de ONTAP Select como parte de una implementación de evaluación.
 
+[NOTE]
+====
+Para descargar la utilidad de administración de ONTAP Select Deploy, necesita lo siguiente:
+
+* Una cuenta registrada en el sitio de soporte de NetApp. Si no tiene una cuenta, consulte https://mysupport.netapp.com/site/user/registration["Registro de usuario"^].
+*  https://mysupport.netapp.com/site/downloads/evaluation/ontap-select["Acepte el contrato de licencia para usuario final"^]Para una implementación de ONTAP Select con una licencia de evaluación.
+
+
+====
 Hay varias consideraciones a la hora de poner en marcha y ofrecer soporte a un clúster de evaluación:
 
 * Solo puede usar el clúster para fines de evaluación. No se debe utilizar un clúster con una licencia de evaluación en un entorno de producción.
@@ -36,7 +45,7 @@ La licencia de evaluación de ONTAP Select tiene las siguientes características
 * No se requiere una licencia de producción con capacidad de almacenamiento
 * El número de serie del nodo es veinte dígitos y se genera automáticamente mediante la implementación de ONTAP Select
 +
-(No lo adquiere directamente a NetApp).
+(No la adquiere directamente de NetApp)
 
 * El período de evaluación proporcionado por la licencia puede ser de hasta 90 días
 * El almacenamiento máximo asignado por cada nodo es el mismo que una licencia de producción
@@ -49,7 +58,7 @@ La licencia de evaluación de ONTAP Select tiene las siguientes características
 Es posible actualizar un clúster de evaluación de ONTAP Select para usar una licencia de producción. Debe tener en cuenta las siguientes restricciones:
 
 * Debe utilizar la utilidad de administración de despliegue para realizar la actualización de la licencia
-* Se puede usar una licencia de nivel de capacidad, pero no se admiten las licencias de pools de capacidad
+* Se puede usar una licencia de nivel de capacidad pero no se admite la gestión de licencias de pools de capacidad
 * Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción, según el tamaño del clúster
 
 

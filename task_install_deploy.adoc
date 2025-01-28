@@ -22,6 +22,9 @@ Debe instalar la utilidad de administración de implementación de ONTAP Select 
 
 Puede descargar el paquete ONTAP Select en el sitio de soporte de NetApp.
 
+.Antes de empezar
+https://mysupport.netapp.com/site/user/registration["Tiene una cuenta registrada en la página de soporte de NetApp"^].
+
 .Acerca de esta tarea
 La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar de formato de virtualización abierta (OVF). El archivo comprimido único tiene el sufijo `ova`. La máquina virtual proporciona las imágenes de instalación y servidor de puesta en marcha para los nodos de ONTAP Select.
 
@@ -118,7 +121,7 @@ Los pasos que siga dependerán de si utiliza un hipervisor ESXi o KVM.
 +
 Debe definir la contraseña de la cuenta de administrador. Debe proporcionar esta contraseña al iniciar sesión en la utilidad de implementación.
 
-. Una vez implementada la máquina virtual, seleccione la nueva máquina virtual y enciéndala si aún no está encendida según la entrada que haya introducido en el asistente de implementación.
+. Una vez implementada la máquina virtual, seleccione la nueva máquina virtual. Si aún no está encendido según la entrada que haya introducido en el asistente de implementación, enciéndalo manualmente.
 . Si es necesario, puede configurar la red de despliegue mediante la consola de VM:
 +
 .. Haga clic en la ficha *Console* para acceder al shell de configuración del host ESXi y supervisar el proceso de encendido.
@@ -208,7 +211,7 @@ Debe iniciar sesión en la interfaz de usuario web para confirmar que la utilida
 
 . Proporcione el nombre de la cuenta y la contraseña del administrador (admin) e inicie sesión.
 . Si aparece la ventana emergente *Bienvenido a ONTAP Select*, revise los requisitos previos y seleccione *Aceptar* para continuar.
-. Si es la primera vez que inicia sesión y no instaló la implementación mediante el asistente disponible con vCenter, proporcione la siguiente información de configuración cuando se le solicite:
+. Si es la primera vez que inicia sesión y no instaló la puesta en marcha con el asistente disponible en vCenter, proporcione la siguiente información de configuración cuando se le solicite:
 +
 ** Nueva contraseña para la cuenta de administrador (obligatorio)
 ** AutoSupport (opcional)

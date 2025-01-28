@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_perf_general.html 
 keywords: ontap select, performance 
-summary: El rendimiento varía en función de la configuración del hardware. 
+summary: El rendimiento de un clúster ONTAP Select puede variar en función de la configuración del hardware. 
 ---
 = Información general sobre el rendimiento de ONTAP Select
 :hardbreaks:
@@ -14,8 +14,6 @@ summary: El rendimiento varía en función de la configuración del hardware.
 
 
 [role="lead"]
-El rendimiento varía en función de la configuración del hardware.
-
 El rendimiento de un clúster de ONTAP Select puede variar considerablemente debido a las características del hardware y la configuración subyacentes. La configuración de hardware específica es el factor más importante en el rendimiento de una instancia ONTAP Select en particular. Estos son algunos de los factores que afectan al rendimiento de una instancia específica de ONTAP Select:
 
 * *Frecuencia de núcleo*. En general, es preferible una frecuencia más alta.

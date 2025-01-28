@@ -51,7 +51,7 @@ NOTE: A la utilidad de administración de despliegue no se le asigna un Núm. De
 
 == Ilustración de una implementación típica
 
-En la siguiente figura, se muestra la utilidad de administración de implementación de ONTAP Select que se utiliza para implementar y admitir un clúster ONTAP Select de cuatro nodos. La utilidad de puesta en marcha y los nodos de ONTAP Select se ejecutan como máquinas virtuales separadas en hosts de hipervisores dedicados.
+En la siguiente figura, se muestra la utilidad de administración NetApp ONTAP Select Deploy que se utiliza para poner en marcha un clúster ONTAP Select de cuatro nodos y admitir dicho clúster. La utilidad de puesta en marcha y los nodos de ONTAP Select se ejecutan como máquinas virtuales separadas en hosts de hipervisores dedicados.
 
 image:ots_architecture.png["Muestra un clúster de cuatro nodos de ONTAP Select creado con la utilidad de administración Deploy."]
 

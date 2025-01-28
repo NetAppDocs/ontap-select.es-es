@@ -122,7 +122,6 @@
   <block id="440776946e3349ff3266a8cf25bef605" category="section-title">Utilidad de administración de ONTAP Select Deploy</block>
   <block id="deeb67d546017625d12dfbcf3d817a5c" category="paragraph">La utilidad de administración de implementación se suministra e instala como una máquina virtual Linux independiente. Debe utilizar la utilidad para implementar clústeres de ONTAP Select en un entorno de producción. Se incluye una versión actual de la imagen del nodo ONTAP Select con la utilidad de implementación.</block>
   <block id="d69f8aaae124c9269620ba7ca5678c34" category="section-title">Ilustración de una implementación típica</block>
-  <block id="60d804a6b011555fd729bcd0c5e206da" category="paragraph">En la siguiente figura, se muestra la utilidad de administración de implementación de ONTAP Select que se utiliza para implementar y admitir un clúster ONTAP Select de cuatro nodos. La utilidad de puesta en marcha y los nodos de ONTAP Select se ejecutan como máquinas virtuales separadas en hosts de hipervisores dedicados.</block>
   <block id="3163bfc32e34eb9c2f84e4c7a1535111" category="inline-image-macro">Muestra un clúster de cuatro nodos de ONTAP Select creado con la utilidad de administración Deploy.</block>
   <block id="3e69161d02590dc69114626444a3d815" category="paragraph"><block ref="3e69161d02590dc69114626444a3d815" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c3c1ba002ed4d0d1ae23559793a734bd" category="section-title">Comparación entre ONTAP Select y ONTAP 9</block>
@@ -652,14 +651,11 @@
   <block id="8b3398557c7fb55b263bf52bece82b68" category="doc">Licencias de evaluación</block>
   <block id="e009f07bc1785009a3ceb83036990929" category="section-title">Características de las licencias</block>
   <block id="11731b987dc6227f75478145446eec49" category="paragraph">La licencia de evaluación de ONTAP Select tiene las siguientes características:</block>
-  <block id="1a722f6211174d2c13dea99241228cdd" category="list-text">No se requiere una licencia de producción con capacidad de almacenamiento</block>
   <block id="da43be3a437b4b11176af278d2bf65e4" category="list-text">El número de serie del nodo es veinte dígitos y se genera automáticamente mediante la implementación de ONTAP Select</block>
-  <block id="d81334460101f9ea4e0446684836ab2c" category="paragraph">(No lo adquiere directamente a NetApp).</block>
   <block id="b8c2c21a1451d44d469c74b3bc603f96" category="list-text">El período de evaluación proporcionado por la licencia puede ser de hasta 90 días</block>
   <block id="ad49b216aa656d515b04dd8c523873dd" category="list-text">El almacenamiento máximo asignado por cada nodo es el mismo que una licencia de producción</block>
   <block id="238908176e0b205e68cd2d9e0c4972e5" category="paragraph">Es posible actualizar un clúster de evaluación de ONTAP Select para usar una licencia de producción. Debe tener en cuenta las siguientes restricciones:</block>
   <block id="60c8e16d600bd89fdcfca7dd31b63260" category="list-text">Debe utilizar la utilidad de administración de despliegue para realizar la actualización de la licencia</block>
-  <block id="1e2f74556f8f29bf17e0d81fdf7f56ab" category="list-text">Se puede usar una licencia de nivel de capacidad, pero no se admiten las licencias de pools de capacidad</block>
   <block id="040571bf34446f7204162544612cd237" category="list-text">Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción, según el tamaño del clúster</block>
   <block id="ca91eb0ffb4e943653e46e9be3d1522e" category="summary">Todos los scripts de Python utilizan una clase Python común en un único módulo.</block>
   <block id="66cebfc655fc14a70cafa6f4ef31ce39" category="doc">Módulo de soporte común</block>
@@ -1185,7 +1181,6 @@
   <block id="d687cb57e7c0a2bc72631659265b9d28" category="list-text">Haga clic en *Actualizar*.</block>
   <block id="00b2b7cadccef92087c6e89de6d2b98a" category="paragraph">Si la operación se realiza correctamente, se actualiza el campo _Last Refresh_. Debe realizar un backup de los datos de configuración de implementación después de completar la operación de actualización del clúster.</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="section-title">Herramienta de matriz de interoperabilidad de NetApp</block>
-  <block id="8b60e6d501896a426a20e22fc6479aec" category="summary">El rendimiento varía en función de la configuración del hardware.</block>
   <block id="9446a98ad14416153cc4d45ab8b531bf" category="doc">Rendimiento</block>
   <block id="d6f9f41f5e5cb8dcf5b3ce01b74d17e5" category="paragraph">El rendimiento de un clúster de ONTAP Select puede variar considerablemente debido a las características del hardware y la configuración subyacentes. La configuración de hardware específica es el factor más importante en el rendimiento de una instancia ONTAP Select en particular. Estos son algunos de los factores que afectan al rendimiento de una instancia específica de ONTAP Select:</block>
   <block id="5def88536d2a69b4424953a923e823a2" category="list-text">*Frecuencia de núcleo*. En general, es preferible una frecuencia más alta.</block>
@@ -3290,7 +3285,6 @@ Host de hipervisor ESXi o host Linux KVM</block>
   <block id="d98fb3ce51b49ee9b9e8ea2645524f08" category="list-text">La dirección IP de la máquina virtual de puesta en marcha</block>
   <block id="30e58d6b4fce06c690ff3897ae040f55" category="paragraph">Si utiliza vSphere, el asistente de plantilla implementar OVF incluye un formulario para proporcionar toda la información de configuración de la implementación, incluida la configuración de red. Sin embargo, si decide no utilizar este formulario, puede utilizar la consola de la VM de despliegue para configurar la red en su lugar.</block>
   <block id="922bafb0938c68773e29242e2675f0b9" category="paragraph">Los pasos que siga dependerán de si utiliza un hipervisor ESXi o KVM.</block>
-  <block id="41c929e54fb793fb7a784130ebd7c7b1" category="list-text">Una vez implementada la máquina virtual, seleccione la nueva máquina virtual y enciéndala si aún no está encendida según la entrada que haya introducido en el asistente de implementación.</block>
   <block id="1c2f49da17d54e224e8288edcb35fd8b" category="list-text">Si es necesario, puede configurar la red de despliegue mediante la consola de VM:</block>
   <block id="e24d94772b7fb552cdad8786d3972fe1" category="list-text">Escriba *n* para definir una configuración IP estática o *y* para usar el DHCP, y seleccione *Intro*.</block>
   <block id="64c8e1a4f8f739423fd7163b603a4b32" category="list-text">Inicie sesión en la CLI en el servidor Linux:</block>
@@ -3561,7 +3555,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="38a6a854a485660aa1ba2f3d554e2bfe" category="paragraph">Hay varias consideraciones a la hora de poner en marcha y ofrecer soporte a un clúster de evaluación:</block>
   <block id="9ccdbbc209e0eddfaf9f0b5a4154a78d" category="list-text">Solo puede usar el clúster para fines de evaluación. No se debe utilizar un clúster con una licencia de evaluación en un entorno de producción.</block>
   <block id="b559f8a2bbcf90e70f60847fb3cce85f" category="list-text">Debe utilizar la utilidad de administración ONTAP Select Deploy de la siguiente manera al configurar cada host:</block>
-  <block id="1b2bebf50d8caf7cae03b0a936752188" category="list-text">No proporcione un número de serie</block>
   <block id="f5010a0b3197d474a3b4618b60c0fd03" category="list-text">Configure para utilizar una licencia de evaluación</block>
   <block id="21f27b191f1f034aa81e5f786bf9829c" category="doc">Conozca las ofertas de licencias de plataforma para ONTAP Select</block>
   <block id="1b1ede8baae6a15d3ba60611103509a4" category="doc">ONTAP Select adquirió licencias para instalaciones de producción</block>
@@ -3609,7 +3602,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="de0887504497c1f3eb64ac5f23488612" category="doc">JSON para el script para crear un clúster de ONTAP Select</block>
   <block id="79ebef96ee386ef1a7dba01d303ce759" category="doc">Script para añadir una licencia de nodo de ONTAP Select</block>
   <block id="be1f2ab308d7f936426d71ac4b257096" category="doc">Script para crear un cluster de ONTAP Select</block>
-  <block id="41cfd9e48a1b6c66998391efe14f06f2" category="doc">Módulo de Python para ONTAP Select de soporte común</block>
   <block id="d066221405020e2f85c198e0b44e228b" category="doc">Script para suprimir un cluster ONTAP Select</block>
   <block id="3a029b8899590dc6c31883e4d8b049d0" category="doc">Script para cambiar el tamaño de los nodos del cluster ONTAP Select</block>
   <block id="f2b54f29c4af2bc66f70b4a5a52b0e2b" category="doc">Flujo de trabajo 1: Cree un clúster de evaluación de un solo nodo ONTAP Select en ESXi</block>
@@ -3761,4 +3753,22 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="e0d52f0658828de62020550252885d55" category="admonition">No se crean SVM de datos como parte de la puesta en marcha del clúster de ONTAP Select. Las debe crear el administrador del clúster tras la puesta en marcha. Para obtener más información, consulte<block ref="35df8afad8b7a7c75a74b08ae370be2a" category="inline-link-rx"></block>.</block>
   <block id="c472d49cae1aabcbf09d7e5fe0e34c87" category="inline-link-macro">Tipos de SVM contenidas en un clúster</block>
   <block id="2e6bba9624b33764642b52b2cab65274" category="list-text"><block ref="2e6bba9624b33764642b52b2cab65274" category="inline-link-macro-rx"></block></block>
+  <block id="c19cab121a967e7d4e145437fee16c02" category="doc">Licencias de evaluación para instalaciones de ONTAP Select</block>
+  <block id="3ad47d20affd564b7db18fcaa67fb9ca" category="paragraph">Para descargar la utilidad de administración de ONTAP Select Deploy, necesita lo siguiente:</block>
+  <block id="f2fd759d6c3aedc384b758263e96be4b" category="inline-link">Registro de usuario</block>
+  <block id="ee071d378f5b3ec57e4eda0d66300334" category="list-text">Una cuenta registrada en el sitio de soporte de NetApp. Si no tiene una cuenta, consulte<block ref="b0f5d39de7f85d20bb3da6a76b3c4368" category="inline-link-rx"></block>.</block>
+  <block id="4c38e9c9635f62bc0c98a4fc0dbf6f04" category="inline-link">Acepte el contrato de licencia para usuario final</block>
+  <block id="bcb0a8f0933f79963f8da791712307a2" category="list-text"><block ref="b36a96015925128ab0074fda8004c795" category="inline-link-rx"></block>Para una implementación de ONTAP Select con una licencia de evaluación.</block>
+  <block id="76be33f6608866426ecccffc5acd6be8" category="list-text">No proporcione un número de serie</block>
+  <block id="2fcd5d5ae3d245e3d2870429d2c9381d" category="list-text">No se requiere una licencia de producción con capacidad de almacenamiento</block>
+  <block id="695af2710450ef107be1555e59f22b01" category="paragraph">(No la adquiere directamente de NetApp)</block>
+  <block id="0fa0a315c1605e80221e4ae40cfaac60" category="list-text">Se puede usar una licencia de nivel de capacidad pero no se admite la gestión de licencias de pools de capacidad</block>
+  <block id="d480e694d74a85a8bf679cab5063c9f1" category="paragraph">En la siguiente figura, se muestra la utilidad de administración NetApp ONTAP Select Deploy que se utiliza para poner en marcha un clúster ONTAP Select de cuatro nodos y admitir dicho clúster. La utilidad de puesta en marcha y los nodos de ONTAP Select se ejecutan como máquinas virtuales separadas en hosts de hipervisores dedicados.</block>
+  <block id="54d1b8efd5a74820db5617b48f538671" category="summary">El rendimiento de un clúster ONTAP Select puede variar en función de la configuración del hardware.</block>
+  <block id="123521c98d5a32b10ae4a2d5e59ed719" category="doc">Módulo Python de soporte común para ONTAP Select</block>
+  <block id="b7a30ea4f45797fa98b43f64e7be11b9" category="doc">Gestionar licencias de ONTAP Select</block>
+  <block id="bf55dfa0f53f23704c47337781c41d3d" category="inline-link">Tiene una cuenta registrada en la página de soporte de NetApp</block>
+  <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>.</block>
+  <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">Una vez implementada la máquina virtual, seleccione la nueva máquina virtual. Si aún no está encendido según la entrada que haya introducido en el asistente de implementación, enciéndalo manualmente.</block>
+  <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">Si es la primera vez que inicia sesión y no instaló la puesta en marcha con el asistente disponible en vCenter, proporcione la siguiente información de configuración cuando se le solicite:</block>
 </blocks>
