@@ -24,11 +24,11 @@ Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Sele
 
 .Pasos
 . Inicie sesión en la utilidad de implementación a través de la interfaz web mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-. Haga clic en *licencias* y haga clic en *nivel de capacidad*.
-. Si lo desea, haga clic en *filtro* y para limitar las licencias mostradas.
-. Para reemplazar una licencia existente; seleccione una licencia, haga clic en image:icon_kebab.gif["Opciones"], Y seleccione *Actualizar*.
-. Para añadir una nueva licencia, haga clic en *Agregar* en la parte superior de la página y, a continuación, haga clic en *cargar licencias* y seleccione un archivo de licencia de su estación de trabajo local.
+. Seleccione la pestaña *Administration* en la parte superior de la página.
+. Selecciona *Licencias* y selecciona *Nivel de capacidad*.
+. Opcionalmente seleccione *Filtro* y para limitar las licencias mostradas.
+. Para reemplazar una licencia existente, seleccione una licencia, seleccione image:icon_kebab.gif["Opciones"]y seleccione *Actualizar*.
+. Para agregar una nueva licencia, seleccione *Agregar* en la parte superior de la página y, a continuación, seleccione *Cargar licencia(s)* y seleccione un archivo de licencia de su estación de trabajo local.
 
 
 
@@ -39,14 +39,33 @@ Es posible añadir, editar y eliminar licencias de pools de capacidad ONTAP Sele
 
 .Pasos
 . Inicie sesión en la utilidad de implementación a través de la interfaz web mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-. Haga clic en *licencias* y haga clic en *grupos de capacidad*.
-. Si lo desea, haga clic en *filtro* y para limitar las licencias mostradas.
-. Si lo desea, seleccione una licencia y haga clic en image:icon_kebab.gif["Opciones"] para administrar una licencia existente.
-. Para añadir una licencia nueva o renovar una licencia existente, haga clic en *Agregar* en la parte superior de la página y, a continuación, haga clic en *cargar licencia(s)* y seleccione un archivo de licencia de su estación de trabajo local.
+. Seleccione la pestaña *Administration* en la parte superior de la página.
+. Selecciona *Licencias* y selecciona *Grupos de capacidad*.
+. Opcionalmente, seleccione *Filtro* y para limitar las licencias mostradas.
+. Opcionalmente, seleccione una licencia y seleccione image:icon_kebab.gif["Opciones"] para gestionar una licencia existente.
+. Agregar una nueva licencia o renovar una existente:
++
+[role="tabbed-block"]
+====
+.Añadir una licencia nueva
+--
+Para agregar una nueva licencia, seleccione *Agregar* en la parte superior de la página.
+
+--
+.Renovar la licencia existente
+--
+Para renovar una licencia existente:
+
+.. Seleccione image:icon_kebab.gif["Opciones"] una licencia existente.
+.. Selecciona *Cargar licencia(s)*.
+.. Seleccione un archivo de licencia de su estación de trabajo local.
+
+
+--
+====
 . Para ver una lista de los pools de capacidad:
 +
-.. Haga clic en *Resumen*.
+.. Selecciona *Resumen*.
 .. Seleccione y expanda un pool para ver los clústeres y los nodos, donde puede arrendar almacenamiento desde el pool.
 .. Consulte el estado actual de la licencia en *Información de licencia*.
 .. Puede cambiar la duración de los arrendamientos emitidos para el pool bajo vencimiento del arrendamiento.
@@ -54,7 +73,7 @@ Es posible añadir, editar y eliminar licencias de pools de capacidad ONTAP Sele
 
 . Para ver una lista de los clústeres:
 +
-.. Haga clic en *Detalles*.
+.. Seleccione *Detalles*.
 .. Seleccione y expanda el clúster para ver aprovechamiento del almacenamiento.
 
 
@@ -85,9 +104,9 @@ Consulte link:task_lic_acquire_cp.html["Adquirir una licencia de pool de capacid
 . Instale las licencias del pool de capacidad en la nueva instancia de implementación:
 +
 .. Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-.. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-.. Haga clic en *licencias* y, a continuación, en *capacidad Pool*.
-.. Haga clic en *Agregar* y luego en *cargar licencias* para seleccionar y cargar las licencias.
+.. Seleccione la pestaña *Administration* en la parte superior de la página.
+.. Seleccione *Licencias* y luego seleccione *Pool de capacidad*.
+.. Seleccione *Agregar* y luego *Cargar Licencia(s)* para seleccionar y cargar las licencias.
 
 
 . Si creó la nueva instancia de implementación sin restaurar una copia de seguridad o utilizó una copia de seguridad que no estaba actualizada y no estaba actualizada, debe actualizar el número de secuencia de serie:
@@ -140,13 +159,13 @@ La realización de una modificación de la licencia de clúster para un clúster
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Clusters* a la parte superior de la página y seleccione el clúster deseado.
-. En la parte superior de la página de detalles del clúster, haga clic en *haga clic aquí* para modificar la licencia del clúster.
+. Seleccione la pestaña *Clusters* en la parte superior de la página y seleccione el clúster deseado.
+. En la parte superior de la página de detalles del clúster, seleccione *Haga clic aquí* para modificar la licencia del clúster.
 +
-También puede hacer clic en *Modificar* junto a la licencia de evaluación en la sección *Detalles del clúster*.
+También puede seleccionar *Modificar* junto a la licencia de evaluación en la sección *Detalles del clúster*.
 
 . Seleccione una licencia de producción disponible para cada nodo o cargue licencias adicionales según sea necesario.
-. Proporcione las credenciales de ONTAP y haga clic en *Modificar*.
+. Proporcione las credenciales de ONTAP y seleccione *Modificar*.
 +
 La actualización de licencia para el clúster puede tardar varios minutos. Permita que el proceso se complete antes de salir de la página o realizar otros cambios.
 

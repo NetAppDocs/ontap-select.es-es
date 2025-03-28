@@ -1873,19 +1873,12 @@
   <block id="9eb6b36f84e03f93cb360a15fa276ffb" category="doc">Licencias ONTAP Select</block>
   <block id="4d072981d0459a6e8dddc5e65d85a19d" category="paragraph">Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Select según sea necesario.</block>
   <block id="d1da5ae38aafefba216edae24c73845b" category="list-text">Inicie sesión en la utilidad de implementación a través de la interfaz web mediante la cuenta de administrador.</block>
-  <block id="27de07fc9b7f932f0181131e79ec3569" category="list-text">Haga clic en *licencias* y haga clic en *nivel de capacidad*.</block>
-  <block id="c1a597c101487100214a5f749a6f3e48" category="list-text">Si lo desea, haga clic en *filtro* y para limitar las licencias mostradas.</block>
-  <block id="6ee0553d617caf0c18d95b731d38d14f" category="list-text">Para añadir una nueva licencia, haga clic en *Agregar* en la parte superior de la página y, a continuación, haga clic en *cargar licencias* y seleccione un archivo de licencia de su estación de trabajo local.</block>
   <block id="2a1af40a05dbd3e59e7040a6aba474e2" category="paragraph">Es posible añadir, editar y eliminar licencias de pools de capacidad ONTAP Select según sea necesario.</block>
-  <block id="7be3eed19afb6e3f04dc4fe18d053f2c" category="list-text">Haga clic en *licencias* y haga clic en *grupos de capacidad*.</block>
-  <block id="8e2791365de62e59e56b5d6fcdd0f3e2" category="list-text">Para añadir una licencia nueva o renovar una licencia existente, haga clic en *Agregar* en la parte superior de la página y, a continuación, haga clic en *cargar licencia(s)* y seleccione un archivo de licencia de su estación de trabajo local.</block>
   <block id="d26363bf70cc27dd1ba8f09739b8f116" category="list-text">Para ver una lista de los pools de capacidad:</block>
-  <block id="b14052b3af7caf15ec0beb76766be24f" category="list-text">Haga clic en *Resumen*.</block>
   <block id="e034cc23606a54a163075931f70dbbab" category="list-text">Seleccione y expanda un pool para ver los clústeres y los nodos, donde puede arrendar almacenamiento desde el pool.</block>
   <block id="8797856e9d86b8ee20026b14229ca29a" category="list-text">Consulte el estado actual de la licencia en *Información de licencia*.</block>
   <block id="21b26341db1dfa394a993c5d152ccf13" category="list-text">Puede cambiar la duración de los arrendamientos emitidos para el pool bajo vencimiento del arrendamiento.</block>
   <block id="a0d12512fae580ca38325fe122b9f447" category="list-text">Para ver una lista de los clústeres:</block>
-  <block id="8ab91110ae01f9e5c2c34364ebb2da32" category="list-text">Haga clic en *Detalles*.</block>
   <block id="31881fb30a812ef998d7f2111d7bcc44" category="list-text">Seleccione y expanda el clúster para ver aprovechamiento del almacenamiento.</block>
   <block id="844c5fe8a900e62416848502a4af7fdf" category="paragraph">Cada licencia de pool de capacidad activo se bloquea en una instancia específica de License Manager, que se encuentra dentro de una instancia de la utilidad de administración de despliegue. Si utiliza una licencia de pool de capacidad y luego restaura o recupera la instancia de implementación, la licencia original ya no es válida. Debe generar un nuevo archivo de licencia de capacidad y, a continuación, instalar la licencia en la nueva instancia de implementación.</block>
   <block id="be0411c455172a2eece4547673c61675" category="list-text">Determinar todas las licencias de pool de capacidad utilizadas por la instancia de implementación original.</block>
@@ -1896,8 +1889,6 @@
   <block id="6d46c419c8dde2ad4ea4d5623e1b4350" category="list-text">Póngase en contacto con el soporte de NetApp y tener todas las licencias del pool de capacidad de la instancia de implementación original sin establecer límites y sin registrar.</block>
   <block id="dc94932a20b0a7c73d1e6aa60af35223" category="list-text">Adquiera y descargue un nuevo archivo de licencia para cada una de las licencias de pool de capacidad.</block>
   <block id="8018479e33974a2b0f774cf42ec399e5" category="list-text">Instale las licencias del pool de capacidad en la nueva instancia de implementación:</block>
-  <block id="99683d4e14f8df30b153000825273e2d" category="list-text">Haga clic en *licencias* y, a continuación, en *capacidad Pool*.</block>
-  <block id="095bb96ffb3551a58960c96316107d76" category="list-text">Haga clic en *Agregar* y luego en *cargar licencias* para seleccionar y cargar las licencias.</block>
   <block id="e05566aa3784020545c76d92dcb376ab" category="list-text">Si creó la nueva instancia de implementación sin restaurar una copia de seguridad o utilizó una copia de seguridad que no estaba actualizada y no estaba actualizada, debe actualizar el número de secuencia de serie:</block>
   <block id="1c4bd3e7e2bc88b1415fade6249d5a46" category="list-text">Inicie sesión en la interfaz de línea de comandos de la utilidad de implementación mediante la cuenta de administrador.</block>
   <block id="1de9bd334d99fc24b79e751ee32ab23c" category="list-text">Muestra el número de serie de un nodo creado recientemente por la instancia de implementación original:</block>
@@ -1916,11 +1907,7 @@
   <block id="bc882e7be43ec2480a6be229d77c8eaf" category="list-text">Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción.</block>
   <block id="b94a9bad5ae121ac9e7cd292197b59e1" category="list-text">Debe tener licencias de nivel de capacidad para cada nodo en el clúster de evaluación.</block>
   <block id="f5d5a8d93d0ff3b80b514c776adc3d06" category="paragraph">La realización de una modificación de la licencia de clúster para un clúster de un solo nodo es disruptiva. Sin embargo, este no es el caso con un clúster de varios nodos, ya que el proceso de conversión reinicia cada nodo de uno en uno para aplicar la licencia.</block>
-  <block id="2bb59383631b39d52464741628ce0ca4" category="list-text">Haga clic en la ficha *Clusters* a la parte superior de la página y seleccione el clúster deseado.</block>
-  <block id="2b92ba791b5d35e9921e9be06d12553c" category="list-text">En la parte superior de la página de detalles del clúster, haga clic en *haga clic aquí* para modificar la licencia del clúster.</block>
-  <block id="3ec0b37e2f174766469a343ec8265983" category="paragraph">También puede hacer clic en *Modificar* junto a la licencia de evaluación en la sección *Detalles del clúster*.</block>
   <block id="5a3b7bb229a1d7655341b191f93fef35" category="list-text">Seleccione una licencia de producción disponible para cada nodo o cargue licencias adicionales según sea necesario.</block>
-  <block id="36d90e9baa4dfd0dda8eeaac2623f12c" category="list-text">Proporcione las credenciales de ONTAP y haga clic en *Modificar*.</block>
   <block id="7d7d0d771e408e152fe9f59aa783a245" category="paragraph">La actualización de licencia para el clúster puede tardar varios minutos. Permita que el proceso se complete antes de salir de la página o realizar otros cambios.</block>
   <block id="58c19e610497280d55686885113b1e5a" category="paragraph">Los números de serie de los nodos de veinte dígitos asignados originalmente a cada nodo para la implementación de evaluación se sustituyen por los números de serie de nueve dígitos de las licencias de producción utilizadas para la actualización.</block>
   <block id="545d5da191e6a6ba8756e03d9e72b5d9" category="summary">Puede seguir un flujo de trabajo para comprar y aplicar una licencia para su implementación de ONTAP Select.</block>
@@ -3424,8 +3411,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="1bacbb36e2afde0c7a93da85daa18ef1" category="list-text">Tipo de instancia small, medium o large</block>
   <block id="4241d8a2662be78b68fdfaf8b9daec1a" category="list-text">HDD, SSD o unidades NVMe</block>
   <block id="884fb5a94a98010f0044edb08adfd51e" category="admonition">El uso del tipo de instancia grande o unidades NVMe en una configuración SW-RAID no se admite en KVM.</block>
-  <block id="4c1cad05d7febe049143598de4b3847d" category="list-text">Para reemplazar una licencia existente; seleccione una licencia, haga clic en <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>, Y seleccione *Actualizar*.</block>
-  <block id="22296b7841252645a75ccd1c4032738e" category="list-text">Si lo desea, seleccione una licencia y haga clic en <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> para administrar una licencia existente.</block>
   <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">Gestionar licencias complementarias</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">Información general sobre gestionar licencias (solo administradores de clúster)</block>
   <block id="a9a72d6af23763d014760a444a6e414b" category="inline-link-macro">Habilite nuevas funciones añadiendo claves de licencia</block>
@@ -3771,4 +3756,28 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>.</block>
   <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">Una vez implementada la máquina virtual, seleccione la nueva máquina virtual. Si aún no está encendido según la entrada que haya introducido en el asistente de implementación, enciéndalo manualmente.</block>
   <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">Si es la primera vez que inicia sesión y no instaló la puesta en marcha con el asistente disponible en vCenter, proporcione la siguiente información de configuración cuando se le solicite:</block>
+  <block id="c2fffdb7e5db1a96deec5901fd1a882b" category="list-text">Seleccione la pestaña *Administration* en la parte superior de la página.</block>
+  <block id="7f73b891b6f89493a9a42f78c96dfbde" category="list-text">Selecciona *Licencias* y selecciona *Nivel de capacidad*.</block>
+  <block id="ac058bee21b19fb7d5683b470b430bce" category="list-text">Opcionalmente seleccione *Filtro* y para limitar las licencias mostradas.</block>
+  <block id="f76e9a144df7cb5bf308e94a6e908da4" category="list-text">Para reemplazar una licencia existente, seleccione una licencia, seleccione <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block>y seleccione *Actualizar*.</block>
+  <block id="2a312f34de3de288696c20c1e8fdab8c" category="list-text">Para agregar una nueva licencia, seleccione *Agregar* en la parte superior de la página y, a continuación, seleccione *Cargar licencia(s)* y seleccione un archivo de licencia de su estación de trabajo local.</block>
+  <block id="e138becae13ca9b3317ae72cd807b7ed" category="list-text">Selecciona *Licencias* y selecciona *Grupos de capacidad*.</block>
+  <block id="e4dbf5646ea0f3591d85a89dcc220112" category="list-text">Opcionalmente, seleccione *Filtro* y para limitar las licencias mostradas.</block>
+  <block id="0238150d48dcbb89f61418a79faf879c" category="list-text">Opcionalmente, seleccione una licencia y seleccione <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> para gestionar una licencia existente.</block>
+  <block id="f675b264e07a6d56cc74839352166e25" category="list-text">Agregar una nueva licencia o renovar una existente:</block>
+  <block id="e1ff67a9ee704536271bf20bae768184" category="open-title">Añadir una licencia nueva</block>
+  <block id="85c89e836071c9255062f2c7b147db6a" category="paragraph">Para agregar una nueva licencia, seleccione *Agregar* en la parte superior de la página.</block>
+  <block id="bbb047a51418944f835ae59b4e145de5" category="open-title">Renovar la licencia existente</block>
+  <block id="612b39eeafbac7f4962e5513903d070d" category="paragraph">Para renovar una licencia existente:</block>
+  <block id="6e1121544cd3144bdf088e3fc4c6d58e" category="list-text">Seleccione <block ref="8bad975decfb5a8958ec55339559e376" category="inline-image-macro-rx" type="image"></block> una licencia existente.</block>
+  <block id="1f20356b85cdefac297216209ca2bcb1" category="list-text">Selecciona *Cargar licencia(s)*.</block>
+  <block id="7d2e20d8c3e5ebfbdbd81ec85b9c313e" category="list-text">Seleccione un archivo de licencia de su estación de trabajo local.</block>
+  <block id="3e4b3d97ed721fa6c588b33d67e7327a" category="list-text">Selecciona *Resumen*.</block>
+  <block id="522aeaf73b031c733a2277fe9eadd494" category="list-text">Seleccione *Detalles*.</block>
+  <block id="055dab4754e0e1d62a339ad80dcac225" category="list-text">Seleccione *Licencias* y luego seleccione *Pool de capacidad*.</block>
+  <block id="8ad539dc195e039c5437c07b3d810ad8" category="list-text">Seleccione *Agregar* y luego *Cargar Licencia(s)* para seleccionar y cargar las licencias.</block>
+  <block id="1a9274360bc45212a6a014b4c6df1e9c" category="list-text">Seleccione la pestaña *Clusters* en la parte superior de la página y seleccione el clúster deseado.</block>
+  <block id="e951843bb1ba0912165bd527e8312bec" category="list-text">En la parte superior de la página de detalles del clúster, seleccione *Haga clic aquí* para modificar la licencia del clúster.</block>
+  <block id="17d9cc4f645deac6e5e367f0ef6fd4ee" category="paragraph">También puede seleccionar *Modificar* junto a la licencia de evaluación en la sección *Detalles del clúster*.</block>
+  <block id="380ce7f967546f46005a7cb8b03e358c" category="list-text">Proporcione las credenciales de ONTAP y seleccione *Modificar*.</block>
 </blocks>
