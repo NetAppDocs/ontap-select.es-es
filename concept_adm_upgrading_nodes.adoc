@@ -54,5 +54,4 @@ ONTAP Select 9,8 está instalado inicialmente:: No puede volver a la versión 9,
 VMXNet3 es el controlador de red predeterminado que se incluye con las puestas en marcha de clústeres nuevos en VMware ESXi. Si actualiza un nodo ONTAP Select existente que ejecuta ONTAP Select 9,4 o una versión anterior, el controlador de red no se actualiza automáticamente. Debe actualizar manualmente a VMXNEL3. Debe ponerse en contacto con el soporte de NetApp para obtener ayuda con la actualización.
 
 .Información relacionada
-* link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["Información general de la actualización de ONTAP"^]
-
+link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["Información general de la actualización de ONTAP"^]

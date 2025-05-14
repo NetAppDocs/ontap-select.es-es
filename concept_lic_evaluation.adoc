@@ -58,7 +58,7 @@ La licencia de evaluación de ONTAP Select tiene las siguientes características
 Es posible actualizar un clúster de evaluación de ONTAP Select para usar una licencia de producción. Debe tener en cuenta las siguientes restricciones:
 
 * Debe utilizar la utilidad de administración de despliegue para realizar la actualización de la licencia
-* Se puede usar una licencia de nivel de capacidad pero no se admite la gestión de licencias de pools de capacidad
+* Se puede usar una licencia de nivel de capacidad, sin embargo, no se admiten las licencias de pools de capacidad
 * Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción, según el tamaño del clúster
 
 

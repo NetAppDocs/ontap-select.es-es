@@ -16,11 +16,11 @@ summary: Puede seguir un flujo de trabajo para comprar y aplicar una licencia pa
 [role="lead"]
 El siguiente flujo de trabajo muestra el proceso de adquisición y aplicación de una licencia para la implementación de ONTAP Select. Cuando se compra una licencia, se debe seleccionar el modelo de licencia y la capacidad de almacenamiento.
 
-El proceso exacto varía según si se usa una licencia de nivel de capacidad o pool de capacidad:
+El proceso exacto varía según si utiliza una licencia de nivel de capacidad o pool de capacidad:
 
 Número de serie de la licencia de nueve dígitos:: El número de serie se aplica a un nodo (niveles de capacidad) o a un pool de almacenamiento (pools de capacidad).
-ID de bloqueo de licencia:: Debe tener el ID de bloqueo de licencia para la instancia de implementación cuando se utiliza una licencia de pool de capacidad
-Sitio Web de licencias:: Puede obtener una licencia de nivel de capacidad y de pool de capacidad en diferentes sitios web
+ID de bloqueo de licencia:: Debe tener el ID de bloqueo de licencia para la instancia de implementación cuando utilice una licencia de pool de capacidad
+Sitio Web de licencias:: Obtiene una licencia de nivel de capacidad y pool de capacidad en diferentes sitios web
 
 
 image:purchased_license_workflow.png["Describe el proceso utilizado para adquirir e instalar una licencia de almacenamiento para una implementación de ONTAP Select de producción."]

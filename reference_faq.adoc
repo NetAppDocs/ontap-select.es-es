@@ -95,7 +95,7 @@ La actualización a ONTAP Select Deploy 2.6 permite la compatibilidad con estos 
 No se admite la modificación de los detalles de red de la instancia de despliegue después de su ejecución en un entorno. Para obtener más información, consulte link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance["Artículo de la base de conocimientos: Modificación de la configuración de DNS de la instancia de implementación de ONTAP"^].
 
 .¿Cómo detecta la implementación que se renuevan las licencias de ONTAP Select?
-El método es el mismo para todas las licencias, aunque los detalles varían según si se trata de una licencia de nivel de capacidad o de pool de capacidad.
+El método es el mismo para todas las licencias, aunque las especificaciones varían en función de si se trata de una licencia de nivel de capacidad o de pool de capacidad.
 
 * ONTAP Select Deploy detecta si las licencias y los contratos de soporte se renuevan con la compra de un archivo de licencia actualizado de NetApp. El archivo de licencia (.NLF) incluye fechas de capacidad, inicio y finalización, y se genera el link:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^], Y, a continuación, se actualiza en el servidor de despliegue.
 +
@@ -108,20 +108,20 @@ CAUTION: No intente modificar el archivo de licencia. Al hacerlo, se invalida la
 
 * Una *licencia de nivel de capacidad* es una licencia permanente por nodo vinculada al número de serie del nodo ONTAP Select. Se vende con un contrato de soporte independiente. Aunque la licencia es permanente, el contrato de soporte debe renovarse para acceder a las actualizaciones de ONTAP Select y recibir asistencia del soporte técnico de NetApp. También se requiere un contrato de soporte actual para cambiar parámetros de licencia, como capacidad o tamaño de nodo.
 +
-La compra de una actualización de licencia de nivel de capacidad, cambio de parámetros o renovación del contrato de soporte requiere el número de serie del nodo como parte del pedido. Los números de serie del nodo de nivel de capacidad tienen nueve dígitos y comienzan por el número '32'.
+Para comprar una actualización de licencia de nivel de capacidad, un cambio de parámetro o una renovación del contrato de soporte, se requiere el número de serie del nodo como parte del pedido. Los números de serie de los nodos de nivel de capacidad tienen nueve dígitos y comienzan por el número '32'.
 
 +
 Una vez completada la compra y generada el archivo de licencia, se carga en el servidor de implementación mediante la función *Update*.
 
-* Una *licencia de grupo de capacidad* es una suscripción para el derecho de usar un grupo específico de capacidad y tamaño de nodo (estándar, premium, premium XL) para implementar uno o más clústeres. La suscripción incluye el derecho de utilizar una licencia y soporte durante un plazo específico. El derecho a usar una licencia y el contrato de soporte han especificado las fechas de inicio y finalización.
+* Una licencia *Capacity Pool* es una suscripción para el derecho de usar un grupo específico de capacidad y tamaño de nodo (estándar, premium, premium XL) para implementar uno o más clústeres. La suscripción incluye el derecho de utilizar una licencia y soporte durante un plazo específico. El derecho a usar una licencia y el contrato de soporte han especificado las fechas de inicio y finalización.
 
 
 .¿Cómo detecta la implementación si los nodos tienen licencias renovadas o contrato de soporte?
 La adquisición, generación y carga de un archivo de licencia actualizado es la forma en que Deploy detecta licencias renovadas y contratos de soporte.
 
-Si ha pasado la fecha de finalización de un contrato de soporte del nivel de capacidad, el nodo puede seguir ejecutándose, pero no podrá descargar e instalar actualizaciones de ONTAP ni llamar al soporte técnico de NetApp para obtener ayuda sin poner primero al día el contrato de soporte.
+Si ha pasado una fecha de finalización de un contrato de soporte de nivel de capacidad, el nodo puede seguir ejecutándose, pero no podrá descargar e instalar actualizaciones de ONTAP ni llamar al soporte técnico de NetApp para obtener ayuda sin poner primero al día el contrato de soporte.
 
-Si una suscripción de pool de capacidad caduca, el sistema le avisa primero, pero después de 30 días, si el sistema se apaga, no se reiniciará hasta que se instale una suscripción actualizada en el servidor de implementación.
+Si una suscripción de Pool de capacidad caduca, el sistema le avisa primero, pero después de 30 días, si el sistema se apaga, no se reiniciará hasta que se instale una suscripción actualizada en el servidor de implementación.
 
 
 

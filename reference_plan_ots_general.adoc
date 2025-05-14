@@ -151,7 +151,7 @@ Calcular el almacenamiento necesario:: Debe determinar la cantidad de almacenami
 
 NOTE: La capacidad de almacenamiento de ONTAP Select corresponde al tamaño total permitido de los discos de datos conectados a la máquina virtual ONTAP Select.
 
-Modelo de licencias para la puesta en marcha de entornos de producción:: Debe seleccionar los niveles de capacidad o el modelo de licencia para pools de capacidad para cada clúster de ONTAP Select implementado en un entorno de producción. Consulte la sección _License_ para obtener más información.
+Modelo de licencias para la puesta en marcha de entornos de producción:: Debe seleccionar el modelo de licencia de niveles de capacidad o pools de capacidad para cada clúster de ONTAP Select puesto en marcha en un entorno de producción. Consulte la sección _License_ para obtener más información.
 
 
 

@@ -40,7 +40,7 @@ La utilidad de administración de implementación contiene una sola versión de 
 
 === Licencia de ONTAP Select para una implementación de producción
 
-Antes de implementar un clúster de ONTAP Select en un entorno de producción, debe adquirir una licencia de capacidad de almacenamiento y descargar el archivo de licencia asociado. Se puede obtener una licencia para el almacenamiento de cada nodo mediante el modelo _Capacity Tiers_ o licencia de un pool compartido mediante el modelo _Capacity Pools_.
+Antes de implementar un clúster de ONTAP Select en un entorno de producción, debe adquirir una licencia de capacidad de almacenamiento y descargar el archivo de licencia asociado. Puede utilizar la licencia para el almacenamiento en cada nodo utilizando el modelo _Capacity Tiers_ o disponer de una licencia para un pool compartido utilizando el modelo _Capacity Pools_.
 
 
 
@@ -230,7 +230,7 @@ cluster modify -name test-cluster -mgmt-ip 10.234.81.20 -netmask 255.255.255.192
 Debe configurar cada uno de los nodos en el clúster de ONTAP Select.
 
 .Antes de empezar
-Debe tener la información de configuración del nodo. El archivo de licencia del nivel de capacidad debe cargarse e instalarse en la utilidad Deploy.
+Debe tener la información de configuración del nodo. El archivo de licencia de nivel de capacidad debe cargarse e instalarse en la utilidad Deploy.
 
 .Acerca de esta tarea
 Debe usar este procedimiento para configurar cada nodo. En este ejemplo, se aplica una licencia de nivel de capacidad al nodo.
@@ -255,7 +255,7 @@ node modify -name test-cluster-01 -cluster-name test-cluster -host-name 10.234.8
 La configuración RAID del nodo se indica con el parámetro _passThrough-disks_ . Si utiliza una controladora RAID de hardware local, este valor debe ser FALSE. Si se utiliza RAID de software, este valor debe ser TRUE.
 
 +
-Una licencia de nivel de capacidad se usa para el nodo ONTAP Select.
+Se usa una licencia de nivel de capacidad para el nodo ONTAP Select.
 
 . Mostrar la configuración de red disponible en el host:
 +

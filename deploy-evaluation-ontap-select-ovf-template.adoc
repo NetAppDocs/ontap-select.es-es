@@ -63,4 +63,4 @@ Complete los siguientes pasos en un servidor host ESXi de 64 bits compatible.
 
 
 .Información relacionada
-link:http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^]
+link:http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad"^]

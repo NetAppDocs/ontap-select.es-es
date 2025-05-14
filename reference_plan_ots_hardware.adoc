@@ -37,8 +37,8 @@ Para poner en marcha un clúster de ONTAP Select, su organización debe tener un
 
 ONTAP Select puede ponerse en marcha en los siguientes hipervisores:
 
-* KVM en Red Hat Enterprise Linux 8,6, 8,7, 8,8, 9,0, 9,1, 9,2 y 9,4
-* KVM en Rocky Linux 8,6, 8,7, 8,8, 8,9, 9,0, 9,1, 9,2, 9,3 y 9,4
+* KVM en Red Hat Enterprise Linux 8,6, 8,7, 8,8, 9,0, 9,1, 9,2, 9,4 y 9,5
+* KVM en Rocky Linux 8,6, 8,7, 8,8, 8,9, 9,0, 9,1, 9,2, 9,3, 9,4 y 9,5
 * VMware ESXi 7.0 GA (compilación 15843807 o posterior), incluidos 7.0 U1, U2 y U3C
 * VMware ESXi 8,0 GA (compilación 20513097)
 * VMware ESXi 8,0 U1 (compilación 21495797)
@@ -67,7 +67,7 @@ El host del hipervisor físico en el que se ponga en marcha ONTAP Select debe cu
 
 NOTE: A partir de ONTAP Select 9.9.1, solo se admiten los modelos de CPU basados en Intel Xeon Sandy Bridge o posteriores.
 
-Consulte la https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp,window=_blank"] si quiere más información.
+Consulte el documento https://mysupport.netapp.com/matrix["Herramienta de Matriz de Interoperabilidad,window=_blank"] si desea obtener más información.
 
 
 

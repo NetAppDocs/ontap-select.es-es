@@ -20,7 +20,7 @@ Existen varias tareas relacionadas que se pueden realizar como parte de la admin
 
 == Gestione las licencias del nivel de capacidad
 
-Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Select según sea necesario.
+Se pueden añadir, editar y eliminar licencias de nivel de capacidad de ONTAP Select según sea necesario.
 
 .Pasos
 . Inicie sesión en la utilidad de implementación a través de la interfaz web mediante la cuenta de administrador.
@@ -35,7 +35,7 @@ Puede añadir, editar y eliminar licencias de niveles de capacidad de ONTAP Sele
 
 == Gestione las licencias del pool de capacidad
 
-Es posible añadir, editar y eliminar licencias de pools de capacidad ONTAP Select según sea necesario.
+Es posible añadir, editar y eliminar licencias de ONTAP Select Capacity Pool según sea necesario.
 
 .Pasos
 . Inicie sesión en la utilidad de implementación a través de la interfaz web mediante la cuenta de administrador.
@@ -81,27 +81,27 @@ Para renovar una licencia existente:
 
 
 
-== Vuelva a instalar una licencia de grupo de capacidad
+== Vuelva a instalar una licencia de Capacity Pool
 
-Cada licencia de pool de capacidad activo se bloquea en una instancia específica de License Manager, que se encuentra dentro de una instancia de la utilidad de administración de despliegue. Si utiliza una licencia de pool de capacidad y luego restaura o recupera la instancia de implementación, la licencia original ya no es válida. Debe generar un nuevo archivo de licencia de capacidad y, a continuación, instalar la licencia en la nueva instancia de implementación.
+Todas las licencias activas de Capacity Pool se bloquean en una instancia específica del Administrador de licencias, que se incluye en una instancia de la utilidad de administración de Desplegar. Si utiliza una licencia Capacity Pool y luego restaura o recupera la instancia de implementación, la licencia original ya no es válida. Debe generar un nuevo archivo de licencia de capacidad y, a continuación, instalar la licencia en la nueva instancia de implementación.
 
 .Antes de empezar
-* Determinar todas las licencias de pool de capacidad utilizadas por la instancia de implementación original.
+* Determinar todas las licencias de pool de capacidad utilizadas por la instancia de puesta en marcha original.
 * Si restaura un backup como parte de la creación de la nueva instancia de implementación, determine si el backup está actualizado y actualizado.
 * Busque los nodos de ONTAP Select que se crearon más recientemente con la instancia de implementación original (solo si un backup actualizado de la instancia de implementación original no se restaura a la nueva instancia de implementación).
 * Restaure o vuelva a crear la instancia de implementación
 
 
 .Acerca de esta tarea
-En líneas generales, esta tarea está compuesta por tres partes. Debe regenerar e instalar todas las licencias de pools de capacidad utilizadas por la instancia de implementación. Una vez reinstaladas todas las licencias en la nueva instancia de despliegue, puede restablecer el número de secuencia de serie si es necesario. Por último, si ha cambiado la dirección IP de implementación, debe actualizar cada nodo ONTAP Select que utilice una licencia de pools de capacidad.
+En líneas generales, esta tarea está compuesta por tres partes. Debe volver a generar e instalar todas las licencias de Capacity Pool que utiliza la instancia de puesta en marcha. Una vez reinstaladas todas las licencias en la nueva instancia de despliegue, puede restablecer el número de secuencia de serie si es necesario. Por último, si la dirección IP de puesta en marcha ha cambiado, debe actualizar todos los nodos ONTAP Select que utilicen una licencia de pools de capacidad.
 
 .Pasos
-. Póngase en contacto con el soporte de NetApp y tener todas las licencias del pool de capacidad de la instancia de implementación original sin establecer límites y sin registrar.
-. Adquiera y descargue un nuevo archivo de licencia para cada una de las licencias de pool de capacidad.
+. Póngase en contacto con el servicio de soporte de NetApp y disponga de todas las licencias Capacity Pool de la instancia de implementación original sin asignar y sin registrar.
+. Adquiera y descargue un nuevo archivo de licencia para cada una de las licencias de Capacity Pool.
 +
-Consulte link:task_lic_acquire_cp.html["Adquirir una licencia de pool de capacidad"] si quiere más información.
+Consulte link:task_lic_acquire_cp.html["Adquiera una licencia de Capacity Pool"] para obtener más información.
 
-. Instale las licencias del pool de capacidad en la nueva instancia de implementación:
+. Instale las licencias del pool de capacidad en la nueva instancia de puesta en marcha:
 +
 .. Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
 .. Seleccione la pestaña *Administration* en la parte superior de la página.
@@ -147,11 +147,11 @@ Consulte link:task_lic_acquire_cp.html["Adquirir una licencia de pool de capacid
 
 == Convertir una licencia de evaluación en una licencia de producción
 
-Puede actualizar un clúster de evaluación de ONTAP Select para utilizar una licencia de nivel de capacidad de producción con la utilidad de administración de implementación.
+Puede actualizar un clúster de evaluación de ONTAP Select para usar una licencia de nivel de capacidad de producción con la utilidad de administración Deploy.
 
 .Antes de empezar
 * Cada nodo debe tener suficiente almacenamiento asignado para admitir el mínimo requerido para una licencia de producción.
-* Debe tener licencias de nivel de capacidad para cada nodo en el clúster de evaluación.
+* Debe tener licencias de nivel de capacidad para cada nodo del clúster de evaluación.
 
 
 .Acerca de esta tarea
@@ -176,7 +176,7 @@ Los números de serie de los nodos de veinte dígitos asignados originalmente a 
 
 
 
-== Gestione una licencia de pool de capacidad caducada
+== Gestione una licencia Capacity Pool caducada
 
 Por lo general, cuando expira una licencia, nada sucede. Sin embargo, no puede instalar una licencia diferente porque los nodos están asociados con la licencia caducada. Hasta que renueve la licencia, debe _no_ hacer cualquier cosa que desconecte el agregado, como una operación de reinicio o conmutación por error. La acción recomendada es acelerar la renovación de la licencia.
 

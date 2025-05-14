@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_lic_acquire_ct.html 
-keywords: license, licensing, acquire, capacity tiers 
-summary: Cuando se utilizan licencias de niveles de capacidad, es necesario adquirir un archivo de licencia para cada nodo ONTAP Select. El archivo de licencia define la capacidad de almacenamiento del nodo y se bloquea en el nodo a través del número de serie único de nueve dígitos que asigna NetApp. 
+keywords: license, licensing, acquire, Capacity Tiers 
+summary: Cuando se usa la licencia Capacity Tiers, es necesario adquirir un archivo de licencia para cada nodo de ONTAP Select. El archivo de licencia define la capacidad de almacenamiento del nodo y se bloquea en el nodo a través del número de serie único de nueve dígitos que asigna NetApp. 
 ---
 = Adquiera una licencia de nivel de capacidad de ONTAP Select
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: Cuando se utilizan licencias de niveles de capacidad, es necesario adqu
 
 
 [role="lead"]
-Cuando se utilizan licencias de niveles de capacidad, es necesario adquirir un archivo de licencia para cada nodo ONTAP Select. El archivo de licencia define la capacidad de almacenamiento del nodo y se bloquea en el nodo a través del número de serie único de nueve dígitos que asigna NetApp.
+Cuando se usa la licencia Capacity Tiers, es necesario adquirir un archivo de licencia para cada nodo de ONTAP Select. El archivo de licencia define la capacidad de almacenamiento del nodo y se bloquea en el nodo a través del número de serie único de nueve dígitos que asigna NetApp.
 
 .Antes de empezar
 Debe tener el número de serie de licencia de nueve dígitos que asigna NetApp al nodo. Antes de intentar adquirir un archivo de licencia, debe esperar al menos veinte cuatro horas después de la fecha de envío de su orden de compra.
 
 .Acerca de esta tarea
-Debe realizar esta tarea para cada nodo de ONTAP Select que requiera una licencia de nivel de capacidad.
+Debe realizar esta tarea en cada nodo ONTAP Select que requiera una licencia de nivel de capacidad.
 
 .Pasos
 . Acceda al sitio de licencias de ONTAP Select mediante un explorador web:

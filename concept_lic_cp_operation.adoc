@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept_lic_cp_operation.html 
-keywords: license, licensing, capacity pools, operation details 
-summary: El modelo de licencias de pools de capacidad es diferente al modelo de niveles de capacidad. En lugar de dedicar capacidad de almacenamiento a cada nodo individual, la capacidad de almacenamiento se asigna a un pool y se comparte entre muchos nodos. Se crearon componentes y procesos adicionales para admitir el modelo de pools de capacidad. 
+keywords: license, licensing, Capacity Pools, operation details 
+summary: El modelo de licencia de pools de capacidad es diferente del modelo de niveles de capacidad. En lugar de dedicar capacidad de almacenamiento a cada nodo individual, la capacidad de almacenamiento se asigna a un pool y se comparte entre muchos nodos. Se crearon componentes y procesos adicionales para admitir el modelo de pools de capacidad. 
 ---
 = Detalles operativos del modelo de licencias de pools de capacidad de ONTAP Select
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: El modelo de licencias de pools de capacidad es diferente al modelo de 
 
 
 [role="lead"]
-El modelo de licencias de pools de capacidad es diferente al modelo de niveles de capacidad. En lugar de dedicar capacidad de almacenamiento a cada nodo individual, la capacidad de almacenamiento se asigna a un pool y se comparte entre muchos nodos. Se crearon componentes y procesos adicionales para admitir el modelo de pools de capacidad.
+El modelo de licencia de pools de capacidad es diferente del modelo de niveles de capacidad. En lugar de dedicar capacidad de almacenamiento a cada nodo individual, la capacidad de almacenamiento se asigna a un pool y se comparte entre muchos nodos. Se crearon componentes y procesos adicionales para admitir el modelo de pools de capacidad.
 
 
 
@@ -22,8 +22,8 @@ El modelo de licencias de pools de capacidad es diferente al modelo de niveles d
 
 El Administrador de licencias se ejecuta como un proceso independiente dentro de cada instancia de la utilidad de administración de despliegue. Algunas de las funciones proporcionadas por LM son:
 
-* Genere un número de serie único de veinte dígitos para cada nodo en función del número de serie de licencia de pool de capacidad
-* Cree concesiones para la capacidad de los pools de capacidad compartida en función de las solicitudes de los nodos ONTAP Select
+* Genere un número de serie único de veinte dígitos para cada nodo en función del número de serie de licencia de Capacity Pool
+* Cree concesiones para capacidad a partir de los pools de capacidad compartida según solicitudes de los nodos ONTAP Select
 * Informe de la información de uso del pool a través de la interfaz de usuario de despliegue
 
 
@@ -31,10 +31,10 @@ El Administrador de licencias se ejecuta como un proceso independiente dentro de
 
 == Características del arrendamiento
 
-El almacenamiento asignado para cada agregado de datos de un nodo que utilice una licencia de pool de capacidad debe tener un arrendamiento asociado. El nodo solicita una concesión de almacenamiento y si la capacidad está disponible, License Manager responde con una concesión. Cada concesión tiene los siguientes atributos explícitos o implícitos:
+El almacenamiento asignado para cada agregado de datos en un nodo utilizando una licencia de Capacity Pool debe tener una concesión asociada. El nodo solicita una concesión de almacenamiento y si la capacidad está disponible, License Manager responde con una concesión. Cada concesión tiene los siguientes atributos explícitos o implícitos:
 
 * License Manager cada nodo ONTAP Select está asociado con una instancia de License Manager
-* Pool de capacidad cada nodo ONTAP Select está asociado con un pool de capacidad
+* Cada nodo de ONTAP Select está asociado con un pool de capacidad
 * Asignación del almacenamiento se asigna Un valor de capacidad específico en el arrendamiento
 * La fecha de caducidad y las concesiones de tiempo tienen una duración de entre una hora y siete días, según la configuración del usuario.
 
@@ -43,7 +43,7 @@ El almacenamiento asignado para cada agregado de datos de un nodo que utilice un
 
 == ID de bloqueo de licencia
 
-Cada instancia del Administrador de licencias y, por lo tanto, cada instancia correspondiente de la utilidad de despliegue se identifica con un número único de 128 bits. Este número se combina con el número de serie de licencia de pool de capacidad de nueve dígitos para bloquear el pool a una instancia específica de License Manager (que es efectivamente una instancia de implementación). Debe proporcionar ambos valores en el sitio de soporte de NetApp como parte de la generación del archivo de licencia de NetApp (NLF).
+Cada instancia del Administrador de licencias y, por lo tanto, cada instancia correspondiente de la utilidad de despliegue se identifica con un número único de 128 bits. Este Núm. Se combina con el Núm. De serie de licencia de nueve dígitos Capacity Pool para bloquear el pool a una instancia específica del Administrador de licencias (que es efectivamente una instancia de despliegue). Debe proporcionar ambos valores en el sitio de soporte de NetApp como parte de la generación del archivo de licencia de NetApp (NLF).
 
 Puede determinar el ID de bloqueo de licencia para la instancia de implementación mediante la interfaz de usuario web de las siguientes formas:
 
@@ -55,7 +55,7 @@ Puede determinar el ID de bloqueo de licencia para la instancia de implementaci�
 
 == Operaciones de arrendamiento básicas
 
-Un nodo ONTAP Select debe localizar o solicitar un arrendamiento de capacidad válido cada vez que se crea, se expande o se modifica un agregado de datos. Se puede utilizar un arrendamiento obtenido de una solicitud anterior que aún sea válido o se puede solicitar un nuevo arrendamiento, si fuera necesario. El nodo ONTAP Select realiza los siguientes pasos para localizar el arrendamiento de un pool de capacidad:
+Un nodo ONTAP Select debe localizar o solicitar un arrendamiento de capacidad válido cada vez que se crea, se expande o se modifica un agregado de datos. Se puede utilizar un arrendamiento obtenido de una solicitud anterior que aún sea válido o se puede solicitar un nuevo arrendamiento, si fuera necesario. El nodo ONTAP Select realiza los siguientes pasos para localizar un arrendamiento de Pool de capacidad:
 
 . Si hay una concesión existente en el nodo, se usa siempre que sean ciertas siguientes:
 +

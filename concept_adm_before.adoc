@@ -53,7 +53,7 @@ Puede conectarse a ONTAP Select utilizando el siguiente software cliente de NetA
 * Virtual Storage Console para VMware vSphere
 
 
-Para identificar las versiones compatibles del software cliente, revise el link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad de NetApp"^]. Si el software cliente admite ONTAP 9, ONTAP Select también admite la misma versión.
+Para identificar las versiones compatibles del software cliente, revise el link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^]. Si el software cliente admite ONTAP 9, ONTAP Select también admite la misma versión.
 
 
 NOTE: El uso de SnapCenter y los complementos correspondientes requiere licencias basadas en servidor. ONTAP Select no admite actualmente la licencia del sistema de almacenamiento de los complementos de SnapCenter.

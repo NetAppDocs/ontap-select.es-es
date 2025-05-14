@@ -31,6 +31,7 @@ Para una nueva implementación de ONTAP Select 9.16.1, se aplica automáticament
 --
 Soporte para protección autónoma frente a ransomware:: ONTAP Select 9.16.1 presenta compatibilidad con la protección autónoma contra ransomware (ARP). ONTAP Select 9.16.1 solo admite actualizaciones manuales para ARP, no se admiten actualizaciones automáticas. La licencia de función ARP se incluye en NLF para ONTAP Select 9.16.1. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["Leer más"].
 Compatibilidad con VMware ESXi mejorada:: ONTAP Select 9.16.1 incluye compatibilidad con VMware ESXi 8.0 U3.
+Compatibilidad actualizada con hipervisor de KVM:: A partir de ONTAP Select 9.16.1, el hipervisor de máquina virtual basada en kernel (KVM) es compatible con Red Hat Enterprise Linux (RHEL) 9,5 y Rocky Linux 9,5.
 
 
 
@@ -39,7 +40,7 @@ Compatibilidad con VMware ESXi mejorada:: ONTAP Select 9.16.1 incluye compatibil
 
 ONTAP Select 9.15.1 incluye varias funciones y mejoras nuevas.
 
-Compatibilidad actualizada con hipervisor de KVM:: A partir de ONTAP Select 9.15.1, el hipervisor de máquina virtual basada en kernel (KVM) es compatible con Red Hat Enterprise Linux (RHEL) 9,4 y Rocky Linux 9,4.
+Compatibilidad actualizada con hipervisor de KVM:: A partir de ONTAP Select 9.15.1, el hipervisor de máquina virtual basada en kernel (KVM) es compatible con RHEL 9,4 y Rocky Linux 9,4.
 Soporte para la expansión y la contracción de clústeres:: A partir de ONTAP Select 9.15.1, se admiten la expansión y contracción de clústeres.
 +
 --

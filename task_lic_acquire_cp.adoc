@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_lic_acquire_cp.html 
-keywords: license, licensing, acquire, capacity pools 
-summary: Debe adquirir un archivo de licencia para cada pool de capacidad que utilizan los nodos ONTAP Select. El archivo de licencia define la capacidad de almacenamiento y la caducidad del pool. Se bloquea en el Administrador de licencias mediante una combinación del número de serie de licencia único que asigna NetApp y el ID de bloqueo de licencia asociado con la instancia de implementación. 
+keywords: license, licensing, acquire, Capacity Pools 
+summary: Debe adquirir un archivo de licencia para cada pool de capacidad que utilizan los nodos de ONTAP Select. El archivo de licencia define la capacidad de almacenamiento y la caducidad del pool. Se bloquea en el Administrador de licencias mediante una combinación del número de serie de licencia único que asigna NetApp y el ID de bloqueo de licencia asociado con la instancia de implementación. 
 ---
-= Adquirir una licencia de pool de capacidad de ONTAP Select
+= Adquirir una licencia de ONTAP Select Capacity Pool
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: Debe adquirir un archivo de licencia para cada pool de capacidad que ut
 
 
 [role="lead"]
-Debe adquirir un archivo de licencia para cada pool de capacidad que utilizan los nodos ONTAP Select. El archivo de licencia define la capacidad de almacenamiento y la caducidad del pool. Se bloquea en el Administrador de licencias mediante una combinación del número de serie de licencia único que asigna NetApp y el ID de bloqueo de licencia asociado con la instancia de implementación.
+Debe adquirir un archivo de licencia para cada pool de capacidad que utilizan los nodos de ONTAP Select. El archivo de licencia define la capacidad de almacenamiento y la caducidad del pool. Se bloquea en el Administrador de licencias mediante una combinación del número de serie de licencia único que asigna NetApp y el ID de bloqueo de licencia asociado con la instancia de implementación.
 
 .Antes de empezar
-Debe tener el número de serie de licencia de nueve dígitos asignado por NetApp al pool de capacidad. Antes de intentar adquirir un archivo de licencia, debe esperar al menos veinte cuatro horas después de la fecha de envío de su orden de compra.
+Debe tener el número de serie de licencia de nueve dígitos asignado al pool de capacidad por NetApp. Antes de intentar adquirir un archivo de licencia, debe esperar al menos veinte cuatro horas después de la fecha de envío de su orden de compra.
 
 .Acerca de esta tarea
-Debe realizar esta tarea en cada pool de capacidad que utilizan los nodos ONTAP Select.
+Debe ejecutar esta tarea en cada pool de capacidad utilizado por los nodos ONTAP Select.
 
 .Pasos
 . Acceda al sitio de soporte de NetApp mediante un navegador web e inicie sesión.
 . Haga clic en *sistemas* en la parte superior y, a continuación, haga clic en *licencias de software*.
-. Escriba el número de serie de la licencia para el pool de capacidad y haga clic en *Go!*.
+. Escriba el número de serie de la licencia para el Pool de capacidad y haga clic en *Ir!*.
 . En la página de detalles de la licencia, vaya a la columna *Detalles del producto*.
 . Haga clic en *obtener archivo de licencia de NetApp* en la fila correspondiente.
 . Escriba el ID de bloqueo de licencia para la instancia de ONTAP Select Deploy y haga clic en *Enviar*.
@@ -34,4 +34,4 @@ Debe realizar esta tarea en cada pool de capacidad que utilizan los nodos ONTAP 
 
 
 .Después de terminar
-Para que un nodo de ONTAP Select pueda usar el pool de capacidad, debe cargar el archivo de licencia en la utilidad de administración de implementación.
+Debe cargar el archivo de licencia en la utilidad de administración Deploy antes de que un nodo ONTAP Select pueda usar el pool de capacidad.

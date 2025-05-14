@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept_lic_cp_serial_number.html 
-keywords: license, licensing, capacity pools, node serial numbers 
-summary: Con el modelo de licencia de niveles de capacidad, el número de serie de nodo de nueve dígitos es el mismo que el número de serie de licencia asignado al nodo. Sin embargo, los números de serie asignados a los nodos mediante el modelo de licencias de pools de capacidad tienen un formato diferente. 
+keywords: license, licensing, Capacity Pools, node serial numbers 
+summary: Con el modelo de licencia de Capacity Tiers, el número de serie del nodo de nueve dígitos es el mismo que el número de serie de la licencia asignado al nodo. Sin embargo, los números de serie asignados a los nodos que utilizan el modelo de licencia de pools de capacidad tienen un formato diferente. 
 ---
 = Números de serie de nodos para el modelo de gestión de licencias de pools de capacidad de ONTAP Select
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: Con el modelo de licencia de niveles de capacidad, el número de serie 
 
 
 [role="lead"]
-Con el modelo de licencia de niveles de capacidad, el número de serie de nodo de nueve dígitos es el mismo que el número de serie de licencia asignado al nodo. Sin embargo, los números de serie asignados a los nodos mediante el modelo de licencias de pools de capacidad tienen un formato diferente.
+Con el modelo de licencia de Capacity Tiers, el número de serie del nodo de nueve dígitos es el mismo que el número de serie de la licencia asignado al nodo. Sin embargo, los números de serie asignados a los nodos que utilizan el modelo de licencia de pools de capacidad tienen un formato diferente.
 
-El número de serie de un nodo que utiliza licencias de pools de capacidad tiene el siguiente formato:
+El número de serie de un nodo que utiliza la gestión de licencias de los pools de capacidad tiene el formato siguiente:
 
 `999 ppppppppp nnnnnnnn`
 
@@ -33,10 +33,10 @@ Cada sección del número de serie del nodo se describe en la siguiente tabla, d
 | '999' | Valor constante de tres dígitos reservado por NetApp. 
 
 
-| ppppppppppppppp | Número de serie de licencia variable de nueve dígitos que NetApp asigna al pool de capacidad 
+| ppppppppppppppp | Número de serie de licencia de nueve dígitos variable asignado al pool de capacidad por NetApp 
 
 
-| nnnnnnnn | Valor de ocho dígitos variable generado por el Administrador de licencias para cada nodo mediante el pool de capacidad 
+| nnnnnnnn | Valor variable de ocho dígitos generado por el administrador de licencias para cada nodo que utiliza el pool de capacidad 
 |===
 
-NOTE: Atención: Cuando se abre un caso con soporte de NetApp que implica un nodo que usa una licencia de pool de capacidad, no se puede proporcionar el número de serie de nodos de veinte dígitos completo. En su lugar, debe proporcionar el número de serie de la licencia de pool de capacidad de nueve dígitos. Puede derivar el número de serie de la licencia del número de serie del nodo tal como se muestra anteriormente. Omita los primeros tres dígitos del número de serie del nodo ('999') y extraiga los siguientes nueve dígitos (ppppppppppppppp).
+NOTE: Atención: Al abrir un caso en compatibilidad con NetApp que implica un nodo que utiliza una licencia de Capacity Pool, no puede proporcionar el número de serie del nodo de veinte dígitos completo. En su lugar, debe proporcionar el número de serie de la licencia de nueve dígitos del pool de capacidad. Puede derivar el número de serie de la licencia del número de serie del nodo tal como se muestra anteriormente. Omita los primeros tres dígitos del número de serie del nodo ('999') y extraiga los siguientes nueve dígitos (ppppppppppppppp).

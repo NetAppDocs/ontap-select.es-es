@@ -32,7 +32,7 @@ sidebar:
       url: "/reference_new_ots.html"
   - title: Conceptos
     entries:
-    - title: Información general de ONTAP Select
+    - title: Obtenga más información sobre ONTAP Select
       url: "/concept_ots_overview.html"
     - title: Puesta en marcha de ONTAP Select
       url: "/concept_ots_deploy.html"
@@ -44,8 +44,8 @@ sidebar:
         url: "/concept_usecase_robo.html"
       - title: Cloud privado y centro de datos
         url: "/concept_usecase_private_cloud.html"
-      - title: SDS de MetroCluster
-        url: "/concept_usecase_mc_sds.html"
+      - title: Eficiencia y protección de datos
+        url: "/concept-data-protection-and-efficiency.html"
     - title: Terminología
       url: "/concept_terminology.html"
   - title: Planificación
@@ -94,7 +94,7 @@ sidebar:
         url: "/concept_lic_production.html"
       - title: Ofertas de licencias de plataformas
         url: "/concept_lic_platforms.html"
-    - title: Modelo de licencias de pools de capacidad
+    - title: Modelo de gestión de licencias de pools de capacidad
       entries:
       - title: Detalles operativos
         url: "/concept_lic_cp_operation.html"
