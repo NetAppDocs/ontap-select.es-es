@@ -14,9 +14,24 @@ summary: A partir de ONTAP Select 9.15.1, puede aumentar el tamaño de un clúst
 
 
 [role="lead"]
-A partir de ONTAP Select 9.15.1, puede aumentar el tamaño de un clúster existente de seis a ocho nodos y reducir el tamaño del clúster de ocho a seis nodos. No se admite ningún otro escenario de expansión o contracción de cluster.
+A partir de ONTAP Select 9.15.1, puede aumentar el tamaño de un clúster existente de seis a ocho nodos y reducir el tamaño del clúster de ocho a seis nodos.
 
-El procedimiento se inicia desde la puesta en marcha de ONTAP Select a través de la CLI, la API o la interfaz web.
+Las siguientes expansiones y contracciones de clúster no son compatibles:
+
+* Expansión de uno, dos o cuatro clústeres de nodos a clústeres de seis u ocho nodos.
+* Contracción de seis u ocho clústeres de nodos a uno, dos o cuatro clústeres de nodos.
+
+
+[NOTE]
+====
+Para cambiar la cantidad de nodos de un clúster a un tamaño que no sea compatible con la expansión o contracción del clúster, debe realizar las siguientes tareas:
+
+. Implemente un nuevo clúster de múltiples nodos mediante el uso de link:task_cli_deploy_cluster.html["CLI"] o el link:task_deploy_cluster.html["interfaz de usuario web"] proporcionado con la utilidad de administración ONTAP Select Deploy.
+. Si corresponde, migre los datos al nuevo clúster mediante link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html["Replicación de SnapMirror"^] .
+
+
+====
+Puede iniciar los procedimientos de expansión y contracción del clúster desde ONTAP Select Deploy mediante la CLI, la API o la interfaz web.
 
 
 
@@ -36,12 +51,6 @@ Las funcionalidades de expansión y contracción del cluster están restringidas
 
 
 
-Actualmente no se admiten las siguientes expansiones y contracciones de cluster:
-
-* Expansión de uno, dos o cuatro clústeres de nodos a clústeres de seis u ocho nodos.
-* Contracción de seis u ocho clústeres de nodos a uno, dos o cuatro clústeres de nodos.
-
-
 
 
 == Expanda el clúster
@@ -52,7 +61,7 @@ Es posible aumentar el tamaño de un clúster existente de seis nodos a uno de o
 Como preparación para el procedimiento de ampliación del clúster, se añaden nuevos hosts ESX al inventario y se asignan los detalles de los nuevos nodos. Antes de iniciar el proceso de expansión del clúster, una comprobación previa de red verifica la red interna seleccionada.
 
 .Antes de empezar
-* Cuando ponga en marcha un clúster multinodo, debería estar familiarizado con el link:https://docs.netapp.com/us-en/ontap-select/task_adm_connectivity.html["comprobador de conectividad de red"].
+* Al implementar un clúster multinodo, debe familiarizarse con el verificador de conectividad de red. Puede ejecutarlo mediante el link:task_adm_connectivity.html["interfaz de usuario web"] o el link:task_cli_connectivity.html["CLI"] .
 * Compruebe que tiene los detalles de la licencia para los nodos nuevos.
 
 

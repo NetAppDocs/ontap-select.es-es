@@ -32,7 +32,7 @@ Utilice los siguientes requisitos para preparar el host ESXi donde se puso en ma
 
 image:prepare_ESXi_host_requirements.png["Requisitos para preparar el host ESXi"]
 
-Para obtener información adicional sobre las opciones de configuración del host, consulte la link:reference_chk_host_prep.html["Documentación de instalación de ONTAP Select"].
+Para obtener información adicional sobre las opciones de configuración del host, consulte la link:esxi-host-configuration-and-preparation-checklist.html["Documentación de instalación de ONTAP Select"].
 
 
 
