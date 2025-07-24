@@ -73,7 +73,7 @@ La oferta premium XL ofrece las siguientes funciones:
 
 
 
-NOTE: El uso del tipo de instancia grande o unidades NVMe en una configuración de software-RAID no es compatible con la máquina virtual basada en kernel (KVM).
+NOTE: El uso del tipo de instancia grande en una configuración RAID de software no se admite en una máquina virtual basada en kernel (KVM).
 
 
 
@@ -170,10 +170,10 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| Tipo de software 3+| Descripción 
 
 
-2+| Soporte del hipervisor (VMware) 3+| VMware vSphere 7,0GA y actualiza 1 a 3C VMware vSphere 8,0GA y actualiza 1 a 3 
+2+| Soporte del hipervisor (VMware) 3+| VMware vSphere 8.0GA y actualizaciones 1 a 3 VMware vSphere 7.0GA y actualizaciones 1 a 3C 
 
 
-2+| Soporte del hipervisor (KVM) 3+| Red Hat Enterprise Linux de 64 bits (KVM) 9,5, 9,4, 9,3, 9,2, 9,1, 9,0, 8,9, 8,8, 8,7 y 8,6 Rocky Linux (KVM) 9 y 8 
+2+| Soporte del hipervisor (KVM) 3+| Red Hat Enterprise Linux de 64 bits (KVM) 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6 Rocky Linux (KVM) 9.6 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6 
 
 
 2+| Software de gestión 3+| Suite de gestión de NetApp Active IQ Unified Manager ONTAP Select Deploy Utility SnapCenter (opcional) 

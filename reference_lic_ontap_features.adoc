@@ -37,8 +37,9 @@ Las siguientes funciones de ONTAP son compatibles con ONTAP Select y tienen lice
 * NVMe sobre TCP
 * Capacidad de multi-tenancy de ONTAP
 * ONTAP S3
-* SnapMirror
 * SnapMirror S3
+* SnapMirror
+* Nube SnapMirror
 * SnapRestore
 * SnapVault
 * Recuperación ante desastres de máquina virtual de almacenamiento (DR de SVM)
