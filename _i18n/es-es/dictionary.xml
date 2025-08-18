@@ -1715,18 +1715,11 @@
   <block id="98f770b0af18ca763421bac22b4b6805" category="paragraph-title">Funciones</block>
   <block id="d5daa4c0e0a3988a633eb5273b984697" category="paragraph">Todas las funciones están sujetas a licencia y están disponibles. Tanto SnapLock como FabricPool requieren licencias independientes.</block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">Puede actualizar una máquina virtual de la utilidad de implementación existente en su sitio mediante la interfaz de línea de comandos.</block>
-  <block id="a0352e441ba04fb28d070a715c9d2ff2" category="paragraph">Asegúrese de que la implementación no se utiliza para realizar ninguna otra tarea durante la actualización. En las notas de la versión actual se proporciona información y restricciones sobre la actualización de la utilidad Deploy.</block>
-  <block id="eb75a7c0dc84d14c47a84e436b8082cc" category="paragraph">Para iniciar el proceso de actualización, es necesario descargar el archivo de actualización de la máquina virtual de implementación correspondiente desde el sitio de soporte de NetApp. El paquete de actualización se formatea como un solo archivo comprimido.</block>
   <block id="67a5c1dd24ee56878ca59f7cbb4a6602" category="list-text">Acceda al sitio de soporte de NetApp mediante un explorador web y haga clic en *Support Quick Links*.</block>
   <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">Seleccione la versión deseada del paquete de actualización.</block>
   <block id="def8f653fff47640d3bcce40244c6331" category="list-text">Seleccione y descargue el paquete adecuado, respondiendo a todos los avisos según sea necesario para su entorno.</block>
-  <block id="e1592123d1df946558bd9bf257720d21" category="paragraph">Después de adquirir el paquete de actualización, debe cargar el archivo en la máquina virtual de implementación.</block>
-  <block id="d5d592c7eaf2cef1bd79103f367e703c" category="paragraph">Debe tener el archivo de actualización disponible en la estación de trabajo local. También debe tener la contraseña de la cuenta de usuario de administrador.</block>
-  <block id="f331fac6e9cf90cf6a3bc3b228554302" category="paragraph-title">Acerca de estas tareas</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">En esta tarea se describe un método para cargar el archivo en la máquina virtual de implementación. Es posible que haya otras opciones más adecuadas para su entorno.</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">El archivo de actualización se almacena en el directorio inicial del usuario administrador.</block>
-  <block id="baa4f96e18f8e9fced4eec3f5a81a23a" category="paragraph">Después de cargar el archivo de actualización en la máquina virtual de implementación, puede aplicar la actualización.</block>
-  <block id="dbb14ca7f13323519486701e4b502763" category="paragraph">Debe saber en qué directorio se ha colocado el archivo de actualización en la máquina virtual de la utilidad de implementación. Además, asegúrese de que no se esté utilizando para realizar ninguna otra tarea mientras se realice la actualización.</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">Realice la actualización con la ruta y el nombre de archivo del directorio adecuados:</block>
   <block id="f5fb71abd32be9bc904db11637b6b903" category="paragraph"><block ref="1299ca75bdbf03e068a6eb77561752df" prefix="" category="inline-code"></block></block>
   <block id="9f8405ace72665fee032686e586d5366" category="summary">Después de implementar un clúster de ONTAP Select, puede actualizar el tipo de instancia del hipervisor de los nodos mediante la utilidad de administración Deploy.</block>
@@ -2638,7 +2631,6 @@
   <block id="f264455563ca8b26d0daffb627e42c00" category="sidebar">Información general sobre rendimiento</block>
   <block id="651f22f695c187057a5de6dca3a72108" category="sidebar">Rendimiento de ONTAP Select 9.6.1</block>
   <block id="724b8ee7bdeb6d5c74de82dc7e6c2e83" category="paragraph">Por lo general, cuando expira una licencia, nada sucede. Sin embargo, no puede instalar una licencia diferente porque los nodos están asociados con la licencia caducada. Hasta que renueve la licencia, debe _no_ hacer cualquier cosa que desconecte el agregado, como una operación de reinicio o conmutación por error. La acción recomendada es acelerar la renovación de la licencia.</block>
-  <block id="92cbe224b663d28b8dd457992abcd653" category="list-text">En un shell de comandos en su estación de trabajo local, use la utilidad scp para cargar el archivo de imagen en la máquina virtual de implementación.</block>
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">Copias Snapshot a prueba de manipulaciones</block>
   <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">Migración de SVM</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">HCX de VMware</block>
@@ -2816,9 +2808,6 @@
   <block id="a576bfb8d18800b15b695bc702167ec1" category="admonition">Sólo debe agregar una imagen ONTAP Select con una versión anterior a la versión original incluida con la instancia de implementación. No se admite la adición de versiones posteriores de ONTAP Select sin también actualizar Deploy.</block>
   <block id="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="paragraph"><block ref="2d7ef53b88b3d50ad2fb9bc27da95ee9" category="inline-link-macro-rx"></block></block>
   <block id="298707edb3b539391aec5a5a89670001" category="admonition">Si tiene instalada una instancia anterior de la utilidad de administración de implementación de ONTAP Select, debe actualizar a la versión actual. El nodo de ONTAP Select y los componentes de puesta en marcha de ONTAP Select se actualizan de forma independiente. Consulte <block ref="fb380fde33185400cd8ee6587621860d" category="inline-link-macro-rx"></block> para obtener más detalles.</block>
-  <block id="dded0118bab7e4547129d9826a3a53bf" category="section-title">Descargue el paquete de actualización</block>
-  <block id="295a9acceaedaed57f5a69a9e9479d14" category="section-title">Cargue el paquete en la máquina virtual de despliegue</block>
-  <block id="89a9fa7a63f2114c1852ebceaf021995" category="section-title">Aplique el paquete de actualización</block>
   <block id="4d0baad02721160fc108f9d6af73fec0" category="doc">Acceda a la consola de vídeos de ONTAP Select</block>
   <block id="ae8d825236a3f7c43af8b7a2dcd40918" category="doc">Confirme la conectividad de red entre los nodos ONTAP Select</block>
   <block id="b58c5f0cafd2de6e2a43174f49b5fb62" category="paragraph">La creación inicial de clúster se puede utilizar para crear un clúster de ONTAP Select que consume parte de o todo el espacio del almacén de datos inicial. Un segundo paso consiste en ejecutar una o más operaciones de adición de capacidad usando almacenes de datos adicionales hasta alcanzar la capacidad total deseada. Esta funcionalidad se detalla en la sección <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block>.</block>
@@ -2878,7 +2867,6 @@
   <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">Acceda a <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Usando un navegador web y elija *Descargas* en el menú Descargas.</block>
   <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">Desplácese hacia abajo y seleccione *Actualización de implementación de ONTAP Select*.</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">Revise el Contrato de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.</block>
-  <block id="3b21e87e0ddc0bee4fd0ebb1cd063173" category="paragraph">Antes de que finalice el procedimiento de actualización, se le pedirá que cree una copia de seguridad de la configuración de la máquina virtual de despliegue. Además, debe limpiar la caché del navegador para poder ver las páginas de despliegue recién creadas.</block>
   <block id="3a2bb6601ae9e99d12a365a40b604d74" category="paragraph">Puede acceder a la consola de vídeo de la máquina virtual del hipervisor donde se está ejecutando ONTAP Select.</block>
   <block id="decbc79b694df69cef4879e861d5bbe4" category="list-text">Opcionalmente, elimine la imagen de ONTAP Select con el host del hipervisor.</block>
   <block id="7460f05e2350b8a56240561f0787e129" category="open-title">Ejemplo de ESXi</block>
@@ -3906,4 +3894,21 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="e6ed9ac65d6ce64c42573257cebe103e" category="paragraph">Utilice la función de contracción de clúster para reducir el tamaño de un clúster existente de ocho nodos a seis nodos.</block>
   <block id="7cf2e3fec3d1629805de3aab60343896" category="sidebar">Documentos de ONTAP Select 9.17.1</block>
   <block id="968414ab46d3b1a79f89163fe1c9a955" category="admonition">El uso del tipo de instancia grande no se admite en una máquina virtual basada en kernel (KVM).</block>
+  <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">Puede actualizar una máquina virtual de la utilidad ONTAP Select Deploy existente en el lugar mediante la CLI de la utilidad ONTAP Select Deploy.</block>
+  <block id="37d4c938e6c31c7ec9166448ac3458f3" category="paragraph">Asegúrese de que ONTAP Select Deploy no se utilice para realizar ninguna otra tarea durante la actualización.  Consulte las notas de la versión actual para obtener información y restricciones sobre la actualización de la utilidad ONTAP Select Deploy.</block>
+  <block id="a59e9f814fd25c07ec74e51d966be96f" category="paragraph">Puede actualizar ONTAP Select Deploy 9.17.1 desde ONTAP Select Deploy 9.16.1 o 9.15.1.  Para actualizar desde ONTAP Select Deploy 9.14.1 o una versión anterior, revise las notas de la versión de su versión de ONTAP Select .</block>
+  <block id="db1b7c6bff7b0da47260c4e758478bf5" category="section-title">Paso 1: Descargue el paquete</block>
+  <block id="c81ba5c62604d6722d8975fb55e13972" category="paragraph">Para comenzar el proceso de actualización, descargue el archivo de actualización de máquina virtual ONTAP Select Deploy apropiado desde<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> . El paquete de actualización está en un único archivo comprimido.</block>
+  <block id="1bd278b7a759195dc2c65f644c38efc6" category="section-title">Paso 2: Cargue el paquete en la máquina virtual ONTAP Select Deploy</block>
+  <block id="58d35d75d5ec4b24d42607d4bf519bb0" category="paragraph">Después de descargar el paquete, debe cargar el archivo en la máquina virtual ONTAP Select Deploy.</block>
+  <block id="f210391b7941f9a4198928bc79fcba09" category="paragraph">Esta tarea describe un método para cargar el archivo en la máquina virtual ONTAP Select Deploy.  Podrían existir otras opciones más adecuadas para su entorno.</block>
+  <block id="c99ab6326cfb96cafe5cf69a39bf5e79" category="list-text">Verifique que el archivo de actualización esté disponible en su estación de trabajo local.</block>
+  <block id="e2a672c847bad2863e57f277c323553c" category="list-text">Verifique que tenga la contraseña de la cuenta de usuario administrador.</block>
+  <block id="e60c1aa35e0fea0a6ef96ddaa4b018f8" category="list-text">En un shell de comandos en su estación de trabajo local, utilice el<block ref="8a444a43bdf534c0c6338bb7809659b3" prefix=" " category="inline-code"></block> Utilidad (Protocolo de copia segura) para cargar el archivo de imagen a la máquina virtual ONTAP Select Deploy.</block>
+  <block id="fc979b5c6d5eef1f824052719f508095" category="section-title">Paso 3: Aplicar el paquete de actualización</block>
+  <block id="8b24796d99b30623379a77021195b47e" category="paragraph">Después de cargar el archivo de actualización en la máquina virtual ONTAP Select Deploy, puede aplicar la actualización.</block>
+  <block id="91aa908b0f2003054a80626907b7d18a" category="list-text">Verifique en qué directorio se ha colocado el archivo de actualización en la máquina virtual de la utilidad ONTAP Select Deploy.</block>
+  <block id="b2fb3f45f259e44e136bed021ae55392" category="list-text">Verifique que ONTAP Select Deploy no se utilice para realizar ninguna otra tarea mientras se realiza la actualización.</block>
+  <block id="abb9205c97b7f267bd63f25baa86e729" category="list-text">Sign in en la CLI de la utilidad ONTAP Select Deploy usando SSH con la cuenta de administrador.</block>
+  <block id="87a5212e058c62281b89455df9a32603" category="paragraph">Antes de completar el procedimiento de actualización, se le solicitará que cree una copia de seguridad de la configuración de la máquina virtual ONTAP Select Deploy.  Además, debes borrar la memoria caché del navegador para poder ver las páginas de implementación de ONTAP Select recién creadas.</block>
 </blocks>
