@@ -127,6 +127,7 @@ No se admite la modificación de las propiedades de los puertos ONTAP, como la v
 * Procesadores de servicios
 * Migración de SVM
 * Cumplimiento de normativas SnapLock
+* Sincronización activa de SnapMirror
 * HCX de VMware
 
 
