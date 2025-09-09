@@ -103,3 +103,24 @@ La implementación de ONTAP Select solo es compatible con IP versión 4 (IPv4). 
 * Debe asignar una dirección IPv4 a la LIF de gestión de la máquina virtual de implementación.
 * La implementación no puede crear nodos de ONTAP Select configurados para usar IPv6 en los LIF de ONTAP.
 
+
+
+
+== Consideraciones sobre la implementación del servidor VMware vCenter en ONTAP Select
+
+
+
+=== Privilegios de VMware vSphere para ESA
+
+A continuación, se enumeran los privilegios específicos para la biblioteca de contenido de vSphere que necesita para crear y administrar vSAN Express Storage Architecture (ESA) en vCenter:
+
+* Agregar elemento de biblioteca
+* Crear una biblioteca local
+* Eliminar elemento de la biblioteca
+* Eliminar biblioteca local
+* Almacenamiento de lectura
+* Actualizar archivos
+* Actualizar biblioteca
+* Actualizar elemento de la biblioteca
+* Actualizar la biblioteca local
+

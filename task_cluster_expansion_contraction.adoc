@@ -4,7 +4,7 @@ permalink: task_cluster_expansion_contraction.html
 keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps 
 summary: A partir de ONTAP Select 9.15.1, puede aumentar el tamaño de un clúster existente de seis a ocho nodos y reducir el tamaño del clúster de ocho a seis nodos. 
 ---
-= Expanda o contraiga un clúster de ONTAP Select
+= Expandir o contraer un clúster ESXi o KVM de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: A partir de ONTAP Select 9.15.1, puede aumentar el tamaño de un clúst
 
 
 [role="lead"]
-Puede aumentar el tamaño del clúster de un clúster ONTAP Select existente de un clúster de seis nodos a uno de ocho nodos y disminuir el tamaño de un clúster de ocho nodos a uno de seis nodos.
+Puede aumentar el tamaño del clúster de un clúster ONTAP Select existente para hosts de hipervisor ESXi y KVM.  Para los hosts KVM, puede aumentar el tamaño del clúster de seis a ocho nodos y disminuir el tamaño de ocho a seis nodos.  Para los hosts ESXi, puede aumentar y disminuir el tamaño del clúster en incrementos de entre seis y doce nodos.
 
-Las siguientes expansiones y contracciones de clúster no son compatibles:
+Las siguientes expansiones y contracciones de clúster no son compatibles con los hosts ESXi y KVM:
 
 * Expansión de uno, dos o cuatro clústeres de nodos a clústeres de seis u ocho nodos.
 * Contracción de seis u ocho clústeres de nodos a uno, dos o cuatro clústeres de nodos.
@@ -37,21 +37,10 @@ Puede iniciar los procedimientos de expansión y contracción del clúster desde
 
 == Consideraciones sobre hardware y almacenamiento
 
-La función de expansión y contracción del clúster es compatible con los hosts de hipervisor KVM y ESXi.
+La función de expansión y contracción del clúster es compatible con los siguientes hosts de hipervisor KVM y ESXi.
 
 [role="tabbed-block"]
 ====
-.KVM
---
-A partir de ONTAP Select 9.17.1, la expansión y contracción de clústeres se admite en los hosts de hipervisor KVM.
-
-La expansión y contracción del clúster es compatible con las siguientes versiones de hipervisor KVM:
-
-* Red Hat Enterprise Linux de 64 bits 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6
-* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6
-
-
---
 .ESXi
 --
 A partir de ONTAP Select 9.15.1, la expansión y contracción de clústeres se admite en los hosts de hipervisor ESXi.
@@ -67,13 +56,42 @@ La expansión y contracción del clúster es compatible con las siguientes versi
 
 
 --
+.KVM
+--
+A partir de ONTAP Select 9.17.1, la expansión y contracción de clústeres se admite en los hosts de hipervisor KVM.
+
+La expansión y contracción del clúster es compatible con las siguientes versiones de hipervisor KVM:
+
+* Red Hat Enterprise Linux de 64 bits 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6
+* Rocky Linux 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6
+
+
+--
 ====
 
 
 == Expanda el clúster
 
-Utilice la función de expansión de clúster para aumentar el tamaño de un clúster existente de seis nodos a ocho nodos.
+Utilice la función de expansión de clúster para aumentar el tamaño de un clúster ESXi o KVM existente.
 
+[role="tabbed-block"]
+====
+.ESXi
+--
+Puede aumentar el tamaño de un clúster ESXi existente en los siguientes incrementos:
+
+* De seis nodos a ocho, diez o doce nodos
+* De ocho nodos a diez o doce nodos
+* De diez a doce nodos
+
+
+--
+.KVM
+--
+Puede aumentar el tamaño de un clúster KVM existente de seis a ocho nodos.
+
+--
+====
 .Acerca de esta tarea
 Para preparar la expansión del clúster, se añaden nuevos hosts ESXi y KVM al inventario y se asignan los detalles de los nuevos nodos. Antes de iniciar el proceso de expansión del clúster, se realiza una comprobación previa de la red para verificar la red interna seleccionada.
 
@@ -119,8 +137,26 @@ Después de expandir el clúster, debe crear un backup de los datos de configura
 
 == Contraiga el clúster
 
-Utilice la función de contracción de clúster para reducir el tamaño de un clúster existente de ocho nodos a seis nodos.
+Utilice la función de contracción del clúster para reducir el tamaño de un clúster ESXi o KVM existente.
 
+[role="tabbed-block"]
+====
+.ESXi
+--
+Puede reducir el tamaño de un clúster ESXi existente en los siguientes incrementos:
+
+* De doce nodos a diez, ocho o seis nodos
+* De diez nodos a ocho o seis nodos
+* De ocho a seis nodos
+
+
+--
+.KVM
+--
+Puede reducir el tamaño de un clúster existente de ocho a seis nodos.
+
+--
+====
 .Acerca de esta tarea
 El par de nodos de alta disponibilidad deseado en el clúster se ha seleccionado para preparar la contracción del clúster durante el procedimiento.
 

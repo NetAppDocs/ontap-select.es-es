@@ -57,11 +57,16 @@ Debe adquirir una licencia independiente para cualquier función ONTAP que no es
 
 * FabricPool
 * SDS de MetroCluster (oferta de licencia premium de ONTAP Select)
-* SnapLock Enterprise (SnapLock Compliance no es compatible con ONTAP Select)
+* SnapLock Enterprise para ONTAP Select 9.16.1 y anteriores (disponible enlink:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] )
++
+
+NOTE: La SnapLock Compliance no es compatible con ONTAP Select.
+
 +
 ** Copias Snapshot a prueba de manipulaciones
 
 
+* Selección de SnapLock
 
 
 
