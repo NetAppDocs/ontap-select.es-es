@@ -65,7 +65,7 @@ La oferta premium ofrece las siguientes funcionalidades:
 
 La oferta premium XL ofrece las siguientes funciones:
 
-* Tipo de instancia small, medium o large
+* Tipos de instancias pequeñas, medianas o grandes
 * HDD, SSD o unidades NVMe
 * Controlador RAID de hardware local o RAID de software
 * VNAS
@@ -124,7 +124,7 @@ Las ofertas de licencias estándar, premium y premium XL son compatibles con una
 
 2+| Red (por nodo) 3+| Mínimo de dos puertos de 1GbE GbE para un clúster de un solo nodo como mínimo de cuatro puertos de 1GbE GbE para un clúster de dos nodos (pareja de alta disponibilidad) como mínimo de dos puertos de 10GbE GbE para un clúster de cuatro, seis u ocho nodos 
 |===
-^1^ asume dos núcleos y 8Gb GB de RAM para el hipervisor.
+^1^ Supone dos núcleos y 8 GB de RAM para el hipervisor.
 
 --
 .Tipo de almacenamiento
@@ -138,7 +138,7 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| Tipo de almacenamiento 3+| Descripción 
 
 
-2+| Tipo de licencia | Estándar | Premium | Pemium XL 
+2+| Tipo de licencia | Estándar | Premium | Premium XL 
 
 
 2+| Tamaño de la instancia | Pequeño | Pequeñas y medianas | Pequeño, mediano y grande 
@@ -153,7 +153,7 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| SSD (SAS) | No aplicable | 4: 60 unidades (solo SSD) | 4: 60 unidades (solo SSD) 
 
 
-2+| Almacenamiento DAS local con RAID de software | No aplicable | No aplicable | 4: 14 unidades (solo NVMe) 
+2+| Almacenamiento DAS local con RAID de software | No aplicable | Aplicable | 4: 14 unidades (solo NVMe) 
 
 
 2+| Matrices externas ^1^ 3+| Los almacenes de datos alojados en cabinas externas están conectados mediante FC, FCoE, iSCSI y NFS (NFS no es compatible con KVM). Estos almacenes de datos proporcionan alta disponibilidad y resiliencia. 
@@ -181,4 +181,5 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 --
 ====
 .Información relacionada
-link:concept_lic_production.html["Obtenga más información sobre los tipos de licencia de Capacity Tiering y Capacity Pool"].
+* link:concept_lic_production.html["Obtenga más información sobre los tipos de licencia de Capacity Tiering y Capacity Pool"]
+

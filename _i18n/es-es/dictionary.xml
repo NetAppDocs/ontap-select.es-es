@@ -3153,7 +3153,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="list-text">NDMP</block>
-  <block id="1bacbb36e2afde0c7a93da85daa18ef1" category="list-text">Tipo de instancia small, medium o large</block>
   <block id="4241d8a2662be78b68fdfaf8b9daec1a" category="list-text">HDD, SSD o unidades NVMe</block>
   <block id="6d0db0daccb7db9a59bfff9fe2840721" category="section-title">Gestionar licencias complementarias</block>
   <block id="85180b24dbd0c343b9c87bf144ede023" category="inline-link-macro">Información general sobre gestionar licencias (solo administradores de clúster)</block>
@@ -3545,10 +3544,8 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="e73d640a676c83c4510d0212e506bb38" category="cell">18 núcleos / 136GB GB de RAM</block>
   <block id="522c4ec4d9d59e1a992d989c8d770589" category="cell">Red (por nodo)</block>
   <block id="d5fda742cbaf307ce4ca202b12335858" category="cell">Mínimo de dos puertos de 1GbE GbE para un clúster de un solo nodo como mínimo de cuatro puertos de 1GbE GbE para un clúster de dos nodos (pareja de alta disponibilidad) como mínimo de dos puertos de 10GbE GbE para un clúster de cuatro, seis u ocho nodos</block>
-  <block id="c65eee5a4810d852ee01a79b87c993f3" category="paragraph">^1^ asume dos núcleos y 8Gb GB de RAM para el hipervisor.</block>
   <block id="f0cb6783b152b19ceab16227ca3976a2" category="open-title">Tipo de almacenamiento</block>
   <block id="5939197c86f855d26c9639db3b9a29d6" category="paragraph">La siguiente tabla proporciona el tipo de licencia mínimo requerido para el almacenamiento especificado. </block>
-  <block id="1138bbb83d6525f914cbce8dccc4a874" category="cell">Pemium XL</block>
   <block id="e629ab9880aae245163ce498ab9e1389" category="cell">Pequeñas y medianas</block>
   <block id="a09a88160dc1591cac42ba911581e599" category="cell">Pequeño, mediano y grande</block>
   <block id="93c34d5f173f74aeed0b64401f2a6edc" category="cell">Das local con controlador RAID de hardware</block>
@@ -3569,7 +3566,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="049f7d1a5b523b8230ca21c727474d11" category="cell">Software de gestión</block>
   <block id="f1680d42c94acc804fddda46a7e4602d" category="cell">Suite de gestión de NetApp Active IQ Unified Manager ONTAP Select Deploy Utility SnapCenter (opcional)</block>
   <block id="bbf6609978bbf45921ea0dae059fde72" category="inline-link-macro">Obtenga más información sobre los tipos de licencia de Capacity Tiering y Capacity Pool</block>
-  <block id="10aa5d1416b41ba5cd05d276a6c13328" category="paragraph"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block>.</block>
   <block id="91d83e84a03b1a016f22b6743fa4a929" category="summary">Después de determinar que ONTAP Select es adecuado para su organización, puede adquirir las licencias necesarias para respaldar una puesta en marcha de producción. Debe elegir el modelo de licencia de niveles de capacidad o pools de capacidad, así como la capacidad de almacenamiento para cada puesta en marcha.</block>
   <block id="580ede122197eca33afea87d209746f9" category="paragraph">Los modelos de licencia _Capacity Tiers_ y _Capacity Pools_ son muy diferentes en varios aspectos. Sin embargo, los dos modelos de licencia comparten varias características comunes, entre las que se incluyen:</block>
   <block id="8e8e728e920aef8a8e61276592f8f07a" category="section-title">Modelo de licencia de niveles de capacidad</block>
@@ -3949,4 +3945,8 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="dbdf8658126f3cab82aa007ed31794d3" category="paragraph">Utilice la función de contracción del clúster para reducir el tamaño de un clúster ESXi o KVM existente.</block>
   <block id="419d991bb53188641539fa8dfe55b258" category="paragraph">Puede reducir el tamaño de un clúster ESXi existente en los siguientes incrementos:</block>
   <block id="50261774776b49c62695c35def3230b0" category="paragraph">Puede reducir el tamaño de un clúster existente de ocho a seis nodos.</block>
+  <block id="64f27557c7c3169a5053aaf03c554939" category="list-text">Tipos de instancias pequeñas, medianas o grandes</block>
+  <block id="4e59a04163b76608c718d51a77e0ab85" category="paragraph">^1^ Supone dos núcleos y 8 GB de RAM para el hipervisor.</block>
+  <block id="8b8284ef1bc414b0568b54a0a11232ad" category="cell">Aplicable</block>
+  <block id="6799f681592f9a0a7cf264c2b7bcd3d7" category="list-text"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block></block>
 </blocks>
