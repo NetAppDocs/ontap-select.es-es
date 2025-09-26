@@ -61,7 +61,7 @@ network connectivity-check show --run-id X (X is a number)
 ----
 Esta herramienta sólo es útil para la solución de problemas de la red interna en un clúster multinodo Select. La herramienta no debe utilizarse para solucionar problemas de clústeres de un solo nodo (incluidas las configuraciones vNAS), puesta en marcha de ONTAP en conectividad ONTAP Select o problemas de conectividad del lado del cliente.
 
-El asistente de creación de clústeres (parte de la GUI de implementación de ONTAP) incluye el comprobador de redes interno como un paso opcional disponible durante la creación de clústeres de varios nodos. Dada la importante función que desempeña la red interna en clústeres de varios nodos, hacer que esta parte del flujo de trabajo de creación de clúster mejore la velocidad de éxito de las operaciones de creación de clústeres.
+El asistente de creación de clústeres (parte de la interfaz de usuario de ONTAP Deploy) incluye el verificador de red interno como un paso opcional disponible durante la creación de clústeres de varios nodos. Dada la importancia de la red interna en los clústeres multinodo, integrar este paso en el flujo de trabajo de creación de clústeres mejora la tasa de éxito de las operaciones de creación de clústeres.
 
 A partir de la puesta en marcha de ONTAP 2.10, el tamaño de MTU utilizado por la red interna se puede establecer entre 7,500 y 9,000. También se puede usar el comprobador de conectividad de red para probar un tamaño de MTU entre 7,500 y 9,000. El valor de MTU predeterminado se establece en el valor del switch de red virtual. Ese valor predeterminado tendría que ser reemplazado por un valor menor si existe una superposición de red como VXLAN en el entorno.
 

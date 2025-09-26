@@ -83,7 +83,7 @@ Tras la migración de una máquina virtual:: Después de migrar una máquina vir
 Puede realizar una actualización del clúster para actualizar la base de datos de configuración de despliegue mediante la interfaz de usuario web.
 
 
-NOTE: En lugar de utilizar la GUI de implementación, puede utilizar el comando cluster Refresh del shell CLI de implementación para actualizar un clúster.
+NOTE: En lugar de utilizar la UI de implementación, puede utilizar el comando de actualización de clúster en el shell CLI de implementación para actualizar un clúster.
 
 Configuración de clústeres y máquinas virtuales:: Algunos de los valores de configuración que pueden cambiar y causar que la base de datos de implementación se quede sin sincronizar son:
 +

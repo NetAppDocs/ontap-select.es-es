@@ -41,7 +41,7 @@ Dispone de varias opciones al acceder a la utilidad de administración de implem
 
 === Interfaz gráfica de usuario web
 
-Puede acceder a la utilidad Deploy a través de un moderno navegador web. La interfaz gráfica de usuario web proporciona una interfaz intuitiva y fácil de usar, y en la mayoría de los casos será su interfaz principal cuando utilice la utilidad.
+Puede acceder a la utilidad de implementación mediante un navegador web moderno. La interfaz de usuario web proporciona una interfaz intuitiva y fácil de usar, y en la mayoría de los casos será su interfaz principal cuando utilice la utilidad.
 
 
 
