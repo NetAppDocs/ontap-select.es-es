@@ -65,23 +65,13 @@ Puede reducir el tamaño del clúster de un clúster ESXi existente en los sigui
 link:task_cluster_expansion_contraction.html["Obtenga información sobre la expansión y contracción del clúster y las versiones de hipervisor KVM y ESXi compatibles"] .
 
 --
-Compatibilidad con las funciones de ONTAP:: A partir de ONTAP Select 9.17.1, las siguientes funciones con licencia de ONTAP son compatibles con ONTAP Select:
+Compatibilidad con la nube SnapMirror:: A partir de ONTAP Select 9.17.1, SnapMirror Cloud es compatible con ONTAP Select. SnapMirror Cloud es una función con licencia de ONTAP que se habilita de forma predeterminada al implementar un clúster de ONTAP Select 9.17.1 o al actualizar un clúster de ONTAP Select existente a la versión 9.17.1.
 +
 --
-* Selección de SnapLock
-+
-A partir de ONTAP Select 9.17.1, las nuevas implementaciones tendrán la licencia SnapLock Select automáticamente.  Para las actualizaciones de ONTAP Select 9.16.1 y anteriores, deberá descargar la licencia de SnapLock Select desdelink:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] y aplicarlo manualmente.
-
-* Nube SnapMirror
-+
-A partir de ONTAP Select 9.17.1, SnapMirror Cloud es compatible con ONTAP Select. SnapMirror Cloud es una función con licencia de ONTAP que se habilita de forma predeterminada al implementar un clúster de ONTAP Select 9.17.1 o al actualizar un clúster de ONTAP Select existente a la versión 9.17.1.
-
-+
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["Obtenga más información sobre las copias de seguridad en la nube de SnapMirror en el almacenamiento de objetos"^] .
 
-
-
 --
+Compatibilidad con SnapLock Select Enterprise:: A partir de ONTAP Select 9.17.1, las nuevas implementaciones tienen licencia automática para SnapLock Select Enterprise (incluido el bloqueo de instantáneas a prueba de manipulaciones).  Para las actualizaciones de ONTAP Select 9.16.1 y anteriores, debe descargar la licencia de SnapLock Select desdelink:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] y aplicarlo manualmente.
 Compatibilidad con vSAN ESA en clústeres de varios nodos:: A partir de ONTAP Select 9.17.1, se amplía la compatibilidad con la arquitectura de almacenamiento vSAN Express (ESA) para implementar clústeres de múltiples nodos.  Esta mejora le permite implementar configuraciones de vSAN ESA.
 +
 --

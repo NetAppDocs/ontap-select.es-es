@@ -112,7 +112,7 @@ Como alternativa, es posible empezar por crear un único almacén de datos en un
 La creación inicial de clúster se puede utilizar para crear un clúster de ONTAP Select que consume parte de o todo el espacio del almacén de datos inicial. Un segundo paso consiste en ejecutar una o más operaciones de adición de capacidad usando almacenes de datos adicionales hasta alcanzar la capacidad total deseada. Esta funcionalidad se detalla en la sección link:concept_stor_capacity_inc.html["Aumente la capacidad de almacenamiento"].
 
 
-NOTE: La sobrecarga de VMFS no es cero (consulte link:https://kb.vmware.com/s/article/1001618["VMware KB 1001618"]), y al intentar utilizar todo el espacio informado como libre por un almacén de datos, se han producido errores espurios durante las operaciones de creación de clúster.
+NOTE: La sobrecarga de VMFS no es cero (consulte VMware KB 1001618) y el intento de utilizar todo el espacio informado como libre por un almacén de datos ha generado errores falsos durante las operaciones de creación del clúster.
 
 Un búfer del 2% queda sin utilizar en cada almacén de datos. Este espacio no requiere una licencia de capacidad porque ONTAP Select no lo utiliza. La implementación de ONTAP calcula automáticamente el número exacto de gigabytes para el búfer, siempre que no se especifique un límite de capacidad. Si se especifica un límite de capacidad, se aplica primero ese tamaño. Si el tamaño del tapón de capacidad se encuentra dentro del tamaño del búfer, la creación del clúster genera un mensaje de error que especifica el parámetro de tamaño máximo correcto que se puede usar como tope de capacidad:
 

@@ -20,7 +20,7 @@ Puede comprar una licencia de nivel de capacidad de ONTAP Select o pool de capac
 
 == Lo que proporciona una oferta de licencia de plataforma
 
-Una oferta de licencia específica define y restringe las funcionalidades del host del hipervisor en dos áreas:
+Una oferta de licencia específica determina las capacidades del host del hipervisor en dos áreas:
 
 * Tipo de instancia (CPU, memoria)
 * Características adicionales
@@ -28,52 +28,44 @@ Una oferta de licencia específica define y restringe las funcionalidades del ho
 
 Las ofertas de licencias se organizan en un orden ascendente de capacidades de estándar a XL premium. En general, la opción de licencia que elija le concede las funcionalidades de ese nivel y todos los niveles inferiores. Por ejemplo, el nivel premium proporciona las funcionalidades de premium y estándar.
 
+La siguiente tabla compara las capacidades de las ofertas de licencias estándar, premium y premium XL.
+
+[cols="25,25,25,25,25"]
+|===
+2+| La licencia admite... | Estándar | Premium | Premium XL 
 
 
-== Ofertas de licencias de plataformas
-
-Hay tres ofertas de licencia de plataforma disponibles.
+2+| Tipo de instancia | Sólo pequeño | Pequeño o mediano | Pequeño, mediano o grande 
 
 
-
-=== Estándar
-
-La oferta estándar ofrece las siguientes funcionalidades:
-
-* Solo tipo de instancia pequeña
-* Solo unidades de disco duro (HDD)
-* Sólo controladora RAID de hardware local
-* VNAS
+.2+| Unidades de disco duro (HDD) en un... | Configuración RAID de hardware | Sí | Sí | Sí 
 
 
+| configuración de vNAS | Sí | Sí | Sí 
 
 
-=== Premium
-
-La oferta premium ofrece las siguientes funcionalidades:
-
-* Tipo de instancia pequeña o mediana
-* Unidades de disco duro (HDD) o unidades de estado sólido (SSD)
-* Controlador RAID de hardware local o RAID de software
-* VNAS
-* SDS de MetroCluster
+.3+| Unidades de estado sólido (SSD) en un... | Configuración RAID de hardware | No | Sí | Sí 
 
 
+| Configuración RAID de software | No | Sí | Sí 
 
 
-=== Premium XL
-
-La oferta premium XL ofrece las siguientes funciones:
-
-* Tipos de instancias pequeñas, medianas o grandes
-* HDD, SSD o unidades NVMe
-* Controlador RAID de hardware local o RAID de software
-* VNAS
-* SDS de MetroCluster
+| configuración de vNAS | Sí | Sí | Sí 
 
 
+.3+| Unidades NVMe en un... | Configuración RAID de hardware | No | No | Sí 
 
-NOTE: El uso del tipo de instancia grande no se admite en una máquina virtual basada en kernel (KVM).
+
+| Configuración RAID de software | No | No | Sí 
+
+
+| configuración de vNAS | Sí | Sí | Sí 
+
+
+2+| SDS de MetroCluster | No | Sí | Sí 
+|===
+
+NOTE: Las máquinas virtuales basadas en kernel (KVM) no admiten el tipo de instancia grande.
 
 
 
