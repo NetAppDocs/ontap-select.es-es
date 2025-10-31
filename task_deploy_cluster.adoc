@@ -196,15 +196,15 @@ La página se actualiza automáticamente a intervalos regulares.
 ====
 
 
-== Paso 3: Después de terminar
+== Paso 3: Completar el despliegue
 
-Es necesario confirmar que la función ONTAP Select AutoSupport está configurada y, a continuación, realizar un backup de los datos de configuración de implementación de ONTAP Select.
+Tras implementar el clúster, confirme que la función ONTAP Select AutoSupport esté configurada y luegolink:task_cli_clusters.html["Realizar una copia de seguridad de los datos de configuración de ONTAP Select Deploy"] .
 
 [TIP]
 ====
 Si se inicia la operación de creación de clúster, pero no se puede completar, es posible que la contraseña de administrador de ONTAP que defina no se aplique. Si esto sucede, puede determinar la contraseña administrativa temporal para el clúster de ONTAP Select mediante el siguiente comando de la CLI:
 
-[listing]
+[source, cli]
 ----
 (ONTAPdeploy) !/opt/netapp/tools/get_cluster_temp_credentials --cluster-name my_cluster
 ----

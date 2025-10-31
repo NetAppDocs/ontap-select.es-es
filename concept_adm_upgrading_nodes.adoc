@@ -43,8 +43,8 @@ Consulte las notas de la versión para obtener información adicional y los proc
 
 No puede revertir un nodo ONTAP Select a una versión anterior a la que estaba instalado originalmente. Por ejemplo:
 
-ONTAP Select 9,7 está instalado inicialmente:: Puede actualizar el nodo a la versión 9,8 y después revertir a la versión 9,7 si es necesario.
-ONTAP Select 9,8 está instalado inicialmente:: No puede volver a la versión 9,7 porque esta versión es anterior a la versión que estaba instalada originalmente.
+ONTAP Select 9.16.1 se instala inicialmente:: Puede actualizar el nodo a la versión 9.17.1 y luego volver a la versión 9.16.1 si es necesario.
+ONTAP Select 9.17.1 se instala inicialmente:: No es posible revertir el proceso ya que no había ninguna versión anterior instalada.
 
 
 

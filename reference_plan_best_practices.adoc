@@ -148,9 +148,9 @@ Debe tener en cuenta las siguientes prácticas recomendadas para una alta dispon
 
 === Instale los backups
 
-Se recomienda realizar backups periódicos de los datos de configuración de implementación, incluida la creación de un clúster. Esto cobra especial importancia en los clústeres de dos nodos, ya que los datos de configuración del mediador se incluyen en el backup.
+Se recomienda realizar copias de seguridad periódicas de los datos de configuración de Deploy, incluso después de crear un clúster. Esto cobra especial importancia en clústeres de dos nodos, ya que los datos de configuración del mediador se incluyen en la copia de seguridad.
 
-Después de crear o implementar un clúster, debe realizar un backup de los datos de configuración ONTAP Select Deploy.
+Después de crear o implementar un clúster, deberíalink:task_cli_clusters.html["Realizar una copia de seguridad de los datos de configuración de ONTAP Select Deploy"] .
 
 
 

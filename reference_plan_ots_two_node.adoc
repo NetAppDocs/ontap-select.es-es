@@ -29,13 +29,12 @@ Un clúster de dos nodos se puede poner en marcha con cualquier licencia de VMwa
 Cuando un clúster consta de dos nodos, no es posible lograr el quórum necesario cuando un nodo falla o pierde la comunicación. Para resolver estos tipos de situaciones de cerebro dividido, cada instancia de la utilidad ONTAP Select Deploy incluye un servicio mediador. Este servicio se conecta a cada nodo en los clústeres de dos nodos activos para supervisar las parejas de alta disponibilidad y ayudar a gestionar fallos. El servicio del mediador mantiene la información de estado de alta disponibilidad en un destino iSCSI dedicado asociado a cada clúster de dos nodos.
 
 
-CAUTION: Si tiene uno o varios clústeres de dos nodos activos, la máquina virtual ONTAP Select Deploy que administra los clústeres debe ejecutarse siempre. Si la máquina virtual de puesta en marcha está detenida o falla, el servicio mediador no estará disponible y se perderá la funcionalidad de alta disponibilidad para los clústeres de dos nodos.
+CAUTION: Si tiene uno o más clústeres de dos nodos activos, la máquina virtual de ONTAP Select Deploy que administra los clústeres debe estar en ejecución permanente. Si la máquina virtual ONTAP Select Deploy se detiene o falla, el servicio de mediación no está disponible y se pierde la capacidad de alta disponibilidad para los clústeres de dos nodos.
 
 .Ubicación del cluster y del servicio mediador
-Dado que los clústeres de dos nodos suelen ponerse en marcha en una sucursal remota, pueden ser remotos desde el centro de datos de la empresa y la utilidad de implementación que proporciona soporte administrativo. Con esta configuración, el tráfico de gestión entre la utilidad Deploy y el clúster fluye por la WAN. Consulte las notas de la versión para obtener más información acerca de las limitaciones y restricciones.
+Debido a que los clústeres de dos nodos se suelen implementar en una oficina remota o sucursal, pueden estar alejados del centro de datos corporativo y de la utilidad ONTAP Select Deploy que proporciona soporte administrativo.  Con esta configuración, el tráfico de gestión entre la utilidad ONTAP Select Deploy y el clúster fluye a través de la WAN. Consulte las notas de la versión para obtener más información sobre las limitaciones y restricciones.
 
-.Realice una copia de seguridad de los datos de configuración de despliegue
-Se recomienda realizar backups periódicos de los datos de configuración de implementación, incluida la creación de un clúster. Esto cobra especial importancia en los clústeres de dos nodos, debido a los datos de configuración del mediador incluidos con el backup.
+. Dirección IP estática asignada a ONTAP Select Implementar
 
-.Dirección IP estática asignada a la implementación
-Debe asignar una dirección IP estática a la utilidad de administración de implementación. Este requisito se aplica a todas las instancias de puesta en marcha que gestionan uno o varios clústeres de dos nodos de ONTAP Select.
+
+Debe asignar una dirección IP estática a la utilidad de administración ONTAP Select Deploy.  Este requisito se aplica a todas las instancias de ONTAP Select Deploy que administran uno o más clústeres de dos nodos de ONTAP Select .

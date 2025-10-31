@@ -20,7 +20,7 @@ Este procedimiento se basa en la creación de una nueva máquina virtual que uti
 
 
 
-== Realice una copia de seguridad de los datos de configuración de despliegue
+== Paso 1: Realizar una copia de seguridad de los datos de configuración de implementación
 
 Debe crear un backup de los datos de configuración de implementación como parte de la migración de la máquina virtual. También debe crear un backup después de implementar un clúster de ONTAP Select. Los datos se guardan en un único archivo cifrado que puede descargar en la estación de trabajo local.
 
@@ -59,7 +59,7 @@ Puede acceder al archivo de copia de seguridad a través de la URL.
 
 
 
-== Instale una nueva instancia de la máquina virtual de despliegue
+== Paso 2: Instalar una nueva instancia de la máquina virtual de implementación
 
 Debe crear una nueva instancia de la máquina virtual de despliegue que se pueda actualizar con los datos de configuración de la máquina virtual original.
 
@@ -84,7 +84,7 @@ link:task_install_deploy.html["Instale ONTAP Select Deploy"]
 
 
 
-== Restaure los datos de configuración de implementación en la nueva máquina virtual
+== Paso 3: Restaurar los datos de configuración de implementación en la nueva máquina virtual
 
 Es necesario restaurar los datos de configuración desde la máquina virtual original de la utilidad de implementación a la nueva máquina virtual. Los datos se encuentran en un único archivo que debe cargar desde su estación de trabajo local.
 

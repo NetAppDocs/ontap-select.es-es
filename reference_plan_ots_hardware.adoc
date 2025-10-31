@@ -23,7 +23,7 @@ Existen varios problemas relacionados con los requisitos de hardware y planifica
 Hay varios requisitos relacionados con el hipervisor donde se ejecuta ONTAP Select.
 
 
-NOTE: Debe revisar las notas de la versión actual para su versión de ONTAP Select sobre cualquier limitación o restricción conocida adicional.
+NOTE: Deberías revisar ellink:reference_release_notes.html["Notas de la versión de ONTAP Select"] para cualquier otra restricción o limitación conocida.
 
 
 
@@ -52,6 +52,7 @@ ONTAP Select admite las siguientes versiones de hipervisor KVM:
 --
 ONTAP Select admite las siguientes versiones de hipervisor ESXi:
 
+* VMware ESXi 9.0
 * VMware ESXi 8,0 U3
 * VMware ESXi 8,0 U2
 * VMware ESXi 8,0 U1 (compilación 21495797)
@@ -80,7 +81,7 @@ Si un host del hipervisor ESXi se gestiona mediante una instancia de vCenter Ser
 El host del hipervisor físico en el que se ponga en marcha ONTAP Select debe cumplir varios requisitos de hardware. Puede elegir cualquier plataforma para el host del hipervisor, siempre que cumpla los requisitos mínimos de hardware. Los siguientes proveedores ofrecen plataformas de hardware compatibles: Cisco, Dell, HP, Fujitsu, Lenovo, Y Supermicro.
 
 
-NOTE: A partir de ONTAP Select 9.9.1, solo se admiten los modelos de CPU basados en Intel Xeon Sandy Bridge o posteriores.
+NOTE: A partir de ONTAP Select 9.9.1, solo se admiten modelos de CPU basados ​​en Intel Xeon Sandy Bridge o posteriores.
 
 Consulte el documento https://mysupport.netapp.com/matrix["Herramienta de Matriz de Interoperabilidad,window=_blank"] si desea obtener más información.
 
@@ -110,7 +111,7 @@ El tamaño del clúster admite varias configuraciones de Ethernet.
 | Clúster de dos nodos o SDS de MetroCluster | 4 x 1 GbE o 1 x 10 GbE | 2 x 10 GbE 
 
 
-| clúster de 4/6/8 nodos | 2 x 10 GbE | 4 x 10 GbE o 2 x 25 GbE 
+| clúster de cuatro, seis u ocho nodos | 2 x 10 GbE | 4 x 10 GbE o 2 x 25 GbE 
 |===
 
 

@@ -81,3 +81,6 @@ El provisionamiento:: Todos los privilegios de la categoría.
 === VApp
 
 Todos los privilegios de la categoría.
+
+.Información relacionada
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html#ontap-select-deploy-vmware-vcenter-server-considerations["Obtenga información sobre los privilegios de VMware vSphere para vSAN ESA en vCenter"]

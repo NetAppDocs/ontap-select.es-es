@@ -480,5 +480,5 @@ cluster show -name <cluster_name>
 ----
 
 
-.Después de terminar
-Debe realizar una copia de seguridad de los datos de configuración de implementación de ONTAP Select.
+.¿Que sigue?
+link:task_cli_clusters.html["Realice una copia de seguridad de los datos de configuración de ONTAP Select Deploy."].

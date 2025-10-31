@@ -98,7 +98,7 @@ RAID de software:: Al usar almacenamiento de conexión directa (DAS), la funcion
 
 
 [[ontap-select-image-install]]
-Instalación de imagen ONTAP Select:: A partir de la implementación de ONTAP Select 2.8, la utilidad de administración de implementación sólo contiene una versión de ONTAP Select. La versión incluida es la más actual disponible en el momento de la publicación. La función de instalación de imagen de ONTAP Select le permite añadir versiones anteriores de ONTAP Select a su instancia de la utilidad de implementación, que se puede utilizar posteriormente al implementar un clúster de ONTAP Select. Consulte link:task_cli_deploy_image_add.html["Añada imágenes ONTAP Select para obtener más información"].
+Instalación de imagen ONTAP Select:: La utilidad de administración Deploy contiene únicamente una versión de ONTAP Select. Esta versión es la más reciente disponible en el momento del lanzamiento. La función de instalación de imágenes de ONTAP Select permite agregar versiones anteriores de ONTAP Select a la instancia de la utilidad de Deploy, que luego se pueden usar al implementar un clúster de ONTAP Select . Verlink:task_cli_deploy_image_add.html["Añada imágenes ONTAP Select para obtener más información"] .
 
 
 
