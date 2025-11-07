@@ -198,7 +198,7 @@ La página se actualiza automáticamente a intervalos regulares.
 
 == Paso 3: Completar el despliegue
 
-Tras implementar el clúster, confirme que la función ONTAP Select AutoSupport esté configurada y luegolink:task_cli_clusters.html["Realizar una copia de seguridad de los datos de configuración de ONTAP Select Deploy"] .
+Tras desplegar el clúster,link:https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Confirme que la función ONTAP Select AutoSupport esté configurada."^] y luegolink:task_cli_clusters.html["Realizar una copia de seguridad de los datos de configuración de ONTAP Select Deploy"] .
 
 [TIP]
 ====

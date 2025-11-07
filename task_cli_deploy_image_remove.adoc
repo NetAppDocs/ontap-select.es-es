@@ -26,19 +26,25 @@ Puede eliminar imágenes ONTAP Select antiguas que no se estén utilizando en es
 . Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador (admin).
 . Muestre los clústeres gestionados mediante la implementación y el registro de las imágenes ONTAP en uso:
 +
-`cluster show`
-
+[source, cli]
+----
+cluster show
+----
 +
 Anote el número de versión y la plataforma del hipervisor en cada caso.
 
 . Inicie el shell Bash:
 +
-`shell bash`
-
+[source, cli]
+----
+shell bash
+----
 . Mostrar todas las imágenes ONTAP Select disponibles:
 +
-`ls -lh /opt/netapp/images`
-
+[source, cli]
+----
+ls -lh /opt/netapp/images
+----
 . Opcionalmente, elimine la imagen de ONTAP Select con el host del hipervisor.
 +
 [role="tabbed-block"]

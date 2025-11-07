@@ -40,16 +40,20 @@ El archivo de backup que se crea captura todos los datos de configuración de la
 . Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
 . Crear una copia de seguridad de los datos de configuración de despliegue, que se almacenan en un directorio interno en el servidor de despliegue:
 +
-`deploy backup create`
-
+[source, cli]
+----
+deploy backup create
+----
 . Introduzca una contraseña para la copia de seguridad cuando se le solicite.
 +
 El archivo de copia de seguridad se cifra en función de la contraseña.
 
 . Mostrar las copias de seguridad disponibles en el sistema:
 +
-`deploy backup show -detailed`
-
+[source, cli]
+----
+deploy backup show -detailed
+----
 . Seleccione su archivo de copia de seguridad en función de la fecha en el campo *creado* y registre el valor *URL de descarga*.
 +
 Puede acceder al archivo de copia de seguridad a través de la URL.
@@ -92,10 +96,7 @@ Es necesario restaurar los datos de configuración desde la máquina virtual ori
 Debe tener los datos de configuración de un backup anterior. Los datos están contenidos en un único archivo y deben estar disponibles en la estación de trabajo local.
 
 .Pasos
-. En un shell de comandos de la estación de trabajo local, utilice la utilidad sftp para cargar el archivo de copia de seguridad en la máquina virtual Deploy.
-+
-Ejemplo
-
+. En una terminal de comandos de su estación de trabajo local, utilice la utilidad sftp para cargar el archivo de copia de seguridad a la máquina virtual de implementación, como se muestra en el siguiente ejemplo:
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -103,12 +104,14 @@ put deploy_backup_20190601162151.tar.gz
 exit
 ....
 . Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
-. Restaure los datos de configuración.
+. Restaurar los datos de configuración:
 +
-`deploy backup restore -path PATHNAME -filename FILENAME`
-
+[source, cli]
+----
+deploy backup restore -path <path_name> -filename <file_name>
+----
 +
-Ejemplo
+Comando de ejemplo
 
 +
 `deploy backup restore -path /home/admin -filename deploy_backup_20180601162151.tar.gz`

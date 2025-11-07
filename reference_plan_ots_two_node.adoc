@@ -34,7 +34,8 @@ CAUTION: Si tiene uno o más clústeres de dos nodos activos, la máquina virtua
 .Ubicación del cluster y del servicio mediador
 Debido a que los clústeres de dos nodos se suelen implementar en una oficina remota o sucursal, pueden estar alejados del centro de datos corporativo y de la utilidad ONTAP Select Deploy que proporciona soporte administrativo.  Con esta configuración, el tráfico de gestión entre la utilidad ONTAP Select Deploy y el clúster fluye a través de la WAN. Consulte las notas de la versión para obtener más información sobre las limitaciones y restricciones.
 
-. Dirección IP estática asignada a ONTAP Select Implementar
+.Realizar una copia de seguridad de los datos de configuración de implementación
+Es una buena prácticalink:task_cli_clusters.html["Realizar una copia de seguridad de los datos de configuración de ONTAP Select Deploy"] de forma regular, incluso después de crear un clúster. Esto cobra especial importancia en clústeres de dos nodos, debido a los datos de configuración del mediador incluidos en la copia de seguridad.
 
-
+.Dirección IP estática asignada a la implementación
 Debe asignar una dirección IP estática a la utilidad de administración ONTAP Select Deploy.  Este requisito se aplica a todas las instancias de ONTAP Select Deploy que administran uno o más clústeres de dos nodos de ONTAP Select .
