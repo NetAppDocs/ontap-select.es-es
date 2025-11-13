@@ -87,7 +87,7 @@ Las ofertas de licencias estándar, premium y premium XL son compatibles con una
 2+| Protocolos de host 3+| NFS, SMB/CIFS, iSCSI y NVMe sobre TCP 
 
 
-2+| Opciones de puesta en marcha 3+| Clúster de un solo nodo, clúster de dos nodos (pareja de alta disponibilidad), clúster de cuatro, seis u ocho nodos 
+2+| Opciones de puesta en marcha 3+| Nodo único. Clúster de dos nodos (par HA). Clúster de cuatro, seis, ocho, diez o doce nodos. 
 
 
 2+| Capacidad admitida (por nodo) 3+| Hasta 400TB datos sin formato (ESXi y KVM) 
@@ -114,7 +114,7 @@ Las ofertas de licencias estándar, premium y premium XL son compatibles con una
 2+| Requisitos mínimos de memoria/CPU del host ^1^ | 6 núcleos / 24GB GB de RAM | 10 núcleos / 72GB GB de RAM | 18 núcleos / 136GB GB de RAM 
 
 
-2+| Red (por nodo) 3+| Mínimo de dos puertos de 1GbE GbE para un clúster de un solo nodo como mínimo de cuatro puertos de 1GbE GbE para un clúster de dos nodos (pareja de alta disponibilidad) como mínimo de dos puertos de 10GbE GbE para un clúster de cuatro, seis u ocho nodos 
+2+| Red (por nodo) 3+| Se requiere un mínimo de dos puertos 1GbE para un clúster de un solo nodo. Se requiere un mínimo de cuatro puertos 1GbE para un clúster de dos nodos (par HA). Se requiere un mínimo de dos puertos 10GbE para un clúster de cuatro, seis, ocho, diez o doce nodos. 
 |===
 ^1^ Supone dos núcleos y 8 GB de RAM para el hipervisor.
 

@@ -65,7 +65,7 @@ Configuración de redes y Open vSwitch:: Debe estar familiarizado con los concep
 
 Hay varios problemas de planificación relacionados con el tamaño del clúster que debe tener en cuenta.
 
-Número de nodos en el clúster:: Un clúster de ONTAP Select se compone de uno, dos, cuatro, seis u ocho nodos. Debe determinar el tamaño del clúster de acuerdo con los requisitos de la aplicación. Por ejemplo, si se necesita una capacidad de alta disponibilidad para una puesta en marcha empresarial, se debe utilizar un clúster de varios nodos.
+Número de nodos en el clúster:: Un clúster ONTAP Select está compuesto por uno, dos, cuatro, seis, ocho, diez o doce nodos. Debe determinar el tamaño del clúster según los requisitos de la aplicación. Por ejemplo, si se necesita capacidad de alta disponibilidad (HA) para una implementación empresarial, se debe utilizar un clúster multinodo.
 Dedicado versus colubicado:: En función del tipo de aplicación, debe determinar si la implementación sigue el modelo dedicado o colubicado. Tenga en cuenta que el modelo de colocación puede ser más complejo debido a la diversidad de la carga de trabajo y a una integración más estrecha.
 
 

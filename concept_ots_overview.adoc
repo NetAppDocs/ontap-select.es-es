@@ -44,7 +44,7 @@ ONTAP Select se compone de dos componentes de software principales:
 
 === Nodo de ONTAP Select
 
-Un clúster de ONTAP Select se compone de uno, dos, cuatro, seis u ocho nodos. Cada nodo del clúster se pone en marcha como máquina virtual independiente y ejecuta una versión especialmente diseñada del software ONTAP 9.
+Un clúster ONTAP Select está compuesto por uno, dos, cuatro, seis, ocho, diez o doce nodos. Cada nodo del clúster se implementa como una máquina virtual independiente y ejecuta una versión especialmente diseñada del software ONTAP 9.
 
 
 

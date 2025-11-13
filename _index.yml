@@ -5,7 +5,7 @@ indexpage:
     que puede implementarse en diversos servidores de hardware estándar que ejecutan
     VMware ESXi o un hipervisor de máquina virtual basada en kernel (KVM). Proporciona
     la agilidad necesaria para construir una infraestructura de nube privada flexible
-    y escalable. Este sitio contiene la documentación de ONTAP Select 9.17.1.
+    y escalable. Este sitio contiene la documentación de ONTAP Select 9.18.1.
   tiles:
   - title: Manos a la obra
     links:

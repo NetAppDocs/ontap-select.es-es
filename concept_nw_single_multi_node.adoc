@@ -67,7 +67,7 @@ La configuración de red multinodo ONTAP Select consta de dos redes.
 
 Se trata de una red interna, responsable de proporcionar servicios de replicación internos y de clústeres, y una red externa, responsable de proporcionar servicios de acceso y gestión de datos. El aislamiento completo del tráfico que fluye dentro de estas dos redes es extremadamente importante para permitirle crear un entorno adecuado para la resiliencia de los clústeres.
 
-Estas redes se representan en la siguiente figura, en la que se muestra un clúster ONTAP Select de cuatro nodos que se ejecuta en una plataforma VMware vSphere. Los clústeres de seis y ocho nodos tienen una distribución de red similar.
+Estas redes se representan en la siguiente figura, que muestra un clúster ONTAP Select de cuatro nodos ejecutándose en una plataforma VMware vSphere. Los clústeres de seis, ocho, diez y doce nodos tienen una disposición de red similar.
 
 
 NOTE: Cada instancia de ONTAP Select reside en un servidor físico independiente. El tráfico interno y externo se aísla mediante grupos de puertos de red independientes, que se asignan a cada interfaz de red virtual y permiten que los nodos del clúster compartan la misma infraestructura de switch físico.
@@ -135,7 +135,7 @@ Los puertos ONTAP e0c y e0d están delegados como puertos principales de las int
 
 NOTE: Estas interfaces no pueden asignarse direcciones IP estáticas y no se deben crear interfaces de clúster adicionales.
 
-El tráfico de red del clúster debe fluir por una red de capa 2 no enrutada de baja latencia. Debido a los requisitos de rendimiento del clúster y de latencia, se espera que el clúster ONTAP Select se encuentre físicamente cerca (por ejemplo, varios paquetes o un solo centro de datos). No se admite la creación de configuraciones de clústeres de cuatro, seis u ocho nodos mediante la separación de los nodos de alta disponibilidad en una WAN o a través de distancias geográficas significativas. Se admite una configuración ampliada de dos nodos con un mediador.
+El tráfico de red del clúster debe fluir a través de una red de capa 2 de baja latencia y sin enrutamiento. Debido a los requisitos de rendimiento y latencia del clúster, se espera que el clúster ONTAP Select esté ubicado físicamente cerca (por ejemplo, en un solo centro de datos con varios paquetes).  No se admite la creación de configuraciones de clúster extendido de cuatro, seis, ocho, diez o doce nodos separando los nodos HA a través de una WAN o a través de distancias geográficas significativas. Se admite una configuración extendida de dos nodos con un mediador.
 
 Para obtener más información, consulte la sección link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices["Prácticas recomendadas de alta disponibilidad (SDS de MetroCluster) extendidas de dos nodos"].
 

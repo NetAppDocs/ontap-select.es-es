@@ -63,7 +63,7 @@ Al implementar un clúster de ONTAP Select en el hipervisor, puede utilizar la f
 
 El entorno de una implantación de RAID de software debe cumplir los siguientes requisitos principales:
 
-* VMware ESXi 7,0 GA (compilación 15843807) o posterior
+* VMware ESXi 8.0 GA (compilación 20513097) o posterior
 * Licencia premium o superior de ONTAP Select
 * Solo unidades SSD locales
 * Separación de discos de sistema de la raíz y los agregados de datos
@@ -77,7 +77,7 @@ NOTE: Si hay una controladora RAID de hardware, consulte link:concept_stor_conce
 
 === Requisitos específicos de ESXi
 
-* VMware ESXi 7,0 GA (compilación 15843807) o posterior
+* VMware ESXi 8.0 GA (compilación 20513097) o posterior
 * No se admiten VMware VMotion, alta disponibilidad y DRS
 * No se puede usar RAID de software con un nodo que se haya actualizado desde ONTAP Select 9,4 o una versión anterior. Si este es el caso, debe crear un nuevo nodo para la implementación de RAID de software.
 
@@ -241,7 +241,7 @@ Es posible configurar RAID de software para usar unidades SSD NVMe. Su entorno d
 
 * ONTAP Select con una utilidad de administración Deploy compatible
 * Oferta de licencia de plataforma Premium XL o licencia de evaluación de 90 días
-* VMware ESXi versión 6.7 o posterior
+* VMware ESXi versión 8.0 o posterior
 * Dispositivos NVMe que cumplen con la especificación 1.0 o posterior
 
 

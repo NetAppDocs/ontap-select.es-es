@@ -71,10 +71,10 @@ ONTAP Select no recibe beneficios en rendimiento al aumentar el número de LUN d
 
 === Hosts VMware ESXi
 
-NetApp recomienda usar ESX 6.5 U2 o posterior y un disco NVMe para el almacén de datos que aloja los discos del sistema. Esta configuración proporciona el mejor rendimiento para la partición NVRAM.
+NetApp recomienda utilizar ESX 8.0 o posterior y un disco NVMe para el almacenamiento de datos que aloja los discos del sistema. Esta configuración proporciona el mejor rendimiento para la partición NVRAM .
 
 
-NOTE: Al instalar en ESX 6.5 U2 y versiones posteriores, ONTAP Select utiliza el controlador vNVMEe, independientemente de si el disco del sistema reside en un SSD o en un disco NVMe. Esto establece el nivel de hardware de la máquina virtual en 13, compatible con ESX 6.5 y versiones posteriores.
+NOTE: Al instalarse en ESX 8.0 o posterior, ONTAP Select utiliza el controlador vNVMEE independientemente de si el disco del sistema reside en una unidad SSD o en un disco NVMe. Esto establece el nivel de hardware de la máquina virtual en 13, compatible con ESX 8.0 y versiones posteriores.
 
 Definir configuraciones de puertos de red dedicados, ancho de banda y vSwitch para las redes de ONTAP Select y almacenamiento externo (VSAN de VMware y tráfico genérico de cabina de almacenamiento cuando se utiliza iSCSI o NFS).
 

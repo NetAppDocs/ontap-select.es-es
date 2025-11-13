@@ -34,7 +34,7 @@ El tamaño del clúster admite varias configuraciones de Ethernet.
 | Clúster de dos nodos o SDS de MetroCluster | 4 x 1 GbE o 1 x 10 GbE | 2 x 10 GbE 
 
 
-| clúster de cuatro, seis u ocho nodos | 2 x 10 GbE | 4 x 10 GbE o 2 x 25 GbE 
+| clúster de cuatro, seis, ocho, diez o doce nodos | 2 x 10 GbE | 4 x 10 GbE o 2 x 25 GbE 
 |===
 
 NOTE: No se admite la conversión entre topologías de enlace único y de enlace múltiple en un clúster en ejecución debido a la posible necesidad de convertir entre diferentes configuraciones de equipos de NIC necesarias para cada topología.

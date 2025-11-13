@@ -14,7 +14,7 @@ summary: El almacenamiento definido por el software de ONTAP Select MetroCluster
 
 
 [role="lead"]
-ONTAP Select se basa en el software de almacenamiento ONTAP para ofrecer servicios de almacenamiento empresarial con eficiencia y con una arquitectura de escalado horizontal altamente disponible y sin elementos compartidos. Se puede poner en marcha una solución con uno, dos, cuatro, seis u ocho nodos y hasta 400TB TB de capacidad bruta para almacenamiento conectado de NFS, SMB/CIFS e iSCSI/ 2 por nodo. Puede aprovechar la deduplicación y la compresión nativas para reducir los costes de almacenamiento aumentando su capacidad efectiva. La arquitectura de escalado horizontal permite una alta disponibilidad y movilidad de datos sin interrupciones con fines de equilibrio de carga o mantenimiento de hardware.
+ONTAP Select se basa en el software de almacenamiento ONTAP para ofrecer servicios de almacenamiento empresarial de forma eficiente con una arquitectura de escalamiento horizontal de alta disponibilidad y sin recursos compartidos. Puede implementar una solución con uno, dos, cuatro, seis, ocho, diez o doce nodos con hasta 400 TB de capacidad bruta para almacenamiento conectado NFS, SMB/CIFS e iSCSI por nodo. Puede aprovechar la deduplicación y la compresión nativas para reducir los costos de almacenamiento al aumentar su capacidad efectiva. La arquitectura de escalamiento horizontal permite alta disponibilidad y movilidad de datos sin interrupciones para el equilibrio de carga o el mantenimiento del hardware.
 
 
 

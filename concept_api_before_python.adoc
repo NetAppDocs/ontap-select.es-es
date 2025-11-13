@@ -16,7 +16,7 @@ summary: Debe preparar el entorno antes de ejecutar los scripts Python de ejempl
 [role="lead"]
 Debe preparar el entorno antes de ejecutar los scripts Python de ejemplo.
 
-Antes de ejecutar los scripts de Python, debe asegurarse de que el entorno está configurado correctamente:
+Antes de ejecutar los scripts de Python, debe asegurarse de que el entorno esté configurado correctamente:
 
 * Debe instalarse la última versión aplicable de python2. Los códigos de las muestras se han probado utilizando python2. También deben ser portátiles a Python3, pero no han sido probados para la compatibilidad.
 * Deben instalarse las solicitudes y las bibliotecas urllib3. Puede utilizar pip u otra herramienta de gestión Python según sea necesario para su entorno.

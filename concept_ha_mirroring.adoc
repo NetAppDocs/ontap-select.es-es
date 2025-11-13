@@ -28,7 +28,7 @@ Un clúster de dos nodos con un mediador puede abarcar dos centros de datos. Par
 
 == Agregados reflejados
 
-Un clúster de ONTAP Select se compone de entre dos y ocho nodos. Cada pareja de alta disponibilidad contiene dos copias de los datos de usuario, que se replican de forma síncrona en los nodos a través de una red IP. Este mirroring es transparente para el usuario y es una propiedad del agregado de datos, se configura automáticamente durante el proceso de creación del agregado de datos.
+Un clúster ONTAP Select está compuesto de dos a doce nodos. Cada par de alta disponibilidad (HA) contiene dos copias de los datos del usuario, replicados sincrónicamente entre los nodos a través de una red IP.  Esta duplicación es transparente para el usuario y es una propiedad del agregado de datos, que se configura automáticamente durante el proceso de creación del agregado de datos.
 
 Todos los agregados de un clúster de ONTAP Select deben duplicarse para ofrecer disponibilidad de los datos en caso de fallo en un nodo y evitar así un SPOF en caso de fallo de hardware. Los agregados de un clúster de ONTAP Select se crean a partir de los discos virtuales proporcionados desde cada nodo de la pareja de alta disponibilidad y utilizan los siguientes discos:
 

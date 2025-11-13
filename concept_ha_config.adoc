@@ -23,7 +23,7 @@ Una gran parte del mercado de SDS está basado en la noción de almacenamiento s
 
 NOTE: En un clúster ONTAP Select, la funcionalidad de replicación síncrona es una función de una implementación de alta disponibilidad, no de los motores de replicación asíncronos de SnapMirror o SnapVault. La replicación síncrona no se puede utilizar independientemente de alta disponibilidad.
 
-Existen dos modelos de puesta en marcha de alta disponibilidad de ONTAP Select: Los clústeres multinodo (cuatro, seis u ocho nodos) y los clústeres de dos nodos. La característica más destacada de un clúster ONTAP Select de dos nodos es el uso de un servicio de mediador externo para resolver situaciones de cerebro dividido. La máquina virtual de puesta en marcha de ONTAP actúa como mediador predeterminado para todas las parejas de alta disponibilidad de dos nodos que configura.
+Existen dos modelos de implementación de ONTAP Select HA: los clústeres multinodo (cuatro, seis, ocho, diez o doce nodos) y los clústeres de dos nodos. La característica principal de un clúster ONTAP Select de dos nodos es el uso de un servicio de mediación externo para resolver escenarios de cerebro dividido.  La máquina virtual ONTAP Deploy actúa como mediador predeterminado para todos los pares HA de dos nodos que configura.
 
 Las dos arquitecturas se representan en las siguientes figuras.
 
@@ -36,7 +36,7 @@ NOTE: El clúster ONTAP Select de dos nodos está compuesto por un par de alta d
 
 *Clúster ONTAP Select de cuatro nodos que utiliza almacenamiento con conexión local*image:DDHA_02.jpg["Clúster ONTAP Select de cuatro nodos mediante almacenamiento con conexión local"]
 
-* El clúster ONTAP Select de cuatro nodos se compone de dos parejas de alta disponibilidad. Los clústeres de seis y ocho nodos están compuestos por tres y cuatro parejas de alta disponibilidad, respectivamente. Dentro de cada pareja de alta disponibilidad, los agregados de datos de cada nodo de clúster se duplican de forma síncrona y, en caso de una conmutación por error, no hay pérdida de datos.
+* El clúster ONTAP Select de cuatro nodos se compone de dos pares de alta disponibilidad (HA). Los grupos de seis, ocho, diez y doce nodos están compuestos por tres, cuatro, cinco y seis pares HA, respectivamente. Dentro de cada par de HA, los agregados de datos de cada nodo del clúster se replican sincrónicamente y, en caso de conmutación por error, no se pierden datos.
 * Solo puede haber una instancia de ONTAP Select en un servidor físico cuando utiliza almacenamiento DAS. ONTAP Select requiere acceso no compartido a la controladora RAID local del sistema y está diseñada para gestionar los discos de conexión local, lo cual sería imposible sin conectividad física al sistema de almacenamiento.
 
 

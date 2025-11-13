@@ -160,7 +160,7 @@ Los sistemas FAS de NetApp vienen equipados tradicionalmente con una tarjeta PCI
 
 Los sistemas de consumo no suelen estar equipados con este tipo de equipos. Por lo tanto, la funcionalidad de esta tarjeta NVRAM se ha virtualizado y se ha colocado en una partición en el disco de arranque del sistema ONTAP Select. Es por esta razón por la cual la colocación del disco virtual del sistema de la instancia es extremadamente importante. Este es también el motivo por el que el producto requiere la presencia de un controlador RAID físico con una caché flexible para las configuraciones de almacenamiento local conectado.
 
-NVRAM se coloca en su propio VMDK. La división de la NVRAM en su propio VMDK permite que la máquina virtual de ONTAP Select utilice el controlador vNVMe para comunicarse con su VMDK de NVRAM. También requiere que ONTAP Select VM utilice la versión de hardware 13, que es compatible con ESX 6.5 y posterior.
+La NVRAM se ubica en su propio VMDK. Dividir la NVRAM en su propio VMDK permite que la VM ONTAP Select utilice el controlador vNVMe para comunicarse con su VMDK de NVRAM . También requiere que la máquina virtual ONTAP Select utilice la versión de hardware 13, que es compatible con ESX 8.0 y versiones posteriores.
 
 
 
@@ -184,4 +184,4 @@ NOTE: Aunque los bloques modificados en el VMDK de NVRAM se almacenan en caché 
 image:ST_13.jpg["Escrituras entrantes en la máquina virtual de ONTAP Select"]
 
 
-NOTE: La partición de NVRAM está separada en su propio VMDK. Ese VMDK se asocia con el controlador vNVME disponible en las versiones ESX de 6.5 o posteriores. Este cambio es más significativo en las instalaciones ONTAP Select con el software RAID, que no se benefician de la caché de la controladora RAID.
+NOTE: La partición NVRAM está separada en su propio VMDK. Este VMDK se conecta mediante el controlador vNVME disponible en las versiones ESX 8.0 o posteriores. Este cambio es especialmente significativo para las instalaciones de ONTAP Select con RAID por software, que no se benefician de la caché del controlador RAID.

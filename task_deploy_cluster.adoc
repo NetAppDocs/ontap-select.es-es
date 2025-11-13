@@ -98,7 +98,7 @@ Verifique que haya instalado la administración de Deploy y completado la config
 Se crea un clúster de ONTAP Select con uno o varios nodos para una puesta en marcha de producción.
 
 .Pasos
-Los pasos que siga dependerán de si desea crear un clúster de un solo nodo o un clúster de varios nodos. Un clúster de varios nodos puede tener dos, cuatro, seis u ocho nodos.
+Los pasos a seguir dependen de si desea crear un clúster de un solo nodo o de varios nodos. Un clúster multinodo puede tener dos, cuatro, seis, ocho, diez o doce nodos.
 
 [role="tabbed-block"]
 ====

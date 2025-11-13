@@ -118,9 +118,11 @@ A continuación, se enumeran los privilegios específicos para la biblioteca de 
 * Crear una biblioteca local
 * Eliminar elemento de la biblioteca
 * Eliminar biblioteca local
+* Descargar archivos
 * Almacenamiento de lectura
 * Actualizar archivos
 * Actualizar biblioteca
 * Actualizar elemento de la biblioteca
 * Actualizar la biblioteca local
+* Ver configuración
 

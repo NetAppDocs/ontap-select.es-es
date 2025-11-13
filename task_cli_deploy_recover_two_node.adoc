@@ -5,8 +5,11 @@ keywords: administer, administering, cli, two node cluster, recover, recovering
 summary: Si la utilidad ONTAP Select Deploy falla o no está disponible por algún motivo, se pierde la capacidad de administrar nodos y clústeres de ONTAP Select. Además, los clústeres de dos nodos pierden funcionalidad de alta disponibilidad porque el servicio mediador incluido en la puesta en marcha no está disponible. Si se produce un error irrecuperable, debe recuperar la instancia de la utilidad de instalación para restaurar la funcionalidad administrativa y de alta disponibilidad. 
 ---
 = Recupere la utilidad ONTAP Select Deploy para un clúster de dos nodos
-:hardbreaks:
 :allow-uri-read: 
+:firstname: :hardbreaks:reints
+:author: :hardbreaks:reints
+:authorinitials: :
+:authors: :hardbreaks:reints
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -211,7 +214,7 @@ Estos comandos permiten que los nodos de ONTAP Select descubran los discos de bu
 +
 [source, cli]
 ----
-disk show -container-type mediator
+disk show -container-type mediator`
 ----
 . Asigne los discos del buzón a los dos nodos:
 +
