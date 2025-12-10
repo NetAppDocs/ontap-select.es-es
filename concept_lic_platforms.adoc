@@ -165,7 +165,17 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| Soporte del hipervisor (VMware) 3+| VMware vSphere 9.0, VMware vSphere 8.0GA y actualizaciones 1 a 3, VMware vSphere 7.0GA y actualizaciones 1 a 3C. 
 
 
-2+| Soporte del hipervisor (KVM) 3+| Red Hat Enterprise Linux de 64 bits (KVM) 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6 Rocky Linux (KVM) 9.6 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6 
+2+| Soporte del hipervisor (KVM)  a| 
+Red Hat Enterprise Linux de 64 bits (KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6
+
+Rocky Linux (KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6
+
+*Nota*: Existen limitaciones en el flujo de trabajo de RAID de software para los hipervisores KVM en los hosts RHEL 10.0 y Rocky Linux 10.0. Para obtener más información, consulte los siguientes artículos de la Base de conocimientos:
+
+* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020["CDEPLOY-4020: ONTAP Select Deploy: Mensaje de advertencia al crear el clúster HWR con RHEL 10 y ROCKY 10"^]
+* link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025["CDEPLOY-4025: ONTAP Select DeployGUI: Los grupos de almacenamiento y los discos de almacenamiento no son visibles para SWR en la página de creación de clústeres en hosts con RHEL10/Rocky 10"^]
+
+
 
 
 2+| Software de gestión 3+| Suite de gestión de NetApp Active IQ Unified Manager ONTAP Select Deploy Utility SnapCenter (opcional) 
