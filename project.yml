@@ -295,8 +295,12 @@ sidebar:
         url: "/task_cli_deploy_image_remove.html"
       - title: Recupere la puesta en marcha de un clúster de dos nodos
         url: "/task_cli_deploy_recover_two_node.html"
-  - title: Ponga en marcha una instancia de evaluación de 90 días de un clúster
-    url: "/deploy-evaluation-ontap-select-ovf-template.html"
+  - title: Pruebe ONTAP Select
+    entries:
+    - title: Software de evaluación de acceso
+      url: "/access-evaluation-software.html"
+    - title: Ponga en marcha una instancia de evaluación de 90 días de un clúster
+      url: "/deploy-evaluation-ontap-select-ovf-template.html"
   - title: PREGUNTAS FRECUENTES
     url: "/reference_faq.html"
   - title: Avisos legales

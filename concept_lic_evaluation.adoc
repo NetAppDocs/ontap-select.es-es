@@ -64,7 +64,11 @@ Es posible actualizar un clúster de evaluación de ONTAP Select para usar una l
 
 Consulte link:task_adm_licenses.html["Convertir una licencia de evaluación en una licencia de producción"] si quiere más información.
 
+.¿Que sigue?
+* link:access-evaluation-software.html["Acceda al software de evaluación ONTAP Select"]
+* link:deploy-evaluation-ontap-select-ovf-template.html["Ponga en marcha una instancia de evaluación de 90 días de un clúster de ONTAP Select"]
+
+
 .Información relacionada
 * link:concept_lic_production.html["Obtenga información sobre las licencias para implementaciones de producción"]
-* link:deploy-evaluation-ontap-select-ovf-template.html["Ponga en marcha una instancia de evaluación de 90 días de un clúster de ONTAP Select"]
 
