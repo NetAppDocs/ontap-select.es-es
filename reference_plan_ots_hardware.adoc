@@ -43,13 +43,13 @@ Puede implementar ONTAP Select en hipervisores KVM y ESXi.
 --
 ONTAP Select admite las siguientes versiones de hipervisor KVM:
 
-* KVM en Red Hat Enterprise Linux (RHEL) 10.0, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6
+* KVM en Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6
 * KVM en Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6
 
 
 [NOTE]
 ====
-Existen limitaciones en el flujo de trabajo de RAID de software para los hipervisores KVM en los hosts RHEL 10.0 y Rocky Linux 10.0. Para obtener más información, consulte los siguientes artículos de la Base de conocimientos:
+Existen limitaciones de flujo de trabajo RAID por software para hipervisores KVM en hosts RHEL 10.1 y 10.0 y Rocky Linux 10.0. Para más información, consulta los siguientes artículos de la base de conocimientos:
 
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020["CDEPLOY-4020: ONTAP Select Deploy: Mensaje de advertencia al crear el clúster HWR con RHEL 10 y ROCKY 10"^]
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025["CDEPLOY-4025: ONTAP Select DeployGUI: Los grupos de almacenamiento y los discos de almacenamiento no son visibles para SWR en la página de creación de clústeres en hosts con RHEL10/Rocky 10"^]
