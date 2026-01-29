@@ -20,7 +20,7 @@ A continuación, se presentan las restricciones aplicables cuando se utiliza el 
 Todos los nodos dentro de un único clúster de ONTAP Select deben usar el mismo modelo de licencia, niveles de capacidad o pools de capacidad. No se pueden mezclar los tipos de licencias para los nodos en un único clúster.
 
 .Todos los nodos de un clúster utilizan la misma instancia de License Manager
-Todos los nodos con una licencia Capacity Pool en un clúster de ONTAP Select deben usar la misma instancia de Administrador de licencias. Debido a que hay una instancia de License Manager dentro de cada instancia de despliegue, esta restricción es una reafirmación del requisito existente de que todos los nodos de un clúster deben ser administrados por la misma instancia de despliegue.
+Todos los nodos con una licencia de Capacity Pool en un clúster ONTAP Select deben usar la misma instancia de License Manager. Porque hay una instancia de License Manager dentro de cada instancia de Deploy, esta restricción es una reafirmación del requisito existente de que la misma instancia de Deploy debe gestionar todos los nodos en un clúster.
 
 .Un pool de capacidad por nodo
 Cada nodo puede arrendar almacenamiento desde exactamente un Pool de capacidad. Un nodo no puede usar dos o más pools.

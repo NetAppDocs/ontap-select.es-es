@@ -22,7 +22,7 @@ Cuando se usa el modelo de licencias de pools de capacidad en lugar del modelo d
 
 Cuando se usa la licencia Capacity Tiers, se asigna una capacidad de almacenamiento fija a cada nodo. Cualquier espacio no utilizado no se puede compartir con los otros nodos y se desperdicia, en la práctica. Con la gestión de licencias de pools de capacidad, cada nodo solo consume la capacidad que necesita en función del tamaño de los agregados de datos.
 
-Dado que la capacidad está anclada en un pool central, puede compartirse entre muchos nodos de la organización.
+La capacidad se ancla en un pool central donde puede compartirse entre muchos nodos de tu organización.
 
 
 

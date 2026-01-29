@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: sizing-capacity-pool-license.html 
+keywords: license, licensing, Capacity Tiers, usable, space 
+summary: La licencia Capacity Tiers se basa en la capacidad de disco subyacente gestionada por cada nodo y no en la capacidad utilizable del nodo, HA-pair o clúster. Cada licencia Capacity Tiers se asigna a un número de serie de nodo individual para una capacidad especificada y requiere un contrato de soporte adjunto. 
+---
+= Consideraciones para dimensionar una licencia de ONTAP Select Capacity Pools
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La capacidad autorizada para una licencia de Capacity Pool está en cantidades completas de TiB, con un mínimo de 2 TiB. Calculas la capacidad autorizada multiplicando la cantidad de espacio utilizable por el factor de sobrecarga. El factor de sobrecarga difiere entre un clúster de un solo nodo y un clúster multinodo (basado en pares de HA):
+
+* El factor de sobrecarga para clústeres de un solo nodo es 1,13
+* El factor de sobrecarga para clústeres multinodo es 2.67
+
+
+Necesitas calcular la capacidad bajo licencia en función del espacio utilizable para asegurarte de que tienes suficiente para tu implementación.
+
+[cols="25,30,45"]
+|===
+| Descripción | Clúster de un solo nodo | Par de HA o mezcla de HA y clúster de un solo nodo 
+
+
+| Espacio utilizable | 20 TiB | 10 TiB por clúster de un solo nodo 20 TiB por par de HA 
+
+
+| Espacio licenciado | 23 TiB (20 x 1,13 = 22,6, redondea al siguiente TiB completo) | 54 TiB (20 x 2,67 = 53,4, redondea al siguiente TiB completo) 
+
+
+| Espacio máximo utilizable por nodo *Nota*: El espacio máximo gestionado por nodo o par de HA es de 400 TiB | 353 TiB (400 / 1.13)  a| 
+Por clúster de un solo nodo:
+
+74 TiB [(400 / 2) / 2.67]
+
+Por clúster de par de HA:
+
+148 TiB (2 x 74)
+
+|===
+.Qué sigue
+link:task_lic_acquire_cp.html["Adquiere una licencia de Capacity Pools para ONTAP Select"]

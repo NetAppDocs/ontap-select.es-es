@@ -4,7 +4,7 @@ permalink: concept_lic_production.html
 keywords: license, licensing, production, purchased, standard, premium, premium xl 
 summary: Después de determinar que ONTAP Select es adecuado para su organización, puede adquirir las licencias necesarias para respaldar una puesta en marcha de producción. Debe elegir el modelo de licencia de niveles de capacidad o pools de capacidad, así como la capacidad de almacenamiento para cada puesta en marcha. 
 ---
-= ONTAP Select adquirió licencias para instalaciones de producción
+= Conoce las licencias adquiridas de ONTAP Select para implementaciones de producción
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,22 +14,20 @@ summary: Después de determinar que ONTAP Select es adecuado para su organizaci�
 
 
 [role="lead"]
-Después de determinar que ONTAP Select es adecuado para su organización, puede adquirir las licencias necesarias para respaldar una puesta en marcha de producción. Debe elegir el modelo de licencia de niveles de capacidad o pools de capacidad, así como la capacidad de almacenamiento para cada puesta en marcha.
+Después de determinar que ONTAP Select es adecuado para tu organización, puedes adquirir las licencias necesarias para soportar un despliegue de producción. Debes elegir el modelo de licencia Capacity Pools o Capacity Tiers, así como la capacidad de almacenamiento para cada despliegue.
 
 
 
 == Características comunes de las licencias
 
-Los modelos de licencia _Capacity Tiers_ y _Capacity Pools_ son muy diferentes en varios aspectos. Sin embargo, los dos modelos de licencia comparten varias características comunes, entre las que se incluyen:
+Los modelos de licencia _Capacity Pools_ y _Capacity Tiers_ son muy diferentes en varios aspectos. Sin embargo, los dos modelos de licencia comparten varias características, incluyendo:
 
 * Debe comprar una o más licencias según sea necesario al implementar ONTAP Select en un entorno de producción.
 * La capacidad de almacenamiento de una licencia se asigna en incrementos de 1 TB.
-* La capacidad de almacenamiento identifica la capacidad bruta y corresponde al tamaño total permitido de los discos de datos disponibles para la máquina virtual ONTAP Select.
-* Todas las ofertas de licencias de plataformas son compatibles (estándar, premium, premium XL).
+* Se admiten todas las ofertas de licencias de plataforma (standard, premium y premium XL).
 * Debe ponerse en contacto con su equipo de cuentas o partner de NetApp para obtener ayuda cuando sea necesario para adquirir las licencias necesarias.
 * Debe cargar los archivos de licencia en la utilidad de administración de despliegue, que a continuación aplica las licencias basadas en el modelo de licencia.
 * Tras instalar y aplicar una licencia, puede añadir capacidad adicional poniéndose en contacto con su equipo de cuentas de NetApp o partner para obtener una licencia actualizada.
-* Los dos nodos de una pareja de ha deben tener la misma capacidad de almacenamiento y licencias.
 * Un nodo ONTAP Select que se implementa inicialmente con una licencia adquirida no puede convertirse en una licencia de evaluación.
 
 
@@ -42,8 +40,10 @@ El modelo de licencia de niveles de capacidad posee varias características úni
 * Debe comprar una licencia para cada nodo de ONTAP Select.
 * La cantidad mínima que puede comprar es de 1 TB.
 * Cada licencia de nivel de capacidad tiene una capacidad de almacenamiento y se bloquea en un nodo específico.
+* La capacidad de almacenamiento identifica la capacidad bruta y corresponde al tamaño total permitido de los discos de datos disponibles para la máquina virtual ONTAP Select.
 * NetApp genera un número de serie de licencia de nueve dígitos para cada nodo ONTAP Select.
-* El almacenamiento asignado a un nodo es perpetuo (sin necesidad de renovación).
+* El almacenamiento asignado a un nodo es perpetuo (no requiere renovación), pero tienes que renovar el contrato de soporte asociado a la licencia.
+* Cada nodo ONTAP Select en un par de alta disponibilidad (HA) requiere una licencia que sea al menos tan grande como el almacenamiento en bruto conectado al nodo.
 * El número de serie del nodo es de nueve dígitos y el mismo número de serie de la licencia.
 * Puede aplicar el archivo de licencia durante la implementación del clúster o dentro de los 30 días siguientes a la creación de un clúster.
 
@@ -56,11 +56,16 @@ Existen varias características únicas para el modelo de licencias de pools de 
 
 * Debe comprar una licencia para cada pool de capacidad compartida.
 * La cantidad mínima que puede adquirir es de 2 TB.
-* Cada licencia de Capacity Pool tiene una capacidad de almacenamiento y se bloquea a una instancia específica de License Manager.
+* Cada licencia de Capacity Pool tiene una capacidad de almacenamiento y está bloqueada a una instancia específica de License Manager dentro de una utilidad de administración de Deploy.
+* La capacidad de almacenamiento identifica la capacidad bruta y corresponde al tamaño total permitido de los agregados de datos que puedes crear en la máquina virtual ONTAP Select.
 * NetApp genera un número de serie de licencia de nueve dígitos para cada pool de capacidad.
 * El almacenamiento asignado a un pool de capacidad es válido solo para un tiempo específico según la compra (se requiere renovación).
-* El número de serie del nodo es veinte dígitos y el administrador de licencias lo genera según el número de serie de la licencia de Capacity Pool.
+* El License Manager genera un número de serie de nodo de veinte dígitos basado en el número de serie de la licencia de Capacity Pool.
+* Todos los nodos ONTAP Select de un clúster comparten la misma capacidad de licencia. Esto significa que la licencia debe ser lo suficientemente grande para cubrir el almacenamiento asignado a todos los nodos del clúster.
 * Cada nodo alquila automáticamente capacidad de almacenamiento para sus agregados de datos locales desde un pool de capacidad compartida.
 
 
-Para obtener más información sobre el modelo de licencias de pools de capacidad, consulte el modelo de licencias _Capacity Pools_ para obtener más información.
+.¿Que sigue?
+* link:concept_lic_platforms.html["Obtenga más información sobre las ofertas de licencias de la plataforma para ONTAP Select"]
+* link:concept_lic_cp_operation.html["Conoce más sobre el modelo de licencia de ONTAP Select Capacity Pools"]
+

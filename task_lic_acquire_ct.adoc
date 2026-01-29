@@ -17,23 +17,26 @@ summary: Cuando se usa la licencia Capacity Tiers, es necesario adquirir un arch
 Cuando se usa la licencia Capacity Tiers, es necesario adquirir un archivo de licencia para cada nodo de ONTAP Select. El archivo de licencia define la capacidad de almacenamiento del nodo y se bloquea en el nodo a través del número de serie único de nueve dígitos que asigna NetApp.
 
 .Antes de empezar
-Debe tener el número de serie de licencia de nueve dígitos que asigna NetApp al nodo. Antes de intentar adquirir un archivo de licencia, debe esperar al menos veinte cuatro horas después de la fecha de envío de su orden de compra.
+* Debes tener el número de serie de licencia de nueve dígitos asignado al nodo ONTAP Select por NetApp.
+* Deberías esperar al menos 24 horas después de la fecha de envío de tu orden de compra antes de adquirir un archivo de licencia.
+* Has revisado la link:sizing-capacity-tier-license.html["consideraciones para dimensionar una licencia Capacity Tiers"].
+
 
 .Acerca de esta tarea
-Debe realizar esta tarea en cada nodo ONTAP Select que requiera una licencia de nivel de capacidad.
+Debes realizar esta tarea para cada nodo ONTAP Select que requiera una licencia de Capacity Tiers.
 
 .Pasos
-. Acceda al sitio de licencias de ONTAP Select mediante un explorador web:
-+
-`https://register.netapp.com/register/getlicensefile`
-
+. link:https://register.netapp.com/register/getlicensefile["Accede al sitio de licencias de ONTAP Select"^].
 . Inicie sesión con sus credenciales de cuenta de NetApp.
 . En la página *Generador de licencias*, seleccione la oferta de licencia deseada en el cuadro desplegable.
-. Rellene los campos restantes de la misma página, incluido el *número de serie del producto*, que es el número de serie del nodo ONTAP Select.
-. Haga clic en *Enviar*.
+. Rellena los campos restantes en la página *License Generator*, incluido el *Product Serial #*.
++
+El "product serial #" es el número de serie del nodo ONTAP Select.
+
+. Seleccione *Enviar*.
 . Después de validar la solicitud, seleccione el método de entrega de la licencia.
 +
-Puede hacer clic en *Licencia de descarga* o *Licencia de correo electrónico*.
+Puedes seleccionar *Descargar licencia* o *Enviar licencia por correo electrónico*.
 
 . Confirme que ha recibido el archivo de licencia según el método de entrega seleccionado.
 

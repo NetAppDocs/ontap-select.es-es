@@ -88,32 +88,42 @@ sidebar:
     entries:
     - title: Opciones
       entries:
-      - title: Licencias de evaluación
+      - title: Conoce las licencias de evaluación
         url: "/concept_lic_evaluation.html"
       - title: Licencias de producción
-        url: "/concept_lic_production.html"
-      - title: Ofertas de licencias de plataformas
-        url: "/concept_lic_platforms.html"
-    - title: Modelo de gestión de licencias de pools de capacidad
-      entries:
-      - title: Detalles operativos
-        url: "/concept_lic_cp_operation.html"
-      - title: Números de serie de los nodos
-        url: "/concept_lic_cp_serial_number.html"
-      - title: Restricciones
-        url: "/concept_lic_cp_restrictions.html"
-      - title: Pools de capacidad frente a niveles de capacidad
-        url: "/concept_lic_cp_compare_ct.html"
-      - title: Resumen de beneficios
-        url: "/concept_lic_cp_benefits.html"
-    - title: Compra
+        entries:
+        - title: Conoce las licencias de producción
+          url: "/concept_lic_production.html"
+        - title: Ofertas de licencias de plataformas
+          url: "/concept_lic_platforms.html"
+        - title: Modelo de gestión de licencias de pools de capacidad
+          entries:
+          - title: Detalles operativos
+            url: "/concept_lic_cp_operation.html"
+          - title: Números de serie de los nodos
+            url: "/concept_lic_cp_serial_number.html"
+          - title: Restricciones
+            url: "/concept_lic_cp_restrictions.html"
+          - title: Resumen de beneficios
+            url: "/concept_lic_cp_benefits.html"
+        - title: Niveles de capacidad versus pools de capacidad
+          url: "/concept_lic_cp_compare_ct.html"
+    - title: Compra una licencia
       entries:
       - title: Flujo de trabajo de licencias
         url: "/concept_lic_workflow.html"
       - title: Niveles de capacidad
-        url: "/task_lic_acquire_ct.html"
+        entries:
+        - title: Consideraciones para dimensionar una licencia
+          url: "/sizing-capacity-tier-license.html"
+        - title: Adquiere una licencia
+          url: "/task_lic_acquire_ct.html"
       - title: Pools de capacidad
-        url: "/task_lic_acquire_cp.html"
+        entries:
+        - title: Consideraciones para dimensionar una licencia
+          url: "/sizing-capacity-pool-license.html"
+        - title: Adquiere una licencia
+          url: "/task_lic_acquire_cp.html"
     - title: Funciones de ONTAP
       url: "/reference_lic_ontap_features.html"
   - title: Instale

@@ -71,7 +71,7 @@ NOTE: Las máquinas virtuales basadas en kernel (KVM) no admiten el tipo de inst
 
 == Compare el soporte de hardware para las ofertas de licencias de plataforma
 
-Las ofertas de licencias estándar, premium y premium XL son compatibles con una amplia gama de hardware y software. Para obtener información actualizada sobre las versiones de hardware y software, consulte la link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^].
+Las ofertas de licencias estándar, premium y premium XL son compatibles con una amplia gama de hardware y software. Para información actual sobre las versiones de hardware y software, consulta la link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^].
 
 [role="tabbed-block"]
 ====
@@ -182,6 +182,5 @@ Rocky Linux (KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6
 |===
 --
 ====
-.Información relacionada
-* link:concept_lic_production.html["Obtenga más información sobre los tipos de licencia de Capacity Tiering y Capacity Pool"]
-
+.¿Que sigue?
+link:concept_lic_workflow.html["Conoce cómo comprar una licencia de ONTAP Select"]

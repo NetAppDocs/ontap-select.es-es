@@ -33,10 +33,22 @@ El Administrador de licencias se ejecuta como un proceso independiente dentro de
 
 El almacenamiento asignado para cada agregado de datos en un nodo utilizando una licencia de Capacity Pool debe tener una concesión asociada. El nodo solicita una concesión de almacenamiento y si la capacidad está disponible, License Manager responde con una concesión. Cada concesión tiene los siguientes atributos explícitos o implícitos:
 
-* License Manager cada nodo ONTAP Select está asociado con una instancia de License Manager
-* Cada nodo de ONTAP Select está asociado con un pool de capacidad
-* Asignación del almacenamiento se asigna Un valor de capacidad específico en el arrendamiento
-* La fecha de caducidad y las concesiones de tiempo tienen una duración de entre una hora y siete días, según la configuración del usuario.
+* Administrador de licencias
++
+Cada nodo ONTAP Select está asociado a una instancia de License Manager
+
+* Pool de capacidad
++
+Cada nodo ONTAP Select está asociado con un grupo de capacidad
+
+* Asignación de almacenamiento
++
+Se asigna un valor de capacidad específico en el contrato de arrendamiento
+
+* Fecha y hora de caducidad
++
+Los arrendamientos tienen una duración de entre una hora y siete días dependiendo de la configuración de usuario.
+
 
 
 
@@ -47,15 +59,20 @@ Cada instancia del Administrador de licencias y, por lo tanto, cada instancia co
 
 Puede determinar el ID de bloqueo de licencia para la instancia de implementación mediante la interfaz de usuario web de las siguientes formas:
 
-* Página «primeros pasos» esta página se muestra cuando inicia sesión por primera vez en Deploy. También puede mostrar la página haciendo clic en el cuadro desplegable de la parte superior derecha de la página y seleccionando primeros pasos. El LLID se muestra en la sección Add Licenses.
-* Administración haga clic en la ficha *Administración* a la parte superior de la página y, a continuación, haga clic en *sistemas* y *Configuración*.
+* Página de introducción
++
+Deploy muestra esta página cuando inicias sesión por primera vez. También puedes abrir el cuadro desplegable en la parte superior derecha de la página y seleccionar *Getting Started* para mostrar esta página. El LLID aparece en la sección Add Licenses.
+
++
+Selecciona la pestaña *Administración* en la parte superior de la página, luego selecciona *Sistemas* y *Configuración*.
+
 
 
 
 
 == Operaciones de arrendamiento básicas
 
-Un nodo ONTAP Select debe localizar o solicitar un arrendamiento de capacidad válido cada vez que se crea, se expande o se modifica un agregado de datos. Se puede utilizar un arrendamiento obtenido de una solicitud anterior que aún sea válido o se puede solicitar un nuevo arrendamiento, si fuera necesario. El nodo ONTAP Select realiza los siguientes pasos para localizar un arrendamiento de Pool de capacidad:
+Un nodo ONTAP Select debe localizar o solicitar un contrato de capacidad válido cada vez que se crea, amplía o modifica un agregado de datos. Puedes usar un contrato obtenido de una solicitud anterior que todavía sea válido, o puedes solicitar uno nuevo si lo necesitas. El nodo ONTAP Select realiza los siguientes pasos para localizar un contrato de un grupo de capacidad:
 
 . Si hay una concesión existente en el nodo, se usa siempre que sean ciertas siguientes:
 +
