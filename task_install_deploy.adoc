@@ -26,16 +26,14 @@ Descargue el paquete ONTAP Select del sitio de soporte de NetApp .
 https://mysupport.netapp.com/site/user/registration["Tiene una cuenta registrada en la página de soporte de NetApp"^].
 
 .Acerca de esta tarea
-La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar de formato de virtualización abierta (OVF). El archivo comprimido único tiene el sufijo `ova`. La máquina virtual proporciona las imágenes de instalación y servidor de puesta en marcha para los nodos de ONTAP Select.
+La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar Open Virtualization Format (OVF). El archivo comprimido único tiene el sufijo `OVA` para hosts ESXi y `TGZ` para hosts KVM. La VM proporciona el servidor Deploy y las imágenes de instalación para los nodos ONTAP Select.
 
 .Pasos
-. Acceda a link:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] mediante un navegador web e iniciar sesión.
-. Seleccione *Descargas* en el menú y, a continuación, seleccione *Descargas* en el menú desplegable.
-. En la página Descargas, en Todos los productos A-Z, seleccione la letra *O*.
-. Desplácese hacia abajo y seleccione *ONTAP Select*.
-. Seleccione la versión deseada del paquete.
+. Accede a la página link:https://mysupport.netapp.com/site/downloads/["NetApp Support Site descargas"^].
+. Desplázate hacia abajo y selecciona *ONTAP Select Deploy*.
+. Selecciona la versión de ONTAP Select que quieras.
 . Revise el Contrato de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.
-. Seleccione y descargue el paquete adecuado, respondiendo a todas las solicitudes según sea necesario.
+. Selecciona y descarga el paquete *ONTAP Select Deploy Install* adecuado. Responde a todas las preguntas según sea necesario.
 
 
 
@@ -52,7 +50,7 @@ Compruebe que el sistema cumple los siguientes requisitos:
 
 
 .Pasos
-. Obtenga los siguientes archivos de la página de descarga del producto en el sitio de soporte de NetApp:
+. Obtén los siguientes archivos de la página de descarga del producto en el sitio de soporte de NetApp:
 +
 [cols="2*"]
 |===
@@ -74,9 +72,9 @@ Compruebe que el sistema cumple los siguientes requisitos:
 | `ONTAPdeploy.ova.sig` | El algoritmo SHA-256 es hash y luego firmado por el agente de soporte remoto (RSA) mediante el `csc-prod` clave y firma para el instalador. 
 |===
 . Compruebe que el `ONTAPdeploy.ova.sig` el archivo utiliza los certificados y los comandos de validación asociados.
-. Verifique la firma con el siguiente comando:
+. Verifica la firma:
 +
-[listing]
+[source, cli]
 ----
 openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
 ----
@@ -117,14 +115,14 @@ Los pasos que siga dependerán de si utiliza un hipervisor ESXi o KVM.
 --
 . Acceda al cliente vSphere e inicie sesión.
 . Desplácese hasta la ubicación adecuada de la jerarquía y seleccione *implementar plantilla OVF*.
-. Seleccione el archivo OVA y complete el asistente implementar plantilla OVF, seleccionando las opciones que correspondan a su entorno.
+. Selecciona el archivo OVA y completa el asistente de despliegue de plantillas OVF. Selecciona las opciones que sean adecuadas para tu entorno.
 +
 Debe definir la contraseña de la cuenta de administrador. Debe proporcionar esta contraseña al iniciar sesión en la utilidad de implementación.
 
 . Una vez implementada la máquina virtual, seleccione la nueva máquina virtual. Si aún no está encendido según la entrada que haya introducido en el asistente de implementación, enciéndalo manualmente.
 . Si es necesario, puede configurar la red de despliegue mediante la consola de VM:
 +
-.. Haga clic en la ficha *Console* para acceder al shell de configuración del host ESXi y supervisar el proceso de encendido.
+.. Selecciona la pestaña *Consola* para acceder al shell de configuración del host ESXi y monitorear el proceso de encendido.
 .. Espere hasta que aparezca el siguiente símbolo del sistema:
 +
 Nombre de host:
@@ -140,7 +138,7 @@ Introduzca una contraseña para el usuario administrador:
 ¿Usar DHCP para establecer la información de red? [n]:
 
 .. Escriba *n* para definir una configuración IP estática o *y* para usar el DHCP, y seleccione *Intro*.
-.. Si selecciona una configuración estática, proporcione toda la información de configuración de red según sea necesario.
+.. Si eliges una configuración estática, proporciona toda la información de configuración de red necesaria.
 
 
 
@@ -202,7 +200,7 @@ Use DHCP to set networking information? [n]:
 
 == Paso 4: Sign in en la interfaz web de implementación
 
-Sign in en la interfaz de usuario web para confirmar que la utilidad de implementación esté disponible y realizar la configuración inicial.
+Sign in en la interfaz de usuario web para confirmar que la utilidad Deploy está disponible y realizar la configuración inicial.
 
 .Pasos
 . Dirija su navegador a la utilidad de implementación mediante la dirección IP o el nombre de dominio:
@@ -211,7 +209,7 @@ Sign in en la interfaz de usuario web para confirmar que la utilidad de implemen
 
 . Proporcione el nombre de la cuenta y la contraseña del administrador (admin) e inicie sesión.
 . Si aparece la ventana emergente *Bienvenido a ONTAP Select*, revise los requisitos previos y seleccione *Aceptar* para continuar.
-. Si es la primera vez que inicia sesión y no instaló la puesta en marcha con el asistente disponible en vCenter, proporcione la siguiente información de configuración cuando se le solicite:
+. Si es la primera vez que inicia sesión y no instaló la implementación mediante el asistente disponible con vCenter, proporcione la siguiente información de configuración cuando se le solicite:
 +
 ** Nueva contraseña para la cuenta de administrador (obligatorio)
 ** AutoSupport (opcional)
@@ -220,7 +218,10 @@ Sign in en la interfaz de usuario web para confirmar que la utilidad de implemen
 
 
 
+.¿Qué sigue?
+link:task_deploy_cluster.html["Ponga en marcha un clúster de ONTAP Select"]
+
 .Información relacionada
-* link:task_cli_signing_in.html["Inicie sesión para implementar con SSH"]
-* link:deploy-evaluation-ontap-select-ovf-template.html["Ponga en marcha una instancia de evaluación de 90 días de un clúster de ONTAP Select"]
+* link:task_cli_signing_in.html["Conoce cómo hacer Sign in en Deploy usando SSH"]
+* link:deploy-evaluation-ontap-select-ovf-template.html["Conoce cómo desplegar una instancia de evaluación de 90 días de un clúster de ONTAP Select"]
 

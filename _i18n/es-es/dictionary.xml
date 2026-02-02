@@ -257,11 +257,6 @@
   <block id="30cf2dd94fe579c8d10145706d2803f2" category="admonition">No se puede usar la utilidad de administración de implementación para realizar actualizaciones de los nodos ONTAP Select existentes. La utilidad de implementación solo se puede usar para crear clústeres de ONTAP Select nuevos.</block>
   <block id="debe5df850e1b90f9e0e1e836af7a573" category="section-title">Procedimiento general</block>
   <block id="6faefe32fa9943fbdd41223aa8a6c274" category="paragraph">En un nivel superior, debe seguir los siguientes pasos para actualizar un nodo ONTAP Select existente.</block>
-  <block id="e105a9c27bf2d9ddd5067b411d434cd6" category="list-text">Desplácese hasta la página de descargas en el sitio de soporte de NetApp.</block>
-  <block id="68f9ff06ec00760816a8852081d652a9" category="inline-link">Descargas de soporte de NetApp</block>
-  <block id="332fd48f854bf692aea555e091e1b3cc" category="paragraph"><block ref="332fd48f854bf692aea555e091e1b3cc" category="inline-link-rx"></block></block>
-  <block id="eea1cec828c419810e082867558ec301" category="list-text">Haga clic en *actualización de nodo ONTAP Select*.</block>
-  <block id="a864f71b844955db4e27746202712f1b" category="list-text">Seleccione y descargue la imagen de actualización adecuada respondiendo a todos los avisos según sea necesario.</block>
   <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link">Documentación de ONTAP 9</block>
   <block id="a451fb0a81dc4fb9e6df8ff3f0cd6380" category="summary">Puede poner en marcha ONTAP Select en un entorno de oficina remota/sucursal (robo, por sus siglas en inglés). Como parte de la planificación de una puesta en marcha de oficinas remotas y sucursales, debe seleccionar la configuración que respalda sus objetivos.</block>
   <block id="1cfe009dafaa293a83a8a143e8aeb868" category="paragraph">Hay dos configuraciones principales disponibles cuando se pone en marcha ONTAP Select en un entorno de oficinas remotas y sucursales.</block>
@@ -885,8 +880,6 @@
   <block id="fabd320b3b2249377e53e93099e27657" category="list-text">Switch virtual</block>
   <block id="a10008cea0defb4e67624bfd88feafb7" category="list-text">El software de switch virtual dentro del entorno de hipervisor, ya sea vSwitch (VMware) o Open vSwitch (KVM), une los puertos expuestos por la máquina virtual con los puertos NIC Ethernet físicos. Debe configurar un vSwitch para cada host ONTAP Select, según proceda a su entorno.</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">Debe instalar la utilidad de administración de implementación de ONTAP Select y utilizar la utilidad para crear un clúster de ONTAP Select.</block>
-  <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">Seleccione la versión deseada del paquete.</block>
-  <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">Seleccione y descargue el paquete adecuado, respondiendo a todas las solicitudes según sea necesario.</block>
   <block id="780f7110b279a0cc42242a48431ab5bd" category="list-text">Active la funcionalidad OVF en su explorador instalando el complemento de integración de clientes de VMware o realizando una configuración similar según sea necesario</block>
   <block id="a361c1b4cc67946dba724c8e11e34b6c" category="list-text">Dirección IP de la máquina virtual de implementación</block>
   <block id="536f68587c52377d3e98807b214c5de8" category="list-text">Máscara de red</block>
@@ -896,9 +889,7 @@
   <block id="44bd913515358cfa80f997ed9a93595a" category="list-text">Dominios de búsqueda DNS</block>
   <block id="33df7e8f977ae61500cd225ae6453cd6" category="list-text">Acceda al cliente vSphere e inicie sesión.</block>
   <block id="c7b5afc9e76543d6c823b8732fde22cc" category="list-text">Desplácese hasta la ubicación adecuada de la jerarquía y seleccione *implementar plantilla OVF*.</block>
-  <block id="3186b86d87a207cefd5620929256fbd0" category="list-text">Seleccione el archivo OVA y complete el asistente implementar plantilla OVF, seleccionando las opciones que correspondan a su entorno.</block>
   <block id="c400d3339e8bc65ccc2657e3aee763be" category="paragraph">Debe definir la contraseña de la cuenta de administrador. Debe proporcionar esta contraseña al iniciar sesión en la utilidad de implementación.</block>
-  <block id="1d7370ec51f294f5948f3cc2550b812a" category="list-text">Haga clic en la ficha *Console* para acceder al shell de configuración del host ESXi y supervisar el proceso de encendido.</block>
   <block id="4b6e5972b38c860adc515c05d7100df8" category="list-text">Espere hasta que aparezca el siguiente símbolo del sistema:</block>
   <block id="08dc93d24cbfbbfd880b1bb1ccc94728" category="paragraph">Nombre de host:</block>
   <block id="be35756ada0a94e987f82992b890a61a" category="list-text">Escriba el nombre del host y pulse *Intro*.</block>
@@ -1591,8 +1582,6 @@
   <block id="98f770b0af18ca763421bac22b4b6805" category="paragraph-title">Funciones</block>
   <block id="d5daa4c0e0a3988a633eb5273b984697" category="paragraph">Todas las funciones están sujetas a licencia y están disponibles. Tanto SnapLock como FabricPool requieren licencias independientes.</block>
   <block id="c9732055d20960435002cec722852b3e" category="summary">Puede actualizar una máquina virtual de la utilidad de implementación existente en su sitio mediante la interfaz de línea de comandos.</block>
-  <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">Seleccione la versión deseada del paquete de actualización.</block>
-  <block id="def8f653fff47640d3bcce40244c6331" category="list-text">Seleccione y descargue el paquete adecuado, respondiendo a todos los avisos según sea necesario para su entorno.</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">En esta tarea se describe un método para cargar el archivo en la máquina virtual de implementación. Es posible que haya otras opciones más adecuadas para su entorno.</block>
   <block id="4d31142bb7c8f427942e83be227bb1f0" category="paragraph">El archivo de actualización se almacena en el directorio inicial del usuario administrador.</block>
   <block id="ddd583d223b6cdfc7284a7d618756d41" category="list-text">Realice la actualización con la ruta y el nombre de archivo del directorio adecuados:</block>
@@ -1638,12 +1627,10 @@
   <block id="c6fdf62cd5d566315189e3fc6458c3d7" category="list-text">Sitio Web de licencias</block>
   <block id="d981b46179e3f91d5fe1f32dd9134fff" category="inline-image-macro">Describe el proceso utilizado para adquirir e instalar una licencia de almacenamiento para una implementación de ONTAP Select de producción.</block>
   <block id="87f55f3b9d86ff28fa332ac74ae68458" category="paragraph"><block ref="87f55f3b9d86ff28fa332ac74ae68458" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6738f098cd2bba79a1109b07a6b3a4e3" category="summary">Puede agregar una imagen ONTAP Select a la instancia de la utilidad de administración de implementación. Después de instalar la imagen, puede usarla cuando se implementa un clúster de ONTAP Select.</block>
   <block id="ff2a9bd49048e73baaf69d5e3097f161" category="paragraph">Antes de agregar cualquier imagen ONTAP Select nueva para implementar, primero debe quitar todas las imágenes innecesarias.</block>
   <block id="7e0a8cfbb81693d645b2e510efe248df" category="admonition">Sólo debe agregar una imagen ONTAP Select con una versión anterior a la versión original incluida con la instancia de la utilidad de implementación. No se admite la adición de versiones posteriores de ONTAP Select a medida que están disponibles en NetApp.</block>
   <block id="807ad9e65833a6b39b8d8286e8b783f8" category="paragraph">Para iniciar el proceso de adición de una imagen de ONTAP Select a una instancia de la utilidad de implementación, debe descargar la imagen de instalación del sitio de soporte de NetApp. La imagen de instalación de ONTAP Select tiene el formato de archivo comprimido único.</block>
   <block id="219698a1df9fbd3c16f4a498102fbc3e" category="paragraph">Después de adquirir la imagen de instalación de ONTAP Select, deberá cargar el archivo en la máquina virtual de implementación.</block>
-  <block id="2a5d9f3f5564baf37e1d1a8cf1a3b68c" category="paragraph">Debe tener el archivo de imagen de instalación disponible en la estación de trabajo local. También debe tener la contraseña para la cuenta de usuario de administrador de despliegue.</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">Paso</block>
   <block id="1c654c4358e2d4003c74f40926274452" category="paragraph">El archivo de instalación del nodo se almacena en el directorio inicial del usuario administrador.</block>
   <block id="1c6a034b63f5d95f8ce563a77103fb05" category="paragraph">Debe saber en qué directorio se ha colocado el archivo de imagen de instalación en la máquina virtual de la utilidad de implementación. Se supone que el archivo está en el directorio principal del administrador.</block>
@@ -2484,7 +2471,6 @@
   <block id="cfa6562e428e1a648631dac061567897" category="paragraph">Compruebe que el sistema cumple los siguientes requisitos:</block>
   <block id="80c9c2739b6086de81c8ec7262f87af8" category="list-text">OpenSSL versiones 1.0.2 a 3,0 para la verificación básica</block>
   <block id="03018e3ee63fad9b70308ee5184022f9" category="list-text">Acceso público a Internet para la verificación del protocolo de estado de certificado en línea (OCSP)</block>
-  <block id="940949e444a7d7ca33644736f8b10bcd" category="list-text">Obtenga los siguientes archivos de la página de descarga del producto en el sitio de soporte de NetApp:</block>
   <block id="0b27918290ff5323bea1e3b78a9cf04e" category="cell">Archivo</block>
   <block id="249111a1c7f415853c625e0755631d11" category="cell"><block ref="008c7b6d630fe84ef2d584c45f088cb2" prefix="" category="inline-code"></block></block>
   <block id="e4069d9d0927b15ac9a4b5a57f151285" category="cell">Clave pública utilizada para verificar la firma.</block>
@@ -2496,7 +2482,6 @@
   <block id="4e4e408ba11d90a1648acdc6230e66d0" category="cell"><block ref="20db26963ac3dc0b119aa4c781855701" prefix="" category="inline-code"></block></block>
   <block id="51efe37fbdc37f9d0c55c657a430d296" category="cell">El algoritmo SHA-256 es hash y luego firmado por el agente de soporte remoto (RSA) mediante el<block ref="b6ad60ee94a07b2ba8c24c883ec70503" prefix=" " category="inline-code"></block> clave y firma para el instalador.</block>
   <block id="1f463ad70f232a0c4114c51cb2a44a5a" category="list-text">Compruebe que el<block ref="20db26963ac3dc0b119aa4c781855701" prefix=" " category="inline-code"></block> el archivo utiliza los certificados y los comandos de validación asociados.</block>
-  <block id="134cfba28fd247854afe7ce4d31767ad" category="list-text">Verifique la firma con el siguiente comando:</block>
   <block id="db05ec33127afb72e99fdef2dd7e222b" category="section-title">Configure MFA</block>
   <block id="aef6d7448e31d21fcd5e57734fa1fb88" category="paragraph">A partir de la versión 9.13.1 de ONTAP Select, se admite la autenticación multifactor (MFA) para la cuenta de administrador de ONTAP Select Deploy:</block>
   <block id="b43e5dc621bb5f7a6746a0bf53636924" category="inline-link-macro">ONTAP Select implementa el inicio de sesión MFA de CLI mediante la autenticación de verificación de identidad personal (PIV) o Fast identity Online (FIDO2) de YubiKey</block>
@@ -2553,7 +2538,6 @@
   <block id="306a97cf9f5c4fb1198deb28baf7cf94" category="list-text">Recuperación ante desastres de máquina virtual de almacenamiento (DR de SVM)</block>
   <block id="c38c45e0a73411d375d048ee41944853" category="list-text">Cumplimiento de normativas SnapLock</block>
   <block id="b22e984a3a8e13089712aab13bd49e4f" category="paragraph">No La máquina virtual de ONTAP Select utiliza unidades persistentes independientes, que se excluyen de las copias snapshot basadas en VMware. El único método admitido para realizar backups de ONTAP Select es SnapMirror o SnapVault.</block>
-  <block id="0778e2d9c54386153e2e52bad4129abe" category="doc">Inicie sesión para implementar con SSH</block>
   <block id="0ef79c5150efdedf5079964981d01a0f" category="section-title">Eliminar un clúster de ONTAP Select</block>
   <block id="483c848cf08aacd19acb4d0b41190eb1" category="inline-link-macro">Aumente la capacidad de almacenamiento</block>
   <block id="fdd1d325ffe2bc60f1cb8023f18ff770" category="paragraph">Consulte <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block> para obtener más información.</block>
@@ -2561,7 +2545,6 @@
   <block id="a86b0aeeb47174a94a9b648d015c71d1" category="admonition">También puede hacerlo <block ref="ea53b27a388cf53d44c3f702619eab0e" category="inline-link-macro-rx"></block>.</block>
   <block id="cf86e8b21059cea7afe42d59893ab1bb" category="inline-link-macro">Agregue una imagen ONTAP Select para implementarla</block>
   <block id="f300769ad7ade3ee1597c88f58750b97" category="doc">Actualice los nodos ONTAP Select</block>
-  <block id="2e17a67d810d937603511ac8eb9044c5" category="paragraph">Consulte las notas de la versión para obtener información adicional y los procedimientos que se necesitan antes de actualizar un nodo ONTAP Select.</block>
   <block id="2a883d1fe3d932e9f2fc25c99deaa4b9" category="inline-link-macro">Información general de la actualización de ONTAP</block>
   <block id="46928a27773a23230df6e5bda4c3aeb9" category="section-title">Revierte un nodo ONTAP Select</block>
   <block id="140182c4500e816e4313b2abddef452d" category="paragraph">No puede revertir un nodo ONTAP Select a una versión anterior a la que estaba instalado originalmente. Por ejemplo:</block>
@@ -2637,7 +2620,6 @@
   <block id="f47ad6e4bc9bad323a7e49da78e990bc" category="doc">Cambie el tamaño de los nodos del clúster de ONTAP Select</block>
   <block id="afe2fb2999af41d32655dc1f20500f66" category="list-text">A partir de ONTAP Select 9,9.1, solo los modelos de CPU de Intel Xeon Sandy Bridge o posteriores son compatibles con ONTAP Select.</block>
   <block id="0fa9a0b98f503373d1e8310c7c58315c" category="cell">Ejecutable de instalación del producto para ONTAP Select.</block>
-  <block id="ccbbd15600c60abef8f9d734d84b4a4e" category="paragraph"><block ref="ccbbd15600c60abef8f9d734d84b4a4e" category="inline-link-macro-rx"></block></block>
   <block id="2d288e7805c1ececa65188f89defd9ce" category="admonition">La versión API v3 no es compatible con versiones anteriores de la API. Hay un nuevo procedimiento de API disponible en la<block ref="d0140e6551623cc2284467774c9abf91" category="inline-link-rx"></block>.</block>
   <block id="7b2b79b3670795398d15d8b845f9018a" category="section-title">Obtenga la clave pública YubiKey PIV o FIDO2</block>
   <block id="7b52eae9ffa5eadcc0fc79391b99411f" category="section-title">Configure la clave pública en ONTAP Select Deploy</block>
@@ -2659,8 +2641,6 @@
   <block id="20f67f07ed859b317730c48838666bb5" category="sidebar">Flujo de trabajo 1 Crear un clúster</block>
   <block id="d95d85ec027f0d5da378060fe690a4ec" category="sidebar">Comprender los scripts</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">Sitio de soporte de NetApp</block>
-  <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">Acceda a <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> Usando un navegador web y elija *Descargas* en el menú Descargas.</block>
-  <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">Desplácese hacia abajo y seleccione *Actualización de implementación de ONTAP Select*.</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">Revise el Contrato de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.</block>
   <block id="3a2bb6601ae9e99d12a365a40b604d74" category="paragraph">Puede acceder a la consola de vídeo de la máquina virtual del hipervisor donde se está ejecutando ONTAP Select.</block>
   <block id="decbc79b694df69cef4879e861d5bbe4" category="list-text">Opcionalmente, elimine la imagen de ONTAP Select con el host del hipervisor.</block>
@@ -2962,11 +2942,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="666ca9627e87a2f5ba354cdf9f1b35dd" category="paragraph">Para obtener más información sobre ONTAP Select y la renovación de licencia, consulte la sección Licencias, instalación, actualizaciones y revertir en la <block ref="7219e755fcbad1744f8ee5b6bd1c51b6" category="inline-link-macro-rx"></block>.</block>
   <block id="e9bea8d0b42d385115a0325044f2d402" category="paragraph-title">¿Se puede cambiar la configuración de red de clúster de ONTAP Select después de la instalación?</block>
   <block id="6ffb75b64cf302e3f2f57c74d51f319d" category="paragraph-title">¿Se puede cambiar la configuración de red de implementación de ONTAP Select después de la instalación?</block>
-  <block id="53e646b7dd5ddb95bd47f8626f05f330" category="paragraph">La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar de formato de virtualización abierta (OVF). El archivo comprimido único tiene el sufijo<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block>. La máquina virtual proporciona las imágenes de instalación y servidor de puesta en marcha para los nodos de ONTAP Select.</block>
-  <block id="a8b083480f6b19e605e4aaa8bd3425f1" category="list-text">Acceda a <block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> mediante un navegador web e iniciar sesión.</block>
-  <block id="cc97556611cf17d7a90f16087052f93b" category="list-text">Seleccione *Descargas* en el menú y, a continuación, seleccione *Descargas* en el menú desplegable.</block>
-  <block id="ab0ffe542101d39137dce2c19869d545" category="list-text">En la página Descargas, en Todos los productos A-Z, seleccione la letra *O*.</block>
-  <block id="a896447aac9deddba0f8b7bc142c079f" category="list-text">Desplácese hacia abajo y seleccione *ONTAP Select*.</block>
   <block id="b41a57a870dbb2988a82d37df74541fa" category="list-text">Si aparece la ventana emergente *Bienvenido a ONTAP Select*, revise los requisitos previos y seleccione *Aceptar* para continuar.</block>
   <block id="044e8c7d609a0b31483ad9c6588ccd58" category="admonition">El cambio de tamaño al tipo de instancia grande solo se admite en ESXi.</block>
   <block id="afc299163ecc817c9d73bc5033f67218" category="admonition">No se admite la conversión entre topologías de enlace único y de enlace múltiple en un clúster en ejecución debido a la posible necesidad de convertir entre diferentes configuraciones de equipos de NIC necesarias para cada topología.</block>
@@ -3221,7 +3196,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="bf55dfa0f53f23704c47337781c41d3d" category="inline-link">Tiene una cuenta registrada en la página de soporte de NetApp</block>
   <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>.</block>
   <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">Una vez implementada la máquina virtual, seleccione la nueva máquina virtual. Si aún no está encendido según la entrada que haya introducido en el asistente de implementación, enciéndalo manualmente.</block>
-  <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">Si es la primera vez que inicia sesión y no instaló la puesta en marcha con el asistente disponible en vCenter, proporcione la siguiente información de configuración cuando se le solicite:</block>
   <block id="c2fffdb7e5db1a96deec5901fd1a882b" category="list-text">Seleccione la pestaña *Administration* en la parte superior de la página.</block>
   <block id="7f73b891b6f89493a9a42f78c96dfbde" category="list-text">Selecciona *Licencias* y selecciona *Nivel de capacidad*.</block>
   <block id="ac058bee21b19fb7d5683b470b430bce" category="list-text">Opcionalmente seleccione *Filtro* y para limitar las licencias mostradas.</block>
@@ -3599,10 +3573,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="305009997eb17ffe0901beb32fdc2040" category="paragraph">Para preparar la expansión del clúster, se añaden nuevos hosts ESXi y KVM al inventario y se asignan los detalles de los nuevos nodos. Antes de iniciar el proceso de expansión del clúster, se realiza una comprobación previa de la red para verificar la red interna seleccionada.</block>
   <block id="1c53d6d4916415921dddecf6128580f3" category="list-text">Elija los siguientes detalles de configuración de par de alta disponibilidad (HA) para el cuarto par de HA:</block>
   <block id="1baec4831214642ebba2ccfdd8a785df" category="list-text">Proporcione las credenciales de ONTAP y seleccione *Expandir clúster*.</block>
-  <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">Puede actualizar una máquina virtual de la utilidad ONTAP Select Deploy existente en el lugar mediante la CLI de la utilidad ONTAP Select Deploy.</block>
-  <block id="37d4c938e6c31c7ec9166448ac3458f3" category="paragraph">Asegúrese de que ONTAP Select Deploy no se utilice para realizar ninguna otra tarea durante la actualización.  Consulte las notas de la versión actual para obtener información y restricciones sobre la actualización de la utilidad ONTAP Select Deploy.</block>
-  <block id="db1b7c6bff7b0da47260c4e758478bf5" category="section-title">Paso 1: Descargue el paquete</block>
-  <block id="c81ba5c62604d6722d8975fb55e13972" category="paragraph">Para comenzar el proceso de actualización, descargue el archivo de actualización de máquina virtual ONTAP Select Deploy apropiado desde<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> . El paquete de actualización está en un único archivo comprimido.</block>
   <block id="1bd278b7a759195dc2c65f644c38efc6" category="section-title">Paso 2: Cargue el paquete en la máquina virtual ONTAP Select Deploy</block>
   <block id="58d35d75d5ec4b24d42607d4bf519bb0" category="paragraph">Después de descargar el paquete, debe cargar el archivo en la máquina virtual ONTAP Select Deploy.</block>
   <block id="f210391b7941f9a4198928bc79fcba09" category="paragraph">Esta tarea describe un método para cargar el archivo en la máquina virtual ONTAP Select Deploy.  Podrían existir otras opciones más adecuadas para su entorno.</block>
@@ -3753,10 +3723,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="12702c2f8c71548bcc7c156da7d7e810" category="paragraph">Si utiliza un controlador RAID de hardware local, debe crear al menos un almacén de datos (ESX) o uno<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block> en cada nodo para los datos del sistema, así como para la raíz y los agregados de datos. Debe conectar el pool de almacenamiento como parte de la configuración del nodo ONTAP Select .</block>
   <block id="d79e665d74455e96fa5fff08009d57ce" category="paragraph">Si utiliza RAID por software, debe crear al menos un almacén de datos (ESX) o uno<block ref="7f40b177101a60800b4ff488a68c2a27" category="inline-link-macro-rx"></block> para los datos del sistema y asegúrese de que las unidades SSD estén disponibles para la raíz y los agregados de datos. Debe conectar el pool de almacenamiento y los discos como parte de la configuración del nodo ONTAP Select .</block>
   <block id="374fcbe92413e77c7fc7cda40bfb3be6" category="section-title">Paso 1: Descarga la imagen de instalación</block>
-  <block id="42cd2a8efe7c9aac811d923637a0f193" category="list-text">Acceda al sitio de soporte de NetApp utilizando un navegador web y seleccione *Enlaces rápidos de soporte*.</block>
-  <block id="6168f6eb3f1b81ec759f515fdd7bab98" category="list-text">Seleccione *Descargar software* en *Tareas principales* e inicie sesión en el sitio.</block>
-  <block id="84791eb50904d5d426f95112ce50d397" category="list-text">Seleccione *Encuentre su producto*.</block>
-  <block id="676522edf33055c4e8da85feed945dc5" category="list-text">En *Otro software disponible*, seleccione *Actualización de implementación, Actualización de nodo, Instalación de imagen*.</block>
   <block id="4ec4ff4105057abcf44071cf2a8f84b6" category="section-title">Paso 2: Cargar la imagen de instalación en Deploy</block>
   <block id="3ad5852905f7d86a4b551630b78bec6f" category="list-text">En una terminal de comandos de su estación de trabajo local, cargue el archivo de imagen en la máquina virtual de implementación, como se muestra en los siguientes ejemplos:</block>
   <block id="9c0d19167b1e62192d344c74670ab607" category="section-title">Paso 3: Agregar la imagen de instalación</block>
@@ -3849,7 +3815,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="bae2221cd26cec7b066734cfd0888c05" category="paragraph">Puedes acceder a<block ref="b88c41ab6f0bacccf3a706fd6b4f9780" category="inline-link-macro-rx"></block> Para ver los detalles sobre la versión actual.</block>
   <block id="8fce0c649f4d72f417cda254112e0124" category="list-text">Para un host ESX, ONTAP Select 9.7 o posterior con una utilidad de administración de implementación compatible</block>
   <block id="14d3f202c8554a54e4a6f4f52aa78fb3" category="list-text">Para un host KVM, ONTAP Select 9.17.1 o posterior con una utilidad de administración Deploy compatible.</block>
-  <block id="da5ed6f3275aa7228f65de977570f140" category="list-text">Desplácese hacia abajo y haga clic en * ONTAP Select*.</block>
   <block id="bb68cf2408900213fd35084701d5c32c" category="paragraph">Puede actualizar directamente a ONTAP Select Deploy 9.18.1 desde ONTAP Select Deploy 9.17.1 o 9.16.1. Para actualizar desde ONTAP Select Deploy 9.15.1 o una versión anterior, revise las notas de la versión de su versión de ONTAP Select .</block>
   <block id="b69fcb807e0b12e6b52ca8806f85c011" category="paragraph">Aumentar o disminuir el tamaño del clúster de un clúster ONTAP Select existente para hosts de hipervisor ESXi y KVM.  Para ambos tipos de host, puede aumentar y disminuir el tamaño del clúster en incrementos de entre cuatro y doce nodos.</block>
   <block id="a0b486320d46bfa4e7a315349c3d059b" category="list-text">Expansiones de grupos de uno o dos nodos a grupos de seis, ocho, diez o doce nodos.</block>
@@ -3866,9 +3831,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="7ceba9002504861c21a7c60ab97ce4d0" category="list-text"><block ref="7ceba9002504861c21a7c60ab97ce4d0" category="inline-link-macro-rx"></block></block>
   <block id="05e40b852405f8fbe510662799c939d2" category="inline-link-macro">CDEPLOY-4025: ONTAP Select DeployGUI: Los grupos de almacenamiento y los discos de almacenamiento no son visibles para SWR en la página de creación de clústeres en hosts con RHEL10/Rocky 10</block>
   <block id="5b121e358e0c7c08ef9cd2f6ed82464f" category="list-text"><block ref="5b121e358e0c7c08ef9cd2f6ed82464f" category="inline-link-macro-rx"></block></block>
-  <block id="b3511106033b4eaf52fa527685aee9bf" category="paragraph">Rocky Linux (KVM) 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6</block>
-  <block id="fc0e52e7a743e546179c3376db422db0" category="list-text">KVM en Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6</block>
-  <block id="5701e65b5391163c34edb9efc807ee5f" category="list-text">Rocky Linux 10.0, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6</block>
   <block id="1d635a2bfb4e1fe570efdeb7e95a39b1" category="summary">Solicita acceso para descargar el software de evaluación ONTAP Select .</block>
   <block id="14a6da11ffa9cf53251b9ff57d86f2e3" category="doc">Acceso al software de evaluación ONTAP Select</block>
   <block id="fe359189fa4d670313b3429fe242de5a" category="inline-link-macro">Software de evaluación ONTAP Select</block>
@@ -3919,7 +3881,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="35f9f1c9a9790bd3fc497db798819083" category="section-title">Paso 3: Implementar la máquina virtual</block>
   <block id="a84a05d08c99af325673887887ed8fdb" category="paragraph">Instale e inicie ONTAP Select Deploy VM usando la imagen de VM OVF. Como parte del proceso de instalación, configura la interfaz de red para utilizar DHCP o una configuración IP estática.</block>
   <block id="7e5f2ca43da3004f8d3d7bae3edb7bae" category="section-title">Paso 4: Sign in en la interfaz web de implementación</block>
-  <block id="619fea79d54cac08622de23d5f1d57d5" category="paragraph">Sign in en la interfaz de usuario web para confirmar que la utilidad de implementación esté disponible y realizar la configuración inicial.</block>
   <block id="97b3aadab6e4066f1f4afb183a83298c" category="sidebar">Pruebe ONTAP Select</block>
   <block id="3ff87e54e9b20339b68f24cf241f05b0" category="sidebar">Software de evaluación de acceso</block>
   <block id="276d590b2be111ae083f54bd5b504fe8" category="paragraph">ONTAP Select admite el uso de configuraciones vSwitch estándar y distribuidas. Los vSwitches distribuidos admiten construcciones de agregación de enlaces (LACP). La agregación de enlaces es una construcción de red común que se utiliza para agregar ancho de banda entre múltiples adaptadores físicos. LACP es un estándar neutral en cuanto al proveedor. Proporciona un protocolo abierto para puntos finales de red que agrupan grupos de puertos de red físicos en un único canal lógico. ONTAP Select puede trabajar con grupos de puertos que estén configurados como un grupo de agregación de enlaces (LAG). Sin embargo, NetApp recomienda utilizar los puertos físicos individuales como puertos de enlace ascendente (troncal) simples para evitar la configuración LAG. En estos casos, las mejores prácticas para los vSwitches estándar y distribuidos son idénticas.</block>
@@ -3931,10 +3892,7 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="23063442dbfdc1f0a8618060853d7bce" category="paragraph">Cuando se utilizan dos NIC de alta velocidad (25/40 Gb), la configuración del grupo de puertos recomendada es conceptualmente muy similar a la configuración con cuatro adaptadores de 10 Gb. Debe utilizar cuatro grupos de puertos incluso cuando utilice solo dos adaptadores físicos. Las asignaciones del grupo de puertos son las siguientes:</block>
   <block id="9bc25e03ceb7e341916e8e6cca6a827b" category="paragraph">El siguiente ejemplo muestra la configuración de un vSwitch y los dos grupos de puertos responsables de manejar los servicios de comunicación internos y externos para un clúster ONTAP Select de varios nodos. La red externa puede usar la VMNIC de la red interna en caso de una interrupción de la red porque las VMNIC de la red interna son parte de este grupo de puertos y están configuradas en modo de espera. En el caso de la red externa ocurre lo contrario. Alternar las VMNIC activas y en espera entre los dos grupos de puertos es fundamental para la conmutación por error correcta de las VM de ONTAP Select durante las interrupciones de la red.</block>
   <block id="bad767c4cc128e0a2a4e8d23a72bdbce" category="admonition">LACP requiere que configure los puertos del conmutador ascendente como un canal de puerto. Antes de habilitar esta configuración en el vSwitch distribuido, asegúrese de que un canal de puerto habilitado para LACP esté configurado correctamente.</block>
-  <block id="666e2d64cc00d0a8b97b0fd56b7dd1f8" category="paragraph">Existen limitaciones de flujo de trabajo RAID por software para hipervisores KVM en hosts RHEL 10.1 y 10.0 y Rocky Linux 10.0. Para más información, consulta los siguientes artículos de la base de conocimientos:</block>
   <block id="fd03a137fae70421c1edc03522f9a111" category="paragraph">Red Hat Enterprise Linux 64-bit (KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6</block>
-  <block id="4c593fb6a6971787a6c1b21b1778dbf1" category="paragraph">*Nota*: Existen limitaciones de flujo de trabajo RAID por software para hipervisores KVM en RHEL 10.1 y 10.0 y Rocky Linux 10.0. Para más información, consulta los siguientes artículos de la base de conocimientos:</block>
-  <block id="cc11bdf4f5765009cf63440bceecaf71" category="list-text">A partir de ONTAP Select 9.17.1, el hipervisor KVM es compatible con Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7 y 9.6 y Rocky Linux 10.0 y 9.6.</block>
   <block id="9f67ae0fbf0ec858c854905b95acf153" category="list-text">KVM en Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6</block>
   <block id="02d99372e9e1eb54a9dddd0b08891357" category="list-text">Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6</block>
   <block id="d65f97fb1a167a35c6951233420ba74d" category="list-text">Red Hat Enterprise Linux (RHEL) 64-bit 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6</block>
@@ -4054,4 +4012,54 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="3b32ccaa0766722aa2afed59d3051ca8" category="sidebar">Compra una licencia</block>
   <block id="9be9343d8314647310e47876ae581a39" category="sidebar">Consideraciones para dimensionar una licencia</block>
   <block id="f207357dde5b74df08cbece4e6ecc93d" category="sidebar">Adquiere una licencia</block>
+  <block id="e9acce0d3652d40c91f9bd7e814291c0" category="inline-link-macro">NetApp Support Site descargas</block>
+  <block id="17838336399b2e69627cea0614c17f30" category="list-text">Accede a la página <block ref="8e92c016cc209b5ea10cc71b5bfe5577" category="inline-link-macro-rx"></block>.</block>
+  <block id="102500ba079e1f102bac567290d3e053" category="list-text">Desplázate hacia abajo y selecciona *ONTAP Select Image*.</block>
+  <block id="1ccd2fe0ab425cd480daec44d7c332ba" category="list-text">Selecciona la versión que quieres de la imagen de instalación.</block>
+  <block id="b0ccaa273cbf1ac7308b75b9c7fd6d4e" category="list-text">Selecciona y descarga el paquete *ONTAP Select Image Upgrade* adecuado. Responde a todas las preguntas que se necesiten.</block>
+  <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">notas de la versión</block>
+  <block id="b7a85c17919c6d783689e1a6530de3d7" category="paragraph">Revisa <block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block> para obtener información adicional y cualquier procedimiento necesario antes de actualizar un nodo ONTAP Select.</block>
+  <block id="bf159becb82fac20415db1b695308945" category="paragraph">Rocky Linux (KVM) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6</block>
+  <block id="f16085e2960ce67f0152bfa786bc2c84" category="list-text">Actualizaciones de las opciones de descarga del producto ONTAP Select</block>
+  <block id="b5993ee67ee45c2b4a002d556ac6eef4" category="list-text">Las opciones de descarga de productos ONTAP Select en el NetApp Support Site están cambiando con la versión ONTAP Select 9.18.1 a *ONTAP Select Deploy* y *ONTAP Select Image*. Estas dos nuevas opciones de descarga de productos reemplazan las cuatro opciones anteriores, como se muestra en la siguiente tabla:</block>
+  <block id="258b030fd9d8536d96ad2ea29b1f1f5b" category="cell">Opción de descarga de producto anterior</block>
+  <block id="01ed5dadeb59dcf70821bb6cfcca823b" category="cell">Nueva opción de descarga de producto</block>
+  <block id="c878ab6b03f2e21c7ddaab60666fe9c7" category="cell">Para más información, ve a....</block>
+  <block id="0fcfd1d06aa4a00c5f6fec474f6f1c06" category="cell">Instalación de imagen ONTAP Select</block>
+  <block id="65d8989162e041cfdb5373e9d5f90a01" category="cell">Imagen de ONTAP Select</block>
+  <block id="daa5867d7c0f09c140622ae0bc6ab1fd" category="cell">Actualización de ONTAP Select Deploy</block>
+  <block id="5922d941fc08a3cbcc408274f92d86e5" category="cell"><block ref="5922d941fc08a3cbcc408274f92d86e5" category="inline-link-macro-rx"></block></block>
+  <block id="5048172a57085779b0d43a0be3872dc8" category="cell">Actualización de ONTAP Select Node</block>
+  <block id="d228516350120c9cc4d55069f100cc11" category="inline-link-macro">Actualiza los nodos de ONTAP Select</block>
+  <block id="97ea190c2e3ce90f52a63364b67dcef9" category="cell"><block ref="97ea190c2e3ce90f52a63364b67dcef9" category="inline-link-macro-rx"></block></block>
+  <block id="bf40684242d22732e87ac0716a947f3f" category="admonition">Los cambios en la descarga del producto también se aplican a ONTAP Select 9.17.1, 9.16.1, 9.15.1 y 9.14.1.</block>
+  <block id="e342911175fb54ab7198aeaf9378ba80" category="list-text">A partir de ONTAP Select 9.17.1, el hipervisor KVM es compatible con Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7 y 9.6 y Rocky Linux 10.1, 10.0, 9.7 y 9.6.</block>
+  <block id="f5bbe572ad2fdd6b30f8297ec74c9ee1" category="paragraph">Existen limitaciones de flujo de trabajo RAID por software para hipervisores KVM en hosts RHEL 10.1 y 10.0 y Rocky Linux 10.1 y 10.0. Para más información, consulta los siguientes artículos de la base de conocimientos:</block>
+  <block id="77c3f1eb72717033f409425f67ee4a6d" category="list-text">KVM en Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6</block>
+  <block id="f1200e5ffcff7a7cc8b8ea25410cc78a" category="list-text">Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6</block>
+  <block id="ab0efa1679a96e82121715180bb36a1d" category="summary">Agrega una imagen de ONTAP Select a tu instancia de la utilidad de administración Deploy. Después de la instalación, puedes usarla al desplegar un clúster ONTAP Select.</block>
+  <block id="91dd9283705750f9fe7e837b0a40349f" category="paragraph">Agrega una imagen de ONTAP Select a tu instancia de la utilidad de administración Deploy. Después de que la imagen se haya instalado, puedes usarla al desplegar un clúster ONTAP Select.</block>
+  <block id="c887723161d2b70aba693fc5b80ea33b" category="list-text">Selecciona y descarga el paquete *ONTAP Select Image Install* adecuado. Responde a todas las preguntas según sea necesario.</block>
+  <block id="04574480371a2b80422d880e51839d84" category="paragraph">Verifica que tienes el archivo de imagen de instalación disponible en tu estación de trabajo local. También debes tener la contraseña de la cuenta de usuario administrador de Deploy.</block>
+  <block id="71b6b56cdf9a8f06858b086466ade95e" category="paragraph">Actualiza una máquina virtual existente de la utilidad ONTAP Select Deploy in situ usando la CLI de la utilidad ONTAP Select Deploy.</block>
+  <block id="893d0216a6847b8a50f3efc04d175542" category="paragraph">Verifica que ONTAP Select Deploy no se use para realizar ninguna otra tarea durante la actualización. Consulta la <block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block> para información y restricciones sobre la actualización de la utilidad ONTAP Select Deploy.</block>
+  <block id="a935f72e89684cc4e1e44be3fa93301b" category="section-title">Paso 1: descarga el paquete de actualización</block>
+  <block id="9c7dbffc228f5e20cfc38dd2e9d52183" category="paragraph">Para comenzar el proceso de actualización, descarga el archivo de actualización de ONTAP Select Deploy desde el sitio de soporte de NetApp. El paquete de actualización está formateado como un solo archivo comprimido.</block>
+  <block id="c7de263deca2f546c4c7b9417bbb6aec" category="list-text">Desplázate hacia abajo y selecciona *ONTAP Select Deploy*.</block>
+  <block id="224ba05e3cb699bfc71537bae00db024" category="list-text">Selecciona la versión de ONTAP Select que quieras.</block>
+  <block id="edef4f12cb19840bbbb69b8757b99015" category="list-text">Selecciona y descarga el paquete *ONTAP Select Deploy Upgrade* adecuado. Responde a todas las preguntas que sean necesarias.</block>
+  <block id="1ace48b65c22215b19f774b3df5f35bc" category="paragraph">La utilidad de administración ONTAP Select Deploy se empaqueta como una máquina virtual (VM) basada en el estándar Open Virtualization Format (OVF). El archivo comprimido único tiene el sufijo<block ref="586ba478b7ebec665f3df120799b6c2e" prefix=" " category="inline-code"></block> para hosts ESXi y<block ref="fe0b8e90d35ee4c0d89c53587e2d402e" prefix=" " category="inline-code"></block> para hosts KVM. La VM proporciona el servidor Deploy y las imágenes de instalación para los nodos ONTAP Select.</block>
+  <block id="1b889c4574d56e52bb5c7740f68139d2" category="list-text">Selecciona y descarga el paquete *ONTAP Select Deploy Install* adecuado. Responde a todas las preguntas según sea necesario.</block>
+  <block id="3f5028687bfdb0f40e4748a9cf9f5076" category="list-text">Obtén los siguientes archivos de la página de descarga del producto en el sitio de soporte de NetApp:</block>
+  <block id="f754a351095ccdb252bb15b2152c09f3" category="list-text">Verifica la firma:</block>
+  <block id="5029ec7f3dcb7c58660c1d47f8dce6c3" category="list-text">Selecciona el archivo OVA y completa el asistente de despliegue de plantillas OVF. Selecciona las opciones que sean adecuadas para tu entorno.</block>
+  <block id="77b39f7b1e60aa5d2af3e45d47ff1adf" category="list-text">Selecciona la pestaña *Consola* para acceder al shell de configuración del host ESXi y monitorear el proceso de encendido.</block>
+  <block id="b976538163f8bd7f20f37762f79adba6" category="list-text">Si eliges una configuración estática, proporciona toda la información de configuración de red necesaria.</block>
+  <block id="896f4c4fdd4e61c33a930415e20d88d3" category="paragraph">Sign in en la interfaz de usuario web para confirmar que la utilidad Deploy está disponible y realizar la configuración inicial.</block>
+  <block id="a88f396cb1d0d25e4d7b5bc9e25d3617" category="paragraph-title">¿Qué sigue?</block>
+  <block id="4452a56e6eb6220413b5f5ed2b39c2eb" category="paragraph"><block ref="4452a56e6eb6220413b5f5ed2b39c2eb" category="inline-link-macro-rx"></block></block>
+  <block id="186a0749125d9c043615b75ece89e1b9" category="inline-link-macro">Conoce cómo hacer Sign in en Deploy usando SSH</block>
+  <block id="3127e7fd2160f6fce263d627cbcb5a4d" category="list-text"><block ref="3127e7fd2160f6fce263d627cbcb5a4d" category="inline-link-macro-rx"></block></block>
+  <block id="53e65bd37d1e95a079cd2ec376ccf900" category="inline-link-macro">Conoce cómo desplegar una instancia de evaluación de 90 días de un clúster de ONTAP Select</block>
+  <block id="f5f0f7b9b906ffe1f1af3b3d9bc2a475" category="list-text"><block ref="f5f0f7b9b906ffe1f1af3b3d9bc2a475" category="inline-link-macro-rx"></block></block>
 </blocks>

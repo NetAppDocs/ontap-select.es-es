@@ -14,10 +14,10 @@ summary: Puede actualizar una máquina virtual de la utilidad de implementación
 
 
 [role="lead"]
-Puede actualizar una máquina virtual de la utilidad ONTAP Select Deploy existente en el lugar mediante la CLI de la utilidad ONTAP Select Deploy.
+Actualiza una máquina virtual existente de la utilidad ONTAP Select Deploy in situ usando la CLI de la utilidad ONTAP Select Deploy.
 
 .Antes de empezar
-Asegúrese de que ONTAP Select Deploy no se utilice para realizar ninguna otra tarea durante la actualización.  Consulte las notas de la versión actual para obtener información y restricciones sobre la actualización de la utilidad ONTAP Select Deploy.
+Verifica que ONTAP Select Deploy no se use para realizar ninguna otra tarea durante la actualización. Consulta la link:reference_release_notes.html["notas de la versión"] para información y restricciones sobre la actualización de la utilidad ONTAP Select Deploy.
 
 [NOTE]
 ====
@@ -28,16 +28,16 @@ Puede actualizar directamente a ONTAP Select Deploy 9.18.1 desde ONTAP Select De
 ====
 
 
-== Paso 1: Descargue el paquete
+== Paso 1: descarga el paquete de actualización
 
-Para comenzar el proceso de actualización, descargue el archivo de actualización de máquina virtual ONTAP Select Deploy apropiado desdelink:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] . El paquete de actualización está en un único archivo comprimido.
+Para comenzar el proceso de actualización, descarga el archivo de actualización de ONTAP Select Deploy desde el sitio de soporte de NetApp. El paquete de actualización está formateado como un solo archivo comprimido.
 
 .Pasos
-. Acceda a link:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] Usando un navegador web y elija *Descargas* en el menú Descargas.
-. Desplácese hacia abajo y seleccione *Actualización de implementación de ONTAP Select*.
-. Seleccione la versión deseada del paquete de actualización.
+. Accede a la página link:https://mysupport.netapp.com/site/downloads/["NetApp Support Site descargas"^].
+. Desplázate hacia abajo y selecciona *ONTAP Select Deploy*.
+. Selecciona la versión de ONTAP Select que quieras.
 . Revise el Contrato de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.
-. Seleccione y descargue el paquete adecuado, respondiendo a todos los avisos según sea necesario para su entorno.
+. Selecciona y descarga el paquete *ONTAP Select Deploy Upgrade* adecuado. Responde a todas las preguntas que sean necesarias.
 
 
 
