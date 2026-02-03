@@ -40,9 +40,6 @@ Actualizaciones de las opciones de descarga del producto ONTAP Select:: Las opci
 
 | Actualización de ONTAP Select Node | Imagen de ONTAP Select | link:concept_adm_upgrading_nodes.html["Actualiza los nodos de ONTAP Select"] 
 |===
-
-NOTE: Los cambios en la descarga del producto también se aplican a ONTAP Select 9.17.1, 9.16.1, 9.15.1 y 9.14.1.
-
 --
 Mayor apoyo a la expansión y contracción de clústeres:: A partir de ONTAP Select 9.18.1, se admite la expansión y contracción de clústeres entre clústeres ONTAP Select de cuatro y doce nodos en hosts de hipervisor ESXi y KVM.
 +
