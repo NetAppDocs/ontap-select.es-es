@@ -74,6 +74,6 @@ Este parámetro controla el comportamiento de los comandos de ejecución prolong
  a| 
 `-username _username_`
  a| 
-El nombre de usuario que tiene acceso a este host. Solo es necesario si el host no está gestionado por un servidor de gestión (es decir, un host ESX gestionado por una instancia de vCenter).
+El nombre de usuario que tiene acceso a este host. Esto solo es necesario si el host no está gestionado por un servidor de gestión (es decir, un host ESXi gestionado por un vCenter).
 
 |===

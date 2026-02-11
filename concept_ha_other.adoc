@@ -36,7 +36,7 @@ Sin embargo, con la arquitectura nada compartida de un clúster de ONTAP Select,
 Aunque no se puede utilizar el método existente de detección y evitación del cerebro dividido, todavía se requiere un método de mediación, que se ajuste a las limitaciones de un entorno sin compartir. ONTAP Select amplía aún más la infraestructura de buzones existente, lo que le permite actuar como un método de mediación en caso de partición en la red. Debido a que el almacenamiento compartido no está disponible, la mediación se logra a través del acceso a los discos de buzón a través de NAS. Estos discos se distribuyen por el clúster, incluido el mediador en un clúster de dos nodos, utilizando el protocolo iSCSI. Por lo tanto, las decisiones inteligentes sobre conmutación por error pueden tomar un nodo de clústeres en función del acceso a estos discos. Si un nodo puede acceder a los discos de buzón de otros nodos fuera de su compañero de alta disponibilidad, probablemente estará activo y en buen estado.
 
 
-NOTE: La arquitectura de buzones y el método de latido basado en disco para resolver problemas de quórum de clúster y de cerebro dividido son las razones por las que la variante multinodo de ONTAP Select requiere cuatro nodos independientes o un mediador para un clúster de dos nodos.
+NOTE: La arquitectura de buzón y el método de latido basado en disco para resolver los problemas de quórum del clúster y de cerebro dividido son las razones por las que la variante multinodo de ONTAP Select requiere cuatro nodos separados o un mediador para un clúster de dos nodos.
 
 
 

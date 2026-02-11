@@ -20,7 +20,7 @@ Características de las redes internas y externas de ONTAP Select.
 
 == Red interna de ONTAP Select
 
-La red ONTAP Select interna, que solo está presente en la variante de varios nodos del producto, es responsable de proporcionar al clúster de ONTAP Select servicios de comunicación de clústeres, interconexión de alta disponibilidad y replicación síncrona. Esta red incluye los siguientes puertos e interfaces:
+La red interna de ONTAP Select, que solo está presente en la variante multinodo del producto, es responsable de proporcionar al clúster de ONTAP Select servicios de comunicación de clúster, interconexión de alta disponibilidad y replicación síncrona. Esta red incluye los siguientes puertos e interfaces:
 
 * *E0c, e0d.* LIF de red de clúster de alojamiento
 * *E0e.* Hosting la LIF RSM
@@ -41,7 +41,7 @@ Los paquetes de red que atraviesan la red interna deben estar en una red de capa
 En todos los casos, el etiquetado de VLAN para el tráfico de red interna se realiza fuera de la VM de ONTAP Select.
 
 
-NOTE: Solo se admiten switches ESX estándar y vSwitch distribuidos. No se admiten otros switches virtuales o conectividad directa entre hosts ESX. La red interna debe estar completamente abierta; no se admiten NAT o firewalls.
+NOTE: Sólo se admiten vSwitches estándar y distribuidos de ESXi. No se admiten otros conmutadores virtuales ni la conectividad directa entre hosts ESXi. La red interna debe estar totalmente abierta; no se admiten NAT ni cortafuegos.
 
 Dentro de un clúster de ONTAP Select , el tráfico interno y externo se separan mediante objetos de red virtuales de capa 2, conocidos como grupos de puertos. La correcta asignación de estos grupos de puertos en el vSwitch es extremadamente importante, especialmente para la red interna, que es responsable de proporcionar servicios de clúster, interconexión de alta disponibilidad y replicación de espejos. Un ancho de banda de red insuficiente para estos puertos puede causar una degradación del rendimiento e incluso afectar la estabilidad del nodo del clúster.  Por lo tanto, los clústeres de cuatro, seis, ocho, diez y doce nodos requieren que la red interna ONTAP Select utilice conectividad de 10 Gb; las NIC de 1 Gb no son compatibles.  Sin embargo, se pueden hacer concesiones a la red externa, ya que limitar el flujo de datos entrantes a un clúster ONTAP Select no afecta su capacidad para operar de manera confiable.
 
@@ -51,7 +51,7 @@ Un clúster de dos nodos puede utilizar cuatro puertos de 1 GB para el tráfico 
 
 === Validación y solución de problemas de redes internas
 
-La red interna de un clúster multinodo se puede validar mediante la funcionalidad del comprobador de conectividad de red. Esta función se puede invocar desde la interfaz de línea de comandos de despliegue que ejecuta `network connectivity-check start` comando.
+La red interna de un clúster multinodo puede validarse utilizando la función de comprobación de conectividad de red. Esta función puede invocarse desde la CLI de Deploy ejecutando el `network connectivity-check start` comando.
 
 Ejecute el siguiente comando para ver el resultado de la prueba:
 
@@ -59,9 +59,9 @@ Ejecute el siguiente comando para ver el resultado de la prueba:
 ----
 network connectivity-check show --run-id X (X is a number)
 ----
-Esta herramienta sólo es útil para la solución de problemas de la red interna en un clúster multinodo Select. La herramienta no debe utilizarse para solucionar problemas de clústeres de un solo nodo (incluidas las configuraciones vNAS), puesta en marcha de ONTAP en conectividad ONTAP Select o problemas de conectividad del lado del cliente.
+Esta herramienta solo es útil para solucionar problemas de la red interna en un clúster Select de varios nodos. La herramienta no debe utilizarse para solucionar problemas de clústeres de un solo nodo (incluidas configuraciones de vNAS), conectividad de ONTAP Deploy a ONTAP Select o problemas de conectividad del lado del cliente.
 
-El asistente de creación de clústeres (parte de la interfaz de usuario de ONTAP Deploy) incluye el verificador de red interno como un paso opcional disponible durante la creación de clústeres de varios nodos. Dada la importancia de la red interna en los clústeres multinodo, integrar este paso en el flujo de trabajo de creación de clústeres mejora la tasa de éxito de las operaciones de creación de clústeres.
+El asistente de creación de clústeres (parte de la interfaz de usuario de ONTAP Deploy) incluye el comprobador de red interna como un paso opcional disponible durante la creación de clústeres multinodo. Dado el importante papel que desempeña la red interna en los clústeres multinodo, hacer que este paso forme parte del flujo de trabajo de creación de clústeres mejora la tasa de éxito de las operaciones de creación de clústeres.
 
 A partir de la puesta en marcha de ONTAP 2.10, el tamaño de MTU utilizado por la red interna se puede establecer entre 7,500 y 9,000. También se puede usar el comprobador de conectividad de red para probar un tamaño de MTU entre 7,500 y 9,000. El valor de MTU predeterminado se establece en el valor del switch de red virtual. Ese valor predeterminado tendría que ser reemplazado por un valor menor si existe una superposición de red como VXLAN en el entorno.
 
@@ -69,7 +69,7 @@ A partir de la puesta en marcha de ONTAP 2.10, el tamaño de MTU utilizado por l
 
 == Red externa ONTAP Select
 
-La red externa de ONTAP Select es responsable de todas las comunicaciones salientes del cluster y, por lo tanto, está presente en las configuraciones de un único nodo y varios nodos. Aunque esta red no cuenta con los requisitos de rendimiento firmemente definidos de la red interna, el administrador debe tener cuidado de no crear cuellos de botella de la red entre el cliente y el equipo virtual de ONTAP, ya que los problemas de rendimiento podrían describirse como problemas de ONTAP Select.
+La red externa de ONTAP Select es responsable de todas las comunicaciones salientes del clúster y, por lo tanto, está presente tanto en la configuración de clúster de un solo nodo como en la de varios nodos. Aunque esta red no tiene los requisitos de rendimiento tan estrictos de la red interna, el administrador debe tener cuidado de no crear cuellos de botella en la red entre el cliente y la ONTAP VM, porque los problemas de rendimiento podrían interpretarse erróneamente como problemas de ONTAP Select.
 
 
 NOTE: De forma similar al tráfico interno, el tráfico externo se puede etiquetar en la capa de vSwitch (VST) y en la capa de switch externo (EST). Además, el propio equipo virtual de ONTAP Select puede etiquetar el tráfico externo en un proceso conocido como VGT. Consulte la sección link:concept_nw_data_mgmt_separation.html["Separación del tráfico de datos y gestión"] para obtener más detalles.

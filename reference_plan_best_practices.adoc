@@ -71,10 +71,10 @@ ONTAP Select no recibe beneficios en rendimiento al aumentar el número de LUN d
 
 === Hosts VMware ESXi
 
-NetApp recomienda utilizar ESX 8.0 o posterior y un disco NVMe para el almacenamiento de datos que aloja los discos del sistema. Esta configuración proporciona el mejor rendimiento para la partición NVRAM .
+NetApp recomienda usar ESXi 8.0 o posterior y un disco NVMe para el almacén de datos que aloja los discos del sistema. Esta configuración proporciona el mejor rendimiento para la partición NVRAM.
 
 
-NOTE: Al instalarse en ESX 8.0 o posterior, ONTAP Select utiliza el controlador vNVMEE independientemente de si el disco del sistema reside en una unidad SSD o en un disco NVMe. Esto establece el nivel de hardware de la máquina virtual en 13, compatible con ESX 8.0 y versiones posteriores.
+NOTE: Cuando se instala en ESXi 8.0 o posterior, ONTAP Select usa el controlador vNVMEe sin importar si el disco del sistema está en un SSD o en un disco NVMe. Esto establece el nivel de hardware de la máquina virtual en 13, que es compatible con ESXi 8.0 y versiones posteriores.
 
 Definir configuraciones de puertos de red dedicados, ancho de banda y vSwitch para las redes de ONTAP Select y almacenamiento externo (VSAN de VMware y tráfico genérico de cabina de almacenamiento cuando se utiliza iSCSI o NFS).
 
@@ -169,7 +169,7 @@ ONTAP Select admite un único enlace de 10 GB para clústeres de dos nodos; sin 
 
 Si un NIC tiene varios circuitos integrados específicos de aplicaciones (ASIC), seleccione un puerto de red de cada ASIC cuando cree construcciones de red a través de equipos NIC para las redes internas y externas.
 
-NetApp recomienda que el modo LACP esté activo en ESX y en los switches físicos. Además, el temporizador LACP se debe establecer en FAST (1 segundo) en el switch físico, los puertos, las interfaces de canal de puerto y en las vmnic.
+NetApp recomienda que el modo LACP esté activo tanto en ESXi como en los switches físicos. Además, el temporizador LACP debe estar configurado como fast (1 segundo) en el switch físico, los puertos, las interfaces de canal de puerto y en las VMNIC.
 
 Cuando se utiliza un vSwitch distribuido con LACP, NetApp recomienda configurar la directiva de equilibrio de carga para enrutar en función de Hash IP en el grupo de puertos, Dirección IP de origen y destino, Puerto TCP/UDP y VLAN en LAG.
 

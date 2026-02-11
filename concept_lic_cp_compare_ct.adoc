@@ -54,8 +54,8 @@ En la siguiente tabla se comparan los dos modelos de licencias de producción co
 | Aplicación: Licencia caducada | N.A. | Sí (sin periodo de gracia) 
 
 
-| Licencia mínima | 1 TiB | 2 TiB 
+| Licencia mínima | 1 TB | 2 TB 
 
 
-| Espacio gestionado máximo | 400 TiB por nodo | 400 TiB por nodo 
+| Espacio gestionado máximo | 400 TB por nodo | 400 TB por nodo 
 |===

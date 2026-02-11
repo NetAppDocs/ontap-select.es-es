@@ -31,7 +31,7 @@ NOTE: Los canales de puerto estáticos no son compatibles con ONTAP Select. Los 
 
 Para clústeres de un solo nodo, ONTAP Deploy configura la VM ONTAP Select para usar un grupo de puertos para la red externa y el mismo grupo de puertos o, opcionalmente, un grupo de puertos diferente para el tráfico de administración de clústeres y nodos. Para clústeres de un solo nodo, puede agregar la cantidad deseada de puertos físicos al grupo de puertos externos como adaptadores activos.
 
-En el caso de clústeres de varios nodos, ONTAP Deploy configura cada equipo virtual de ONTAP Select para utilizar uno o dos grupos de puertos para la red interna y por separado, uno o dos grupos de puertos para la red externa. El tráfico de gestión de clústeres y nodos puede usar el mismo grupo de puertos que el tráfico externo o, de manera opcional, un grupo de puertos separado. El tráfico de gestión de clústeres y nodos no puede compartir el mismo grupo de puertos con tráfico interno.
+Para clústeres de varios nodos, ONTAP Deploy configura cada ONTAP Select VM para que utilice uno o dos grupos de puertos para la red interna y, por separado, uno o dos grupos de puertos para la red externa. El tráfico de gestión del clúster y del nodo puede usar el mismo grupo de puertos que el tráfico externo o, opcionalmente, un grupo de puertos independiente. El tráfico de gestión del clúster y del nodo no puede compartir el mismo grupo de puertos con el tráfico interno.
 
 
 NOTE: ONTAP Select admite un máximo de cuatro VMNIC.
@@ -40,7 +40,7 @@ NOTE: ONTAP Select admite un máximo de cuatro VMNIC.
 
 == VSwitch estándar o distribuido y cuatro puertos físicos por nodo
 
-Puede asignar cuatro grupos de puertos a cada nodo en un clúster de varios nodos. Cada grupo de puertos tiene un solo puerto físico activo y tres puertos físicos en espera como en la siguiente figura.
+Puedes asignar cuatro grupos de puertos a cada nodo en un clúster de varios nodos. Cada grupo de puertos tiene un solo puerto físico activo y tres puertos físicos en espera como en la siguiente figura.
 
 *VSwitch con cuatro puertos físicos por nodo*
 
@@ -124,9 +124,9 @@ Cuando se utilizan dos NIC de alta velocidad (25/40 Gb), la configuración del g
 
 image:DDN_17.jpg["VSwitch con dos puertos físicos de alta velocidad (25 GB/40 GB) por nodo"]
 
-Al usar dos puertos físicos (10 GB o menos), cada grupo de puertos debe tener un adaptador activo y un adaptador en espera configurado opuesto al otro. La red interna solo está presente para clústeres multinodo de ONTAP Select. Para los clústeres de un solo nodo, se pueden configurar ambos adaptadores como activos en el grupo de puertos externo.
+Cuando se utilizan dos puertos físicos (10Gb o menos), cada grupo de puertos debe tener un adaptador activo y un adaptador en espera configurados opuestos entre sí. La red interna solo está presente para clústeres ONTAP Select multinodo. Para clústeres de un solo nodo, ambos adaptadores pueden configurarse como activos en el grupo de puertos externos.
 
-El siguiente ejemplo muestra la configuración de un vSwitch y los dos grupos de puertos responsables de manejar los servicios de comunicación internos y externos para un clúster ONTAP Select de varios nodos. La red externa puede usar la VMNIC de la red interna en caso de una interrupción de la red porque las VMNIC de la red interna son parte de este grupo de puertos y están configuradas en modo de espera. En el caso de la red externa ocurre lo contrario. Alternar las VMNIC activas y en espera entre los dos grupos de puertos es fundamental para la conmutación por error correcta de las VM de ONTAP Select durante las interrupciones de la red.
+El siguiente ejemplo muestra la configuración de un vSwitch y los dos grupos de puertos responsables de gestionar los servicios de comunicación internos y externos para un clúster de varios nodos de ONTAP Select. La red externa puede usar la VMNIC de la red interna en caso de una caída de red porque las VMNIC de la red interna forman parte de este grupo de puertos y están configuradas en modo de espera. Lo contrario es el caso para la red externa. Alternar las VMNIC activas y en espera entre los dos grupos de puertos es fundamental para la correcta conmutación por error de las ONTAP Select VMs durante los cortes de red.
 
 *VSwitch con dos puertos físicos (10 GB o menos) por nodo*
 

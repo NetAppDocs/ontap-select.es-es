@@ -22,7 +22,7 @@ El requisito mínimo es que el hipervisor que está utilizando (VMware ESXi o KV
 
 == Arquitectura vNAS
 
-La nomenclatura vNAS se utiliza para todas las configuraciones que no utilizan DAS. En el caso de clústeres ONTAP Select de varios nodos, estas arquitecturas incluyen las cuales los dos nodos de ONTAP Select del mismo par de alta disponibilidad comparten un único almacén de datos (incluidos los almacenes de datos de VSAN). Los nodos también pueden instalarse en almacenes de datos separados de la misma cabina externa compartida. Esto permite eficiencias en el almacenamiento en la cabina para reducir la huella general de todo el par de alta disponibilidad de ONTAP Select. La arquitectura de las soluciones vNAS de ONTAP Select es muy similar a la de ONTAP Select en DAS con una controladora RAID local. Es decir, cada nodo ONTAP Select continúa teniendo una copia de los datos de su partner ha. Las políticas de eficiencia del almacenamiento de ONTAP están delimitadas por nodos. Por lo tanto, es preferible recurrir a las eficiencias de almacenamiento en cabina, ya que pueden aplicarse potencialmente en todos los conjuntos de datos de ambos nodos ONTAP Select.
+La nomenclatura vNAS se utiliza para todas las configuraciones que no usan DAS. Para los clústeres ONTAP Select de varios nodos, esto incluye arquitecturas en las que los dos nodos ONTAP Select del mismo par de alta disponibilidad comparten un único datastore (incluidos los datastores vSAN). Los nodos también se pueden instalar en datastores separados del mismo array externo compartido. Esto permite que las eficiencias de almacenamiento del lado del array reduzcan la huella total de todo el par de alta disponibilidad de ONTAP Select. La arquitectura de las soluciones ONTAP Select vNAS es muy similar a la de ONTAP Select en DAS con una controladora RAID local. Es decir, cada nodo ONTAP Select sigue teniendo una copia de los datos de su pareja de alta disponibilidad. Las políticas de eficiencia de almacenamiento de ONTAP tienen alcance de nodo. Por lo tanto, las eficiencias de almacenamiento del lado del array son preferibles porque pueden aplicarse potencialmente a los conjuntos de datos de ambos nodos ONTAP Select.
 
 También es posible que cada nodo de ONTAP Select de un par de alta disponibilidad utilice una cabina externa independiente. Ésta es una opción común al usar SDS de ONTAP Select MetroCluster con almacenamiento externo.
 
@@ -52,7 +52,8 @@ La característica IDL no es compatible con todas las funciones de eficiencia de
 ----
 storage aggregate modify -aggregate aggr-name -single-instance-data-logging off
 ----
-Tenga en cuenta que el rendimiento de escritura se ve afectado si la característica IDL está desactivada. Es posible volver a habilitar la característica IDL después de que se deshabiliten todas las políticas de eficiencia de almacenamiento de todos los volúmenes de ese agregado:
+
+NOTE: El rendimiento de escritura se ve afectado si la función SIDL está desactivada. Es posible volver a activar la función SIDL después de que todas las directivas de eficiencia del almacenamiento en todos los volúmenes de ese agregado estén desactivadas:
 
 [listing]
 ----
@@ -62,18 +63,21 @@ volume efficiency stop -all true -vserver * -volume * (all volumes in the affect
 
 == Coloque los nodos de ONTAP Select cuando use vNAS en ESXi
 
-ONTAP Select incluye compatibilidad con clústeres de varios nodos de ONTAP Select en un almacenamiento compartido. La implementación de ONTAP permite la configuración de varios nodos ONTAP Select en el mismo host ESX, siempre y cuando estos nodos no formen parte del mismo clúster. Tenga en cuenta que esta configuración solo es válida para entornos VNAS (almacenes de datos compartidos). No se admiten varias instancias de ONTAP Select por host cuando se utiliza el almacenamiento DAS, porque estas instancias compiten por el mismo controlador de RAID de hardware.
+ONTAP Select incluye soporte para clústeres ONTAP Select de varios nodos en almacenamiento compartido. ONTAP Deploy permite la configuración de varios nodos ONTAP Select en el mismo host ESXi siempre que estos nodos no sean parte del mismo clúster.
 
-ONTAP Deploy garantiza que la implementación inicial del clúster VNAS multinodo no coloque varias instancias de ONTAP Select del mismo clúster en el mismo host. La siguiente figura ilustra un ejemplo de una implementación correcta de dos clústeres de cuatro nodos que se cruzan en dos hosts.
+
+NOTE: Esta configuración solo es válida para entornos VNAS (almacenamiento compartido). No se admiten varias instancias de ONTAP Select por host cuando se utiliza almacenamiento DAS porque estas instancias compiten por la misma controladora RAID de hardware.
+
+ONTAP Deploy se asegura de que el despliegue inicial del clúster VNAS multinodo no coloque varias instancias de ONTAP Select del mismo clúster en el mismo host. La siguiente figura ilustra un ejemplo de un despliegue correcto de dos clústeres de cuatro nodos que se cruzan en dos hosts.
 
 *Implementación inicial de clústeres VNAS multinodo*
 
-image:ST_14.jpg["Implementación inicial de clústeres VNAS multinodo"]
+image:ST_14.jpg["Despliegue inicial de clústeres VNAS multinodo"]
 
 Después de la implementación, los nodos ONTAP Select se pueden migrar entre hosts. Esto podría dar como resultado configuraciones no óptimas y no compatibles para las cuales dos o más nodos ONTAP Select del mismo clúster compartan el mismo host subyacente. NetApp recomienda la creación manual de reglas de anti-afinidad de máquinas virtuales, de modo que VMware mantiene automáticamente la separación física entre los nodos del mismo clúster, no solo los nodos del mismo par de alta disponibilidad.
 
 
-NOTE: Las reglas de anti-afinidad requieren que DRS esté habilitado en el clúster ESX.
+NOTE: Las reglas de antiafinidad requieren que DRS esté habilitado en el clúster ESXi.
 
 Consulte el siguiente ejemplo sobre cómo crear una regla de anti-afinidad para los equipos virtuales de ONTAP Select. Si el clúster de ONTAP Select contiene más de un par de alta disponibilidad, todos los nodos del clúster deben incluirse en esta regla.
 
@@ -81,12 +85,13 @@ image:ST_15.jpg["Reglas VM/Host"]
 
 image:ST_16.jpg["Editar regla de VM/host"]
 
-Se pueden encontrar dos o más nodos ONTAP Select del mismo clúster ONTAP Select en el mismo host ESX por uno de los siguientes motivos:
+Dos o más nodos ONTAP Select del mismo clúster ONTAP Select podrían encontrarse en el mismo host ESXi por una de las siguientes razones:
 
 * DRS no aparece debido a las limitaciones de la licencia de VMware vSphere o si no está habilitado DRS.
 * La regla de antiafinidad de DRS se omite porque tiene prioridad una operación de alta disponibilidad de VMware o una migración de máquinas virtuales iniciada por el administrador.
 
 
-Tenga en cuenta que la implementación de ONTAP no supervisa de forma proactiva las ubicaciones de las máquinas virtuales de ONTAP Select. No obstante, una operación de actualización de clúster refleja esta configuración no compatible en los registros de implementación de ONTAP:
+
+NOTE: ONTAP Deploy no supervisa de forma proactiva las ubicaciones de las máquinas virtuales de ONTAP Select. Sin embargo, una operación de actualización del clúster refleja esta configuración no admitida en los registros de ONTAP Deploy:
 
 image:ST_17.PNG["Registros de implementación de ONTAP"]
