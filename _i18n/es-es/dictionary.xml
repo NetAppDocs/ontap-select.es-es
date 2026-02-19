@@ -1753,16 +1753,6 @@
   <block id="6ead2b5cc2e9a07c3c837cd527eae680" category="section-title">Un único nodo dentro de un clúster de cuatro nodos</block>
   <block id="0e17d1b8e444a58b17e21b8d633cf3c9" category="paragraph">En la siguiente figura se muestra la configuración de red típica para una única máquina virtual ONTAP Select en un clúster de cuatro nodos. Hay dos redes separadas: ONTAP-interno y ONTAP-externo.</block>
   <block id="ab818ab7a96525155b780ef59003cf8c" category="paragraph"><block ref="ab818ab7a96525155b780ef59003cf8c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c44b5d59bfc3b0196028c522c56aa989" category="paragraph">El vSwitch es el componente de hipervisor central utilizado para admitir la conectividad para las redes internas y externas. Hay varios aspectos que debería tener en cuenta al configurar cada hipervisor vSwitch.</block>
-  <block id="bfb9321c8431589faff7f47c47138df7" category="list-text">Establezca la directiva de equilibrio de carga en “Ruta basada en el identificador de puerto virtual de origen”.</block>
-  <block id="0cc1ebaa405436d568cee576cc2d2503" category="inline-image-macro">Propiedades de vSwitch)</block>
-  <block id="0bd1bd6c1c4f8c07bba0ee34ba53b4b3" category="list-text">Configure el vSwitch para que utilice tramas gigantes (9000 MTU).</block>
-  <block id="e954024be7362eabbc9a349d62fdd4d4" category="list-text">Configurar un grupo de puertos en el vSwitch para el tráfico interno (ONTAP-interno):</block>
-  <block id="a75b88570c3f7c89c4fc7aa2f4ab0862" category="list-text">El grupo de puertos se asigna a los adaptadores de red virtual ONTAP Select e0c-e0g utilizados para el tráfico de clúster, interconexión de alta disponibilidad y mirroring.</block>
-  <block id="98a4f6885e7d5c14cf8637949d2c7084" category="list-text">El grupo de puertos debe estar en una VLAN no enrutable porque se espera que esta red sea privada. Debe agregar la etiqueta VLAN adecuada al grupo de puertos para tener esto en cuenta.</block>
-  <block id="1d73953b34ca84fbbf679a9071108259" category="list-text">La configuración de equilibrio de carga, conmutación por recuperación y orden de conmutación por error del grupo de puertos debe ser la misma que la del vSwitch.</block>
-  <block id="b7760ca7d6bf308d66b54dafb201dee0" category="list-text">Configurar un grupo de puertos en el vSwitch para el tráfico externo (ONTAP-external):</block>
-  <block id="cc60c471b3f7c93bb39710ddf02f3de5" category="list-text">El grupo de puertos está asignado a los adaptadores de red virtual ONTAP Select e0a-e0c utilizados para tráfico de datos y de gestión.</block>
   <block id="7e50557ab7c128d61ddb8403a32e8516" category="summary">Debido a la flexibilidad inherente de los servicios web de REST, se puede acceder a la API de implementación de ONTAP Select de varias maneras diferentes.</block>
   <block id="6a68fab02ba768915e168f24a76af71a" category="section-title">Implemente la interfaz de usuario nativa de la utilidad</block>
   <block id="5562f45da42fc2c23cc8991e41c4057f" category="paragraph">La forma principal de acceder a la API se realiza a través de la interfaz de usuario web de implementación de ONTAP Select. El navegador realiza llamadas a la API y reformatea los datos según el diseño de la interfaz de usuario. También se accede a la API a través de la interfaz de línea de comandos de Deploy Utility.</block>
@@ -2298,7 +2288,6 @@
   <block id="0a15f7ba73868a32304fdf52855463c9" category="sidebar">Quite imágenes ONTAP Select</block>
   <block id="afc9d68a1be701598b5ef94dc0be2844" category="sidebar">Recupere la puesta en marcha de un clúster de dos nodos</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">PREGUNTAS FRECUENTES</block>
-  <block id="8042c73ffcc0e5ec0c31ae3e4d7b414e" category="list-text">Marque ambos adaptadores como “activo” o marque un adaptador como “activo” y el otro como “en espera”.</block>
   <block id="f601b21fb8e0d97eaf4f9b6866a264f6" category="summary">Información de rendimiento para el rendimiento de ONTAP Select 9.6: Almacenamiento SSD de conexión directa de alta disponibilidad premium.</block>
   <block id="2d1e1ff5065ae8a1f3c889ed2101b09c" category="paragraph">Información de rendimiento de la plataforma de referencia.</block>
   <block id="e4491605377fcc65eaedf127cb13bb15" category="section-title">Plataforma de referencia</block>
@@ -3307,16 +3296,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="1abfe64fc729ead26726164b794bcc72" category="paragraph">Las siguientes figuras ilustran las redes ONTAP Select utilizadas con un clúster de un solo nodo y un clúster de cuatro nodos.</block>
   <block id="2e5a1a6424ee2d0aa549b427d2f571d2" category="open-title">Clúster de cuatro nodos</block>
   <block id="e6a67192413f528c465842e03f8443e0" category="paragraph">La siguiente figura ilustra un clúster de cuatro nodos que muestra dos redes. La red interna permite la comunicación entre los nodos que dan soporte a los servicios de red de clústeres de ONTAP. La red externa transporta tráfico de replicación entre clústeres, gestión y clientes (SnapMirror/SnapVault).</block>
-  <block id="c3a20bbad365631eadc5b2dca8f640b3" category="section-title">Paso 3: Configurar Open vSwitch</block>
-  <block id="d1beebffe274c5b13d29f2fbfaa10b06" category="paragraph">Los siguientes pasos son para una configuración de vSwitch para un host ESXi con dos puertos físicos (2 x 10 Gb) en un entorno de red típico.</block>
-  <block id="720708f411d277d77845e1db4cee83de" category="inline-link-macro">Configurar un vSwitch y asignar ambos puertos al vSwitch</block>
-  <block id="f07356480e3047e35b4cb99dbcc748e2" category="list-text"><block ref="2076eeb99e46600240fb1d963411bb31" category="inline-link-macro-rx"></block>.</block>
-  <block id="bf87bb05f214f1b9f8546e218338fb13" category="inline-link-macro">Cree un equipo NIC utilizando los dos puertos</block>
-  <block id="32d6da19d2584fe97eb75d6418af8ca3" category="list-text"><block ref="4d5b30272096305aaf5c4ffdca2a1db5" category="inline-link-macro-rx"></block>.</block>
-  <block id="5a9f02bdaab74c00379f1d1e19fe6c57" category="list-text">Ajuste el ajuste “Faiback” en “Yes”.</block>
-  <block id="f2456bc45004bdf347023d01536a2379" category="paragraph"><block ref="f2456bc45004bdf347023d01536a2379" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9c0cdffd9a10aa81c87d6972a4d9f884" category="list-text">El grupo de puertos puede estar en una VLAN enrutable. Dependiendo del entorno de red, también debe agregar una etiqueta VLAN adecuada o configurar el grupo de puertos para el enlace troncal de VLAN.</block>
-  <block id="fae4bee7c370d0d0391b8ef189079d46" category="list-text">Las configuraciones de equilibrio de carga, conmutación por recuperación y orden de conmutación por error del grupo de puertos deben ser las mismas que las del vSwitch.</block>
   <block id="9450ade0fc753dddabd4ea63d8bb1187" category="summary">Prepare cada host del hipervisor KVM donde se implemente un nodo ONTAP Select . Al preparar los hosts, evalúe cuidadosamente el entorno de implementación para asegurarse de que estén configurados correctamente y listos para la implementación de un clúster ONTAP Select .</block>
   <block id="6ca9942b969b8c587ad10afd9e0ef119" category="doc">Lista de verificación de preparación y configuración del host KVM para ONTAP Select</block>
   <block id="75b870251dc6cf53eee7c05860c964ad" category="paragraph">Prepare cada host de hipervisor KVM donde se implemente un nodo ONTAP Select . Al preparar los hosts, evalúe cuidadosamente el entorno de implementación para asegurarse de que estén configurados correctamente y listos para la implementación de un clúster ONTAP Select .</block>
@@ -3799,7 +3778,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="1a09fd5b1a162aaf184e47b77eb3825d" category="paragraph">Los arrendamientos tienen una duración de entre una hora y siete días dependiendo de la configuración de usuario.</block>
   <block id="5c51dc3fcfdd9653809e90fa3948c2f4" category="list-text">Página de introducción</block>
   <block id="7102680d0af5da00746abf5266571291" category="paragraph">Deploy muestra esta página cuando inicias sesión por primera vez. También puedes abrir el cuadro desplegable en la parte superior derecha de la página y seleccionar *Getting Started* para mostrar esta página. El LLID aparece en la sección Add Licenses.</block>
-  <block id="ad0f17488057d0a4f5ef95d80d34618e" category="paragraph">Selecciona la pestaña *Administración* en la parte superior de la página, luego selecciona *Sistemas* y *Configuración*.</block>
   <block id="e4c7778b64e92f4500818df277754f2e" category="paragraph">Un nodo ONTAP Select debe localizar o solicitar un contrato de capacidad válido cada vez que se crea, amplía o modifica un agregado de datos. Puedes usar un contrato obtenido de una solicitud anterior que todavía sea válido, o puedes solicitar uno nuevo si lo necesitas. El nodo ONTAP Select realiza los siguientes pasos para localizar un contrato de un grupo de capacidad:</block>
   <block id="891663db017744be89f051ca6f5c115b" category="paragraph">Todos los nodos con una licencia de Capacity Pool en un clúster ONTAP Select deben usar la misma instancia de License Manager. Porque hay una instancia de License Manager dentro de cada instancia de Deploy, esta restricción es una reafirmación del requisito existente de que la misma instancia de Deploy debe gestionar todos los nodos en un clúster.</block>
   <block id="8e3654f44c6cb5c34c098c1ab6d7f533" category="paragraph">La siguiente tabla describe cada sección del número de serie del nodo de izquierda a derecha.</block>
@@ -3834,11 +3812,8 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="50e947c808b914257cb5209da74fa627" category="list-text">El factor de sobrecarga para clústeres multinodo es 2.67</block>
   <block id="249a516ff48049712229714792dc7131" category="paragraph">Necesitas calcular la capacidad bajo licencia en función del espacio utilizable para asegurarte de que tienes suficiente para tu implementación.</block>
   <block id="3d1317b428299aa3785275ff6eb8e119" category="cell">Clúster de un solo nodo</block>
-  <block id="4a56ef223b95c874ab12ac4a78def040" category="cell">Par de HA o mezcla de HA y clúster de un solo nodo</block>
   <block id="ee77295963ed13bed36e924ed72f669e" category="cell">Espacio utilizable</block>
   <block id="686d2bd292fa941724920d9f5764926c" category="cell">Espacio licenciado</block>
-  <block id="d89ec2e9b51f836e29d4d62e09ac58db" category="paragraph">Por clúster de un solo nodo:</block>
-  <block id="bb91092a841534c73b7475d3ab63802a" category="paragraph">Por clúster de par de HA:</block>
   <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">Qué sigue</block>
   <block id="336320a7d1fb36ba0e0e250060a962ec" category="inline-link-macro">Adquiere una licencia de Capacity Pools para ONTAP Select</block>
   <block id="349097419d01aa81b07916c8f94601e6" category="paragraph"><block ref="349097419d01aa81b07916c8f94601e6" category="inline-link-macro-rx"></block></block>
@@ -4053,16 +4028,22 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="598d217f06b9250ad27a8198bb5c2a4b" category="cell">54 TB (20 x 2,67 = 53,4, redondea al siguiente TB completo)</block>
   <block id="6694602e4cd7d0b05713de6bd31c888e" category="cell">Espacio máximo utilizable por nodo *Nota*: El espacio máximo gestionado por nodo o par de HA es 400 TB</block>
   <block id="0ff836b729a9f331160a37a804c5f502" category="cell">353 TB (400 / 1.13)</block>
-  <block id="79a0d4f0660fe4b9a46b19e4fa18a314" category="paragraph">74 TB [(400 / 2) / 2.67]</block>
-  <block id="19aeb97207c21df691d50d8d0930aeba" category="paragraph">148 TB (2 x 74)</block>
   <block id="9ed860bf7c910e8f72592e603158fb1a" category="paragraph">La capacidad bajo licencia para una licencia de Capacity Tiers está en cantidades completas de TB, con un mínimo de 1 TB. Calculas la capacidad bajo licencia multiplicando la cantidad de espacio utilizable por el factor de sobrecarga. El factor de sobrecarga difiere entre un clúster de un solo nodo y un clúster multinodo (basado en pares de HA):</block>
   <block id="1191f788083da9194f8eef9400d10898" category="cell">10 TB</block>
   <block id="f515aabc5719e9815156a5bba11b0271" category="cell">5 TB por nodo 10 TB para par de HA</block>
   <block id="8ef83a850a4c3f98639c08c641ced5a0" category="cell">12 TB (10 x 1,13 = 11,3, redondea al siguiente TB completo)</block>
   <block id="5c2813f14ac4d1fdac66648a550ead14" category="cell">Dos licencias de 14 TB (5 x 2.67 = 13.35, redondeado al siguiente TB completo)</block>
-  <block id="985b1eaad72a330f5ac66444aa1cc872" category="list-text">Dos nodos: 148 TB (2 x 74)</block>
-  <block id="42d74051003e55f5c33a72399e33ee7c" category="list-text">Cuatro nodos: 296 TB (4 x 74)</block>
-  <block id="cb7d5ca5e63133f9c3ddab01857677e1" category="list-text">Seis nodos: 444 TB (6 x 74)</block>
-  <block id="dd0cb9fad81cb887132c37097f5cc87f" category="list-text">Ocho nodos: 592 TB (8 x 74)</block>
   <block id="7257bc0e5008e5606e49eb884e2bc425" category="list-text">Para un host ESXi, ONTAP Select 9.7 o posterior con una utilidad de administración Deploy compatible</block>
+  <block id="eac3eeac664694b6433309da45a1300a" category="list-text">Selecciona la pestaña *Administración* en la parte superior de la página, luego selecciona *Sistemas y AutoSupport*.</block>
+  <block id="200bbcb887da28e9cd489bc89afc5674" category="cell">Par de HA o combinación de par de HA y nodo único</block>
+  <block id="d1600869d5b424ddbc5e9e6b111e1551" category="paragraph">Por cada nodo individual en un clúster:</block>
+  <block id="68fa7b3d2b5fa9a6405ba8b8886e16e6" category="paragraph">149 TB (400 / 2.67)</block>
+  <block id="867f936c72e1e7c832aeeeb86dfdad19" category="paragraph">Por cada par de HA en un clúster:</block>
+  <block id="1ae9306d13e8652cea306cd8e0f2f998" category="paragraph">298 TB (2 x 149)</block>
+  <block id="24ebdf5291b487d72a9f72970d82108d" category="list-text">Dos nodos: 298 TB (2 x 149)</block>
+  <block id="483679a22c6b3db76de43d55829178e0" category="list-text">Cuatro nodos: 596 TB (4 x 149)</block>
+  <block id="c7ba1f9c0cd7b8c5a7b2c67b9c3e7973" category="list-text">Seis nodos: 894 TB (6 x 149)</block>
+  <block id="4148985b49a3b29db1e703cf43b2866f" category="list-text">Ocho nodos: 1.192 TB (8 x 149)</block>
+  <block id="01d09c7a6491e08b12c0b1b76615fe0d" category="list-text">Diez nodos: 1,490 TB (10 x 149)</block>
+  <block id="6c1b0c6ec4484bd2c7186af4f45ae51a" category="list-text">Doce nodos: 1,788 TB (12 x 149)</block>
 </blocks>

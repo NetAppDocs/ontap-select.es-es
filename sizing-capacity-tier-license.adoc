@@ -38,15 +38,17 @@ Calcula la capacidad bajo licencia según el espacio utilizable para asegurarte 
 | Espacio máximo utilizable por nodo *Nota*: El espacio máximo gestionado por nodo o par de HA es 400 TB | 353 TB (400 / 1.13)  a| 
 Por nodo en un par de HA:
 
-* 74 TB [(400 / 2) / 2.67]
+* 149 TB (400 / 2.67)
 
 
 Por par de HA en un clúster multinodo:
 
-* Dos nodos: 148 TB (2 x 74)
-* Cuatro nodos: 296 TB (4 x 74)
-* Seis nodos: 444 TB (6 x 74)
-* Ocho nodos: 592 TB (8 x 74)
+* Dos nodos: 298 TB (2 x 149)
+* Cuatro nodos: 596 TB (4 x 149)
+* Seis nodos: 894 TB (6 x 149)
+* Ocho nodos: 1.192 TB (8 x 149)
+* Diez nodos: 1,490 TB (10 x 149)
+* Doce nodos: 1,788 TB (12 x 149)
 
 
 |===

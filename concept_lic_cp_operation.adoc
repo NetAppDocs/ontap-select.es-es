@@ -63,9 +63,7 @@ Puede determinar el ID de bloqueo de licencia para la instancia de implementaci�
 +
 Deploy muestra esta página cuando inicias sesión por primera vez. También puedes abrir el cuadro desplegable en la parte superior derecha de la página y seleccionar *Getting Started* para mostrar esta página. El LLID aparece en la sección Add Licenses.
 
-+
-Selecciona la pestaña *Administración* en la parte superior de la página, luego selecciona *Sistemas* y *Configuración*.
-
+* Selecciona la pestaña *Administración* en la parte superior de la página, luego selecciona *Sistemas y AutoSupport*.
 
 
 
