@@ -56,7 +56,7 @@ De forma predeterminada, VMware permite el acceso a los siguientes puertos:
 --
 ====
 +
-Para obtener más información, consulte la link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-security-8-0/securing-esxi-hosts/customizing-hosts-with-the-security-profile/esxi-firewall-configuration.html["Documentación de Broadcom VMware vSphere"^].
+Para más información, consulta el link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-security-8-0/securing-esxi-hosts/customizing-hosts-with-the-security-profile/esxi-firewall-configuration.html["Documentación de Broadcom VMware vSphere"^].
 
 . Familiarícese con los derechos de vCenter que se requieren. Consulte link:reference_plan_ots_vcenter.html["Servidor VMware vCenter"] para obtener más información.
 

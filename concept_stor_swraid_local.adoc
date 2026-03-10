@@ -148,7 +148,7 @@ En el shell ESXi o KVM, puede ingresar el siguiente comando para hacer parpadear
 
 [role="tabbed-block"]
 ====
-.ESX
+.ESXi
 --
 [source, cli]
 ----

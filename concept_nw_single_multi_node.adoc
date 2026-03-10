@@ -136,7 +136,7 @@ NOTE: No puedes asignar una dirección IP estática a estas interfaces y no debe
 
 El tráfico de red del clúster debe fluir a través de una red de capa 2 de baja latencia y sin enrutamiento. Debido a los requisitos de rendimiento y latencia del clúster, deberías ubicar físicamente el clúster de ONTAP Select en un lugar cercano (por ejemplo, multipack, un solo centro de datos). No se admite la creación de configuraciones de clúster de cuatro, seis, ocho, diez o doce nodos extendidos separando los nodos de alta disponibilidad a través de una WAN o de distancias geográficas significativas. Se admite una configuración extendida de dos nodos con un mediador.
 
-Para obtener más información, consulte la sección link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices["Prácticas recomendadas de alta disponibilidad (SDS de MetroCluster) extendidas de dos nodos"].
+Para más detalles, consulta la sección link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices["Prácticas recomendadas de alta disponibilidad (SDS de MetroCluster) extendidas de dos nodos"].
 
 
 NOTE: Para asegurarte del máximo rendimiento para el tráfico de red del clúster, este puerto de red está configurado para usar tramas gigantes (7500 a 9000 MTU). Para el funcionamiento correcto del clúster, verifica que las tramas gigantes estén habilitadas en todos los switches virtuales y físicos ascendentes que proporcionan servicios de red interna a los nodos del clúster ONTAP Select.

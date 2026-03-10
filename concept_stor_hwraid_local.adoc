@@ -150,7 +150,7 @@ ONTAP Select divide el almacenamiento conectado subyacente en discos virtuales d
 Por ejemplo, un ONTAP Select puede asignar un almacén de datos o LUN con una cantidad de 31 TB (el espacio restante después de que se ponga en marcha el equipo virtual y se aprovisionan el sistema y los discos raíz). A continuación, se crean y asignan cuatro discos virtuales de ~7,75 TB al complejo de reflejos y local de ONTAP adecuado.
 
 
-NOTE: Añadir capacidad a una máquina virtual de ONTAP Select es probable que tenga como resultado VMDK de diferentes tamaños. Para obtener más información, consulte la sección link:concept_stor_capacity_inc.html["Aumente la capacidad de almacenamiento"]. A diferencia de los sistemas FAS, pueden existir VMDK de distinto tamaño en el mismo agregado. ONTAP Select utiliza una franja RAID 0 en estos VMDK, lo que provoca que se pueda utilizar todo el espacio de cada VMDK con independencia de su tamaño.
+NOTE: Si añades capacidad a una máquina virtual ONTAP Select, probablemente tendrás VMDKs de diferentes tamaños. Para más detalles, consulta la sección link:concept_stor_capacity_inc.html["Aumente la capacidad de almacenamiento"]. A diferencia de los sistemas FAS, pueden existir VMDKs de diferentes tamaños en el mismo agregado. ONTAP Select usa un stripe RAID 0 en estos VMDKs, lo que permite aprovechar todo el espacio de cada VMDK sin importar su tamaño.
 
 
 

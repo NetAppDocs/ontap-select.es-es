@@ -136,7 +136,7 @@ VMware recomienda que STP se establezca como PortFast en los puertos del switch 
 
 Debe configurar un switch virtual en cada uno de los hosts ONTAP Select para admitir la red externa y la red interna (solo clústeres de varios nodos). Como parte de la implementación de un clúster de varios nodos, debe probar la conectividad de red en la red de clúster interna.
 
-Para obtener más información sobre cómo configurar un Open vSwitch en un host de hipervisor, consulte la link:https://www.netapp.com/media/13134-tr4613.pdf["Prácticas recomendadas y arquitectura de producto de ONTAP Select en KVM"^] informe técnico.
+Para obtener más información sobre cómo configurar un Open vSwitch en un host hipervisor, consulta el informe técnico link:https://www.netapp.com/media/13134-tr4613.pdf["Prácticas recomendadas y arquitectura de producto de ONTAP Select en KVM"^].
 
 
 

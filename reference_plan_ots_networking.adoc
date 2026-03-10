@@ -23,7 +23,7 @@ Debe configurar la red del hipervisor correctamente antes de implementar ONTAP S
 Debe configurar un switch virtual en cada uno de los hosts ONTAP Select para admitir la red externa y la red interna (solo clústeres de varios nodos). Como parte de la implementación de un clúster de varios nodos, debe probar la conectividad de red en la red de clúster interna.
 
 
-NOTE: Si quiere más información sobre cómo configurar un vSwitch en un host de hipervisor y la función de interfaz de alta velocidad, consulte la link:concept_nw_concepts_chars.html["Redes profundas"] sección.
+NOTE: Para obtener más información sobre cómo configurar un vSwitch en un host hipervisor y la función de interfaz de alta velocidad, consulta la sección link:concept_nw_concepts_chars.html["Redes profundas"].
 
 
 
@@ -72,7 +72,7 @@ En este entorno, debe configurar el tráfico mediante dos grupos de puertos de l
 * NIC2 en activo
 
 
-Consulte link:concept_nw_concepts_chars.html["Redes profundas"] Para obtener más información acerca de las implementaciones de dos NIC.
+Consulta la sección link:concept_nw_concepts_chars.html["Redes profundas"] para más información sobre las implementaciones de dos NIC.
 
 
 
@@ -111,7 +111,7 @@ En este entorno, debe configurar el tráfico mediante cuatro grupos de puertos d
 * NIC1, NIC2, NIC3 en espera
 
 
-Consulte link:concept_nw_concepts_chars.html["Redes profundas"] Para obtener más información acerca de las implementaciones de cuatro NIC.
+Consulta la sección link:concept_nw_concepts_chars.html["Redes profundas"] para más información sobre las implementaciones de cuatro NIC.
 
 
 

@@ -71,7 +71,7 @@ El entorno de una implantación de RAID de software debe cumplir los siguientes 
 
 
 
-NOTE: Si hay una controladora RAID de hardware, consulte link:concept_stor_concepts_chars.html["Almacenamiento en profundidad"] para obtener información sobre requisitos de configuración adicionales.
+NOTE: Si hay una controladora RAID por hardware, consulta la sección link:concept_stor_concepts_chars.html["Almacenamiento en profundidad"] para conocer los requisitos de configuración adicionales.
 
 
 
@@ -86,7 +86,7 @@ NOTE: Si hay una controladora RAID de hardware, consulte link:concept_stor_conce
 
 === Requisitos específicos de KVM
 
-También hay requisitos específicos de configuración de paquetes de software. Ver el link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server["preparación del servidor Linux"] paso para más información.
+También existen requisitos específicos de configuración del paquete de software. Consulta el paso link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server["preparación del servidor Linux"] para más información.
 
 Expectativas de medios para KVM:: Los dispositivos de almacenamiento flash SSD utilizados deben cumplir los siguientes requisitos adicionales:
 +
@@ -137,7 +137,7 @@ Como parte de la planificación de una implementación de ONTAP Select, debe ten
 A continuación se presentan las restricciones de almacenamiento más importantes. También debe revisar el link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^] para obtener información más detallada.
 
 
-TIP: ONTAP Select aplica varias restricciones relacionadas con la asignación y el uso del almacenamiento. Antes de poner en marcha un clúster de ONTAP Select o adquirir una licencia, debería estar familiarizado con estas restricciones. Consulte link:https://docs.netapp.com/us-en/ontap-select/concept_lic_evaluation.html["Licencia"] para obtener más información.
+TIP: ONTAP Select aplica varias restricciones relacionadas con la asignación y el uso del almacenamiento. Antes de desplegar un clúster de ONTAP Select o comprar una licencia, deberías familiarizarte con estas restricciones. Consulta la sección link:concept_lic_evaluation.html["Licencia"] para más información.
 
 
 

@@ -69,7 +69,7 @@ Sí, el procedimiento de actualización de un clúster Select es idéntico a la 
 Sí, el procedimiento de reversión de un clúster de ONTAP Select es casi idéntico al procedimiento de reversión de un clúster de FAS. Sin embargo, existen algunas diferencias:
 
 * Solo se pueden revertir las instancias actualizadas de ONTAP Select y solo se pueden realizar copias de seguridad en la versión original de instalación. No se pueden revertir las nuevas instalaciones a una versión de código anterior, incluso si ONTAP Select, en general, admite esa versión anterior.
-* Para ONTAP Select (KVM) y ONTAP Select (ESX) usando RAID por software, no es posible revertir a una versión anterior que no admita RAID por software. Además, una nueva instalación de ONTAP Select 9.5 o posterior en ESXi usa controladores de red VMXNET3 y, cuando es posible, el controlador vNMVE. Estas nuevas instalaciones no se pueden revertir a versiones anteriores de ONTAP Select.
+* Para ONTAP Select (KVM) y ONTAP Select (ESXi) usando RAID por software, no es posible revertir a una versión anterior que no admita RAID por software. Además, una nueva instalación de ONTAP Select 9.5 o posterior en ESXi usa controladores de red VMXNET3 y, cuando es posible, el controlador vNVMe. Estas nuevas instalaciones no pueden revertirse a versiones anteriores de ONTAP Select.
 * Si la VM ONTAP Select también se actualizó a una instancia grande (usando la licencia Premium XL), entonces no se admite volver a una versión anterior a 9.6, porque la función de instancia grande no está disponible en versiones anteriores.
 
 
@@ -92,7 +92,7 @@ También se reconocen los siguientes cambios de ONTAP Select VM:
 La actualización a ONTAP Select Deploy 2.6 permite la compatibilidad con estos cambios para cualquier clúster de ONTAP Select que ya se haya implementado pero no se haya modificado de su configuración original. En otras palabras, si se cambiaron las propiedades del clúster de ONTAP Select mencionadas anteriormente mediante System Manager o vCenter, la actualización a ONTAP Select Deploy 2.6 no solucionará estas inconsistencias. Los cambios de las propiedades de ONTAP Select deben revertirse primero para implementar ONTAP Select para añadir sus metadatos únicos a cada máquina virtual de ONTAP Select.
 
 .¿Se puede cambiar la configuración de red de implementación de ONTAP Select después de la instalación?
-No se permite modificar los detalles de red de la instancia de implementación después de que se esté ejecutando en un entorno. Para obtener más información, consulte el artículo de la base de conocimientos. link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance["Modificar la configuración de DNS de la instancia de ONTAP Deploy"^] .
+No se admite la modificación de los detalles de red de la instancia Deploy después de que se esté ejecutando en un entorno. Para más información, consulta el artículo de base de conocimientos link:https://kb.netapp.com/onprem/ontap/ONTAP_Select/Modifying_DNS_configuration_of_ONTAP_Deploy_instance["Modificar la configuración de DNS de la instancia de ONTAP Deploy"^].
 
 .¿Cómo detecta la implementación que se renuevan las licencias de ONTAP Select?
 El método es el mismo para todas las licencias, aunque las especificaciones varían en función de si se trata de una licencia de nivel de capacidad o de pool de capacidad.
@@ -130,9 +130,9 @@ Si una suscripción de Pool de capacidad caduca, el sistema le avisa primero, pe
 Existen varias preguntas y respuestas que se ocupan del almacenamiento.
 
 .¿Puede una única instancia de ONTAP Select Deploy crear clústeres tanto en ESXi como en KVM?
-Sí. La puesta en marcha de ONTAP Select puede instalarse en KVM o ESX, y ambas instalaciones pueden crear clústeres de ONTAP Select en cualquiera de los hipervisores.
+Sí. ONTAP Select Deploy puede instalarse tanto en KVM como en ESXi, y ambas instalaciones pueden crear clústeres ONTAP Select en cualquiera de los dos hipervisores.
 
-.¿Se requiere vCenter para ONTAP Select en ESX?
+.¿Es necesario vCenter para ONTAP Select en ESXi?
 Si los hosts ESXi tienen la licencia adecuada, entonces no es necesario que los hosts ESXi estén gestionados por un vCenter Server. Sin embargo, si los hosts están gestionados por un vCenter server, debes configurar ONTAP Select Deploy para que use ese vCenter Server. En otras palabras, no puedes configurar los hosts ESXi como independientes en ONTAP Select Deploy si están siendo gestionados activamente por un vCenter Server. Ten en cuenta que la VM de ONTAP Select Deploy depende de vCenter para rastrear todas las migraciones de VM de ONTAP Select entre hosts ESXi debido a un evento de vMotion o VMware HA.
 
 .¿Qué es RAID de software?
@@ -169,7 +169,7 @@ Debe utilizar un mínimo de dos NIC físicas para evitar un único punto de erro
 ONTAP HA gestiona todos los demás errores en el caso de un clúster de dos o cuatro nodos. Si es necesario reemplazar el servidor de hipervisor y reconstituir el clúster ONTAP Select con un nuevo servidor, consulte _¿Puedo recuperar un nodo ONTAP Select ?_.
 
 .¿Puedo recuperar un nodo ONTAP Select ?
-Comuníquese con el soporte técnico de NetApp si necesita recuperar un nodo de ONTAP Select , por ejemplo, si una máquina virtual o un host de ONTAP Select se pierde por completo o si un clúster de un solo nodo se elimina accidentalmente. Para obtener más información, consulte el artículo de la base de conocimientos. link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster["Recuperación de máquinas virtuales del nodo ONTAP Select en caso de desastre"^] .
+Contacta con el soporte técnico de NetApp si necesitas recuperar un nodo de ONTAP Select, por ejemplo, si una máquina virtual o un host de ONTAP Select se pierde por completo o si se elimina accidentalmente un clúster de un solo nodo. Para más información, consulta el artículo de base de conocimientos link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-KBs/ONTAP_Select_node_VM_recovery_in_case_of_disaster["Recuperación de máquinas virtuales del nodo ONTAP Select en caso de desastre"^].
 
 .¿Cuál es el tamaño máximo de almacén de datos compatible con ONTAP Select?
 Todas las configuraciones, incluido VSAN, admiten 400 TB de almacenamiento por nodo ONTAP Select.
@@ -263,7 +263,7 @@ SDS de MetroCluster es una función premium y requiere la licencia Premium o Pre
 El SDS de ONTAP MetroCluster es compatible con todo tipo de configuraciones de almacenamiento (DAS y vNAS).
 
 .¿El SDS de ONTAP MetroCluster admite RAID de software?
-Sí, el software RAID es compatible con medios SSD en KVM y ESX.
+Sí, RAID por software es compatible con SSD en KVM y ESXi.
 
 .¿El SDS de ONTAP MetroCluster admite tanto SSD como medios giratorios?
 Sí, aunque se requiere una licencia Premium, esta licencia admite tanto máquinas virtuales pequeñas como medianas, así como SSD y medios giratorios.

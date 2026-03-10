@@ -45,7 +45,7 @@ El almacenamiento definido por el software de ONTAP Select MetroCluster proporci
 
 image:MCSDS_01.jpg["Cloud privado basado en DAS"]
 
-Para obtener más información acerca de las prácticas recomendadas y otros requisitos, consulte las secciones link:concept_ha_config.html#two-node-ha-versus-multi-node-ha["Alta disponibilidad de dos nodos frente a la alta disponibilidad de varios nodos"] y.. link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices["Prácticas recomendadas de alta disponibilidad (SDS de MetroCluster) extendidas de dos nodos"].
+Para más prácticas recomendadas y otros requisitos, consulta las secciones link:concept_ha_config.html#two-node-ha-versus-multi-node-ha["Alta disponibilidad de dos nodos frente a la alta disponibilidad de varios nodos"] y link:reference_plan_best_practices.html#two-node-stretched-ha-metrocluster-sds-best-practices["Prácticas recomendadas de alta disponibilidad (SDS de MetroCluster) extendidas de dos nodos"].
 
 .Información relacionada
 link:reference_lic_ontap_features.html["Compatibilidad de ONTAP Select con las funciones de ONTAP"]

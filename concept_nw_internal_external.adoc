@@ -72,7 +72,7 @@ A partir de la puesta en marcha de ONTAP 2.10, el tamaño de MTU utilizado por l
 La red externa de ONTAP Select es responsable de todas las comunicaciones salientes del clúster y, por lo tanto, está presente tanto en la configuración de clúster de un solo nodo como en la de varios nodos. Aunque esta red no tiene los requisitos de rendimiento tan estrictos de la red interna, el administrador debe tener cuidado de no crear cuellos de botella en la red entre el cliente y la ONTAP VM, porque los problemas de rendimiento podrían interpretarse erróneamente como problemas de ONTAP Select.
 
 
-NOTE: De forma similar al tráfico interno, el tráfico externo se puede etiquetar en la capa de vSwitch (VST) y en la capa de switch externo (EST). Además, el propio equipo virtual de ONTAP Select puede etiquetar el tráfico externo en un proceso conocido como VGT. Consulte la sección link:concept_nw_data_mgmt_separation.html["Separación del tráfico de datos y gestión"] para obtener más detalles.
+NOTE: De forma similar al tráfico interno, el tráfico externo se puede etiquetar en la capa vSwitch (VST) y en la capa de switch externo (EST). Además, el tráfico externo puede ser etiquetado por la propia VM de ONTAP Select en un proceso conocido como VGT. Consulta la sección link:concept_nw_data_mgmt_separation.html["Separación del tráfico de datos y gestión"] para más detalles.
 
 En la siguiente tabla se muestran las principales diferencias entre las redes internas y externas de ONTAP Select.
 

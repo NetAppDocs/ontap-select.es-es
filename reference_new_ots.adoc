@@ -65,6 +65,7 @@ Puede reducir el tamaño del clúster para un clúster existente en un host ESXi
 link:task_cluster_expansion_contraction.html["Obtenga información sobre la expansión y contracción del clúster y las versiones de hipervisor KVM y ESXi compatibles"] .
 
 --
+Compatibilidad actualizada con hipervisor de KVM:: A partir de ONTAP Select 9.18.1, el hipervisor KVM es compatible con Rocky Linux 10.1.
 
 
 
@@ -113,7 +114,7 @@ Puede reducir el tamaño del clúster de un clúster ESXi existente en los sigui
 link:task_cluster_expansion_contraction.html["Obtenga información sobre la expansión y contracción del clúster y las versiones de hipervisor KVM y ESXi compatibles"] .
 
 --
-Compatibilidad con SnapMirror Cloud:: A partir de ONTAP Select 9.17.1, SnapMirror Cloud es compatible con ONTAP Select. SnapMirror Cloud es una función de ONTAP con licencia que se habilita por defecto cuando despliegas un clúster de ONTAP Select 9.17.1 o actualizas un clúster de ONTAP Select existente a la versión 9.17.1.
+Soporte para SnapMirror cloud:: A partir de ONTAP Select 9.17.1, SnapMirror cloud es compatible con ONTAP Select. SnapMirror cloud es una función de ONTAP con licencia que se activa por defecto cuando implementas un clúster de ONTAP Select 9.17.1 o actualizas un clúster de ONTAP Select existente a la versión 9.17.1.
 +
 --
 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["Conoce las copias de seguridad en la nube de SnapMirror a almacenamiento de objetos"^].
@@ -141,12 +142,12 @@ Compatibilidad actualizada con controladores NDA:: A partir de ONTAP Select 9.17
 Para ONTAP Select 9.16.1 y versiones anteriores, NVD continúa brindando soporte para dispositivos NVMe en su implementación de ONTAP Select .
 
 --
-Compatibilidad actualizada con hipervisor de KVM:: A partir de ONTAP Select 9.17.1, el hipervisor KVM es compatible con Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7 y 9.6 y Rocky Linux 10.1, 10.0, 9.7 y 9.6.
+Compatibilidad actualizada con hipervisor de KVM:: A partir de ONTAP Select 9.17.1, el hipervisor KVM es compatible con Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7 y 9.6 y Rocky Linux 10.0, 9.7 y 9.6.
 +
 --
 [NOTE]
 ====
-Existen limitaciones de flujo de trabajo RAID por software para hipervisores KVM en hosts RHEL 10.1 y 10.0 y Rocky Linux 10.1 y 10.0. Para más información, consulta los siguientes artículos de la base de conocimientos:
+Existen limitaciones de flujo de trabajo RAID por software para hipervisores KVM en hosts RHEL 10.1 y 10.0 y Rocky Linux 10.0. Para más información, consulta los siguientes artículos de la base de conocimientos:
 
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4020["CDEPLOY-4020: ONTAP Select Deploy: Mensaje de advertencia al crear el clúster HWR con RHEL 10 y ROCKY 10"^]
 * link:https://kb.netapp.com/on-prem/ontap/ontap-select/Select-Issues/CDEPLOY-4025["CDEPLOY-4025: ONTAP Select DeployGUI: Los grupos de almacenamiento y los discos de almacenamiento no son visibles para SWR en la página de creación de clústeres en hosts con RHEL10/Rocky 10"^]
@@ -202,7 +203,7 @@ NOTE: El soporte para la expansión y contracción de clústeres está limitado 
 
 Compatibilidad con hipervisor KVM:: A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hipervisor KVM. Anteriormente, en ONTAP Select 9.10.1 se eliminó la compatibilidad para poner en marcha un clúster nuevo en un hipervisor KVM y se eliminó la compatibilidad con la administración de hosts y clústeres KVM existentes, excepto para desconectar o eliminar, en ONTAP Select 9.11.1.
 Ya no se admite la implementación del complemento de VMware vCenter:: A partir de ONTAP Select 9.14.1, ya no se admite el complemento para implementar VMware vCenter.
-Soporte actualizado de ONTAP Select Deploy:: Si está ejecutando una versión de ONTAP Select Deploy 9.14.1 inferior a 9.14.1P2, debe actualizar a ONTAP Select Deploy 9.14.1P2 lo antes posible. Para obtener más información, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["Notas de la versión de ONTAP Select 9.14.1"^].
+Soporte actualizado de ONTAP Select Deploy:: Si estás ejecutando una versión de ONTAP Select Deploy 9.14.1 inferior a la 9.14.1P2, deberías actualizar a ONTAP Select Deploy 9.14.1P2 lo antes posible. Para más información, consulta el link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["Notas de la versión de ONTAP Select 9.14.1"^].
 Compatibilidad con VMware ESXi mejorada:: ONTAP Select 9.14.1 incluye compatibilidad con VMware ESXi 8.0 U2.
 
 
@@ -212,7 +213,7 @@ Compatibilidad con VMware ESXi mejorada:: ONTAP Select 9.14.1 incluye compatibil
 
 Compatibilidad con NVMe sobre TCP:: Cuando actualice a ONTAP Select 9.13.1, debe tener la nueva licencia para admitir NVMe over TCP. Esta licencia se incluye automáticamente cuando se implementa ONTAP Select por primera vez desde la versión 9.13.1.
 Se ha actualizado el soporte de VMware ESXi:: A partir de ONTAP 9.13,1, se admite VMware ESXi 8.0.1 GA (compilación 20513097) con las versiones de hardware 4 y posteriores.
-Soporte actualizado de ONTAP Select Deploy:: A partir de abril de 2024, ONTAP Select Deploy 9.13.1 ya no está disponible en el sitio de soporte de NetApp. Si ejecuta ONTAP Select Deploy 9.13.1, debe actualizar a ONTAP Select Deploy 9.14.1P2 lo antes posible. Para obtener más información, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["Notas de la versión de ONTAP Select 9.14.1"^].
+Soporte actualizado de ONTAP Select Deploy:: A partir de abril de 2024, ONTAP Select Deploy 9.13.1 ya no está disponible en el NetApp Support Site. Si estás ejecutando ONTAP Select Deploy 9.13.1, deberías actualizar a ONTAP Select Deploy 9.14.1P2 lo antes posible. Para más información, consulta el link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["Notas de la versión de ONTAP Select 9.14.1"^].
 
 
 
@@ -221,7 +222,7 @@ Soporte actualizado de ONTAP Select Deploy:: A partir de abril de 2024, ONTAP Se
 
 ONTAP Select 9.12.1 se beneficia de la mayoría de los nuevos desarrollos en la versión actual del producto principal de ONTAP. No incluye ninguna nueva función ni mejora específica de ONTAP Select.
 
-A partir de abril de 2024, ONTAP Select Deploy 9.12.1 ya no está disponible en el sitio de soporte de NetApp. Si ejecuta ONTAP Select Deploy 9.12.1, debe actualizar a ONTAP Select Deploy 9.14.1P2 lo antes posible. Para obtener más información, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["Notas de la versión de ONTAP Select 9.14.1"^].
+A partir de abril de 2024, ONTAP Select Deploy 9.12.1 ya no está disponible en el NetApp Support Site. Si estás ejecutando ONTAP Select Deploy 9.12.1, deberías actualizar a ONTAP Select Deploy 9.14.1P2 lo antes posible. Para más información, consulta el link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["Notas de la versión de ONTAP Select 9.14.1"^].
 
 
 
@@ -244,7 +245,7 @@ Ya no se admite el hipervisor KVM::
 * A partir de ONTAP Select 9.10.1, ya no es posible poner en marcha un clúster nuevo en el hipervisor KVM.
 * A partir de ONTAP Select 9.11.1, toda la funcionalidad de capacidad de gestión ya no está disponible para los clústeres y hosts KVM existentes, excepto para las funciones de desconectar y eliminar.
 +
-NetApp recomienda a los clientes planificar y ejecutar una migración completa de datos desde ONTAP Select para KVM a cualquier otra plataforma ONTAP, incluido ONTAP Select para ESXi. Para obtener más información, consulte https://mysupport.netapp.com/info/communications/ECMLP2877451.html["Aviso de EOA"^]
+NetApp recomienda encarecidamente que los clientes planifiquen y realicen una migración completa de datos desde ONTAP Select para KVM a cualquier otra plataforma ONTAP, incluida ONTAP Select para ESXi. Para más información, consulta el  https://mysupport.netapp.com/info/communications/ECMLP2877451.html["Aviso de EOA"^]
 
 
 

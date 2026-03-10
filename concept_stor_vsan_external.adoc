@@ -79,7 +79,7 @@ Después de la implementación, los nodos ONTAP Select se pueden migrar entre ho
 
 NOTE: Las reglas de antiafinidad requieren que DRS esté habilitado en el clúster ESXi.
 
-Consulte el siguiente ejemplo sobre cómo crear una regla de anti-afinidad para los equipos virtuales de ONTAP Select. Si el clúster de ONTAP Select contiene más de un par de alta disponibilidad, todos los nodos del clúster deben incluirse en esta regla.
+Consulta el siguiente ejemplo sobre cómo crear una regla de antiafinidad para las máquinas virtuales de ONTAP Select. Si el clúster de ONTAP Select contiene más de un par de HA, todos los nodos del clúster deben incluirse en esta regla.
 
 image:ST_15.jpg["Reglas VM/Host"]
 
