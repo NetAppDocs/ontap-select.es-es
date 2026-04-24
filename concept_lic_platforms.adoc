@@ -44,7 +44,7 @@ La siguiente tabla compara las capacidades de las ofertas de licencias estándar
 | configuración de vNAS | Sí | Sí | Sí 
 
 
-.3+| Unidades de estado sólido (SSD) en un... | Configuración RAID de hardware | No | Sí | Sí 
+.3+| Unidades de estado sólido (SSDs) en ... | Configuración RAID de hardware | No | Sí | Sí 
 
 
 | Configuración RAID de software | No | Sí | Sí 

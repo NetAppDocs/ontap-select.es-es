@@ -59,7 +59,7 @@ KVM es compatible con las siguientes versiones de hipervisor:
 * Dispositivos NVMe que cumplen con la especificación 1.0 o posterior
 
 
-Sigue el link:kvm-host-configuration-and-preparation-checklist["lista de comprobación de preparación de host"] , y revise la información requerida para el link:reference_chk_deploy_req_info.html["Implementar la instalación de la utilidad"] y el link:reference_chk_select_req_info.html["Instalación de ONTAP Select"] Para más información.
+Sigue el link:kvm-host-configuration-and-preparation-checklist.html["lista de comprobación de preparación de host"], y revisa la información requerida para el link:reference_chk_deploy_req_info.html["Implementar la instalación de la utilidad"] y el link:reference_chk_select_req_info.html["Instalación de ONTAP Select"] para más información.
 
 .Acerca de esta tarea
 Debe realizar este procedimiento antes de crear un nuevo clúster de ONTAP Select . También puede realizar el procedimiento para configurar unidades NVMe adicionales para un clúster NVMe RAID por software existente. En este caso, después de configurar las unidades, debe agregarlas mediante Implementar, como lo haría con las unidades SSD adicionales. La principal diferencia es que Implementar detecta las unidades NVMe y reinicia los nodos. Al agregar unidades NVMe a un clúster existente, tenga en cuenta lo siguiente sobre el proceso de reinicio:
