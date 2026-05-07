@@ -144,7 +144,7 @@ NOTE: El objetivo del procedimiento de recuperación es restaurar el clúster de
 . Prepare una nueva instancia de la utilidad ONTAP Select Deploy:
 +
 .. Instale una nueva máquina virtual de la utilidad de implementación.
-.. Si lo desea, puede restaurar la configuración de implementación desde un backup anterior a la nueva máquina virtual.
+.. Opcionalmente, restaura la configuración de Deploy de una copia de seguridad anterior en la nueva máquina virtual.
 +
 Si restaura una copia de seguridad anterior, la nueva instancia de implementación no contendrá el clúster de dos nodos. Consulte la sección de información relacionada para obtener información más detallada sobre los procedimientos de instalación y restauración.
 

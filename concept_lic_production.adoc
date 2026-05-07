@@ -64,8 +64,3 @@ Existen varias características únicas para el modelo de licencias de pools de 
 * Todos los nodos ONTAP Select de un clúster comparten la misma capacidad de licencia. Esto significa que la licencia debe ser lo suficientemente grande para cubrir el almacenamiento asignado a todos los nodos del clúster.
 * Cada nodo alquila automáticamente capacidad de almacenamiento para sus agregados de datos locales desde un pool de capacidad compartida.
 
-
-.¿Que sigue?
-* link:concept_lic_platforms.html["Obtenga más información sobre las ofertas de licencias de la plataforma para ONTAP Select"]
-* link:concept_lic_cp_operation.html["Conoce más sobre el modelo de licencia de ONTAP Select Capacity Pools"]
-

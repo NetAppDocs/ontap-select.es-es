@@ -20,7 +20,7 @@ El proceso exacto varía según si utiliza una licencia de nivel de capacidad o 
 
 Número de serie de la licencia de nueve dígitos:: El número de serie se aplica a un nodo (niveles de capacidad) o a un pool de almacenamiento (pools de capacidad).
 ID de bloqueo de licencia:: Debe tener el ID de bloqueo de licencia para la instancia de implementación cuando utilice una licencia de pool de capacidad
-Sitio Web de licencias:: Obtiene una licencia de nivel de capacidad y pool de capacidad en diferentes sitios web
+Sitio Web de licencias:: Obtienes una licencia de Capacity Tier y una de Capacity Pool en sitios web diferentes.
 
 
 image:purchased_license_workflow.png["Describe el proceso utilizado para adquirir e instalar una licencia de almacenamiento para una implementación de ONTAP Select de producción."]

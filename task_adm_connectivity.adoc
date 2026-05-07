@@ -33,10 +33,10 @@ NOTE: Se recomienda que siempre ejecute una prueba rápida antes de crear un cl�
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* en la parte superior de la página y haga clic en *Comprobador de red*.
-. Haga clic en *Iniciar nueva ejecución* y seleccione los hosts y las redes para el par ha
+. Selecciona la pestaña *Administración* en la parte superior de la página y luego selecciona *Network Checker*.
+. Selecciona *Start New Run*, luego selecciona los hosts y redes para el par HA
 +
 Puede añadir y configurar parejas de alta disponibilidad adicionales según sea necesario.
 
-. Haga clic en *Iniciar* para iniciar la prueba de conectividad de red.
+. Selecciona *Iniciar* para comenzar la prueba de conectividad de red.
 

@@ -16,11 +16,11 @@ summary: Puede actualizar una máquina virtual de la utilidad de implementación
 [role="lead"]
 Actualiza una máquina virtual existente de la utilidad ONTAP Select Deploy in situ usando la CLI de la utilidad ONTAP Select Deploy.
 
-Puedes actualizar directamente a ONTAP Select Deploy 9.18.1 desde ONTAP Select Deploy 9.17.1 o 9.16.1. Para actualizar desde una versión anterior, por ejemplo, ONTAP Select Deploy 9.15.1, primero tienes que actualizar a ONTAP Select Deploy 9.16.1 o 9.17.1 y luego actualizar a ONTAP Select Deploy 9.18.1.
+Puedes actualizar directamente a ONTAP Select Deploy 9.19.1 desde ONTAP Select Deploy 9.18.1 o 9.17.1. Para actualizar desde una versión anterior, por ejemplo, ONTAP Select Deploy 9.16.1, primero tienes que actualizar a ONTAP Select Deploy 9.17.1 o 9.18.1 y luego actualizar a ONTAP Select Deploy 9.19.1.
 
 [NOTE]
 ====
-Si tienes una versión anterior de la utilidad de administración ONTAP Select Deploy instalada, deberías actualizar a la versión actual. El nodo ONTAP Select y el componente ONTAP Select Deploy se actualizan de forma independiente. Consulta link:concept_adm_upgrading_nodes.html["Actualice los nodos ONTAP Select"^] para más detalles.
+Si tienes instalada una versión anterior de la utilidad de administración ONTAP Select Deploy, deberías actualizar a la versión actual. Actualizas los componentes ONTAP Select node y ONTAP Select Deploy de forma independiente. Consulta link:concept_adm_upgrading_nodes.html["Actualice los nodos ONTAP Select"^] para más detalles.
 
 ====
 .Antes de empezar
@@ -54,14 +54,12 @@ Esta tarea describe un método para cargar el archivo en la máquina virtual ONT
 * Verifique que tenga la contraseña de la cuenta de usuario administrador.
 
 
-.Pasos
-. En una terminal de comandos de su estación de trabajo local, utilice `scp` (Protocolo de copia segura) utilidad para cargar el archivo de imagen a la máquina virtual ONTAP Select Deploy, como se muestra en el siguiente ejemplo:
-+
+.Paso
+En una terminal de comandos de su estación de trabajo local, utilice `scp` (Protocolo de copia segura) utilidad para cargar el archivo de imagen a la máquina virtual ONTAP Select Deploy, como se muestra en el siguiente ejemplo:
+
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
 ....
-
-
 .Resultado
 El archivo de actualización se almacena en el directorio inicial del usuario administrador.
 

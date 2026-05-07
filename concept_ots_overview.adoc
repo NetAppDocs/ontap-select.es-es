@@ -115,6 +115,7 @@ ONTAP Select no admite varias funciones de ONTAP. En la mayoría de los casos, e
 
 NOTE: A partir de ONTAP Select 9.16.1, se admiten las actualizaciones manuales de ARP y la licencia de función ARP se incluye en el archivo de licencia de NetApp (NLF).
 
+* Gestores de claves en la nube
 * Espacio IP del clúster
 +
 No se admite ninguna modificación del espacio IP del clúster, como la adición o eliminación de puertos, LAN virtuales (VLAN) o grupos de agregación de enlaces.
@@ -131,12 +132,12 @@ La supervisión de estado tradicional utilizada con una puesta en marcha de ONTA
 +
 No se admiten los grupos de interfaces.
 
-* Gestor de claves multi-tenant (MTKM)
 * Compatibilidad con descarga de NIC
 +
 Debido al entorno virtualizado que se utiliza con ONTAP Select, no se admite la instalación de descarga de NIC.
 
 * Unidades de cifrado del almacenamiento de NetApp
+* Gestor de llaves a bordo
 * Propiedades del puerto ONTAP
 +
 No se admite la modificación de las propiedades de los puertos ONTAP, como la velocidad, la dúplex y el control de flujo.
@@ -149,6 +150,6 @@ No se admite la modificación de las propiedades de los puertos ONTAP, como la v
 
 
 .Información relacionada
-* link:reference_lic_ontap_features.html#enabled-ontap-features["Conozca las funciones de ONTAP habilitadas de forma predeterminada"]
+* link:reference_lic_ontap_features.html#licensed-ontap-features["Conoce las funciones de ONTAP con licencia por defecto"]
 * link:concept_lic_evaluation.html["Obtenga más información sobre las opciones de licencia de ONTAP Select"]
 

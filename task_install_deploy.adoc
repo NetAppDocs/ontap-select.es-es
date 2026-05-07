@@ -127,12 +127,12 @@ Debe definir la contraseña de la cuenta de administrador. Debe proporcionar est
 +
 Nombre de host:
 
-.. Escriba el nombre del host y pulse *Intro*.
+.. Escriba el nombre del host y seleccione *Intro*.
 .. Espere hasta que aparezca el siguiente símbolo del sistema:
 +
 Introduzca una contraseña para el usuario administrador:
 
-.. Escriba la contraseña y pulse *Intro*.
+.. Escribe la contraseña y selecciona *Intro*.
 .. Espere hasta que aparezca el siguiente símbolo del sistema:
 +
 ¿Usar DHCP para establecer la información de red? [n]:

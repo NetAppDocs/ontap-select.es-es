@@ -27,15 +27,15 @@ Después de crear el clúster, inicialmente está en estado en línea.
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Clusters* en la parte superior de la página y seleccione el clúster deseado en la lista.
-. Haga clic en image:icon_kebab.gif["Opciones"] A la derecha del clúster y seleccione *desconectar*.
+. Seleccione la pestaña *Clusters* en la parte superior de la página y seleccione el clúster deseado de la lista.
+. Selecciona image:icon_kebab.gif["Opciones"] a la derecha del cluster y selecciona *Take Offline*.
 +
 Si la opción sin conexión no está disponible, el clúster ya está en el estado sin conexión.
 
-. Haga clic en *Sí* en la ventana emergente para confirmar la solicitud.
-. Haga clic en *Actualizar* ocasionalmente para confirmar que el clúster está sin conexión.
-. Para volver a conectar el clúster, haga clic en image:icon_kebab.gif["Opciones"] Y seleccione *traer en línea*.
-. Haga clic en *Actualizar* ocasionalmente para confirmar que el clúster está en línea.
+. Selecciona *Sí* en la ventana emergente para confirmar la solicitud.
+. Selecciona *Refrescar* de vez en cuando para confirmar que el clúster está desconectado.
+. Para volver a poner en línea el clúster, selecciona image:icon_kebab.gif["Opciones"] y selecciona *Bring Online*.
+. Selecciona *Refrescar* de vez en cuando para confirmar que el clúster está en línea.
 
 
 
@@ -49,12 +49,12 @@ El clúster debe estar en el estado sin conexión.
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Clusters* en la parte superior de la página y seleccione el clúster deseado en la lista.
-. Haga clic en image:icon_kebab.gif["Opciones"] A la derecha del clúster y seleccione *Eliminar*.
+. Seleccione la pestaña *Clusters* en la parte superior de la página y seleccione el clúster deseado de la lista.
+. Selecciona image:icon_kebab.gif["Opciones"] a la derecha del cluster y selecciona *Borrar*.
 +
 Si la opción de eliminación no está disponible, el clúster no tiene el estado sin conexión.
 
-. Haga clic en *Actualizar* ocasionalmente para confirmar que el clúster se ha eliminado de la lista.
+. Selecciona *Refrescar* de vez en cuando para confirmar que el cluster se ha eliminado de la lista.
 
 
 
@@ -109,10 +109,10 @@ estados del clúster y del nodo:: Un clúster o nodo de ONTAP Select puede estar
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Clusters* en la parte superior izquierda de la página y seleccione el clúster deseado en la lista.
-. Haga clic en image:icon_kebab.gif["Opciones"] En el lado derecho de la página y seleccione *actualización de clúster*.
+. Selecciona la pestaña *Clusters* en la parte superior izquierda de la página y selecciona el cluster deseado de la lista.
+. Selecciona image:icon_kebab.gif["Opciones"] en la parte derecha de la página y selecciona *Cluster Refresh*.
 . En *credenciales de clúster*, proporcione la contraseña de administrador de ONTAP para el clúster.
-. Haga clic en *Actualizar*.
+. Selecciona *Refrescar*.
 
 
 .Después de terminar

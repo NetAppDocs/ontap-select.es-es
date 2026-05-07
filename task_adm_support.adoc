@@ -27,9 +27,9 @@ AutoSupport utiliza los datos de configuración de despliegue.
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-. Haga clic en *Configuración y AutoSupport* y, a continuación, haga clic en image:icon_pencil.gif["Editar"].
-. Proporcione los datos de configuración según corresponda a su entorno y haga clic en *Modificar*.
+. Seleccione la pestaña *Administration* en la parte superior de la página.
+. Selecciona *Configuración & AutoSupport*, luego selecciona image:icon_pencil.gif["Editar"].
+. Proporciona los datos de configuración adecuados para tu entorno y selecciona *Modificar*.
 +
 Si utiliza un servidor proxy, puede configurar la URL del proxy del siguiente modo:
 `\http://USERNAME:PASSWORD@<FQDN|IP>:PORT`
@@ -59,9 +59,9 @@ Puede filtrar la lista de mensajes de eventos según varias características, co
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-. Haga clic en *Eventos y trabajos* y, a continuación, en *Eventos*.
-. Si lo desea, haga clic en *filtro* y cree un filtro para limitar los mensajes de eventos que se muestran.
+. Seleccione la pestaña *Administration* en la parte superior de la página.
+. Selecciona *Eventos y trabajos* y luego *Eventos*.
+. Opcionalmente, selecciona *Filtro* y crea un filtro para limitar los mensajes de eventos mostrados.
 
 
 
@@ -75,8 +75,8 @@ AutoSupport es la principal herramienta de solución de problemas que usa NetApp
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-. Haga clic en *Configuración y AutoSupport* y, a continuación, haga clic en image:icon_kebab.gif["Opciones"].
+. Seleccione la pestaña *Administration* en la parte superior de la página.
+. Selecciona *Settings & AutoSupport* y luego selecciona image:icon_kebab.gif["Opciones"].
 . Habilite o deshabilite la función AutoSupport según sea necesario.
 
 
@@ -96,13 +96,13 @@ Puede generar los siguientes paquetes AutoSupport bajo la dirección y guía del
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-. Haga clic en *Configuración y AutoSupport* y, a continuación, haga clic en image:icon_kebab.gif["Opciones"].
-. Haga clic en *generar*.
+. Seleccione la pestaña *Administration* en la parte superior de la página.
+. Selecciona *Settings & AutoSupport* y luego selecciona image:icon_kebab.gif["Opciones"].
+. Selecciona *Generar*.
 . Seleccione el tipo y proporcione una descripción para el paquete; opcionalmente puede proporcionar un número de caso.
-. Haga clic en *generar*.
+. Selecciona *Generar*.
 +
 A cada paquete AutoSupport se le asigna un número de identificación de secuencia único.
 
-. Opcionalmente, en *Historial de AutoSupport*, seleccione el paquete correcto y haga clic en el icono de descarga para guardar el archivo AutoSupport en su estación de trabajo local.
+. Si lo deseas, selecciona el paquete correcto en *AutoSupport History* y luego selecciona el icono de descarga para guardar el archivo AutoSupport en tu estación de trabajo local.
 

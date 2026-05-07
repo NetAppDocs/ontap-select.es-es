@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_usecase_robo.html 
-keywords: ontap select, ROBO, remote office/branch office 
+keywords: ontap select, ROBO, remote office, branch office 
 summary: Ponga en marcha ONTAP Select en situaciones de oficinas remotas y sucursales para dar soporte a oficinas más pequeñas sin renunciar a una administración y un control centralizados. 
 ---
 = Utilice ONTAP Select en oficinas remotas y sucursales

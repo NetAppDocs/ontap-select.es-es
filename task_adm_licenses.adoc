@@ -26,7 +26,7 @@ Se pueden añadir, editar y eliminar licencias de nivel de capacidad de ONTAP Se
 . Inicie sesión en la utilidad de implementación a través de la interfaz web mediante la cuenta de administrador.
 . Seleccione la pestaña *Administration* en la parte superior de la página.
 . Selecciona *Licencias* y selecciona *Nivel de capacidad*.
-. Opcionalmente seleccione *Filtro* y para limitar las licencias mostradas.
+. Opcionalmente, selecciona *Filtro* para limitar las licencias mostradas.
 . Para reemplazar una licencia existente, seleccione una licencia, seleccione image:icon_kebab.gif["Opciones"]y seleccione *Actualizar*.
 . Para agregar una nueva licencia, seleccione *Agregar* en la parte superior de la página y, a continuación, seleccione *Cargar licencia(s)* y seleccione un archivo de licencia de su estación de trabajo local.
 

@@ -31,5 +31,5 @@ Debe tener la contraseña actual de la cuenta de administrador de implementació
 ** URL de proxy (opcional)
 
 
-. Escriba *?* y pulse *Intro* para mostrar una lista de los comandos de shell de administración disponibles.
+. Escribe *?* y selecciona *Enter* para mostrar una lista de los comandos de shell de gestión disponibles.
 

@@ -50,5 +50,5 @@ Todas las funciones están sujetas a licencia y están disponibles. Tanto SnapLo
 
 .Información relacionada
 * link:https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html["Tipos de SVM contenidas en un clúster"^]
-* link:reference_lic_ontap_features.html["Funciones de ONTAP habilitadas de forma predeterminada"]
+* link:reference_lic_ontap_features.html["Funciones de ONTAP con licencia por defecto"]
 

@@ -23,6 +23,6 @@ Debe haber iniciado sesión en la página web de documentación en línea de imp
 Puede recuperar la información de configuración que describe un clúster de ONTAP Select con su identificador único. En este ejemplo, se devuelven todos los campos clasificados como baratos. Sin embargo, como práctica recomendada, solo se deben solicitar los campos específicos que se necesitan.
 
 .Pasos
-. En la página principal, desplácese hasta la parte inferior y haga clic en *Cluster*.
-. Haga clic en *GET /Clusters/{cluster_id}* para mostrar los detalles de la llamada API utilizada para devolver información acerca de un clúster ONTAP Select.
+. En la página principal, desplázate hasta la parte inferior y selecciona *Cluster*.
+. Selecciona *GET /clusters/{cluster_id}* para mostrar los detalles de la llamada a la API utilizada para devolver información sobre un cluster de ONTAP Select.
 

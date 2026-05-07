@@ -24,8 +24,8 @@ Puede cambiar la contraseña de la cuenta de administrador de la máquina virtua
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en el icono de figura situado en la parte superior derecha de la página y seleccione *Cambiar contraseña*.
-. Introduzca la contraseña actual y la nueva según se le solicite y haga clic en *Enviar*.
+. Selecciona el icono de la figura en la parte superior derecha de la página y luego selecciona *Cambiar contraseña*.
+. Proporciona la contraseña actual y la nueva cuando se te pida y selecciona *Submit*.
 
 
 
@@ -39,9 +39,9 @@ Debe estar familiarizado con los tipos de credenciales y con cómo se utilizan e
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Administración* situada en la parte superior de la página.
-. Haga clic en *servidores de administración* y, a continuación, haga clic en *Agregar vCenter*.
-. Introduzca la siguiente información y haga clic en *Agregar*.
+. Seleccione la pestaña *Administration* en la parte superior de la página.
+. Selecciona *Management Servers* > *Add vCenter*.
+. Ingresa la siguiente información y selecciona *Add*.
 +
 [cols="30,70"]
 |===
@@ -56,7 +56,7 @@ Debe estar familiarizado con los tipos de credenciales y con cómo se utilizan e
 
 | Contraseña | Introduzca la contraseña del nombre de usuario asociado. 
 |===
-. Una vez añadido el nuevo servidor de gestión, puede hacer clic opcionalmente image:icon_kebab.gif["Opciones"] y seleccione una de las siguientes opciones:
+. Opcionalmente, selecciona image:icon_kebab.gif["Opciones"] después de añadir el nuevo servidor de gestión, luego selecciona una de las siguientes:
 +
 ** Actualizar las credenciales
 ** Verificar credenciales
@@ -166,7 +166,7 @@ Puede iniciar sesión en ONTAP Select Deploy con la autenticación PIV de YubiKe
 . Inicie sesión desde su dispositivo con el YubiKey conectado.
 
 
-.Resultado de ejemplo
+.Ejemplo de salida:
 [listing]
 ----
 login as: admin
@@ -194,7 +194,7 @@ La `ssh-keygen` command soporta varios algoritmos de clave pública para claves 
 * El tamaño de la clave se selecciona con el `-b` opción
 
 
-.Resultado de ejemplo
+.Ejemplo de salida:
 [listing]
 ----
 ssh-keygen -t ecdsa -b 521

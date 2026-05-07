@@ -24,7 +24,7 @@ La página de documentación en línea de ONTAP Select incluye los detalles de c
 
 Se incluye la siguiente información para cada llamada de API dentro de un flujo de trabajo para ayudar a localizar la llamada en la página de documentación:
 
-* Categoría las llamadas API se organizan en la página de documentación en categorías o áreas relacionadas con la funcionalidad. Para ubicar una llamada API específica, desplácese hasta la parte inferior de la página y haga clic en la categoría API correspondiente.
+* Categoría Las llamadas API están organizadas en la página de documentación en áreas o categorías relacionadas funcionalmente. Para localizar una llamada API específica, desplázate hasta la parte inferior de la página y selecciona la categoría API aplicable.
 * Verbo HTTP el verbo HTTP identifica la acción realizada en un recurso. Cada llamada API se ejecuta a través de un único verbo HTTP.
 * Ruta de acceso la ruta de acceso determina el recurso específico al que se aplica la acción como parte de la realización de una llamada. La cadena de ruta de acceso se anexa a la URL de núcleo para formar la URL completa que identifica el recurso.
 

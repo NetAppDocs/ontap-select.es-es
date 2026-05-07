@@ -27,6 +27,6 @@ Puede ver la configuración de cada mediador, incluido el estado actual, los dos
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la pestaña *Administración* en la parte superior de la página y haga clic en *mediadores*.
-. Opcionalmente, haga clic en *filtro* para personalizar la vista de los clústeres de dos nodos supervisados por el servicio mediador.
+. Selecciona la pestaña *Administración* en la parte superior de la página y luego selecciona *Mediadores*.
+. Opcionalmente, selecciona *Filtro* para personalizar tu vista de los clústeres de dos nodos supervisados por el servicio mediador.
 

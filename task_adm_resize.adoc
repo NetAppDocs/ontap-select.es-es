@@ -30,9 +30,9 @@ Esta tarea describe cómo utilizar la interfaz de usuario web de implementación
 
 .Pasos
 . Inicie sesión en la interfaz de usuario web de la utilidad de implementación mediante la cuenta de administrador.
-. Haga clic en la ficha *Cluster* en la parte superior de la página y seleccione el clúster deseado en la lista.
-. En la página de detalles del clúster, haga clic en el icono de engranaje situado a la derecha de la página y seleccione *ajuste de tamaño de instancia*.
-. Seleccione *Tipo de instancia* y proporcione las credenciales de ONTAP y, a continuación, haga clic en *Modificar*.
+. Selecciona la pestaña *Cluster* en la parte superior de la página, luego selecciona el cluster deseado de la lista.
+. En la página de detalles del clúster, selecciona el icono de engranaje a la derecha de la página y selecciona *Redimensionar instancia*.
+. Selecciona el *Tipo de instancia* e introduce las credenciales de ONTAP, luego selecciona *Modificar*.
 
 
 .Después de terminar
