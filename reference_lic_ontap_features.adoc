@@ -30,7 +30,7 @@ Las siguientes funciones de ONTAP son compatibles con ONTAP Select y tienen lice
 * Deduplicación y compresión
 * Gestión externa de claves mediante el protocolo de interoperabilidad de gestión de claves (KMIP)
 +
-La gestión externa de claves es la única gestión de claves soportada por ONTAP Select. Conoce más sobre link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["habilitación y configuración de la gestión externa de claves"^].
+Conoce más sobre link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["habilitación y configuración de la gestión externa de claves"^].
 
 * FlexCache
 +

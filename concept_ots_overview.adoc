@@ -137,7 +137,6 @@ No se admiten los grupos de interfaces.
 Debido al entorno virtualizado que se utiliza con ONTAP Select, no se admite la instalación de descarga de NIC.
 
 * Unidades de cifrado del almacenamiento de NetApp
-* Gestor de llaves a bordo
 * Propiedades del puerto ONTAP
 +
 No se admite la modificación de las propiedades de los puertos ONTAP, como la velocidad, la dúplex y el control de flujo.
