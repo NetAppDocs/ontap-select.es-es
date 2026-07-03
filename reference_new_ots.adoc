@@ -138,9 +138,9 @@ ONTAP Select Deploy y ONTAP Select para ESXi admiten la configuración de un cl�
 
 [NOTE]
 ====
-Para realizar operaciones en la biblioteca de contenido, necesitará acceso a niveles de permisos adicionales.  Esto es necesario para las implementaciones de vSAN ESA si está trabajando con roles restringidos.
+Para realizar operaciones en la biblioteca de contenidos, necesitas acceso a niveles de permiso adicionales. Este acceso es necesario para las implementaciones de vSAN ESA si trabajas con roles restringidos.
 
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html["Obtenga información sobre cómo acceder a los niveles de permisos para las operaciones de la biblioteca de contenido"^] .
+link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["Conoce los niveles de acceso para las operaciones de Content Library"].
 
 ====
 --

@@ -125,8 +125,8 @@ NOTE: La información de cuentas se almacena de forma segura en la base de datos
 .Tipos de credenciales
 Se admiten los siguientes tipos de credenciales:
 
-* El host que se usa para autenticar un host de hipervisor como parte de la puesta en marcha de un nodo ONTAP Select directamente en VMware ESXi
-* VCenter se usa para autenticar un servidor de vCenter como parte de la puesta en marcha de un nodo de ONTAP Select en ESXi cuando el host se gestiona mediante VMware vCenter
+* *Host*: Se utiliza para autenticar un host hipervisor como parte de la implementación de un nodo ONTAP Select directamente en VMware ESXi
+* *vCenter*: se utiliza para autenticar un servidor vCenter como parte de la implementación de un nodo ONTAP Select en ESXi cuando el host está gestionado por VMware vCenter
 
 
 .Acceso
