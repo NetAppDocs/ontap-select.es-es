@@ -18,6 +18,7 @@ Algunas de las llamadas de implementación de API, especialmente las que crean o
 
 
 
+[[asynchronous-requests-described-using-job-object]]
 == Solicitudes asincrónicas descritas mediante el objeto Job
 
 Después de realizar una llamada API que se ejecuta de forma asíncrona, el código de respuesta HTTP 202 indica que la solicitud se ha validado y aceptado correctamente, pero que aún no se ha completado. La solicitud se procesa como una tarea en segundo plano que continúa ejecutándose después de la respuesta HTTP inicial al cliente. La respuesta incluye el objeto Job anclando la solicitud, incluyendo su identificador único.
@@ -27,6 +28,7 @@ NOTE: Consulte la página de documentación en línea de implementación de ONTA
 
 
 
+[[query-the-job-object-associated-with-an-api-request]]
 == Consulte el objeto Job asociado a una solicitud API
 
 El objeto Job devuelto en la respuesta HTTP contiene varias propiedades. Puede consultar la propiedad state para determinar si la solicitud se completó correctamente. Un objeto Job puede estar en uno de los siguientes estados:
@@ -55,6 +57,7 @@ TIP: Siempre debe utilizar los sondeos largos para reducir la carga de trabajo e
 
 
 
+[[general-procedure-for-issuing-an-asynchronous-request]]
 == Procedimiento general para emitir una solicitud asincrónica
 
 Puede utilizar el siguiente procedimiento de alto nivel para completar una llamada API asíncrona:

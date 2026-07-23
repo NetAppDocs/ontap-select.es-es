@@ -18,6 +18,7 @@ ONTAP Select Deploy es la utilidad de administración que se usa para poner en m
 
 
 
+[[core-functionality]]
 == Funcionalidad principal
 
 La utilidad de administración Deploy realiza las siguientes funciones principales:
@@ -33,18 +34,21 @@ La utilidad de administración Deploy realiza las siguientes funciones principal
 
 
 
+[[ways-you-can-access-the-deploy-utility]]
 == Formas de acceder a la utilidad Deploy
 
 Dispone de varias opciones al acceder a la utilidad de administración de implementación. Todas las interfaces externas son funcionalmente equivalentes. Debe seleccionar la opción de acceso que mejor se adapte a sus requisitos y objetivos específicos de implementación. En todos los casos, debe iniciar sesión utilizando la cuenta de administrador con una contraseña válida.
 
 
 
+[[web-graphical-user-interface]]
 === Interfaz gráfica de usuario web
 
 Puede acceder a la utilidad de implementación mediante un navegador web moderno. La interfaz de usuario web proporciona una interfaz intuitiva y fácil de usar, y en la mayoría de los casos será su interfaz principal cuando utilice la utilidad.
 
 
 
+[[command-line-interface]]
 === Interfaz de línea de comandos
 
 Hay disponible una interfaz de línea de comandos basada en texto a través del shell de administración. Puede acceder al shell de gestión de la CLI de las siguientes maneras:
@@ -57,6 +61,7 @@ Normalmente se utiliza la consola de la máquina virtual como parte del proceso 
 
 
 
+[[rest-web-services-api]]
 === API de servicios web DE REST
 
 La API DE SERVICIOS web REST expuesta a clientes externos ofrece otra opción al conectarse a la utilidad Deploy. Puede acceder a la API mediante cualquier lenguaje o herramienta de programación estándar que admita servicios web REST. Las opciones más populares incluyen:
@@ -70,6 +75,7 @@ El uso de un lenguaje de programación o secuencias de comandos proporciona una 
 
 
 
+[[ontap-select-online-documentation-web-page]]
 === Página web de documentación en línea de ONTAP Select
 
 La visualización de la página web de documentación en línea de la utilidad Deploy es una alternativa para acceder a la API de servicios web DE REST. Sin embargo, en lugar de utilizar un lenguaje de programación, debe acceder a la API de gestión a través de la página mediante un navegador. Se proporcionan las siguientes funciones:

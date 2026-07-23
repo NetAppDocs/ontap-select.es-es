@@ -21,6 +21,8 @@ NOTE: Las funciones de ONTAP con dependencias específicas de hardware generalme
 
 
 
+[[ontap-features-licensed-by-default]]
+[[licensed-ontap-features]]
 == Funciones de ONTAP con licencia por defecto
 
 Las siguientes funciones de ONTAP son compatibles con ONTAP Select y tienen licencia de forma predeterminada:
@@ -56,6 +58,9 @@ SnapLock Select es la implementación de ONTAP SnapLock diseñada para ONTAP Sel
 Más información link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^]
 
 * SnapMirror
++
+ONTAP Select no admite grupos de consistencia en Asynchronous SnapMirror.
+
 * SnapRestore
 * SnapVault
 * Recuperación ante desastres de máquina virtual de almacenamiento (DR de SVM)
@@ -66,6 +71,8 @@ ONTAP Select admite SVM DR como origen y destino con un máximo de 16 relaciones
 
 
 
+[[ontap-features-that-are-separately-licensed]]
+[[other-ontap-features]]
 == Funciones de ONTAP con licencias independientes
 
 Es necesario adquirir una licencia independiente para cualquier función de ONTAP que no tenga licencia por defecto, incluyendo:

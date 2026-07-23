@@ -35,6 +35,7 @@ Puede iniciar los procedimientos de expansión y contracción del clúster desde
 
 
 
+[[hardware-and-storage-considerations]]
 == Consideraciones sobre hardware y almacenamiento
 
 La función de expansión y contracción del clúster es compatible con los siguientes hosts de hipervisor KVM y ESXi.
@@ -69,6 +70,7 @@ La expansión y contracción del clúster es compatible con las siguientes versi
 ====
 
 
+[[expand-the-cluster]]
 == Expanda el clúster
 
 Utilice la función de expansión de clúster para aumentar el tamaño de un clúster ONTAP Select existente.
@@ -124,6 +126,7 @@ Tras expandir el clúster, deberíalink:task_cli_clusters.html["Realizar una cop
 
 
 
+[[contract-the-cluster]]
 == Contraiga el clúster
 
 Utilice la función de contracción de clúster para disminuir el tamaño de un clúster ONTAP Select existente.

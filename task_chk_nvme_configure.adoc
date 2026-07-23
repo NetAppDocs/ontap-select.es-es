@@ -20,6 +20,7 @@ Utilice el paso a través de I/o de VMDirectPath en los dispositivos NVMe para m
 
 
 
+[[step-1-configure-the-host]]
 == Paso 1: Configurar el host
 
 Configure el host ESXi o KVM para que reconozca las unidades.
@@ -109,6 +110,7 @@ image:nvme_03.png["Reinicie este host"]
 
 
 
+[[step-2-install-the-ontap-select-deploy-utility]]
 == Paso 2: Instale la utilidad ONTAP Select Deploy
 
 Una vez preparados los hosts, puede instalar la utilidad ONTAP Select Deploy. Deploy le guiará en la creación de clústeres de almacenamiento ONTAP Select en los hosts recién preparados. Durante este proceso, Deploy detecta la presencia de las unidades NVMe configuradas para transferencia directa y las selecciona automáticamente para usarlas como discos de datos ONTAP . Puede ajustar la selección predeterminada si es necesario.

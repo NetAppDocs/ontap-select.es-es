@@ -18,6 +18,7 @@ Latido del disco de alta disponibilidad, buzón de alta disponibilidad, latido d
 
 
 
+[[disk-heartbeating]]
 == Latido del disco
 
 A pesar de que la arquitectura de alta disponibilidad de ONTAP Select aprovecha muchas de las rutas de código utilizadas por los arrays FAS tradicionales, existen algunas excepciones. Una de estas excepciones es la implementación de la búsqueda de corazón basada en disco, un método de comunicación no basado en red utilizado por los nodos de clúster para evitar que el aislamiento de red cause un comportamiento de cerebro dividido. Una situación de cerebro dividido es el resultado de la partición de los clústeres, normalmente causada por fallos de red, en los que cada lado cree que la otra está inactiva e intenta hacerse cargo de los recursos del clúster.
@@ -40,6 +41,7 @@ NOTE: La arquitectura de buzón y el método de latido basado en disco para reso
 
 
 
+[[ha-mailbox-posting]]
 == Contabilización DE buzón HA
 
 La arquitectura de buzones de correo de alta disponibilidad utiliza un modelo de post de mensaje. A intervalos repetidos, los nodos del clúster publican mensajes a todos los demás discos del buzón en el clúster, incluido el mediador, indicando que el nodo está activo y en ejecución. Dentro de un clúster en buen estado en cualquier momento, un único disco de buzón de un nodo de clúster tiene mensajes publicados desde todos los demás nodos del clúster.
@@ -48,6 +50,7 @@ Conectado a cada nodo de clúster Select es un disco virtual que se utiliza espe
 
 
 
+[[ha-heartbeating]]
 == Ha latido del corazón
 
 Al igual que sucede con las plataformas FAS de NetApp, ONTAP Select envía periódicamente mensajes de latido de alta disponibilidad a través de la interconexión de alta disponibilidad. En el clúster ONTAP Select, se realiza a través de una conexión de red TCP/IP que existe entre los partners de alta disponibilidad. Además, los mensajes latido de disco se transmiten a todos los discos de buzón de alta disponibilidad, incluido el mediador de discos de buzón. Estos mensajes se transmiten cada pocos segundos y se leen periódicamente. La frecuencia con la que se envían y se reciben estos mensajes permite que el clúster de ONTAP Select detecte eventos de fallo de alta disponibilidad en un plazo aproximado de 15 segundos, es decir, la misma ventana disponible en las plataformas FAS. Cuando ya no se leen mensajes de latido, se activa un evento de conmutación por error.
@@ -61,6 +64,7 @@ NOTE: Los latidos de red se envían a través de la interconexión de alta dispo
 
 
 
+[[ha-failover-and-giveback]]
 == Conmutación al nodo primario y al nodo primario DE HA
 
 Durante una operación de recuperación tras fallos, el nodo que aún continúa activo asume la responsabilidad de servir datos para su nodo del mismo nivel mediante la copia local de los datos de su partner de alta disponibilidad. Las operaciones de I/o del cliente pueden continuar sin interrupciones, pero los cambios en estos datos se deben replicar de nuevo antes de que se pueda producir la devolución. Tenga en cuenta que ONTAP Select no admite un retorno de la memoria forzado porque se pierden los cambios almacenados en el nodo superviviente.

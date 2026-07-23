@@ -18,6 +18,7 @@ Existen varias tareas relacionadas que puede realizar para administrar un clúst
 
 
 
+[[back-up-the-ontap-select-deploy-configuration-data]]
 == Realice una copia de seguridad de los datos de configuración de ONTAP Select Deploy.
 
 Copia de seguridad de los datos de configuración de ONTAP Select Deploy, por ejemplo, después de implementar un clúster. Los datos se guardan en un único archivo cifrado que puede descargar a su estación de trabajo local.
@@ -54,6 +55,7 @@ Puede acceder al archivo de copia de seguridad a través de la URL.
 
 
 
+[[delete-an-ontap-select-cluster]]
 == Eliminar un clúster de ONTAP Select
 
 Es posible eliminar un clúster de ONTAP Select cuando ya no se necesita.

@@ -21,6 +21,7 @@ NOTE: Tanto la eliminación de la unidad con error como la adición de una unida
 
 
 
+[[identify-the-failed-drive]]
 == Identifique la unidad con error
 
 Cuando se produce un error en una unidad, es necesario utilizar la interfaz de línea de comandos ONTAP para identificar el disco con errores.
@@ -87,6 +88,7 @@ NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
 ====
 
 
+[[remove-the-failed-drive]]
 == Quite la unidad con error
 
 Después de identificar la unidad que ha fallado, quite el disco.
@@ -212,6 +214,7 @@ image:ST_26.jpg["Advertencia"]
 ====
 
 
+[[add-the-new-spare-drive]]
 == Añada la unidad de repuesto nueva
 
 Después de quitar la unidad con error, agregue el disco de repuesto.

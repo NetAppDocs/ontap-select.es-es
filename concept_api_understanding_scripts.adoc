@@ -18,6 +18,7 @@ Los scripts Python de ejemplo le permiten realizar varias tareas diferentes. Deb
 
 
 
+[[common-design-characteristics]]
 == Características de diseño comunes
 
 Los scripts se han diseñado con las siguientes características comunes:
@@ -30,6 +31,7 @@ Los scripts se han diseñado con las siguientes características comunes:
 
 
 
+[[create-a-cluster]]
 == Cree un clúster
 
 Es posible crear un clúster de ONTAP Select con el script cluster.py. Según los parámetros de la CLI y el contenido del archivo de entrada JSON, puede modificar el script en el entorno de implementación de la manera siguiente:
@@ -49,6 +51,7 @@ Los parámetros de entrada de la CLI para el script incluyen:
 
 
 
+[[add-a-node-license]]
 == Añada una licencia de nodo
 
 Si decide implementar un clúster de producción, debe agregar una licencia para cada nodo utilizando el script _add_license.py_. Puede añadir la licencia antes o después de implementar el clúster.
@@ -64,6 +67,7 @@ Los parámetros de entrada de la CLI para el script incluyen:
 
 
 
+[[delete-a-cluster]]
 == Elimine un clúster
 
 Es posible eliminar un clúster ONTAP Select existente con el script _delete_cluster.py_.

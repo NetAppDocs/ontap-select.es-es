@@ -18,6 +18,7 @@ Evite la pérdida de datos mediante RAID SyncMirror (RSM), agregados reflejados 
 
 
 
+[[synchronous-replication]]
 == Replicación síncrona
 
 El modelo de alta disponibilidad de ONTAP se basa en el concepto de partners de alta disponibilidad. ONTAP Select amplía esta arquitectura en el mundo de los servidores de consumo no compartidos mediante la funcionalidad RAID SyncMirror (RSM) presente en ONTAP para replicar bloques de datos entre los nodos del clúster, proporcionando dos copias de datos de usuario distribuidos por un par de alta disponibilidad.
@@ -26,6 +27,7 @@ Un clúster de dos nodos con un mediador puede abarcar dos centros de datos. Par
 
 
 
+[[mirrored-aggregates]]
 == Agregados reflejados
 
 Un clúster ONTAP Select está compuesto de dos a doce nodos. Cada par de alta disponibilidad (HA) contiene dos copias de los datos del usuario, replicados sincrónicamente entre los nodos a través de una red IP.  Esta duplicación es transparente para el usuario y es una propiedad del agregado de datos, que se configura automáticamente durante el proceso de creación del agregado de datos.
@@ -54,6 +56,7 @@ NOTE: Cuando se implementa un clúster de ONTAP Select, todos los discos virtual
 
 
 
+[[write-path]]
 == Ruta de escritura
 
 El mirroring síncrono de bloques de datos entre nodos de clúster y el requisito de no pérdida de datos con un fallo del sistema tienen un impacto significativo en la ruta que tiene una escritura entrante mientras se propaga a través de un clúster de ONTAP Select. Este proceso consta de dos fases:

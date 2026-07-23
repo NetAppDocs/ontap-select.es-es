@@ -30,6 +30,7 @@ NOTE: No se puede extender una licencia de evaluación. Al final de los 90 días
 
 
 
+[[step-1-register-for-an-account]]
 == Paso 1: Regístrese para obtener una cuenta
 
 Complete el registro de la cuenta de NetApp , si es necesario, y solicite acceso de prospecto.
@@ -73,6 +74,7 @@ Incluya el nombre de su contacto de NetApp .
 
 
 
+[[step-2-download-ontap-select-evaluation-software]]
 == Paso 2: Descargue el software de evaluación ONTAP Select
 
 Una vez revisado y aprobado su caso de soporte, el soporte de NetApp le notificará mediante la dirección de correo electrónico proporcionada.

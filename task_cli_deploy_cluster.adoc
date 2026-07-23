@@ -18,6 +18,7 @@ Puede usar la interfaz de línea de comandos proporcionada con la utilidad de ad
 
 
 
+[[step-1-prepare-for-the-deployment]]
 == Paso 1: Prepárese para la implementación
 
 Antes de crear un clúster de ONTAP Select en un hipervisor, debe comprender la preparación necesaria.
@@ -50,6 +51,7 @@ Antes de implementar un clúster de ONTAP Select en un entorno de producción, d
 
 
 
+[[step-2-upload-and-register-a-license-file]]
 == Paso 2: Cargue y registre un archivo de licencia
 
 Después de adquirir un archivo de licencia con capacidad de almacenamiento, debe cargar el archivo que contiene la licencia en la máquina virtual de implementación y registrarlo.
@@ -91,6 +93,7 @@ license show
 
 
 
+[[step-3-add-hypervisor-hosts]]
 == Paso 3: Agregar hosts de hipervisor
 
 Debe registrar cada host de hipervisor en el que se ejecutará un nodo de ONTAP Select.
@@ -204,6 +207,7 @@ host show -name 10.234.81.14 -detailed
 ====
 
 
+[[step-4-create-and-configure-an-ontap-select-cluster]]
 == Paso 4: Crear y configurar un clúster de ONTAP Select
 
 Debe crear y, a continuación, configurar el clúster ONTAP Select. Una vez que se configura el clúster, puede configurar los nodos individuales.
@@ -253,6 +257,7 @@ cluster show -name <cluster_name> -detailed
 
 
 
+[[step-5-configure-an-ontap-select-node]]
 == Paso 5: Configurar un nodo ONTAP Select
 
 Debe configurar cada uno de los nodos en el clúster de ONTAP Select.
@@ -353,6 +358,7 @@ node show -name test-cluster-01 -cluster-name test-cluster -detailed
 
 
 
+[[step-6-attach-storage-to-the-ontap-select-nodes]]
 == Paso 6: Adjuntar almacenamiento a los nodos de ONTAP Select
 
 Configure el almacenamiento utilizado por cada nodo en el clúster ONTAP Select . Cada nodo debe tener asignado siempre al menos un pool de almacenamiento. Cuando se usa software RAID, cada nodo también debe asignarse al menos una unidad de disco.
@@ -446,6 +452,7 @@ node storage disk show -node-name sdot-smicro-009a -cluster-name NVME
 
 
 
+[[step-7-deploy-an-ontap-select-cluster]]
 == Paso 7: Implementar un clúster ONTAP Select
 
 Después de configurar el clúster y los nodos, puede implementar el clúster.

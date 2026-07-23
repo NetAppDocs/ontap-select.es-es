@@ -21,6 +21,7 @@ CAUTION: No se debe modificar directamente la configuración de una máquina vir
 
 
 
+[[hypervisor-independent]]
 == Independiente del hipervisor
 
 Tanto ONTAP Select como la utilidad de administración de puesta en marcha de ONTAP Select son independientes del hipervisor.
@@ -64,6 +65,7 @@ No se puede añadir un nodo ONTAP Select directamente a un clúster basado en ha
 
 
 
+[[vmware-hypervisor-environment]]
 == Entorno de hipervisores de VMware
 
 Hay varios requisitos y restricciones específicos del entorno de VMware que debe tener en cuenta antes de instalar la utilidad de implementación de ONTAP Select en un entorno de VMware.
@@ -106,6 +108,7 @@ La implementación de ONTAP Select solo es compatible con IP versión 4 (IPv4). 
 
 
 
+[[vmware-vcenter-server-considerations]]
 == Aspectos a tener en cuenta sobre el servidor VMware vCenter
 
 .Privilegios de VMware vSphere para ESA

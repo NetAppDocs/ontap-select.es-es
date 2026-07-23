@@ -18,6 +18,7 @@ Después de determinar que ONTAP Select es adecuado para tu organización, puede
 
 
 
+[[common-licensing-characteristics]]
 == Características comunes de las licencias
 
 Los modelos de licencia _Capacity Pools_ y _Capacity Tiers_ son muy diferentes en varios aspectos. Sin embargo, los dos modelos de licencia comparten varias características, incluyendo:
@@ -33,6 +34,7 @@ Los modelos de licencia _Capacity Pools_ y _Capacity Tiers_ son muy diferentes e
 
 
 
+[[capacity-tiers-licensing-model]]
 == Modelo de licencia de niveles de capacidad
 
 El modelo de licencia de niveles de capacidad posee varias características únicas, como las siguientes:
@@ -50,6 +52,7 @@ El modelo de licencia de niveles de capacidad posee varias características úni
 
 
 
+[[capacity-pools-licensing-model]]
 == Modelo de gestión de licencias de pools de capacidad
 
 Existen varias características únicas para el modelo de licencias de pools de capacidad, como las siguientes:

@@ -23,6 +23,7 @@ A partir de ONTAP Select 9.14.1, se ha restablecido el soporte para el hiperviso
 ====
 
 
+[[general]]
 == Generales
 
 Hay varias preguntas y respuestas generales.
@@ -55,6 +56,7 @@ Contacto link:mailto:ng-ses-ontap-select@netapp.com["ng-ses-ontap-select@netapp.
 
 
 
+[[licenses-installation-upgrades-and-reverts]]
 == Licencias, instalación, actualizaciones y renovaciones
 
 Hay varias preguntas y respuestas que tratan de las licencias, la instalación, las actualizaciones y las reverencias.
@@ -125,6 +127,7 @@ Si una suscripción de Pool de capacidad caduca, el sistema le avisa primero, pe
 
 
 
+[[storage]]
 == Reducida
 
 Existen varias preguntas y respuestas que se ocupan del almacenamiento.
@@ -216,6 +219,7 @@ Debe instalar y ejecutar componentes de código abierto CLVM y marcapasos (pc) e
 
 
 
+[[vcenter]]
 == VCenter
 
 VMware vCenter contiene varias preguntas y respuestas.
@@ -239,6 +243,7 @@ La lista de derechos de vCenter requeridos está disponible aquí: link:referenc
 
 
 
+[[ha-and-clusters]]
 == ALTA DISPONIBILIDAD y clústeres
 
 Existen varias preguntas y respuestas que tratan sobre los pares y clústeres de alta disponibilidad.
@@ -300,6 +305,7 @@ Segregar el tráfico de alta disponibilidad en una infraestructura física separ
 
 
 
+[[mediator-service]]
 == Servicio de mediación
 
 Hay varias preguntas y respuestas sobre el servicio de mediación.

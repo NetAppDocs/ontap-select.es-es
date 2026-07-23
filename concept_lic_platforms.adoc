@@ -18,6 +18,7 @@ Puede comprar una licencia de nivel de capacidad de ONTAP Select o pool de capac
 
 
 
+[[what-a-platform-license-offering-provides]]
 == Lo que proporciona una oferta de licencia de plataforma
 
 Una oferta de licencia específica determina las capacidades del host del hipervisor en dos áreas:
@@ -69,6 +70,7 @@ NOTE: Las máquinas virtuales basadas en kernel (KVM) no admiten el tipo de inst
 
 
 
+[[compare-hardware-support-for-platform-license-offerings]]
 == Compare el soporte de hardware para las ofertas de licencias de plataforma
 
 Las ofertas de licencias estándar, premium y premium XL son compatibles con una amplia gama de hardware y software. Para información actual sobre las versiones de hardware y software, consulta la link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^].

@@ -18,6 +18,7 @@ Existen varios problemas relacionados con los requisitos de hardware y planifica
 
 
 
+[[hypervisor-requirements]]
 == Requisitos de hipervisor
 
 Hay varios requisitos relacionados con el hipervisor donde se ejecuta ONTAP Select.
@@ -27,12 +28,14 @@ NOTE: Deberías revisar ellink:reference_release_notes.html["Notas de la versió
 
 
 
+[[vmware-licensing]]
 === Licencias de VMware
 
 Para poner en marcha un clúster de ONTAP Select, su organización debe tener una licencia de VMware vSphere válida para los hosts de hipervisores donde se ejecuta ONTAP Select. Debe utilizar las licencias adecuadas para la implementación.
 
 
 
+[[software-compatibility]]
 === Compatibilidad de software
 
 Puede implementar ONTAP Select en hipervisores KVM y ESXi.
@@ -69,12 +72,14 @@ NOTE: ESXi 7.0 GA ha alcanzado el fin de su estado de disponibilidad.  Si tiene 
 ====
 
 
+[[vmware-vcenter-and-standalone-esxi-hosts]]
 === VMware vCenter y hosts ESXi independientes
 
 Si un host del hipervisor ESXi se gestiona mediante una instancia de vCenter Server, debe registrar el host en la utilidad de administración de puesta en marcha con las credenciales de vCenter. No es posible registrar el host como un host independiente con las credenciales ESXi.
 
 
 
+[[core-hardware-requirements]]
 == Requisitos centrales de hardware
 
 El host del hipervisor físico en el que se ponga en marcha ONTAP Select debe cumplir varios requisitos de hardware. Puede elegir cualquier plataforma para el host del hipervisor, siempre que cumpla los requisitos mínimos de hardware. Los siguientes proveedores ofrecen plataformas de hardware compatibles: Cisco, Dell, HP, Fujitsu, Lenovo, Y Supermicro.
@@ -85,6 +90,7 @@ Consulta la  https://mysupport.netapp.com/matrix["Herramienta de matriz de inter
 
 
 
+[[basic-hardware-requirements]]
 === Requisitos básicos de hardware
 
 Existen varios requisitos de hardware comunes que se aplican a todas las plataformas independientemente del tipo de instancia del nodo o de la oferta de licencia.
@@ -112,6 +118,7 @@ El tamaño del clúster admite varias configuraciones de Ethernet.
 |===
 
 
+[[additional-hardware-requirements-based-on-the-instance-type]]
 === Requisitos de hardware adicionales basados en el tipo de instancia
 
 Existen varios requisitos de hardware adicionales según el tipo de instancia del nodo.

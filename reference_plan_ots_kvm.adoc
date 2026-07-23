@@ -18,6 +18,7 @@ Puede configurar ONTAP Select en el hipervisor KVM con una cabina de almacenamie
 
 
 
+[[basic-requirements-and-restrictions]]
 == Requisitos básicos y restricciones
 
 Si se usa una cabina externa para los pools de almacenamiento de ONTAP Select, se aplican las siguientes restricciones de configuración:
@@ -33,6 +34,7 @@ CAUTION: La capacidad de almacenamiento que especifique debe estar dentro de los
 
 
 
+[[best-practices]]
 == Mejores prácticas
 
 Deberías seguir estas buenas prácticas:

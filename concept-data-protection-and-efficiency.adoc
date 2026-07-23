@@ -14,16 +14,18 @@ summary: El almacenamiento definido por el software de ONTAP Select MetroCluster
 
 
 [role="lead"]
-ONTAP Select se basa en el software de almacenamiento ONTAP para ofrecer servicios de almacenamiento empresarial de forma eficiente con una arquitectura de escalamiento horizontal de alta disponibilidad y sin recursos compartidos. Puede implementar una solución con uno, dos, cuatro, seis, ocho, diez o doce nodos con hasta 400 TB de capacidad bruta para almacenamiento conectado NFS, SMB/CIFS e iSCSI por nodo. Puede aprovechar la deduplicación y la compresión nativas para reducir los costos de almacenamiento al aumentar su capacidad efectiva. La arquitectura de escalamiento horizontal permite alta disponibilidad y movilidad de datos sin interrupciones para el equilibrio de carga o el mantenimiento del hardware.
+ONTAP Select se basa en el software de almacenamiento ONTAP para ofrecer servicios de almacenamiento empresarial de forma eficiente mediante una arquitectura de escalado horizontal de alta disponibilidad y sin recursos compartidos. Puedes implementar una solución con uno, dos, cuatro, seis, ocho, diez o doce nodos, con hasta 400TB de capacidad bruta por nodo para almacenamiento conectado mediante NFS, SMB/CIFS e iSCSI. Puedes aprovechar la deduplicación y la compresión nativas para reducir los costes de almacenamiento al aumentar tu capacidad efectiva. La arquitectura de escalado horizontal permite alta disponibilidad y acceso a los datos sin interrupciones para el equilibrio de carga o para dar servicio al hardware.
 
 
 
+[[snapshot-data-protection]]
 == Protección de datos Snapshot
 
 ONTAP Select incluye funciones de protección de datos, como el software SnapMirror y Snapshot. Puede replicar sus datos rápidamente en otro almacenamiento de ONTAP, ya sea en las instalaciones, en un sitio remoto o en el cloud. Si necesita recuperar datos rápidamente, el software SnapRestore puede utilizar snapshots locales para recuperar sistemas de archivos o volúmenes de datos completos en cuestión de segundos, con independencia de la capacidad o el número de archivos.
 
 
 
+[[metrocluster-software-defined-storage]]
 == Almacenamiento definido por software de MetroCluster
 
 El almacenamiento definido por software (SDS) de ONTAP Select MetroCluster ofrece una mayor protección e implementación rentable.

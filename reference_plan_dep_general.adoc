@@ -18,6 +18,7 @@ Existen varios requisitos generales que debe tener en cuenta como parte de la pl
 
 
 
+[[pairing-the-deploy-utility-with-the-ontap-select-clusters]]
 == Emparejamiento de la utilidad de implementación con los clústeres de ONTAP Select
 
 Existen varias opciones al emparejar una instancia de la utilidad Deploy con los clústeres de ONTAP Select.
@@ -36,6 +37,7 @@ NOTE: Una instancia de la utilidad Deploy puede administrar hasta 400 nodos de O
 
 
 
+[[requirements-related-to-the-kvm-environment]]
 == Requisitos relacionados con el entorno KVM
 
 Antes de instalar la utilidad de administración de implementación en un entorno de hipervisor KVM, debe revisar los requisitos básicos y prepararse para el despliegue.
@@ -70,6 +72,7 @@ La implementación de ONTAP Select solo es compatible con IP versión 4 (IPv4). 
 
 
 
+[[required-configuration-information]]
 == Información de configuración requerida
 
 Como parte de la planificación de la implementación, debe determinar la información de configuración necesaria antes de instalar la utilidad de administración de implementación de ONTAP Select.
@@ -88,6 +91,7 @@ La red a la que está conectada la VM de despliegue.
 
 
 
+[[optional-network-configuration-information]]
 == Información de configuración de red opcional
 
 La máquina virtual de despliegue se configura mediante DHCP de forma predeterminada. Sin embargo, si es necesario, puede configurar manualmente la interfaz de red para la máquina virtual.
@@ -115,6 +119,7 @@ Los dominios de búsqueda que se van a utilizar.
 
 
 
+[[authentication-using-the-credential-store]]
 == Autenticación mediante el almacén de credenciales
 
 El almacén de credenciales de despliegue de ONTAP Select es una base de datos que contiene información de cuenta. La implementación utiliza las credenciales de la cuenta para realizar la autenticación del host como parte de la creación y la gestión del clúster. Debe saber cómo se utiliza el almacén de credenciales como parte de la planificación de una implementación de ONTAP Select.

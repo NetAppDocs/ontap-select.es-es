@@ -18,12 +18,14 @@ Cada llamada de API de implementación se realiza como una solicitud HTTP a la m
 
 
 
+[[input-variables-controlling-an-api-request]]
 == Variables de entrada que controlan una solicitud API
 
 Puede controlar cómo se procesa una llamada API mediante parámetros definidos en la solicitud HTTP.
 
 
 
+[[request-headers]]
 === Solicitar encabezados
 
 Debe incluir varios encabezados en la solicitud HTTP, incluidos:
@@ -35,6 +37,7 @@ Debe incluir varios encabezados en la solicitud HTTP, incluidos:
 
 
 
+[[request-body]]
 === Solicitar el cuerpo
 
 El contenido del cuerpo de la solicitud varía en función de la llamada específica. El cuerpo de la solicitud HTTP consta de uno de los siguientes elementos:
@@ -45,6 +48,7 @@ El contenido del cuerpo de la solicitud varía en función de la llamada especí
 
 
 
+[[filter-objects]]
 === Filtrar objetos
 
 Al emitir una llamada API que utilice GET, puede limitar o filtrar los objetos devueltos en función de cualquier atributo. Por ejemplo, puede especificar un valor exacto para que coincida:
@@ -85,6 +89,7 @@ También puede devolver un conjunto de objetos basándose en si se establece o n
 
 
 
+[[selecting-object-fields]]
 === Selección de campos de objeto
 
 De forma predeterminada, al emitir una llamada API mediante GET, sólo se devuelven los atributos que identifican de forma exclusiva el objeto o los objetos. Este conjunto mínimo de campos actúa como clave para cada objeto y varía según el tipo de objeto. Puede seleccionar propiedades de objeto adicionales mediante el parámetro de consulta Campos de las siguientes formas:
@@ -99,6 +104,7 @@ TIP: Como práctica recomendada, siempre debe identificar los campos específico
 
 
 
+[[sort-objects-in-the-output-set]]
 === Ordenar objetos en el conjunto de salida
 
 Los registros de una colección de recursos se devuelven en el orden predeterminado definido por el objeto. Puede cambiar el orden utilizando el parámetro de consulta Order_by con el nombre del campo y la dirección de ordenación de la siguiente manera:
@@ -111,6 +117,7 @@ Cuando se incluyan varios parámetros, los campos deben separarse con una coma.
 
 
 
+[[pagination]]
 === Paginación
 
 Al emitir una llamada API mediante GET para acceder a una colección de objetos del mismo tipo, todos los objetos coincidentes se devuelven de forma predeterminada. Si es necesario, puede limitar el número de registros devueltos mediante el parámetro de consulta max_Records con la solicitud. Por ejemplo:
@@ -123,12 +130,14 @@ Puede emitir varias solicitudes para páginas a través de los eventos (o cualqu
 
 
 
+[[interpret-an-api-response]]
 == Interpretar una respuesta API
 
 Cada solicitud de API genera una respuesta al cliente. Puede examinar la respuesta para determinar si ha tenido éxito y recuperar datos adicionales según sea necesario.
 
 
 
+[[http-status-code]]
 === Código de estado HTTP
 
 A continuación se describen los códigos de estado HTTP utilizados por la API de REST de despliegue.
@@ -169,6 +178,7 @@ A continuación se describen los códigos de estado HTTP utilizados por la API d
 |===
 
 
+[[response-headers]]
 === Encabezados de respuesta
 
 Se incluyen varios encabezados en la respuesta HTTP generada por el servidor de implementación, entre los que se incluyen:
@@ -179,6 +189,7 @@ Se incluyen varios encabezados en la respuesta HTTP generada por el servidor de 
 
 
 
+[[response-body]]
 === Cuerpo de respuesta
 
 El contenido de la respuesta asociada a una solicitud API varía en función del objeto, el tipo de procesamiento y el éxito o el fallo de la solicitud. El cuerpo de la respuesta se representa en JSON.

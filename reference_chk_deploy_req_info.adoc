@@ -18,6 +18,7 @@ Antes de instalar la utilidad de administración de implementación en un entorn
 
 
 
+[[required-configuration-information]]
 == Información de configuración requerida
 
 Como parte de la planificación de la implementación, debe determinar la información de configuración necesaria antes de instalar la utilidad de administración de implementación de ONTAP Select.
@@ -40,6 +41,7 @@ Como parte de la planificación de la implementación, debe determinar la inform
 |===
 
 
+[[optional-network-configuration-information]]
 == Información de configuración de red opcional
 
 De forma predeterminada, la máquina virtual de implementación se configura mediante DHCP. Sin embargo, si es necesario, puede configurar manualmente la interfaz de red para la máquina virtual.
