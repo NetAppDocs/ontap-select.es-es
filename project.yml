@@ -222,11 +222,7 @@ sidebar:
       - title: Otras funciones de alta disponibilidad
         url: "/concept_ha_other.html"
     - title: Rendimiento
-      entries:
-      - title: Información general sobre rendimiento
-        url: "/concept_perf_general.html"
-      - title: Rendimiento de ONTAP Select 9.6.1
-        url: "/concept_perf_premium_ha_direct_ssd_96.html"
+      url: "/concept_perf_general.html"
   - title: Automatice con REPOSO
     entries:
     - title: Conceptos

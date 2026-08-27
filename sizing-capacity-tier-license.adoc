@@ -16,13 +16,18 @@ summary: La licencia Capacity Tiers se basa en la capacidad de disco subyacente 
 [role="lead"]
 La licencia Capacity Tiers se basa en la capacidad de disco subyacente gestionada por cada nodo ONTAP Select y no en la capacidad utilizable del nodo, HA-pair o clúster. Cada licencia Capacity Tiers se asigna a un número de serie de nodo individual para una capacidad especificada y requiere un contrato de soporte adjunto.
 
-La capacidad bajo licencia para una licencia de Capacity Tiers está en cantidades completas de TB, con un mínimo de 1 TB. Calculas la capacidad bajo licencia multiplicando la cantidad de espacio utilizable por el factor de sobrecarga. El factor de sobrecarga difiere entre un clúster de un solo nodo y un clúster multinodo (basado en pares de HA):
+La capacidad licenciada de una licencia Capacity Tiers se expresa en unidades completas de TB, con un mínimo de 1 TB. Calculas la capacidad licenciada multiplicando la cantidad de espacio utilizable por el factor de sobrecarga. El factor de sobrecarga estima la capacidad de sobrecarga del software ONTAP Select que se toma del espacio utilizable y se aplica para determinar la capacidad de ONTAP Select para unidades NVMe, SSD, HDD o virtuales. El factor de sobrecarga difiere entre un clúster de un solo nodo y uno de varios nodos (basado en pares de alta disponibilidad):
 
 * El factor de sobrecarga para clústeres de un solo nodo es 1,13
 * El factor de sobrecarga para clústeres multinodo es 2.67
 
 
-Calcula la capacidad bajo licencia según el espacio utilizable para asegurarte de que tienes suficiente para tu implementación.
+Debes calcular la capacidad con licencia en función del espacio utilizable para asegurarte de que tienes suficiente para tu implementación. Por ejemplo, quieres 10 TB de capacidad utilizable para un par HA (5 TB por nodo):
+
+* Con un par de alta disponibilidad (HA), los datos se duplican entre ambos nodos para redundancia, así que para 10 TB de datos de capacidad utilizable en un par de HA, necesitas tener 10 TB por nodo, en caso de que uno de los nodos se desconecte.
+* El factor de 2,67 duplica la capacidad de cada nodo y añade la capacidad de reserva (0,67) necesaria para que ONTAP Select funcione.
+* La capacidad de la licencia por nodo es de 14 TB (5 × 2,67 = 13,35). Para el par de alta disponibilidad (HA), necesitas dos licencias de 14 TB para tener 10 TB de capacidad utilizable.
+
 
 [cols="25,30,45"]
 |===
@@ -36,7 +41,7 @@ Calcula la capacidad bajo licencia según el espacio utilizable para asegurarte 
 
 
 | Espacio máximo utilizable por nodo *Nota*: El espacio máximo gestionado por nodo o par de HA es 400 TB | 353 TB (400 / 1.13)  a| 
-Por nodo en un par de HA:
+Por nodo en un par de alta disponibilidad:
 
 * 149 TB (400 / 2.67)
 
