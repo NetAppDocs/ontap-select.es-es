@@ -4,7 +4,7 @@ permalink: concept_adm_upgrading_nodes.html
 keywords: administer, administering, web, upgrading nodes 
 summary: Después de implementar un clúster de ONTAP Select, puede actualizar la imagen de ONTAP de cada nodo según sea necesario mediante el procedimiento estándar de actualización del software ONTAP. 
 ---
-= Actualice los nodos ONTAP Select
+= Actualiza los nodos de ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

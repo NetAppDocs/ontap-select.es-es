@@ -4,7 +4,7 @@ permalink: concept_ha_other.html
 keywords: ontap select, ha, high availability, disk heartbeating, heartbeating, mailbox, failover, giveback 
 summary: Corazón de disco DE ALTA DISPONIBILIDAD, buzón de correo de alta disponibilidad, corazón de alta disponibilidad, conmutación por error de alta disponibilidad y trabajo de restauración para mejorar la protección de datos. 
 ---
-= La alta disponibilidad de ONTAP Select mejora la protección de los datos
+= Mejoras en la protección de datos con ONTAP Select HA
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

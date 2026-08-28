@@ -4,7 +4,7 @@ permalink: concept_lic_workflow.html
 keywords: license, licensing, purchase, purchasing, workflow 
 summary: Puede seguir un flujo de trabajo para comprar y aplicar una licencia para su implementación de ONTAP Select. 
 ---
-= Flujo de trabajo al comprar una licencia de ONTAP Select
+= Flujo de compra de licencias para ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

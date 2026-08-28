@@ -4,7 +4,7 @@ permalink: kvm-host-configuration-and-preparation-checklist.html
 keywords: ontap select, pre-installation checklist, kvm, host preparation 
 summary: Prepare cada host del hipervisor KVM donde se implemente un nodo ONTAP Select . Al preparar los hosts, evalúe cuidadosamente el entorno de implementación para asegurarse de que estén configurados correctamente y listos para la implementación de un clúster ONTAP Select . 
 ---
-= Lista de verificación de preparación y configuración del host KVM para ONTAP Select
+= Prepara un host KVM para ONTAP Select
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
