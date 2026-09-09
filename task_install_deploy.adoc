@@ -16,6 +16,9 @@ summary: Debe instalar la utilidad de administración de implementación de ONTA
 [role="lead"]
 Debe instalar la utilidad de administración de implementación de ONTAP Select y utilizar la utilidad para crear un clúster de ONTAP Select.
 
+.Antes de empezar
+Has revisado la link:kvm-host-configuration-and-preparation-checklist.html["lista de comprobación previa a la instalación"].
+
 
 
 [[step-1-download-the-virtual-machine-image]]

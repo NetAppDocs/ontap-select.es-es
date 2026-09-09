@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: reference_api_workflow01.html 
+permalink: reference_api_workflow.html 
 keywords: rest api, deploy rest api, rest, workflow, create cluster, curl, json 
-summary: Se puede poner en marcha un clúster de ONTAP Select de un solo nodo en un host VMware ESXi gestionado por vCenter. El clúster se crea con una licencia de evaluación. 
+summary: Puedes desplegar un clúster de un solo nodo ONTAP Select en un host VMware ESXi gestionado por vCenter. 
 ---
 = Crear un clúster de evaluación de ONTAP Select de un solo nodo en ESXi
 :hardbreaks:
@@ -18,18 +18,18 @@ Se puede poner en marcha un clúster de ONTAP Select de un solo nodo en un host 
 
 El flujo de trabajo de creación del clúster difiere en las siguientes situaciones:
 
-* El host ESXi no está gestionado por vCenter (host independiente)
-* Se utilizan varios nodos o hosts en el clúster
-* Clúster se implementa en un entorno de producción con una licencia adquirida
-* En lugar de VMware ESXi, se utiliza el hipervisor KVM
+* El host ESXi no está gestionado por vCenter (host independiente).
+* Dentro del clúster se utilizan varios nodos u hosts.
+* El clúster está implementado en un entorno de producción con una licencia adquirida.
+* Se utiliza el hipervisor KVM en lugar de VMware ESXi.
 
 
 
 
-[[1-register-vcenter-server-credential]]
-== 1. Registre la credencial de vCenter Server
+[[step-1-register-vcenter-server-credential]]
+== Paso 1: Registrar la credencial del servidor vCenter
 
-Cuando se ponga en marcha en un host ESXi gestionado por una instancia de vCenter Server, debe añadir una credencial antes de registrar el host. La utilidad de administración de implementación puede usar la credencial para autenticar en vCenter.
+Al realizar una implementación en un host ESXi gestionado por un servidor vCenter, necesitas añadir una credencial antes de registrar el host. Luego, la utilidad de administración Deploy puede usar la credencial para autenticarse en vCenter.
 
 [cols="15,15,70"]
 |===
@@ -70,10 +70,10 @@ Salida::
 
 
 
-[[2-register-a-hypervisor-host]]
-== 2. Registre un host de hipervisor
+[[step-2-register-a-hypervisor-host]]
+== Paso 2: Registrar un host de hipervisor
 
-Debe añadir un host de hipervisor donde se ejecutará la máquina virtual que contiene el nodo ONTAP Select.
+Añade un host de hipervisor donde se ejecutará la máquina virtual que contiene el nodo ONTAP Select.
 
 [cols="15,15,70"]
 |===
@@ -117,10 +117,10 @@ Salida::
 
 
 
-[[3-create-a-cluster]]
-== 3. Cree un clúster
+[[step-3-create-a-cluster]]
+== Paso 3: crea un clúster
 
-Cuando se crea un clúster ONTAP Select, se registra la configuración básica de clúster y los nombres de los nodos se generan automáticamente mediante la implementación.
+Cuando creas un clúster ONTAP Select, se registra la configuración básica del clúster y Deploy genera automáticamente los nombres de los nodos.
 
 [cols="15,15,70"]
 |===
@@ -129,7 +129,7 @@ Cuando se crea un clúster ONTAP Select, se registra la configuración básica d
 
 | Clúster | PUBLICAR | /cluster 
 |===
-Rizo:: El parámetro de consulta node_count se debe establecer como 1 para un clúster de un solo nodo.
+Rizo:: Debes establecer el parámetro de consulta node_count en 1 para un clúster de un solo nodo.
 
 
 [source, curl]
@@ -157,10 +157,10 @@ Salida::
 
 
 
-[[4-configure-the-cluster]]
-== 4. Configure el clúster
+[[step-4-configure-the-cluster]]
+== Paso 4: configura el clúster
 
-Debe proporcionar varios atributos como parte de la configuración del clúster.
+Debes especificar los siguientes atributos como parte de la configuración del clúster.
 
 [cols="15,15,70"]
 |===
@@ -169,7 +169,7 @@ Debe proporcionar varios atributos como parte de la configuración del clúster.
 
 | Clúster | PARCHE | /cluster/{cluster_id} 
 |===
-Rizo:: Debe proporcionar el ID de clúster.
+Rizo:: Indica el ID del clúster.
 
 
 [source, curl]
@@ -199,10 +199,10 @@ Salida:: Ninguno
 
 
 
-[[5-retrieve-the-node-name]]
-== 5. Recupere el nombre del nodo
+[[step-5-retrieve-the-node-name]]
+== Paso 5: obtener el nombre de nodo
 
-La utilidad de administración Deploy genera automáticamente los identificadores de nodo y los nombres cuando se crea un clúster. Para poder configurar un nodo, debe recuperar el ID asignado.
+La utilidad de administración Deploy genera automáticamente los identificadores y los nombres de los nodos al crear un clúster. Antes de poder configurar un nodo, necesitas obtener el ID asignado.
 
 [cols="15,15,70"]
 |===
@@ -211,7 +211,7 @@ La utilidad de administración Deploy genera automáticamente los identificadore
 
 | Clúster | OBTENGA | /cluster/{cluster_id}/nodos 
 |===
-Rizo:: Debe proporcionar el ID de clúster.
+Rizo:: Indica el ID del clúster.
 
 
 [source, curl]
@@ -230,10 +230,10 @@ Salida::
 
 
 
-[[6-configure-the-nodes]]
-== 6. Configure los nodos
+[[step-6-configure-the-nodes]]
+== Paso 6: configura los nodos
 
-Debe proporcionar la configuración básica del nodo, que es la primera de las tres llamadas API que se usan para configurar un nodo.
+Proporciona la configuración básica del nodo, que es la primera de las tres llamadas a la API que se utilizan para configurar un nodo.
 
 [cols="15,15,70"]
 |===
@@ -242,14 +242,14 @@ Debe proporcionar la configuración básica del nodo, que es la primera de las t
 
 | Clúster | RUTA | /cluster/{cluster_id}/nodes/{node_id} 
 |===
-Rizo:: Debe proporcionar el ID de clúster y el ID de nodo.
+Rizo:: Indica el ID del clúster y el ID del nodo.
 
 
 [source, curl]
 ----
 curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step06 'https://10.21.191.150/api/clusters/CLUSTERID/nodes/NODEID'
 ----
-Entrada JSON (paso 06):: Debe proporcionar el ID de host donde se ejecutará el nodo de ONTAP Select.
+Entrada JSON (paso 06):: Indica el ID del host en el que se ejecutará el nodo ONTAP Select.
 
 
 [source, json]
@@ -269,10 +269,10 @@ Salida:: Ninguno
 
 
 
-[[7-retrieve-the-node-networks]]
-== 7. Recupere las redes de nodos
+[[step-7-retrieve-the-node-networks]]
+== Paso 7: Recuperar las redes de nodos
 
-En el clúster de un único nodo, debe identificar las redes de datos y gestión que utiliza el nodo. La red interna no se usa con un clúster de un solo nodo.
+Identifica las redes de datos y de gestión que utiliza el nodo en el clúster de un solo nodo. La red interna no se utiliza en un clúster de un solo nodo.
 
 [cols="15,15,70"]
 |===
@@ -281,7 +281,7 @@ En el clúster de un único nodo, debe identificar las redes de datos y gestión
 
 | Clúster | OBTENGA | /cluster/{cluster_id}/nodes/{node_id}/redes 
 |===
-Rizo:: Debe proporcionar el ID de clúster y el ID de nodo.
+Rizo:: Indica el ID del clúster y el ID del nodo.
 
 
 [source, curl]
@@ -300,10 +300,10 @@ Salida::
 
 
 
-[[8-configure-the-node-networking]]
-== 8. Configure la red del nodo
+[[step-8-configure-the-node-networking]]
+== Paso 8: Configura la red del nodo
 
-Debe configurar las redes de gestión y datos. La red interna no se usa con un clúster de un solo nodo.
+Configura las redes de datos y de gestión. La red interna no se utiliza en un clúster de un solo nodo.
 
 
 NOTE: Emita la siguiente llamada API dos veces, una por cada red.
@@ -315,14 +315,14 @@ NOTE: Emita la siguiente llamada API dos veces, una por cada red.
 
 | Clúster | PARCHE | /cluster/{cluster_id}/nodes/{node_id}/networks/{network_id} 
 |===
-Rizo:: Debe proporcionar el ID de clúster, el ID de nodo y el ID de red.
+Rizo:: Indica el ID del clúster, el ID del nodo y el ID de red.
 
 
 [source, curl]
 ----
 curl -iX PATCH -H 'Content-Type: application/json' -u admin:<password> -k -d @step08 'https://10.21.191.150/api/clusters/ CLUSTERID/nodes/NODEID/networks/NETWORKID'
 ----
-Entrada JSON (paso 08):: Debe proporcionar el nombre de la red.
+Entrada JSON (paso 08):: Indica el nombre de la red.
 
 
 [source, json]
@@ -337,8 +337,8 @@ Salida:: Ninguno
 
 
 
-[[9-configure-the-node-storage-pool]]
-== 9. Configure el pool de almacenamiento del nodo
+[[step-9-configure-the-node-storage-pool]]
+== Paso 9: Configura el grupo de almacenamiento del nodo
 
 El paso final de configurar un nodo es conectar un pool de almacenamiento. Se pueden determinar los pools de almacenamiento disponibles a través del cliente web de vSphere, o bien, de manera opcional, mediante la API DE REST Deploy.
 
@@ -349,7 +349,7 @@ El paso final de configurar un nodo es conectar un pool de almacenamiento. Se pu
 
 | Clúster | PARCHE | /cluster/{cluster_id}/nodes/{node_id}/networks/{network_id} 
 |===
-Rizo:: Debe proporcionar el ID de clúster, el ID de nodo y el ID de red.
+Rizo:: Indica el ID del clúster, el ID del nodo y el ID de red.
 
 
 [source, curl]
@@ -376,8 +376,8 @@ Salida:: Ninguno
 
 
 
-[[10-deploy-the-cluster]]
-== 10. Ponga en marcha el clúster
+[[step-10-deploy-the-cluster]]
+== Paso 10: implementa el clúster
 
 Después de configurar el clúster y el nodo, puede implementar el clúster.
 
@@ -388,14 +388,14 @@ Después de configurar el clúster y el nodo, puede implementar el clúster.
 
 | Clúster | PUBLICAR | /cluster/{cluster_id}/deploy 
 |===
-Rizo:: Debe proporcionar el ID de clúster.
+Rizo:: Indica el ID del clúster.
 
 
 [source, curl]
 ----
 curl -iX POST -H 'Content-Type: application/json' -u admin:<password> -k -d @step10 'https://10.21.191.150/api/clusters/CLUSTERID/deploy'
 ----
-Entrada JSON (paso 10):: Debe proporcionar la contraseña de la cuenta de administrador de ONTAP.
+Entrada JSON (paso 10):: Introduce la contraseña de la cuenta de administrador de ONTAP.
 
 
 [source, json]

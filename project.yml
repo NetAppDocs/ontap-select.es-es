@@ -250,7 +250,7 @@ sidebar:
       - title: Antes de empezar
         url: "/concept_api_before_workflows.html"
       - title: Crear un clúster en ESXi
-        url: "/reference_api_workflow01.html"
+        url: "/reference_api_workflow.html"
     - title: Acceso con Python
       entries:
       - title: Antes de empezar
@@ -259,7 +259,7 @@ sidebar:
         url: "/concept_api_understanding_scripts.html"
     - title: Muestras de código Python
       entries:
-      - title: Crear un clúster mediante script
+      - title: Script para crear un clúster
         url: "/reference_api_script_cc.html"
       - title: JSON para crear un clúster
         url: "/reference_api_json_cc.html"

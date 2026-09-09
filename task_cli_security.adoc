@@ -14,13 +14,7 @@ summary: Existen varias tareas relacionadas que puede realizar como parte de la 
 
 
 [role="lead"]
-Existen varias tareas relacionadas que puede realizar como parte de la protección de una puesta en marcha de ONTAP Select.
-
-
-
-= Cambie la contraseña del administrador de despliegue
-
-Puede cambiar la contraseña de la cuenta de administrador de la máquina virtual de implementación según sea necesario mediante la interfaz de línea de comandos.
+Puedes proteger una implementación de ONTAP Select cambiando la contraseña de la cuenta de administrador de la máquina virtual Deploy según sea necesario mediante la interfaz de línea de comandos.
 
 .Pasos
 . Inicie sesión en la CLI de la utilidad de implementación mediante la cuenta de administrador.
