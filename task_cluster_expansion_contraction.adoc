@@ -48,6 +48,7 @@ A partir de ONTAP Select 9.15.1, la expansión y contracción de clústeres se a
 
 La expansión y contracción del clúster es compatible con las siguientes versiones de hipervisor ESXi:
 
+* ESXi 9.1
 * ESXi 9.0
 * ESXi 8,0 U3
 * ESXi 8,0 U2

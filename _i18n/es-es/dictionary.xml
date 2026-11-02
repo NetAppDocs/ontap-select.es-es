@@ -2499,7 +2499,6 @@ Host de hipervisor ESXi o host Linux KVM</block>
   <block id="d8ca36c2c2dd21202d873bdf26e7ec79" category="cell">Identificador del almacén de datos del hipervisor que contiene los archivos de la máquina virtual (se requieren aproximadamente 40GB GB).</block>
   <block id="a295d719442375039396c1ff541e8a8f" category="paragraph">Para un hipervisor ESXi, debe prepararse para poner en marcha la máquina virtual ONTAP Select Deploy:</block>
   <block id="171890587c5a7811013eb0e4f687968f" category="list-text">Habilite DHCP en el entorno VMware si asignará dinámicamente una dirección IP a la VM de despliegue</block>
-  <block id="4ecc6637981131c676cdedcda970a661" category="paragraph">Para los hipervisores ESXi y KVM, debe tener la información de configuración que se utilizará al crear la máquina virtual, incluido el nombre de la máquina virtual, la red externa y el nombre de host. Al definir una configuración de red estática, se necesita la siguiente información adicional:</block>
   <block id="d98fb3ce51b49ee9b9e8ea2645524f08" category="list-text">La dirección IP de la máquina virtual de puesta en marcha</block>
   <block id="30e58d6b4fce06c690ff3897ae040f55" category="paragraph">Si utiliza vSphere, el asistente de plantilla implementar OVF incluye un formulario para proporcionar toda la información de configuración de la implementación, incluida la configuración de red. Sin embargo, si decide no utilizar este formulario, puede utilizar la consola de la VM de despliegue para configurar la red en su lugar.</block>
   <block id="922bafb0938c68773e29242e2675f0b9" category="paragraph">Los pasos que siga dependerán de si utiliza un hipervisor ESXi o KVM.</block>
@@ -2943,13 +2942,10 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="e629ab9880aae245163ce498ab9e1389" category="cell">Pequeñas y medianas</block>
   <block id="a09a88160dc1591cac42ba911581e599" category="cell">Pequeño, mediano y grande</block>
   <block id="93c34d5f173f74aeed0b64401f2a6edc" category="cell">Das local con controlador RAID de hardware</block>
-  <block id="2feb1874507e2463194f3c757efe6209" category="cell">8: 60 unidades</block>
   <block id="7742d08808786c4493a46e06b5648ff9" category="cell">UNIDAD DE DISCO DURO (SAS, NL-SAS, SATA)</block>
   <block id="fea45fcfeb873048ff2e2be995d8cb77" category="cell">4 – 60 unidades</block>
   <block id="bb878052f3499d534f13d06526b7d885" category="cell">SSD (SAS)</block>
-  <block id="25a5b17224d1f38c386742ec7cbc343b" category="cell">4: 60 unidades (solo SSD)</block>
   <block id="d8e31ece33b3b9fb9373e996815932a7" category="cell">Almacenamiento DAS local con RAID de software</block>
-  <block id="a64e775634e2bf5c5e3f63f149af2601" category="cell">4: 14 unidades (solo NVMe)</block>
   <block id="518c7a2538245dd75c6daac2212b8316" category="cell">Matrices externas ^1^</block>
   <block id="8731210144d2e5094fb4001b893115d2" category="cell">Los almacenes de datos alojados en cabinas externas están conectados mediante FC, FCoE, iSCSI y NFS (NFS no es compatible con KVM). Estos almacenes de datos proporcionan alta disponibilidad y resiliencia.</block>
   <block id="563a5726768d43a126f11bc13b3361dd" category="paragraph">^1^ La compatibilidad con el protocolo de cabina externa refleja la conectividad de almacenamiento en red.</block>
@@ -3272,7 +3268,6 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="a72643a79ec8e9d1d5c61ff835cabbeb" category="list-text">ONTAP Select 9.16.1 se instala inicialmente</block>
   <block id="588a4431a3d49dda029dcc4161fc2be3" category="list-text">Puede actualizar el nodo a la versión 9.17.1 y luego volver a la versión 9.16.1 si es necesario.</block>
   <block id="c762418e7ca866adad88c4350fc20ef0" category="list-text">ONTAP Select 9.17.1 se instala inicialmente</block>
-  <block id="7b5019dce3bb835acb62c31388f47aef" category="cell">VMware vSphere 9.0, VMware vSphere 8.0GA y actualizaciones 1 a 3, VMware vSphere 7.0GA y actualizaciones 1 a 3C.</block>
   <block id="709b51c435c268c165dc26b6de6a856e" category="list-text">La utilidad de administración Deploy contiene únicamente una versión de ONTAP Select. Esta versión es la más reciente disponible en el momento del lanzamiento. La función de instalación de imágenes de ONTAP Select permite agregar versiones anteriores de ONTAP Select a la instancia de la utilidad de Deploy, que luego se pueden usar al implementar un clúster de ONTAP Select . Ver<block ref="9252191d0d6c29910ebabc98ee426eb0" category="inline-link-macro-rx"></block> .</block>
   <block id="d4859de543e918748cbd58f23dedb243" category="list-text">ONTAP Select 9.17.1 incluye soporte para VMware ESXi 9.0.</block>
   <block id="bc70eaa4fe619d482b08c680b31e9639" category="paragraph">Se recomienda realizar copias de seguridad periódicas de los datos de configuración de Deploy, incluso después de crear un clúster. Esto cobra especial importancia en clústeres de dos nodos, ya que los datos de configuración del mediador se incluyen en la copia de seguridad.</block>
@@ -4035,4 +4030,14 @@ show-spare-disks del agregado de almacenamiento</block>
   <block id="cdf955804034c3c67f90a9fa2b26792d" category="paragraph">Has revisado la <block ref="1a659edfd1511c28d59e934c80be869d" category="inline-link-macro-rx"></block>.</block>
   <block id="e16c906ba61aeeafbcb69e14b4357d15" category="sidebar">Script para crear un clúster</block>
   <block id="9a2f5932020cd5f8335afc3f02118937" category="sidebar">Comunidad ONTAP</block>
+  <block id="50ae596e882ccedcefde5c47743d7203" category="cell">8 – 60 unidades</block>
+  <block id="70d9e3c68d42d6ec42ab792e06c44357" category="cell">NVMe</block>
+  <block id="09c766d054990e91a8bd7172378ef91f" category="cell">4 – 14 unidades</block>
+  <block id="4afe31410695c2d966b3cab63555adc2" category="cell">4 – 14 unidades (solo NVMe)</block>
+  <block id="a993152ace9c48fc9ffe20e1239c701e" category="cell">VMware vSphere 9.1, 9.0 VMware vSphere 8.0GA y actualizaciones 1 a 3</block>
+  <block id="d6a844c0eee1b2460b68d5e1674ce3ee" category="list-text">ONTAP Select 9.19.1 incluye compatibilidad con VMware ESXi 9.1.</block>
+  <block id="7fad4e1ab4f0475552986341e454b657" category="list-text">VMware ESXi 9.1</block>
+  <block id="e95da606b42156a1d47560476c9088a5" category="list-text">ESXi 9.1</block>
+  <block id="05297b8670c42857ef0d5c0e4996e75c" category="paragraph">Debes disponer de la información de configuración que se utilizará al crear la VM, incluido el nombre de la VM, la red externa y el nombre de host. Al definir una configuración de red estática, necesitarás la siguiente información adicional:</block>
+  <block id="9db175ef7b9ec37a8ebe335363d8fbe5" category="paragraph">En el caso de los hipervisores KVM, debes disponer de la información de configuración que se utilizará al crear la VM, incluido el nombre de la VM, la red externa y el nombre de host. Al definir una configuración de red estática, necesitarás la siguiente información adicional:</block>
 </blocks>

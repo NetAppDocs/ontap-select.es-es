@@ -93,13 +93,17 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 Instale e inicie ONTAP Select Deploy VM usando la imagen de VM OVF. Como parte del proceso de instalación, configura la interfaz de red para utilizar DHCP o una configuración IP estática.
 
 .Antes de empezar
+[role="tabbed-block"]
+====
+.ESXi
+--
 Para un hipervisor ESXi, debe prepararse para poner en marcha la máquina virtual ONTAP Select Deploy:
 
 * Active la funcionalidad OVF en su explorador instalando el complemento de integración de clientes de VMware o realizando una configuración similar según sea necesario
 * Habilite DHCP en el entorno VMware si asignará dinámicamente una dirección IP a la VM de despliegue
 
 
-Para los hipervisores ESXi y KVM, debe tener la información de configuración que se utilizará al crear la máquina virtual, incluido el nombre de la máquina virtual, la red externa y el nombre de host. Al definir una configuración de red estática, se necesita la siguiente información adicional:
+Debes disponer de la información de configuración que se utilizará al crear la VM, incluido el nombre de la VM, la red externa y el nombre de host. Al definir una configuración de red estática, necesitarás la siguiente información adicional:
 
 * La dirección IP de la máquina virtual de puesta en marcha
 * Máscara de red
@@ -109,6 +113,21 @@ Para los hipervisores ESXi y KVM, debe tener la información de configuración q
 * Dominios de búsqueda DNS
 
 
+--
+.KVM
+--
+En el caso de los hipervisores KVM, debes disponer de la información de configuración que se utilizará al crear la VM, incluido el nombre de la VM, la red externa y el nombre de host. Al definir una configuración de red estática, necesitarás la siguiente información adicional:
+
+* La dirección IP de la máquina virtual de puesta en marcha
+* Máscara de red
+* Dirección IP de la puerta de enlace (enrutador)
+* Dirección IP del servidor DNS primario
+* Dirección IP del segundo servidor DNS
+* Dominios de búsqueda DNS
+
+
+--
+====
 .Acerca de esta tarea
 Si utiliza vSphere, el asistente de plantilla implementar OVF incluye un formulario para proporcionar toda la información de configuración de la implementación, incluida la configuración de red. Sin embargo, si decide no utilizar este formulario, puede utilizar la consola de la VM de despliegue para configurar la red en su lugar.
 

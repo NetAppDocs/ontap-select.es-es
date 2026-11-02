@@ -150,16 +150,19 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| Tamaño de la instancia | Pequeño | Pequeñas y medianas | Pequeño, mediano y grande 
 
 
-2+| Das local con controlador RAID de hardware | 8: 60 unidades | 8: 60 unidades | 8: 60 unidades 
+2+| Das local con controlador RAID de hardware | 8 – 60 unidades | 8 – 60 unidades | 8 – 60 unidades 
 
 
 2+| UNIDAD DE DISCO DURO (SAS, NL-SAS, SATA) | No aplicable | 4 – 60 unidades | 4 – 60 unidades 
 
 
-2+| SSD (SAS) | No aplicable | 4: 60 unidades (solo SSD) | 4: 60 unidades (solo SSD) 
+2+| SSD (SAS) | No aplicable | 4 – 60 unidades | 4 – 60 unidades 
 
 
-2+| Almacenamiento DAS local con RAID de software | No aplicable | Aplicable | 4: 14 unidades (solo NVMe) 
+2+| NVMe | No aplicable | No aplicable | 4 – 14 unidades 
+
+
+2+| Almacenamiento DAS local con RAID de software | No aplicable | Aplicable | 4 – 14 unidades (solo NVMe) 
 
 
 2+| Matrices externas ^1^ 3+| Los almacenes de datos alojados en cabinas externas están conectados mediante FC, FCoE, iSCSI y NFS (NFS no es compatible con KVM). Estos almacenes de datos proporcionan alta disponibilidad y resiliencia. 
@@ -176,7 +179,7 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| Tipo de software 3+| Descripción 
 
 
-2+| Soporte del hipervisor (VMware) 3+| VMware vSphere 9.0, VMware vSphere 8.0GA y actualizaciones 1 a 3, VMware vSphere 7.0GA y actualizaciones 1 a 3C. 
+2+| Soporte del hipervisor (VMware) 3+| VMware vSphere 9.1, 9.0 VMware vSphere 8.0GA y actualizaciones 1 a 3 
 
 
 2+| Soporte del hipervisor (KVM)  a| 
