@@ -100,49 +100,6 @@ Debe registrar cada host de hipervisor en el que se ejecutará un nodo de ONTAP 
 
 [role="tabbed-block"]
 ====
-.KVM
---
-Debe registrar un host del hipervisor en el que se ejecutará el nodo de ONTAP Select. Como parte de esto, la utilidad de administración de despliegue autentica en el host KVM.
-
-.Acerca de esta tarea
-Si se necesita más de un host de hipervisor, utilice este procedimiento para agregar cada host.
-
-.Pasos
-. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
-. Registre el host:
-+
-[source, cli]
-----
-host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
-----
-+
-Ejemplo de salida:
-
-+
-[listing]
-----
-host register -name 10.234.81.14 -hypervisor-type KVM -username root
-----
-+
-Proporcione la contraseña para la cuenta de host cuando se le solicite.
-
-. Muestre el estado del host y confirme que se ha autenticado:
-+
-[source, cli]
-----
-host show -name <FQDN|IP> -detailed
-----
-+
-Ejemplo de salida:
-
-+
-[listing]
-----
-host show -name 10.234.81.14 -detailed
-----
-
-
---
 .ESXi
 --
 Como parte de esto, la utilidad de administración de puesta en marcha autentica ya sea en el servidor vCenter que gestiona el host o directamente en el host independiente ESXi.
@@ -201,6 +158,60 @@ Ejemplo de salida:
 ....
 host show -name 10.234.81.14 -detailed
 ....
+
+
+--
+.Hyper-V o KVM
+--
+Debe registrar un host del hipervisor en el que se ejecutará el nodo de ONTAP Select. Como parte de esto, la utilidad de administración de despliegue autentica en el host KVM.
+
+.Acerca de esta tarea
+Si se necesita más de un host de hipervisor, utilice este procedimiento para agregar cada host.
+
+.Pasos
+. Inicie sesión en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
+. Registre el host:
++
+*Hyper-V*
+
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type Hyper-V -username <Hyper-V_username>
+----
++
+*KVM*
+
++
+[source, cli]
+----
+host register -name <FQDN|IP> -hypervisor-type KVM -username <KVM_username>
+----
++
+Ejemplo de salida:
+
++
+[listing]
+----
+host register -name 10.234.81.14 -hypervisor-type KVM -username root
+----
++
+Proporcione la contraseña para la cuenta de host cuando se le solicite.
+
+. Muestre el estado del host y confirme que se ha autenticado:
++
+[source, cli]
+----
+host show -name <FQDN|IP> -detailed
+----
++
+Ejemplo de salida:
+
++
+[listing]
+----
+host show -name 10.234.81.14 -detailed
+----
 
 
 --
@@ -315,14 +326,14 @@ host network show -host-name 10.234.81.14 -detailed
 +
 [role="tabbed-block"]
 ====
-.Host ESXi
+.ESXi
 --
 [source, cli]
 ----
 node modify -name <node_name> -cluster-name <cluster_name> -mgmt-ip IP -management-networks <network_name> -data-networks <network_name> -internal-network <network_name>
 ----
 --
-.Host KVM
+.Hyper-V o KVM
 --
 [source, cli]
 ----

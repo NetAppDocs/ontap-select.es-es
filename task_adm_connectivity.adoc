@@ -24,8 +24,14 @@ Cada vez que inicie una prueba, se creará una nueva ejecución de proceso en se
 
 La prueba tiene dos modos que controlan su funcionamiento:
 
-* Rápido este modo realiza una prueba básica sin interrupciones. Se realiza una prueba DE PING, así como una prueba del tamaño de MTU de red y del vSwitch.
-* Este modo ampliado realiza una prueba más completa de todas las rutas de red redundantes. Si ejecuta esto en un clúster ONTAP Select activo, el rendimiento del clúster puede verse afectado.
+* Rápido
++
+Este modo realiza una prueba básica sin interrupciones. Realiza una prueba PING, junto con una prueba del tamaño de la unidad de transmisión máxima (MTU) de la red y del vSwitch.
+
+* Ampliado
++
+Este modo realiza una prueba más exhaustiva en todas las rutas de red redundantes. Si ejecutas esto en un clúster ONTAP Select activo, puede afectar al rendimiento del clúster.
+
 
 
 

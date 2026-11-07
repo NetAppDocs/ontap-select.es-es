@@ -38,7 +38,7 @@ Puede iniciar los procedimientos de expansión y contracción del clúster desde
 [[hardware-and-storage-considerations]]
 == Consideraciones sobre hardware y almacenamiento
 
-La función de expansión y contracción del clúster es compatible con los siguientes hosts de hipervisor KVM y ESXi.
+La función de expansión y contracción de clústeres es compatible con los siguientes hosts de hipervisor ESXi y KVM.
 
 [role="tabbed-block"]
 ====

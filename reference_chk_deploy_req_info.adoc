@@ -28,23 +28,23 @@ Como parte de la planificación de la implementación, debe determinar la inform
 | Información obligatoria | Descripción 
 
 
-| Nombre de la máquina virtual de puesta en marcha | Identificador que se usará para la máquina virtual. 
+| Nombre de la máquina virtual (VM) de Deploy | Identificador que debes usar para la máquina virtual. 
 
 
-| Nombre del host del hipervisor | Identificador del host de hipervisor VMware ESXi o KVM donde se instala la utilidad Deploy. 
+| Nombre del host del hipervisor | Identificador del host del hipervisor VMware ESXi, Hyper-V o KVM donde has instalado la utilidad Deploy. 
 
 
-| Nombre del almacén de datos | Identificador del almacén de datos del hipervisor que contiene los archivos de la máquina virtual (se requieren aproximadamente 40GB GB). 
+| Nombre de la ubicación de almacenamiento | Identificador del almacén de datos (ESXi) o del pool de almacenamiento (Hyper-V o KVM) que contiene los archivos de la VM (se necesita aproximadamente 40GB). 
 
 
-| De la máquina virtual | Identificador de la red en la que está conectada la máquina virtual de implementación. 
+| Red para la máquina virtual | Identificador de la red a la que está conectada la Deploy VM. 
 |===
 
 
 [[optional-network-configuration-information]]
 == Información de configuración de red opcional
 
-De forma predeterminada, la máquina virtual de implementación se configura mediante DHCP. Sin embargo, si es necesario, puede configurar manualmente la interfaz de red para la máquina virtual.
+La máquina virtual Deploy VM está configurada de forma predeterminada mediante DHCP. Sin embargo, si es necesario, puedes configurar manualmente la interfaz de red de la máquina virtual.
 
 [cols="35,65"]
 |===
@@ -57,7 +57,7 @@ De forma predeterminada, la máquina virtual de implementación se configura med
 | Dirección IP del host | Dirección IPv4 estática del equipo host. 
 
 
-| Máscara de subred | Máscara de subred, según la red de la que forma parte la máquina virtual. 
+| Máscara de subred | Máscara de subred, en función de la red de la que forma parte la máquina virtual. 
 
 
 | Puerta de enlace | Puerta de enlace o enrutador predeterminadas. 

@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: plan-ots-hyper-v.html 
+keywords: plan, planning, vnas, hyper-v 
+summary: Hay varias cuestiones de planificación relacionadas con el uso del hipervisor Hyper-V que debes tener en cuenta. 
+---
+= Requisitos de almacenamiento de Hyper-V para ONTAP Select
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Al configurar ONTAP Select en un hipervisor Hyper-V, ONTAP Select almacena la máquina virtual (VM) y los discos virtuales en un volumen local del host Hyper-V.
+
+
+
+[[basic-requirements-and-restrictions]]
+== Requisitos básicos y restricciones
+
+Los siguientes requisitos y restricciones de configuración se aplican a los grupos de almacenamiento ONTAP Select en un host Hyper-V:
+
+* El grupo de almacenamiento debe ser un volumen NTFS o ReFS con una letra de unidad asignada. La utilidad Deploy identifica el grupo de almacenamiento por su letra de unidad.
+* Los volúmenes compartidos del clúster no son compatibles como grupos de almacenamiento.
+* Los recursos compartidos de archivos de red y las rutas UNC remotas, como SMB 3.0, no se admiten como grupos de almacenamiento.
+* ONTAP Select no detecta un volumen que esté montado únicamente en una ruta de carpeta, ya que ese volumen no tiene letra de unidad.
+* ONTAP Select puede usar un LUN en una cabina de almacenamiento externa mediante FC, FCoE o iSCSI si el host de Hyper-V formatea el LUN como NTFS o ReFS y le asigna una letra de unidad. ONTAP Select trata ese volumen como almacenamiento local del host. El modelo vNAS de ONTAP Select utilizado con ESXi no se aplica a Hyper-V.
+* Un disco virtual de Storage Spaces puede albergar un grupo de almacenamiento si está formateado como NTFS o ReFS y tiene asignada una letra de unidad. Sin embargo, el RAID por software no puede utilizar discos físicos que formen parte de un grupo de Storage Spaces.
+* Una configuración de Hyper-V no reconoce el almacenamiento con aprovisionamiento ligero. ONTAP Select utiliza la capacidad que Windows indica para el volumen.
+
+
+
+
+[[best-practices]]
+== Mejores prácticas
+
+Deberías seguir estas buenas prácticas:
+
+* Define las configuraciones de los adaptadores de red dedicados, el ancho de banda y los conmutadores virtuales para las redes ONTAP Select. Mantén el tráfico de almacenamiento externo, como iSCSI, en adaptadores independientes.
+* Dedica el volumen del grupo de almacenamiento a ONTAP Select. No coloques otra VM de Hyper-V ni otra carga de trabajo de Windows en el mismo volumen, y no uses el volumen de arranque de Windows como grupo de almacenamiento.
+* Ajusta el tamaño del volumen de modo que ONTAP Select no consuma toda su capacidad.
+* Configura MPIO de Windows para las matrices de almacenamiento externas, de modo que los LUN se presenten a través de rutas redundantes.
+

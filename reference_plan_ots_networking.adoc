@@ -38,7 +38,7 @@ A partir de ONTAP Select 9.5 con Deploy 2.10, VMXNEG3 es el controlador de red p
 [[cluster-mtu]]
 == MTU del clúster
 
-Se usa una red interna separada para conectar los nodos de ONTAP Select en un clúster de varios nodos. Generalmente, el tamaño de MTU para esta red es de 9000. Sin embargo, existen situaciones en las que este tamaño de MTU sea demasiado grande para la red que conecta los nodos de ONTAP Select. Para acomodar las tramas más pequeñas, el tamaño de MTU que utiliza ONTAP Select en la red interna puede estar en un rango de 7500-9000 bytes.
+Se usa una red interna independiente para conectar los nodos de ONTAP Select en un clúster de varios nodos. Normalmente, el tamaño de la MTU para esta red es 9000. Sin embargo, hay situaciones en las que este tamaño de MTU es demasiado grande para la red que conecta los nodos de ONTAP Select. Para adaptarse a las tramas más pequeñas, el tamaño de MTU que usa ONTAP Select en la red interna puede estar dentro del rango de 7500-9000 bytes.
 
 El tamaño de MTU se muestra en la sección Cluster Details de la página cluster Creation. El valor está determinado por la utilidad de administración de despliegue de la siguiente manera:
 
@@ -123,19 +123,35 @@ Consulta la sección link:concept_nw_concepts_chars.html["Redes profundas"] para
 [[network-traffic-requirements]]
 == Requisitos de tráfico de red
 
-Debe asegurarse de que los firewalls están configurados correctamente para permitir que el tráfico de red fluya entre los distintos participantes en un entorno de implementación de ONTAP Select.
+Debes asegurarte de que tus cortafuegos estén configurados correctamente para permitir que el tráfico de red fluya entre los distintos participantes de un entorno de implementación de ONTAP Select.
 
 .Participantes
 Hay varios participantes o entidades que intercambian tráfico de red como parte de una implementación de ONTAP Select. Se introducen y, a continuación, se utilizan en la descripción de resumen de los requisitos de tráfico de red.
 
-* Implemente la utilidad de administración ONTAP Select Deploy
-* VSphere (solo ESXi)
-Un servidor vSphere o un host ESXi, según cómo se gestione el host en la puesta en marcha del clúster
+* Puesta en marcha
++
+Utilidad de administración de ONTAP Select Deploy
+
+* vSphere (solo ESXi)
++
+Un servidor vSphere o un host ESXi, dependiendo de cómo se gestiona el host en la implementación de tu clúster
+
 * Servidor de hipervisor
-Host de hipervisor ESXi o host Linux KVM
-* Nodo OTS nodo ONTAP Select
-* Grupo OTS un clúster ONTAP Select
-* Estación de trabajo administrativa local de WS de administración
++
+Host con hipervisor ESXi, host con Microsoft Hyper-V o host con Linux KVM
+
+* Nodo de ONTAP Select
++
+Un nodo de ONTAP Select
+
+* Clúster de ONTAP Select
++
+Un clúster de ONTAP Select
+
+* WS de administración
++
+Estación de trabajo administrativa local
+
 
 
 .Resumen de los requisitos de tráfico de red
@@ -143,7 +159,25 @@ En la siguiente tabla se describen los requisitos de tráfico de red para una im
 
 [cols="20,20,35,25"]
 |===
-| Protocolo/Puerto | ESXi/KVM | Dirección | Descripción 
+| Protocolo/Puerto | ESXi / Hyper-V / KVM | Dirección | Descripción 
+
+
+| ICMP | ESXi, Hyper-V o KVM | Puesta en marcha en servidor de hipervisor | Ping 
+
+
+| ICMP | ESXi, Hyper-V o KVM | Implementa en cada nodo ONTAP Select | Ping 
+
+
+| SSH (22) | ESXi, Hyper-V o KVM | WS de administración para cada nodo ONTAP Select | Administración 
+
+
+| SSH (22) | KVM | Póngalo en marcha en nodos de servidor del hipervisor | Acceda al servidor del hipervisor 
+
+
+| TLS (443) | ESXi, Hyper-V o KVM | Implementar en nodos y clústeres de ONTAP Select | Acceda a ONTAP 
+
+
+| TLS (443) | ESXi, Hyper-V o KVM | Cada nodo ONTAP Select que se vaya a implementar | Acceso a puesta en marcha (licencia de pools de capacidad) 
 
 
 | TLS (443) | ESXi | Ponga en marcha en vCenter Server (gestionado) o ESXi (gestionado o no gestionado) | API VIX de VMware 
@@ -152,23 +186,8 @@ En la siguiente tabla se describen los requisitos de tráfico de red para una im
 | 902 | ESXi | Implemente en vCenter Server (gestionado) o ESXi (no administrado) | API VIX de VMware 
 
 
-| ICMP | ESXi o KVM | Puesta en marcha en servidor de hipervisor | Ping 
+| ISCSI (3260) | ESXi, Hyper-V o KVM | Cada nodo ONTAP Select que se vaya a implementar | Mediador/disco de buzón 
 
 
-| ICMP | ESXi o KVM | Despliegue en cada nodo OTS | Ping 
-
-
-| SSH (22) | ESXi o KVM | WS de administración a cada nodo OTS | Administración 
-
-
-| SSH (22) | KVM | Póngalo en marcha en nodos de servidor del hipervisor | Acceda al servidor del hipervisor 
-
-
-| TLS (443) | ESXi o KVM | Despliegue en los nodos y clusters de OTS | Acceda a ONTAP 
-
-
-| TLS (443) | ESXi o KVM | Cada nodo OTS que se va a implementar | Acceso a puesta en marcha (licencia de pools de capacidad) 
-
-
-| ISCSI (3260) | ESXi o KVM | Cada nodo OTS que se va a implementar | Mediador/disco de buzón 
+| WinRM HTTPS (5986) | Hyper-V | Póngalo en marcha en nodos de servidor del hipervisor | Acceda al servidor del hipervisor 
 |===

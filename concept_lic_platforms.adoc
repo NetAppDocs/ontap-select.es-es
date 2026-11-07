@@ -65,9 +65,13 @@ La siguiente tabla compara las capacidades de las ofertas de licencias estándar
 
 2+| SDS de MetroCluster | No | Sí | Sí 
 |===
+[NOTE]
+====
+Microsoft Hyper-V admite tipos de instancias pequeñas, medianas y grandes.
 
-NOTE: Las máquinas virtuales basadas en kernel (KVM) no admiten el tipo de instancia grande.
+Las máquinas virtuales basadas en kernel (KVM) no admiten el tipo de instancia grande.
 
+====
 
 
 [[compare-hardware-support-for-platform-license-offerings]]
@@ -92,7 +96,7 @@ Las ofertas de licencias estándar, premium y premium XL son compatibles con una
 2+| Opciones de puesta en marcha 3+| Nodo único. Clúster de dos nodos (par HA). Clúster de cuatro, seis, ocho, diez o doce nodos. 
 
 
-2+| Capacidad admitida (por nodo) 3+| Hasta 400TB datos sin formato (ESXi y KVM) 
+2+| Capacidad admitida (por nodo) 3+| Hasta 400 TB de datos sin procesar (ESXi, Hyper-V y KVM) 
 |===
 --
 .Hardware subyacente
@@ -165,7 +169,7 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| Almacenamiento DAS local con RAID de software | No aplicable | Aplicable | 4 – 14 unidades (solo NVMe) 
 
 
-2+| Matrices externas ^1^ 3+| Los almacenes de datos alojados en cabinas externas están conectados mediante FC, FCoE, iSCSI y NFS (NFS no es compatible con KVM). Estos almacenes de datos proporcionan alta disponibilidad y resiliencia. 
+2+| Matrices externas ^1^ 3+| Los datastores alojados en cabinas externas se conectan a través de FC, FCoE e iSCSI para ESXi, Hyper-V y KVM, y mediante NFS para ESXi. NFS no es compatible con KVM ni con Hyper-V. Estos datastores ofrecen alta disponibilidad y resiliencia. 
 |===
 ^1^ La compatibilidad con el protocolo de cabina externa refleja la conectividad de almacenamiento en red.
 
@@ -180,6 +184,9 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 
 
 2+| Soporte del hipervisor (VMware) 3+| VMware vSphere 9.1, 9.0 VMware vSphere 8.0GA y actualizaciones 1 a 3 
+
+
+2+| Compatibilidad con hipervisor (Hyper-V) 3+| Windows Server 2025 y 2022 
 
 
 2+| Soporte del hipervisor (KVM)  a| 

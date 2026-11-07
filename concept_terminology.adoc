@@ -17,8 +17,9 @@ summary: Al comenzar a explorar ONTAP Select y planificar una implementación, e
 Al comenzar a explorar ONTAP Select y planificar una implementación, es útil familiarizarse con la terminología y los conceptos clave.
 
 Puesta en marcha de ONTAP Select:: ONTAP Select Deploy es la utilidad de administración que se utiliza para poner en marcha clústeres de ONTAP Select. La utilidad Deploy se ejecuta en una máquina virtual dedicada de Linux. Puede acceder a la utilidad de implementación mediante la interfaz de usuario web, el shell de gestión de la interfaz de línea de comandos y la API DE REST.
+Microsoft Hyper-V:: Microsoft Hyper-V es la plataforma de virtualización de hardware incluida en Windows Server. Al habilitar la función Hyper-V, un host de Windows Server puede crear, ejecutar y gestionar todo el ciclo de vida de una máquina virtual (VM). En un entorno ONTAP Select, un host de Windows Server que ejecuta Hyper-V es la plataforma de host del hipervisor para la VM de ONTAP Select Deploy y los nodos virtuales de ONTAP Select.
 Máquina virtual basada en kernel:: La máquina virtual basada en kernel (KVM) es una característica de virtualización del kernel de Linux, que le permite actuar como una plataforma de hipervisor. Se admite una amplia gama de sistemas operativos invitados.
-Host de hipervisor frente a nodo ONTAP Select:: Un _hypervisor host_ es la plataforma de hardware principal que aloja una máquina virtual ONTAP Select. Cuando se implementa una máquina virtual ONTAP Select y está activa en un host de hipervisor, se considera un _ONTAP Select node_.
+Host de hipervisor frente a nodo ONTAP Select:: Un _host de hipervisor_ es la plataforma de hardware principal que aloja una VM de ONTAP Select. Cuando una VM de ONTAP Select se implementa y está activa en un host de hipervisor, se considera un _nodo de ONTAP Select_.
 Clúster de ONTAP Select:: Puede crear un clúster _ONTAP Select_ compuesto por uno, dos, cuatro, seis, ocho, diez o doce nodos. Los clústeres multinodo siempre contienen uno o más pares de alta disponibilidad (HA). Por ejemplo, un clúster de cuatro nodos consta de dos pares de HA. Un clúster de un solo nodo no ofrece capacidad de alta disponibilidad (HA).
 Preparación del entorno de host del hipervisor:: Antes de usar la utilidad de administración Deploy para poner en marcha un clúster de ONTAP Select, debe preparar los hosts de hipervisor donde se ejecutará ONTAP Select, incluidos los entornos de almacenamiento y redes. Esta configuración previa del host se realiza fuera del producto de ONTAP Select de acuerdo con los requisitos y las limitaciones actuales.
 Evaluación frente a implementaciones de producción:: Cada nodo ONTAP Select se ejecuta con una _licencia de evaluación_ o con una _licencia adquirida_. Una licencia de evaluación permite evaluar ONTAP Select antes de implementarla en un entorno de producción. La licencia de evaluación se genera y aplica automáticamente. Si implementa un clúster en un entorno de producción, debe adquirir una licencia que suponga elegir:
@@ -33,7 +34,7 @@ Evaluación frente a implementaciones de producción:: Cada nodo ONTAP Select se
 Modelo de licencia de niveles de capacidad:: El modelo de licencia de niveles de capacidad es la opción original cuando se otorga una licencia de almacenamiento para una puesta en marcha de ONTAP Select. Se basa en el modelo de ONTAP utilizado con AFF y FAS de NetApp. Se necesita una licencia aparte para cada nodo. La capacidad de almacenamiento está bloqueada en el nodo y es perpetua (sin necesidad de renovación).
 Modelo de gestión de licencias de pools de capacidad:: Se introdujo el modelo de licencia de pools de capacidad con ONTAP Select 9,5 con la puesta en marcha 2,10. Se requiere una licencia independiente para cada pool de capacidad de almacenamiento. La licencia de Pool de capacidad está bloqueada en una instancia de Administrador de licencias (es decir, una instancia de despliegue) y debe renovarse según las condiciones de su compra. Puede obtener licencia y usar cualquier número de pools de capacidad de la organización. Sin embargo, como los nodos ONTAP Select comparten los pools de capacidad, normalmente se necesitan menos licencias que la licencia de los niveles de capacidad.
 Administrador de licencias:: El Administrador de licencias es un componente de software que admite licencias de pools de capacidad. Actualmente forma parte de la utilidad de administración de despliegue. LM alquila almacenamiento a los nodos ONTAP Select de los pools compartidos que gestiona. El _License Lock ID_ es una cadena numérica que identifica de forma exclusiva cada instancia LM y, por lo tanto, cada instancia de implementación. Debe usar el número de serie de la licencia de Capacity Pool y LLID para generar un archivo de licencia.
-Ofertas de licencias de plataformas:: Hay tres ofertas de licencia disponibles que determinan el tamaño de las capacidades de la máquina virtual de ONTAP Select al comprar una licencia:
+Ofertas de licencias de plataformas:: Hay tres opciones de licencia disponibles que determinan el tamaño que puede tener la máquina virtual ONTAP Select al adquirir una licencia:
 +
 --
 * Estándar
@@ -47,7 +48,7 @@ Ofertas de licencias de plataformas:: Hay tres ofertas de licencia disponibles q
 Para más información, consulta las dos secciones link:concept_workflow_deploy.html["Planificación"] y link:concept_lic_evaluation.html["Licencia"].
 
 Pools de almacenamiento frente a almacenes de datos:: Un _pool de almacenamiento_ de ONTAP Select es un contenedor de datos lógico diseñado para extraer y ocultar el almacenamiento físico subyacente. Un pool de almacenamiento no depende del hipervisor. Cuando se pone en marcha en un host de hipervisor ESXi, el pool de almacenamiento de ONTAP Select es sinónimo de VMware _datastore_.
-MTU del clúster:: La MTU de clúster es una función de que permite configurar el tamaño de MTU usado en la red interna que se usa con un clúster de varios nodos de ONTAP Select. La utilidad de administración de puesta en marcha ajusta el tamaño de MTU a medida que configura las parejas de alta disponibilidad para adaptarse al entorno de red. También puede establecer manualmente el valor.
+MTU del clúster:: La unidad máxima de transmisión (MTU) del clúster es una función que te permite configurar el tamaño de MTU que se utiliza en la red interna de un clúster de varios nodos de ONTAP Select. La utilidad de administración Deploy ajusta el tamaño de MTU a medida que configuras los pares de alta disponibilidad (HA) para adaptarse a tu entorno de red. También puedes establecer el valor manualmente.
 VNAS de ONTAP Select:: La solución vNAS de ONTAP Select permite que un nodo ONTAP Select acceda a los almacenes de datos de VMware en almacenamiento externo. Con vNAS de ONTAP Select, ya no es necesario un controlador RAID local; el almacenamiento remoto asume que la función RAID es proporcionada. VNAS de ONTAP Select puede configurarse de las siguientes maneras:
 +
 --
@@ -60,20 +61,20 @@ VNAS de ONTAP Select:: La solución vNAS de ONTAP Select permite que un nodo ONT
 
 En ambos casos, el almacenamiento externo debe configurarse antes de crear un clúster de ONTAP Select o ampliar la capacidad de almacenamiento de un nodo existente.
 
-Realojamiento del nodo en la máquina virtual ESXi:: Cuando pone en marcha un clúster que utiliza almacenamiento externo disponible a través de la solución vNAS de ONTAP Select (VMware VSAN o una cabina de almacenamiento externo genérica), la máquina virtual ESXi que aloja el nodo ONTAP Select puede moverse por medio de acciones utilizando las siguientes funciones de VMware:
+Realojamiento del nodo en la máquina virtual ESXi:: Al implementar un clúster que utilice almacenamiento externo disponible a través de la solución ONTAP Select vNAS (ya sea VMware vSAN o una matriz de almacenamiento externo genérica), la máquina virtual ESXi que aloja el nodo ONTAP Select se puede trasladar mediante acciones que utilicen las siguientes funciones de VMware:
 +
 --
 * VMotion
 * Alta disponibilidad
 * Planificador de recursos distribuidos (DRS, Distributed Resource Scheduler)
 +
-La utilidad ONTAP Select Deploy detecta el movimiento de la máquina virtual como parte de la ejecución de una operación en el clúster, por ejemplo:
+La utilidad ONTAP Select Deploy detecta el movimiento de la VM como parte de la ejecución de una operación en el clúster, como:
 
 * clúster en línea
 * clúster sin conexión
 * adición de almacenamiento
 +
-Cuando se mueve una máquina virtual, la utilidad Deploy actualiza su base de datos interna y configura el nuevo host ESXi. Todas las acciones realizadas en el nodo ONTAP Select se bloquean hasta que se completa el movimiento de la máquina virtual y las actualizaciones de implementación.
+Cuando se mueve una VM, la utilidad Deploy actualiza su base de datos interna y configura el nuevo host ESXi. Todas las acciones realizadas en el nodo ONTAP Select quedan bloqueadas hasta que se completen el movimiento de la VM y las actualizaciones de Deploy.
 
 
 
@@ -83,7 +84,7 @@ Servicio de mediación:: La utilidad de puesta en marcha de ONTAP Select incluye
 
 
 
-CAUTION: Si tiene uno o varios clústeres de dos nodos activos, la máquina virtual ONTAP Select Deploy que administra los clústeres debe ejecutarse siempre. Si la máquina virtual de puesta en marcha está detenida, el servicio del mediador no estará disponible y se perderán funcionalidades de alta disponibilidad para los clústeres de dos nodos.
+CAUTION: Si tienes uno o más clústeres activos de dos nodos, la ONTAP Select Deploy VM que administra los clústeres debe estar en ejecución en todo momento. Si la Deploy VM se detiene, el servicio mediador no estará disponible y se perderá la funcionalidad de HA en los clústeres de dos nodos.
 
 SDS de MetroCluster:: El almacenamiento definido por software de MetroCluster es una función que proporciona una opción de configuración adicional al implementar un clúster de ONTAP Select de dos nodos. A diferencia de una típica puesta en marcha robo de dos nodos, los nodos SDS de MetroCluster pueden separarse con una distancia mucho mayor. Esta separación física proporciona casos de uso adicionales como la recuperación ante desastres. Debe tener una licencia premium o superior para usar SDS de MetroCluster. Además, la red entre los nodos debe admitir un requisito mínimo de latencia.
 Almacén de credenciales:: El almacén de credenciales de Deploy es una base de datos segura que contiene credenciales de cuentas. Se utiliza principalmente para registrar hosts de hipervisor como parte de la creación de un nuevo clúster. Consulta la sección link:concept_workflow_deploy.html["Planificación"] para más información.
@@ -93,7 +94,7 @@ Eficiencia del almacenamiento:: ONTAP Select ofrece opciones de eficiencia del a
 Las configuraciones predeterminadas de vNAS habilitan una función de optimización de escritura conocida como registro de datos de instancia única (SIDL). Con ONTAP Select 9.6 y versiones posteriores, las funciones de eficiencia de almacenamiento en segundo plano de ONTAP están calificadas con SIDL habilitado. Consulta la sección link:concept_stor_concepts_chars.html["En profundidad"] para más información.
 
 --
-Actualización del clúster:: Después de crear un clúster, puede realizar cambios en la configuración del clúster o de máquinas virtuales fuera de la utilidad de puesta en marcha mediante las herramientas de administración de ONTAP o del hipervisor. También puede migrar una máquina virtual que cause cambios en la configuración. Cuando se producen estos cambios, la utilidad de implementación no se actualiza automáticamente y puede quedar sin sincronizar con el estado del clúster. Puede utilizar la función de actualización de clúster para actualizar la base de datos de configuración de despliegue. La actualización del clúster se encuentra disponible a través de la interfaz de usuario web de Deploy, el shell de gestión de la interfaz de línea de comandos y la API DE REST.
+Actualización del clúster:: Una vez creado un clúster, puedes realizar cambios en la configuración del clúster o de la máquina virtual fuera de la utilidad Deploy utilizando ONTAP o las herramientas de administración del hipervisor. También puedes migrar una máquina virtual, lo que provoca cambios en la configuración. Cuando se producen estos cambios, la utilidad Deploy no se actualiza automáticamente y puede desincronizarse con el estado del clúster. Puedes utilizar la función de actualización del clúster para actualizar la base de datos de configuración de Deploy. La actualización del clúster está disponible a través de la interfaz de usuario web de Deploy, el shell de administración de la CLI y la API de REST.
 RAID de software:: Al usar almacenamiento de conexión directa (DAS), la funcionalidad RAID se proporciona tradicionalmente a través de una controladora RAID de hardware local. En su lugar, puede configurar un nodo para que utilice _software RAID_ donde el nodo ONTAP Select proporciona la funcionalidad RAID. Si utiliza RAID de software, ya no se necesita una controladora RAID de hardware.
 
 

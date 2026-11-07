@@ -38,19 +38,10 @@ Para poner en marcha un clúster de ONTAP Select, su organización debe tener un
 [[software-compatibility]]
 === Compatibilidad de software
 
-Puede implementar ONTAP Select en hipervisores KVM y ESXi.
+Puedes implementar ONTAP Select en hipervisores ESXi, Hyper-V y KVM.
 
 [role="tabbed-block"]
 ====
-.KVM
---
-ONTAP Select admite las siguientes versiones de hipervisor KVM:
-
-* KVM en Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6
-* KVM en Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6
-
-
---
 .ESXi
 --
 ONTAP Select admite las siguientes versiones de hipervisor ESXi:
@@ -63,11 +54,29 @@ ONTAP Select admite las siguientes versiones de hipervisor ESXi:
 * VMware ESXi 8,0 GA (compilación 20513097)
 
 
+[NOTE]
+====
+NetApp es compatible con ONTAP Select en las versiones identificadas de ESXi siempre que VMware también siga siendo compatible con las mismas versiones.
 
-NOTE: NetApp es compatible con ONTAP Select en las versiones identificadas de ESXi siempre que VMware también siga siendo compatible con las mismas versiones.
+ESXi 7.0 GA ha alcanzado el fin de su estado de disponibilidad.  Si tiene clústeres ONTAP Select con esta versión, debe actualizarlos a las versiones compatibles según lo indicado en el documento. https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad (IMT)"^] .
+
+====
+--
+.Hyper-V
+--
+ONTAP Select es compatible con las siguientes versiones del hipervisor Hyper-V:
+
+* Microsoft Windows Server 2025 y 2022
 
 
-NOTE: ESXi 7.0 GA ha alcanzado el fin de su estado de disponibilidad.  Si tiene clústeres ONTAP Select con esta versión, debe actualizarlos a las versiones compatibles según lo indicado en el documento. https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad (IMT)"^] .
+--
+.KVM
+--
+ONTAP Select admite las siguientes versiones de hipervisor KVM:
+
+* KVM en Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 y 8.6
+* KVM en Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6
+
 
 --
 ====

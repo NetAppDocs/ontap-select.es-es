@@ -16,7 +16,7 @@ summary: Puede actualizar una máquina virtual de la utilidad de implementación
 [role="lead"]
 Actualiza una máquina virtual existente de la utilidad ONTAP Select Deploy in situ usando la CLI de la utilidad ONTAP Select Deploy.
 
-Puedes actualizar directamente a ONTAP Select Deploy 9.19.1 desde ONTAP Select Deploy 9.18.1 o 9.17.1. Para actualizar desde una versión anterior, por ejemplo, ONTAP Select Deploy 9.16.1, primero tienes que actualizar a ONTAP Select Deploy 9.17.1 o 9.18.1 y luego actualizar a ONTAP Select Deploy 9.19.1.
+Puedes actualizar directamente a ONTAP Select Deploy 9.20.1 desde ONTAP Select Deploy 9.19.1 o 9.18.1. Para actualizar desde una versión anterior, por ejemplo, ONTAP Select Deploy 9.17.1, primero tienes que actualizar a ONTAP Select Deploy 9.18.1 o 9.19.1 y luego actualizar a ONTAP Select Deploy 9.20.1.
 
 [NOTE]
 ====

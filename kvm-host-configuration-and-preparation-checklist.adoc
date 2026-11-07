@@ -14,7 +14,7 @@ summary: Prepare cada host del hipervisor KVM donde se implemente un nodo ONTAP 
 
 
 [role="lead"]
-Prepare cada host de hipervisor KVM donde se implemente un nodo ONTAP Select . Al preparar los hosts, evalúe cuidadosamente el entorno de implementación para asegurarse de que estén configurados correctamente y listos para la implementación de un clúster ONTAP Select .
+Prepara cada host con hipervisor KVM donde esté implementado un nodo ONTAP Select. Asegúrate de que los hosts estén correctamente configurados y listos para admitir la implementación de un clúster ONTAP Select.
 
 
 NOTE: La utilidad de administración de ONTAP Select Deploy no realiza la configuración de red y almacenamiento necesaria de los hosts del hipervisor. Debe preparar manualmente cada host antes de implementar un clúster de ONTAP Select .

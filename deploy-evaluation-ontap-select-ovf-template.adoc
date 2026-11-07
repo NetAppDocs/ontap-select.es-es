@@ -20,7 +20,7 @@ Puede implementar una instancia de evaluación de 90 días de un clúster selecc
 * No es necesario obtener un número de serie ni una licencia de capacidad de almacenamiento de NetApp.
 * Puede asignar la misma cantidad de almacenamiento para los datos de usuario que una licencia adquirida.
 * Solo se puede usar una cuenta de vCenter para implementar la plantilla OVF. Actualmente no se admite la instalación directa en un host ESXi.
-* Debe instalar la plantilla OVF (incluida en un archivo ova) mediante el cliente independiente de vSphere o el cliente web de vSphere (la única opción para ESXi 8.0 y versiones posteriores). No utilice la utilidad de administración ONTAP Select Deploy.
+* Debes instalar la plantilla OVF (incluida en un archivo OVA) mediante el cliente independiente de vSphere o el cliente web de vSphere (la única opción para ESXi 8.0 y versiones posteriores). No utilizas la utilidad de administración ONTAP Select Deploy.
 
 
 

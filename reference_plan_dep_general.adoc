@@ -37,60 +37,6 @@ NOTE: Una instancia de la utilidad Deploy puede administrar hasta 400 nodos de O
 
 
 
-[[requirements-related-to-the-kvm-environment]]
-== Requisitos relacionados con el entorno KVM
-
-Antes de instalar la utilidad de administración de implementación en un entorno de hipervisor KVM, debe revisar los requisitos básicos y prepararse para el despliegue.
-
-.Requisitos y restricciones para una puesta en marcha
-Hay varios requisitos y restricciones que debe tener en cuenta al instalar la utilidad ONTAP Select Deploy en un entorno KVM.
-
-.Requisitos de hardware del servidor host KVM de Linux
-Hay varios requisitos mínimos de recursos que debe cumplir su host de hipervisor KVM de Linux. Compruebe que los hosts donde se implementa ONTAP Select cumplen los siguientes requisitos básicos:
-
-* Servidor Linux:
-+
-** El hardware y el software deben ser de 64 bits
-** El servidor debe cumplir con las mismas versiones compatibles que se han definido para un nodo ONTAP Select
-
-
-* CPU virtuales (2)
-* Memoria virtual (4GB)
-* Almacenamiento (40GB)
-* El protocolo de configuración dinámica de host (DHCP) está habilitado (también puede asignar una dirección IP estática)
-
-
-.Conectividad de la red
-Comprobar que la interfaz de red de la máquina virtual de implementación está configurada y se puede conectar a los hosts ONTAP Select que gestiona.
-
-.Compatibilidad con IP versión 4
-La implementación de ONTAP Select solo es compatible con IP versión 4 (IPv4). La versión 6 (IPv6) de IP no se admite. Esta restricción afecta a ONTAP Select de las siguientes maneras:
-
-* Debe asignar una dirección IPv4 a la LIF de gestión de la máquina virtual de puesta en marcha.
-* La implementación no puede crear nodos de ONTAP Select configurados para usar IPv6 en los LIF de ONTAP.
-
-
-
-
-[[required-configuration-information]]
-== Información de configuración requerida
-
-Como parte de la planificación de la implementación, debe determinar la información de configuración necesaria antes de instalar la utilidad de administración de implementación de ONTAP Select.
-
-.Nombre de la máquina virtual de puesta en marcha
-El nombre que se utiliza para la máquina virtual.
-
-.Nombre del host KVM de Linux
-Host KVM de Linux en el que está instalada la utilidad de implementación.
-
-.Nombre del pool de almacenamiento
-El pool de almacenamiento que contiene los archivos de la máquina virtual (se requieren aproximadamente 40GB GB).
-
-.Red para la máquina virtual
-La red a la que está conectada la VM de despliegue.
-
-
-
 [[optional-network-configuration-information]]
 == Información de configuración de red opcional
 
@@ -122,7 +68,7 @@ Los dominios de búsqueda que se van a utilizar.
 [[authentication-using-the-credential-store]]
 == Autenticación mediante el almacén de credenciales
 
-El almacén de credenciales de despliegue de ONTAP Select es una base de datos que contiene información de cuenta. La implementación utiliza las credenciales de la cuenta para realizar la autenticación del host como parte de la creación y la gestión del clúster. Debe saber cómo se utiliza el almacén de credenciales como parte de la planificación de una implementación de ONTAP Select.
+El almacén de credenciales de ONTAP Select Deploy es una base de datos que contiene información de las cuentas. Deploy usa las credenciales de las cuentas para autenticar hosts como parte de la creación y la gestión de clústeres. Debes saber cómo se usa el almacén de credenciales al planificar una implementación de ONTAP Select.
 
 
 NOTE: La información de cuentas se almacena de forma segura en la base de datos mediante el algoritmo de cifrado AES y el algoritmo de hash SHA-256.

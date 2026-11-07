@@ -17,7 +17,7 @@ summary: Existen varios problemas de planificación relacionados con el almacena
 Existen varios problemas de planificación relacionados con el almacenamiento en host de ONTAP Select que se deben tener en cuenta.
 
 
-NOTE: La información sobre compatibilidad con almacenamiento externo se describe para hosts ESXi y KVM. Para más información, consulta link:reference_plan_ots_vnas.html["Requisitos de VMware ESXi"] y link:reference_plan_ots_kvm.html["Requisitos KVM"].
+NOTE: Se describe información de compatibilidad de almacenamiento para hosts ESXi, Hyper-V y KVM. Para obtener más información, consulta link:reference_plan_ots_vnas.html["Requisitos de almacenamiento externo de VMware ESXi"], link:plan-ots-hyper-v.html["Requisitos de almacenamiento de Hyper-V"] y link:reference_plan_ots_kvm.html["Requisitos de almacenamiento externo para KVM"].
 
 
 
