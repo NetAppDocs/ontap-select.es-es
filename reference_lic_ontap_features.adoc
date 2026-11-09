@@ -112,7 +112,7 @@ Debes adquirir una licencia independiente para las siguientes funciones de ONTAP
 | FabricPool | link:https://docs.netapp.com/us-en/ontap/concepts/fabricpool-concept.html["ONTAP FabricPool"^] | No necesita una licencia de FabricPool cuando utilice StorageGRID. 
 
 
-| SDS de MetroCluster | link:https://docs.netapp.com/us-en/ontap/concepts/mcc-sds-ontap-select.html["MetroCluster SDS para ONTAP Select"^] | Se trata de una oferta de licencia premium de ONTAP Select. 
+| SDS de MetroCluster | link:reference_plan_ots_mcc_sds.html["MetroCluster SDS para ONTAP Select"] | Se trata de una oferta de licencia premium de ONTAP Select. 
 
 
 | SnapMirror cloud | link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror copias de seguridad en la nube en almacenamiento de objetos"^] | Necesitas link:https://mysupport.netapp.com/site/help["abrir un caso de asistencia no técnica"^] para obtener una licencia cloud de SnapMirror. 

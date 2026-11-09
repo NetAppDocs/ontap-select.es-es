@@ -191,7 +191,7 @@ La adición de almacenamiento también admite el software RAID. Sin embargo, en 
 .¿ONTAP Select admite almacenes de datos de tipo cabina externa o VSAN?
 ONTAP Select Deploy y ONTAP Select para ESXi admiten la configuración de un clúster de un solo nodo de ONTAP Select usando un datastore de tipo vSAN o un array externo para su pool de almacenamiento.
 
-ONTAP Select Deploy y ONTAP Select para KVM admiten la configuración de un clúster de un solo nodo de ONTAP Select mediante un tipo de grupo de almacenamiento lógico compartido en cabinas externas. Los grupos de almacenamiento pueden basarse en iSCSI, FC/FCoE y NFS. No se admiten otros tipos de grupos de almacenamiento.
+ONTAP Select Deploy y ONTAP Select para KVM admiten la configuración de un clúster de un solo nodo de ONTAP Select mediante un tipo de grupo de almacenamiento lógico compartido en cabinas externas. Los pools de almacenamiento pueden basarse en iSCSI o FC/FCoE. No se admiten otros tipos de grupos de almacenamiento.
 
 Se admiten clústeres de alta disponibilidad multinodo en almacenamiento compartido.
 
