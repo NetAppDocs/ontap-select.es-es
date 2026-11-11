@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: sizing-capacity-pool-license.html 
-keywords: license, licensing, Capacity Tiers, usable, space 
-summary: La licencia Capacity Tiers se basa en la capacidad de disco subyacente gestionada por cada nodo y no en la capacidad utilizable del nodo, HA-pair o clúster. Cada licencia Capacity Tiers se asigna a un número de serie de nodo individual para una capacidad especificada y requiere un contrato de soporte adjunto. 
+keywords: license, licensing, Capacity Pools, usable, space 
+summary: 'La licencia de Capacity Pools se basa en la capacidad del disco subyacente gestionada por cada nodo y no en la capacidad utilizable del nodo, del par de alta disponibilidad (HA) o del clúster. Cada licencia de Capacity Pools se asigna al número de serie de un nodo concreto para una capacidad específica y requiere un contrato de soporte asociado.' 
 ---
 = Determina el tamaño de la licencia de Capacity Pools para ONTAP Select
 :hardbreaks:
@@ -14,13 +14,23 @@ summary: La licencia Capacity Tiers se basa en la capacidad de disco subyacente 
 
 
 [role="lead"]
+Calcula el tamaño de la licencia de ONTAP Select Capacity Pool en función del espacio utilizable y la sobrecarga de la configuración del clúster para garantizar suficiente capacidad licenciada para una implementación.
+
+Antes de determinar el tamaño de la licencia de Capacity Pools, debes tener en cuenta las siguientes consideraciones:
+
+* Tanto en las configuraciones de RAID de hardware (VMDKs) como en las de RAID de software (NVMe o SSDs), el consumo de licencias se calcula a partir de los discos de datos o las particiones de datos asignados a los agregados de datos.
+* ONTAP Select excluye los discos y particiones de paridad RAID-DP del consumo de licencias. Solo tienes licencia para las particiones de datos y los discos añadidos a un agregado, por lo que la sobrecarga de paridad RAID-DP no consume capacidad de licencia adicional.
+* La capacidad de la unidad de reserva no se incluye en la capacidad utilizable del agregado y no consume capacidad de licencia.
+* Los discos de paridad están dedicados a la protección de datos. No ofrecen almacenamiento utilizable para volúmenes ni datos y no se contabilizan como capacidad utilizable.
+
+
 La capacidad licenciada de una licencia de Capacity Pool se expresa en unidades completas de TB, con un mínimo de 2 TB. Calculas la capacidad licenciada multiplicando la cantidad de espacio utilizable por el factor de sobrecarga. El factor de sobrecarga estima la capacidad de sobrecarga del software ONTAP Select que se deducirá del espacio utilizable y se aplica para determinar la capacidad de ONTAP Select para unidades NVMe, SSD, HDD o virtuales. El factor de sobrecarga varía entre los clústeres de un solo nodo y los de varios nodos (basados en pares de alta disponibilidad):
 
 * El factor de sobrecarga para clústeres de un solo nodo es 1,13
 * El factor de sobrecarga para clústeres multinodo es 2.67
 
 
-Debes calcular la capacidad con licencia basándote en el espacio utilizable para asegurarte de que tienes suficiente para tu implementación. Por ejemplo, quieres 20 TB de capacidad utilizable para un par de alta disponibilidad (10 TB por nodo):
+Debes calcular la capacidad con licencia en función del espacio utilizable para asegurarte de que tienes suficiente capacidad para una implementación. Por ejemplo, si necesitas 20 TB de capacidad utilizable para un par de alta disponibilidad (10 TB por nodo):
 
 * Con un par de alta disponibilidad (HA), los datos se duplican entre ambos nodos para redundancia, así que para 20 TB de datos utilizables en un par de HA, necesitas tener 20 TB por nodo, en caso de que uno de los nodos quede fuera de línea.
 * El factor de 2,67 duplica la capacidad de cada nodo y añade la capacidad de reserva (0,67) necesaria para que ONTAP Select funcione.
