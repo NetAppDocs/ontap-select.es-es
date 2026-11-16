@@ -98,7 +98,7 @@ image:nvme_02.png["Edite la disponibilidad del dispositivo PCI"]
 
 +
 
-NOTE: Necesita un almacén de datos VMFS que también esté respaldado por un dispositivo NVMe para alojar los discos del sistema de máquinas virtuales ONTAP Select y la NVRAM virtual. Deje al menos una unidad NVMe disponible con este fin cuando configure las otras para el paso a través de PCI.
+NOTE: Necesitas un almacén de datos VMFS respaldado también por un dispositivo NVMe para alojar los discos del sistema de la VM de ONTAP Select y la NVRAM virtual. Deja al menos una unidad NVMe disponible para este fin al configurar las demás para el paso directo de PCI.
 
 .. Seleccione *Aceptar*. Los dispositivos seleccionados aparecen como *Disponibles (pendientes)*.
 

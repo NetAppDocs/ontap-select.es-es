@@ -14,7 +14,7 @@ summary: 'La licencia de Capacity Pools se basa en la capacidad del disco subyac
 
 
 [role="lead"]
-Calcula el tamaño de la licencia de ONTAP Select Capacity Pool en función del espacio utilizable y la sobrecarga de la configuración del clúster para garantizar suficiente capacidad licenciada para una implementación.
+Calcula el tamaño de la licencia de ONTAP Select Capacity Pool en función del espacio utilizable y la sobrecarga de la configuración en clúster para asegurarte de que dispones de capacidad con licencia suficiente para una implementación.
 
 Antes de determinar el tamaño de la licencia de Capacity Pools, debes tener en cuenta las siguientes consideraciones:
 
@@ -30,7 +30,7 @@ La capacidad licenciada de una licencia de Capacity Pool se expresa en unidades 
 * El factor de sobrecarga para clústeres multinodo es 2.67
 
 
-Debes calcular la capacidad con licencia en función del espacio utilizable para asegurarte de que tienes suficiente capacidad para una implementación. Por ejemplo, si necesitas 20 TB de capacidad utilizable para un par de alta disponibilidad (10 TB por nodo):
+Por ejemplo, si necesitas 20 TB de capacidad utilizable para un par de alta disponibilidad (10 TB por nodo):
 
 * Con un par de alta disponibilidad (HA), los datos se duplican entre ambos nodos para redundancia, así que para 20 TB de datos utilizables en un par de HA, necesitas tener 20 TB por nodo, en caso de que uno de los nodos quede fuera de línea.
 * El factor de 2,67 duplica la capacidad de cada nodo y añade la capacidad de reserva (0,67) necesaria para que ONTAP Select funcione.
